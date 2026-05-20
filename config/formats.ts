@@ -5495,6 +5495,13 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		banlist: ['Uber', 'Sand Veil', 'King\'s Rock'],
 	},
 	{
+		name: "[Gen 3] ZangOuSe",
+		desc: `A curated ADV singles format with a slim Pok&eacute;mon pool. Zangoose sits in its own ZangOuSe tier; everything else is OU or NFE.`,
+		mod: 'gen3zangouse',
+		ruleset: ['Standard', 'One Boost Passer Clause', 'Freeze Clause Mod'],
+		banlist: ['Sand Veil', 'King\'s Rock'],
+	},
+	{
 		name: "[Gen 3] ADV 200",
 		mod: 'gen3rs',
 		searchShow: false,
