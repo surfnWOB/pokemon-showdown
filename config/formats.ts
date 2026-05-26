@@ -171,6 +171,19 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		],
 	},
 
+	// Yak Attack
+	///////////////////////////////////////////////////////////////////
+
+	{
+		section: "Yak Attack",
+	},
+	{
+		name: "[Gen 1] RBY Plus",
+		desc: "RBY with an expanded roster &mdash; later-generation Pok&eacute;mon retyped to the 15 Gen 1 types, on the original RBY engine. The whole roster is legal.",
+		mod: 'gen1rbyplus',
+		ruleset: ['Standard'],
+	},
+
 	// S/V Singles
 	///////////////////////////////////////////////////////////////////
 
