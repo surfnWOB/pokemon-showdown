@@ -1,4 +1,4 @@
-export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
+export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTable = {
 	bulbasaur: {
 		learnset: {
 			amnesia: ["1L1"],

@@ -1,4 +1,7 @@
-export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
+// gen1rbyplus ships a from-scratch, RBY-pure roster: entries are intentionally
+// minimal (no abilities/eggGroups/weightkg — all unused on the gen 1 engine), so the
+// table is typed as partial species data rather than ModdedSpeciesDataTable.
+export const Pokedex: { [speciesid: string]: Partial<import('../../../sim/dex-species').SpeciesData> } = {
 	bulbasaur: {
 		num: 1,
 		name: "Bulbasaur",

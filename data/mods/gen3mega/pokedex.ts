@@ -184,7 +184,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		// Psychic/Fairy → Gardevoir is Psychic monotype in Gen 3, stays Psychic
 		types: ["Psychic"],
 		// Pixilate can't be legalized (Normal→Fairy, no Fairy type in Gen 3) → Synchronize
-		abilities: {0: "Synchronize"},
+		abilities: { 0: "Synchronize" },
 	},
 	sableyemega: {
 		inherit: true,
@@ -229,7 +229,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		// Dragon/Fairy → Altaria is Dragon/Flying, keep secondary type
 		types: ["Dragon", "Flying"],
 		// Pixilate can't be legalized (Normal→Fairy, no Fairy type in Gen 3) → Natural Cure
-		abilities: {0: "Natural Cure"},
+		abilities: { 0: "Natural Cure" },
 	},
 	banettemega: {
 		inherit: true,
@@ -291,22 +291,22 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 	// and re-legalizing rewrites that gen to 3. Pin these base formes back to their
 	// real Gen-3 ability so e.g. Cloyster can't run Skill Link, Machamp No Guard.
 	// (The Mega formes are separate species and keep their re-legalized ability.)
-	mrmime: {inherit: true, abilities: {0: "Soundproof"}},
-	tyrogue: {inherit: true, abilities: {0: "Guts"}},
-	hitmontop: {inherit: true, abilities: {0: "Intimidate"}},
-	meowth: {inherit: true, abilities: {0: "Pickup"}},
-	persian: {inherit: true, abilities: {0: "Limber"}},
-	machop: {inherit: true, abilities: {0: "Guts"}},
-	machoke: {inherit: true, abilities: {0: "Guts"}},
-	machamp: {inherit: true, abilities: {0: "Guts"}},
-	shellder: {inherit: true, abilities: {0: "Shell Armor"}},
-	cloyster: {inherit: true, abilities: {0: "Shell Armor"}},
-	scyther: {inherit: true, abilities: {0: "Swarm"}},
-	pinsir: {inherit: true, abilities: {0: "Hyper Cutter"}},
-	eevee: {inherit: true, abilities: {0: "Run Away"}},
-	sunkern: {inherit: true, abilities: {0: "Chlorophyll"}},
-	sunflora: {inherit: true, abilities: {0: "Chlorophyll"}},
-	scizor: {inherit: true, abilities: {0: "Swarm"}},
-	smeargle: {inherit: true, abilities: {0: "Own Tempo"}},
-	tropius: {inherit: true, abilities: {0: "Chlorophyll"}},
+	mrmime: { inherit: true, abilities: { 0: "Soundproof" } },
+	tyrogue: { inherit: true, abilities: { 0: "Guts" } },
+	hitmontop: { inherit: true, abilities: { 0: "Intimidate" } },
+	meowth: { inherit: true, abilities: { 0: "Pickup" } },
+	persian: { inherit: true, abilities: { 0: "Limber" } },
+	machop: { inherit: true, abilities: { 0: "Guts" } },
+	machoke: { inherit: true, abilities: { 0: "Guts" } },
+	machamp: { inherit: true, abilities: { 0: "Guts" } },
+	shellder: { inherit: true, abilities: { 0: "Shell Armor" } },
+	cloyster: { inherit: true, abilities: { 0: "Shell Armor" } },
+	scyther: { inherit: true, abilities: { 0: "Swarm" } },
+	pinsir: { inherit: true, abilities: { 0: "Hyper Cutter" } },
+	eevee: { inherit: true, abilities: { 0: "Run Away" } },
+	sunkern: { inherit: true, abilities: { 0: "Chlorophyll" } },
+	sunflora: { inherit: true, abilities: { 0: "Chlorophyll" } },
+	scizor: { inherit: true, abilities: { 0: "Swarm" } },
+	smeargle: { inherit: true, abilities: { 0: "Own Tempo" } },
+	tropius: { inherit: true, abilities: { 0: "Chlorophyll" } },
 };
