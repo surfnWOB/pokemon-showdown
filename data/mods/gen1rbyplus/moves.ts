@@ -789,7 +789,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	hurricane: {
 		num: 542,
 		accuracy: 70,
-		basePower: 90,
+		basePower: 105,
 		category: "Special",
 		name: "Hurricane",
 		pp: 10,
