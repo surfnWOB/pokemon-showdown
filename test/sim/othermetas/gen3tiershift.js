@@ -19,7 +19,6 @@ const CASES = [
 	{ species: 'Blastoise', tier: 'UU', boost: 10 },
 	{ species: 'Jumpluff', tier: 'RUBL', boost: 10 },
 	{ species: 'Raichu', tier: 'RU', boost: 15 },
-	{ species: 'Glalie', tier: 'NUBL', boost: 15 },
 	{ species: 'Pidgeot', tier: 'NU', boost: 20 },
 	{ species: 'Machoke', tier: 'PUBL', boost: 20 },
 	{ species: 'Charmeleon', tier: 'PU', boost: 30 },
@@ -61,5 +60,20 @@ describe('[Gen 3] Tier Shift', () => {
 		const miloticSpa = Dex.mod('gen3').species.get('Milotic').baseStats.spa;
 		assert.equal(battle.p1.active[0].species.baseStats.spa, regiceSpa + 5, 'Regice "(OU)" should get +5');
 		assert.equal(battle.p2.active[0].species.baseStats.spa, miloticSpa, 'Milotic real OU should get +0');
+	});
+
+	it('should boost Glalie as UU (+10), overriding its standard-gen3 NUBL (+15) rank', () => {
+		battle = common.createBattle({ formatid: 'gen3tiershift' }, [
+			[{ species: 'Glalie', moves: ['tackle'] }, { species: 'Snorlax', moves: ['tackle'] }],
+			[{ species: 'Snorlax', moves: ['tackle'] }, { species: 'Zapdos', moves: ['tackle'] }],
+		]);
+		const base = Dex.mod('gen3').species.get('Glalie').baseStats;
+		const active = battle.p1.active[0];
+		assert.equal(active.species.tier, 'NUBL', 'Glalie is still ranked NUBL in gen3');
+		assert.equal(active.species.baseStats.hp, base.hp, 'Glalie HP must never be boosted');
+		for (const stat of ['atk', 'def', 'spa', 'spd', 'spe']) {
+			assert.equal(active.species.baseStats[stat], Math.min(255, base[stat] + 10),
+				`Glalie ${stat} should be boosted by +10 (UU), not +15 (NUBL)`);
+		}
 	});
 });
