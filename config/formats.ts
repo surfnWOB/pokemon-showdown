@@ -302,7 +302,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 3] Hoennification OU",
 		mod: 'gen3hoennification',
 		ruleset: ['Standard', 'Freeze Clause Mod'],
-		banlist: ['Uber', 'Soundproof', 'Assist', 'Baton Pass', 'Smeargle + Ingrain', 'Starf Berry', 'Speed Boost + Blaziken', 'Drizzle', 'Drought'],
+		banlist: ['Uber', 'Soul Dew', 'Soundproof', 'Assist', 'Baton Pass', 'Smeargle + Ingrain', 'Starf Berry', 'Speed Boost + Blaziken', 'Drizzle', 'Drought'],
 	},
 	{
 		name: "[Gen 3] Hoennification Ubers",
