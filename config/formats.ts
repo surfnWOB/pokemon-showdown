@@ -19,32 +19,8 @@ The column value will be ignored for repeat sections.
 
 export const Formats: import('../sim/dex-formats').FormatList = [
 
-	// surfnWOB Customs
-	///////////////////////////////////////////////////////////////////
-
 	{
-		section: "surfnWOB Customs",
-	},
-	// [Gen 3] UUBL Classic 26 — preserves the UUBL metagame as it stood in 2026, before
-	// Raikou and Registeel were raised to OU by tiering decision on 2026-07-08. Both are
-	// kept legal here via unbanlist. ("26" leaves room to preserve other UUBL eras later.)
-	{
-		name: "[Gen 3] UUBL Classic 26",
-		desc: "Gen 3 UUBL as it stood in 2026, before Raikou and Registeel were raised to OU on July 8, 2026. Both remain legal here, preserving that era's UUBL metagame.",
-		mod: 'gen3',
-		ruleset: ['[Gen 3] OU', '!Accuracy Trap Clause'],
-		banlist: [
-			'OU', 'Smeargle + Ingrain', 'Baton Pass + Block', 'Baton Pass + Mean Look', 'Baton Pass + Spider Web', 'Flail', 'Reversal',
-			'Baton Pass + Speed Boost', 'Baton Pass + Agility', 'Baton Pass + Dragon Dance', 'Baton Pass + Salac Berry',
-		],
-		unbanlist: ['Soundproof', 'Sand Veil', 'Regice', 'Raikou', 'Registeel', 'Porygon2', 'Quick Claw'],
-	},
-	{
-		name: "[Gen 3] Tera",
-		desc: "Gen 3 OU with Terastallization (no Fairy type). Once per battle, per player.",
-		mod: 'gen3tera',
-		ruleset: ['Standard', 'Bonus Type Mod', 'One Boost Passer Clause', 'Accuracy Trap Clause', 'Freeze Clause Mod', 'Speed Pass Clause'],
-		banlist: ['Uber', 'Smeargle + Ingrain', 'Sand Veil', 'Soundproof', 'Assist', 'Baton Pass + Block', 'Baton Pass + Mean Look', 'Baton Pass + Spider Web', 'Swagger'],
+		section: "Gen 3 Megas",
 	},
 	{
 		name: "[Gen 3] Megas",
@@ -128,6 +104,66 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		},
 	},
 	{
+		name: "[Gen 3] Megas Doubles",
+		desc: "Gen 3 Megas in the Gen 3 Doubles OU ruleset.",
+		mod: 'gen3mega',
+		gameType: 'doubles',
+		ruleset: ['Standard', '!Switch Priority Clause Mod'],
+		banlist: ['Uber', 'Quick Claw', 'Soul Dew', 'Explosion', 'Self-Destruct', 'Swagger'],
+		unbanlist: ['Wobbuffet', 'Wynaut'],
+	},
+	{
+		name: "[Gen 3] Megas Ubers Doubles",
+		desc: "Gen 3 Megas Doubles with Ubers unbanned. Only AG-tier Megas stay banned.",
+		mod: 'gen3mega',
+		gameType: 'doubles',
+		ruleset: ['Standard', '!Switch Priority Clause Mod'],
+		banlist: ['AG', 'Quick Claw', 'Soul Dew', 'Explosion', 'Self-Destruct', 'Swagger'],
+		unbanlist: ['Wobbuffet', 'Wynaut'],
+	},
+	{
+		name: "[Gen 3] Megas AG",
+		desc: "Gen 3 Megas with all Mega tiers legal.",
+		mod: 'gen3mega',
+		ruleset: ['Standard AG'],
+		banlist: ['Wobbuffet + Leftovers', 'Wynaut + Leftovers'],
+	},
+	{
+		name: "[Gen 3] Megas AG Doubles",
+		desc: "Gen 3 Megas Anything Goes in doubles.",
+		mod: 'gen3mega',
+		gameType: 'doubles',
+		ruleset: ['Standard AG'],
+		banlist: ['Wobbuffet + Leftovers', 'Wynaut + Leftovers'],
+	},
+	// surfnWOB Customs
+	///////////////////////////////////////////////////////////////////
+
+	{
+		section: "surfnWOB Customs",
+	},
+	// [Gen 3] UUBL Classic 26 — preserves the UUBL metagame as it stood in 2026, before
+	// Raikou and Registeel were raised to OU by tiering decision on 2026-07-08. Both are
+	// kept legal here via unbanlist. ("26" leaves room to preserve other UUBL eras later.)
+	{
+		name: "[Gen 3] UUBL Classic 26",
+		desc: "Gen 3 UUBL as it stood in 2026, before Raikou and Registeel were raised to OU on July 8, 2026. Both remain legal here, preserving that era's UUBL metagame.",
+		mod: 'gen3',
+		ruleset: ['[Gen 3] OU', '!Accuracy Trap Clause'],
+		banlist: [
+			'OU', 'Smeargle + Ingrain', 'Baton Pass + Block', 'Baton Pass + Mean Look', 'Baton Pass + Spider Web', 'Flail', 'Reversal',
+			'Baton Pass + Speed Boost', 'Baton Pass + Agility', 'Baton Pass + Dragon Dance', 'Baton Pass + Salac Berry',
+		],
+		unbanlist: ['Soundproof', 'Sand Veil', 'Regice', 'Raikou', 'Registeel', 'Porygon2', 'Quick Claw'],
+	},
+	{
+		name: "[Gen 3] Tera",
+		desc: "Gen 3 OU with Terastallization (no Fairy type). Once per battle, per player.",
+		mod: 'gen3tera',
+		ruleset: ['Standard', 'Bonus Type Mod', 'One Boost Passer Clause', 'Accuracy Trap Clause', 'Freeze Clause Mod', 'Speed Pass Clause'],
+		banlist: ['Uber', 'Smeargle + Ingrain', 'Sand Veil', 'Soundproof', 'Assist', 'Baton Pass + Block', 'Baton Pass + Mean Look', 'Baton Pass + Spider Web', 'Swagger'],
+	},
+	{
 		name: "[Gen 3] PSS",
 		desc: "Gen 3 OU with the Gen 4 Physical/Special split.",
 		mod: 'gen3pss',
@@ -140,13 +176,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen3pss',
 		ruleset: ['Standard', 'One Boost Passer Clause', 'Accuracy Trap Clause', 'Freeze Clause Mod', 'Speed Pass Clause'],
 		banlist: ['Smeargle + Ingrain', 'Sand Veil', 'Soundproof', 'Assist', 'Baton Pass + Block', 'Baton Pass + Mean Look', 'Baton Pass + Spider Web', 'Swagger'],
-	},
-	{
-		name: "[Gen 3] ZangOuSe",
-		desc: `A curated ADV singles format with a slim Pok&eacute;mon pool. Zangoose sits in its own ZangOuSe tier; everything else is OU or NFE.`,
-		mod: 'gen3zangouse',
-		ruleset: ['Standard', 'One Boost Passer Clause', 'Accuracy Trap Clause', 'Freeze Clause Mod', 'Speed Pass Clause'],
-		banlist: ['Sand Veil', 'Soundproof', 'King\'s Rock', 'Assist', 'Baton Pass + Block', 'Baton Pass + Mean Look', 'Baton Pass + Spider Web', 'Swagger'],
 	},
 	{
 		name: "[Gen 3] ADV 200 UU",
@@ -385,6 +414,13 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		section: "Archie Madness",
 	},
 	{
+		name: "[Gen 3] ZangOuSe",
+		desc: `A curated ADV singles format with a slim Pok&eacute;mon pool. Zangoose sits in its own ZangOuSe tier; everything else is OU or NFE.`,
+		mod: 'gen3zangouse',
+		ruleset: ['Standard', 'One Boost Passer Clause', 'Accuracy Trap Clause', 'Freeze Clause Mod', 'Speed Pass Clause'],
+		banlist: ['Sand Veil', 'Soundproof', 'King\'s Rock', 'Assist', 'Baton Pass + Block', 'Baton Pass + Mean Look', 'Baton Pass + Spider Web', 'Swagger'],
+	},
+	{
 		name: "[Gen 3] Megas CAP",
 		desc: "Gen 3 OU with the CAP Mega Evolution and Primal Reversion roster (no Fairy type, no Mega Rayquaza).",
 		mod: 'gen3megascap',
@@ -393,7 +429,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		ruleset: ['Standard', 'One Boost Passer Clause', 'Accuracy Trap Clause', 'Freeze Clause Mod', 'Speed Pass Clause'],
 		banlist: ['Uber', 'Smeargle + Ingrain', 'Sand Veil', 'Soundproof', 'Assist', 'Baton Pass + Block', 'Baton Pass + Mean Look', 'Baton Pass + Spider Web', 'Swagger'],
 	},
-
 	// Other
 	///////////////////////////////////////////////////////////////////
 

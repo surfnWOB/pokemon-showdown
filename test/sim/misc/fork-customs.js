@@ -18,7 +18,7 @@ const { Dex } = require('./../../../dist/sim');
 // body — including the per-format it()s generated below — before any hook runs,
 // so the format list has to exist now.
 Dex.includeFormats();
-const CUSTOM_SECTIONS = ['surfnWOB Customs', 'Yak Attack', 'Other'];
+const CUSTOM_SECTIONS = ['Gen 3 Megas', 'surfnWOB Customs', 'Yak Attack', 'Other'];
 const customFormats = Dex.formats.all().filter(f => CUSTOM_SECTIONS.includes(f.section));
 
 describe('Fork customs', () => {
@@ -39,6 +39,36 @@ describe('Fork customs', () => {
 	});
 
 	// --- Targeted behavior: pins the seams the refactors will move. ---
+
+	it('gen3mega: the Gen 3 Megas formats share the dedicated category and the new doubles/AG formats enforce their tier rules', () => {
+		const formats = {
+			megas: { gameType: 'singles' },
+			megasubers: { gameType: 'singles' },
+			megasuu: { gameType: 'singles' },
+			megasdoubles: { gameType: 'doubles' },
+			megasubersdoubles: { gameType: 'doubles' },
+			megasag: { gameType: 'singles' },
+			megasagdoubles: { gameType: 'doubles' },
+	};
+		for (const [id, { gameType }] of Object.entries(formats)) {
+			const format = Dex.formats.get(`gen3${id}`, true);
+			assert(format.exists, `${id} must be registered`);
+			assert.equal(format.section, 'Gen 3 Megas', `${format.name} must be in the Gen 3 Megas section`);
+			assert.equal(format.gameType, gameType, `${format.name} must use ${gameType}`);
+			Dex.formats.getRuleTable(format);
+		}
+
+		const { TeamValidator } = require('./../../../dist/sim/team-validator');
+		const medicham = [{ species: 'Medicham', ability: 'Pure Power', item: 'medichamite', moves: ['brickbreak', 'shadowball', 'calmmind', 'rest'], evs: { hp: 4 }, level: 100 }];
+		const salamence = [{ species: 'Salamence', ability: 'Intimidate', item: 'salamencite', moves: ['dragondance', 'earthquake', 'rockslide', 'doubleedge'], evs: { hp: 4 }, level: 100 }];
+		const doublesTeam = team => [...team, { species: 'Snorlax', ability: 'Thick Fat', moves: ['bodyslam'], evs: { hp: 4 }, level: 100 }];
+
+		const doublesErrors = TeamValidator.get('gen3megasdoubles').validateTeam(medicham);
+		assert(doublesErrors && doublesErrors.some(e => /Uber/.test(e)), `expected M-Medicham Uber-banned from Megas Doubles, got: ${JSON.stringify(doublesErrors)}`);
+		assert.legalTeam(doublesTeam(medicham), 'gen3megasubersdoubles');
+		assert.legalTeam(salamence, 'gen3megasag');
+		assert.legalTeam(doublesTeam(salamence), 'gen3megasagdoubles');
+	});
 
 	it('gen3tera: a Pokemon can Terastallize (guards the bonustypemod seam)', () => {
 		const battle = common.createBattle({ formatid: 'gen3tera' }, [
