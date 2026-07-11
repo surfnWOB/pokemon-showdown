@@ -21,6 +21,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 
 	{
 		section: "Gen 3 Megas",
+		column: 1,
 	},
 	{
 		name: "[Gen 3] Megas",
@@ -141,6 +142,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 
 	{
 		section: "surfnWOB Customs",
+		column: 1,
 	},
 	// [Gen 3] UUBL Classic 26 — preserves the UUBL metagame as it stood in 2026, before
 	// Raikou and Registeel were raised to OU by tiering decision on 2026-07-08. Both are
@@ -329,6 +331,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 
 	{
 		section: "Yak Attack",
+		column: 1,
 	},
 	{
 		name: "[Gen 1] RBY Plus",
@@ -412,6 +415,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 
 	{
 		section: "Archie Madness",
+		column: 1,
 	},
 	{
 		name: "[Gen 3] ZangOuSe",
@@ -434,6 +438,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 
 	{
 		section: "Other",
+		column: 1,
 	},
 	{
 		name: "[Gen 8] National Dex AG",
@@ -449,6 +454,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 
 	{
 		section: "S/V Singles",
+		column: 2,
 	},
 	{
 		name: "[Gen 9] Random Battle",
@@ -585,6 +591,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 
 	{
 		section: "S/V Doubles",
+		column: 2,
 	},
 	{
 		name: "[Gen 9] Random Doubles Battle",
@@ -676,6 +683,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 
 	{
 		section: "Champions",
+		column: 2,
 	},
 	{
 		name: "[Gen 9 Champions] Random Battle",
@@ -762,6 +770,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 
 	{
 		section: "Unofficial Metagames",
+		column: 2,
 	},
 	{
 		name: "[Gen 9] 1v1",
@@ -1054,7 +1063,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 
 	{
 		section: "Ladder Spotlight",
-		column: 2,
+		column: 3,
 	},
 	{
 		name: "[Gen 9] Mega Invasion Random Battle",
@@ -1220,7 +1229,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 
 	{
 		section: "Other Metagames",
-		column: 2,
+		column: 3,
 	},
 	{
 		name: "[Gen 9] Almost Any Ability",
@@ -3561,6 +3570,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 
 	{
 		section: "National Dex",
+		column: 3,
 	},
 	{
 		name: "[Gen 9] National Dex",
@@ -3583,6 +3593,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 
 	{
 		section: "National Dex Other Tiers",
+		column: 3,
 	},
 	{
 		name: "[Gen 9] National Dex Ubers",
@@ -3924,7 +3935,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 
 	{
 		section: "Randomized Metas",
-		column: 3,
+		column: 4,
 	},
 	{
 		name: "[Gen 9] Random Roulette",
