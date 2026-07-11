@@ -378,6 +378,22 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		},
 	},
 
+	// Archie Madness
+	///////////////////////////////////////////////////////////////////
+
+	{
+		section: "Archie Madness",
+	},
+	{
+		name: "[Gen 3] Megas CAP",
+		desc: "Gen 3 OU with the CAP Mega Evolution and Primal Reversion roster (no Fairy type, no Mega Rayquaza).",
+		mod: 'gen3megascap',
+		searchShow: true,
+		rated: true,
+		ruleset: ['Standard', 'One Boost Passer Clause', 'Accuracy Trap Clause', 'Freeze Clause Mod', 'Speed Pass Clause'],
+		banlist: ['Uber', 'Smeargle + Ingrain', 'Sand Veil', 'Soundproof', 'Assist', 'Baton Pass + Block', 'Baton Pass + Mean Look', 'Baton Pass + Spider Web', 'Swagger'],
+	},
+
 	// Other
 	///////////////////////////////////////////////////////////////////
 
