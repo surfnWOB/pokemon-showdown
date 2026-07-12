@@ -2440,7 +2440,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "OU",
 	},
 	meloetta: {
-		tier: "Uber",
+		tier: "OU",
 	},
 	meloettapirouette: {
 		tier: "OU",
