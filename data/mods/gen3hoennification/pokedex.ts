@@ -296,7 +296,7 @@ export const Pokedex: { [k: string]: AnyObject } = {
 		num: 6,
 		name: "Charizard-Mega-X",
 		baseSpecies: "Charizard",
-		forme: "Mega-X",
+		// forme: "Mega-X",
 		types: [
 			"Fire",
 			"Dragon",
@@ -329,7 +329,7 @@ export const Pokedex: { [k: string]: AnyObject } = {
 		num: 6,
 		name: "Charizard-Mega-Y",
 		baseSpecies: "Charizard",
-		forme: "Mega-Y",
+		// forme: "Mega-Y",
 		types: [
 			"Fire",
 			"Flying",
@@ -1821,7 +1821,7 @@ export const Pokedex: { [k: string]: AnyObject } = {
 		num: 26,
 		name: "Raichu-Mega-X",
 		baseSpecies: "Raichu",
-		forme: "Mega-X",
+		// forme: "Mega-X",
 		types: [
 			"Electric",
 		],
@@ -1849,7 +1849,7 @@ export const Pokedex: { [k: string]: AnyObject } = {
 		num: 26,
 		name: "Raichu-Mega-Y",
 		baseSpecies: "Raichu",
-		forme: "Mega-Y",
+		// forme: "Mega-Y",
 		types: [
 			"Electric",
 		],
@@ -7579,7 +7579,7 @@ export const Pokedex: { [k: string]: AnyObject } = {
 		num: 150,
 		name: "Mewtwo-Mega-X",
 		baseSpecies: "Mewtwo",
-		forme: "Mega-X",
+		// forme: "Mega-X",
 		types: [
 			"Psychic",
 			"Fighting",
@@ -7608,7 +7608,7 @@ export const Pokedex: { [k: string]: AnyObject } = {
 		num: 150,
 		name: "Mewtwo-Mega-Y",
 		baseSpecies: "Mewtwo",
-		forme: "Mega-Y",
+		// forme: "Mega-Y",
 		types: [
 			"Psychic",
 		],
@@ -15251,7 +15251,7 @@ export const Pokedex: { [k: string]: AnyObject } = {
 		num: 359,
 		name: "Absol-Mega-Z",
 		baseSpecies: "Absol",
-		forme: "Mega-Z",
+		// forme: "Mega-Z",
 		types: [
 			"Dark",
 			"Ghost",
@@ -18520,7 +18520,7 @@ export const Pokedex: { [k: string]: AnyObject } = {
 		num: 445,
 		name: "Garchomp-Mega-Z",
 		baseSpecies: "Garchomp",
-		forme: "Mega-Z",
+		// forme: "Mega-Z",
 		types: [
 			"Dragon",
 		],
@@ -18690,7 +18690,7 @@ export const Pokedex: { [k: string]: AnyObject } = {
 		num: 448,
 		name: "Lucario-Mega-Z",
 		baseSpecies: "Lucario",
-		forme: "Mega-Z",
+		// forme: "Mega-Z",
 		types: [
 			"Fighting",
 			"Steel",
