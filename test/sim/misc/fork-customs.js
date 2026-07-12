@@ -49,7 +49,7 @@ describe('Fork customs', () => {
 			megasubersdoubles: { gameType: 'doubles' },
 			megasag: { gameType: 'singles' },
 			megasagdoubles: { gameType: 'doubles' },
-	};
+		};
 		for (const [id, { gameType }] of Object.entries(formats)) {
 			const format = Dex.formats.get(`gen3${id}`, true);
 			assert(format.exists, `${id} must be registered`);
