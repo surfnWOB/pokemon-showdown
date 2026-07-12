@@ -115,11 +115,11 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 3] Megas Ubers Doubles",
-		desc: "Gen 3 Megas Doubles with Ubers unbanned. Only AG-tier Megas stay banned.",
+		desc: "Gen 3 Megas Doubles with Ubers unbanned. Only AG-tier Megas stay banned. Explosion and Self-Destruct are legal.",
 		mod: 'gen3mega',
 		gameType: 'doubles',
 		ruleset: ['Standard', '!Switch Priority Clause Mod'],
-		banlist: ['AG', 'Quick Claw', 'Soul Dew', 'Explosion', 'Self-Destruct', 'Swagger'],
+		banlist: ['AG', 'Quick Claw', 'Soul Dew', 'Swagger'],
 		unbanlist: ['Wobbuffet', 'Wynaut'],
 	},
 	{
@@ -143,6 +143,14 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		section: "surfnWOB Customs",
 		column: 1,
+	},
+	{
+		name: "[Gen 3] Ubers Doubles",
+		desc: "Gen 3 Doubles with Ubers unbanned. Explosion and Self-Destruct are legal.",
+		mod: 'gen3',
+		gameType: 'doubles',
+		ruleset: ['Standard', '!Switch Priority Clause Mod'],
+		banlist: ['Quick Claw', 'Soul Dew', 'Swagger'],
 	},
 	// [Gen 3] UUBL Classic 26 — preserves the UUBL metagame as it stood in 2026, before
 	// Raikou and Registeel were raised to OU by tiering decision on 2026-07-08. Both are
