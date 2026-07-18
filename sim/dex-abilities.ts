@@ -92,9 +92,9 @@ export class DexAbilities {
 		let ability = this.abilityCache.get(id);
 		if (ability) return ability;
 
-		if (this.dex.getAlias(id)) {
-			ability = this.get(this.dex.getAlias(id));
-		} else if (id && this.dex.data.Abilities.hasOwnProperty(id)) {
+		// A real ability ID takes precedence over a cross-effect alias with the same ID.
+		// For example, the CAP ability Sandy coexists with the "sandy" species alias.
+		if (id && this.dex.data.Abilities.hasOwnProperty(id)) {
 			const abilityData = this.dex.data.Abilities[id] as any;
 			ability = new Ability({
 				name: id,
@@ -109,6 +109,8 @@ export class DexAbilities {
 			if ((this.dex.currentMod === 'gen7letsgo' || this.dex.gen <= 2) && ability.id === 'noability') {
 				(ability as any).isNonstandard = null;
 			}
+		} else if (this.dex.getAlias(id)) {
+			ability = this.get(this.dex.getAlias(id));
 		} else {
 			ability = new Ability({
 				id, name: id, exists: false,
