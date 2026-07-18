@@ -13,6 +13,11 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 	},
 	hitmonchanite: { inherit: true, gen: 3, isNonstandard: null },
 	dittite: { inherit: true, gen: 3, isNonstandard: null },
+	magnetite: {
+		name: "Magnetite", spritenum: 782, megaStone: { "Magneton": "Magneton-Mega" }, itemUser: ["Magneton"],
+		onTakeItem(item, source) { return !item.megaStone?.[source.baseSpecies.baseSpecies]; },
+		num: 2687, gen: 3, isNonstandard: null,
+	},
 
 	// Gen 2
 	noctite: { inherit: true, gen: 3, isNonstandard: null },

@@ -131,6 +131,35 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		gen: 3,
 		isNonstandard: null,
 	},
+	// Custom fusion ability (Magneton-Mega): Drizzle + Magnet Pull. The onStart
+	// rain fires on Mega Evolution because gen3megascap's runMegaEvo (scripts.ts)
+	// explicitly re-runs the ability's Start event. Trapping uses the gen3
+	// onAny* handlers (gen3's Magnet Pull override drops the modern onFoe* ones).
+	monsooncoil: {
+		onStart(source) {
+			this.field.setWeather('raindance');
+		},
+		onAnyTrapPokemon(pokemon) {
+			if (pokemon.hasType('Steel') && pokemon.isAdjacent(this.effectState.target)) {
+				pokemon.tryTrap(true);
+			}
+		},
+		onAnyMaybeTrapPokemon(pokemon, source) {
+			if (!source) source = this.effectState.target;
+			if (!source || !pokemon.isAdjacent(source)) return;
+			if (!pokemon.knownType || pokemon.hasType('Steel')) {
+				pokemon.maybeTrapped = true;
+			}
+		},
+		flags: {},
+		name: "Monsoon Coil",
+		desc: "On switch-in, this Pokemon summons Rain Dance until the weather is changed. Prevents adjacent Steel-type foes from choosing to switch out.",
+		shortDesc: "On switch-in, summons rain. Traps adjacent Steel-type foes.",
+		rating: 4.5,
+		num: 322,
+		gen: 3,
+		isNonstandard: null,
+	},
 
 	// Custom fork abilities (originally isNonstandard: "Future")
 	megasol: { inherit: true, gen: 3, isNonstandard: null },

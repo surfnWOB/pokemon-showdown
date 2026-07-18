@@ -15,6 +15,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 	hitmonchanmega: { inherit: true, gen: 3, isNonstandard: null },
 	dittomega: { inherit: true, gen: 3, isNonstandard: null },
 	venomoth: { inherit: true, otherFormes: ["Venomoth-Mega"] },
+	magneton: { inherit: true, otherFormes: ["Magneton-Mega"] },
 
 	// === GENERATION 2 ===
 	yanmega: { inherit: true, gen: 3 },
@@ -66,6 +67,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 	// New roster data delivered with this revision. These are defined in the mod so
 	// the custom CAP roster does not leak into unrelated formats.
 	venomothmega: { num: 49, name: "Venomoth-Mega", baseSpecies: "Venomoth", forme: "Mega", types: ["Bug", "Poison"], baseStats: { hp: 85, atk: 100, def: 60, spa: 100, spd: 80, spe: 120 }, abilities: { 0: "Merciless" }, heightm: 1.5, weightkg: 12.5, color: "Purple", eggGroups: ["Bug"], requiredItem: "Venomite", gen: 3, isNonstandard: null },
+	magnetonmega: { num: 82, name: "Magneton-Mega", baseSpecies: "Magneton", forme: "Mega", types: ["Electric", "Steel"], baseStats: { hp: 50, atk: 70, def: 120, spa: 165, spd: 90, spe: 70 }, abilities: { 0: "Monsoon Coil" }, heightm: 1.2, weightkg: 80, color: "Gray", eggGroups: ["Mineral"], requiredItem: "Magnetite", gen: 3, isNonstandard: null },
 	quagsiremega: { num: 196, name: "Quagsire-Mega", baseSpecies: "Quagsire", forme: "Mega", types: ["Water", "Ground"], baseStats: { hp: 110, atk: 95, def: 110, spa: 90, spd: 90, spe: 35 }, abilities: { 0: "Unaware" }, heightm: 1.4, weightkg: 75, color: "Blue", eggGroups: ["Water 1", "Field"], requiredItem: "Quagsite", gen: 3, isNonstandard: null },
 	corsolamega: { num: 222, name: "Corsola-Mega", baseSpecies: "Corsola", forme: "Mega", types: ["Water", "Psychic"], baseStats: { hp: 90, atk: 100, def: 120, spa: 100, spd: 95, spe: 35 }, abilities: { 0: "Natural Cure" }, heightm: 0.6, weightkg: 5, color: "Pink", eggGroups: ["Water 1", "Water 3"], requiredItem: "Corsolite", gen: 3, isNonstandard: null },
 	masquerainmega: { num: 284, name: "Masquerain-Mega", baseSpecies: "Masquerain", forme: "Mega", types: ["Bug", "Water"], baseStats: { hp: 91, atk: 80, def: 84, spa: 90, spd: 110, spe: 95 }, abilities: { 0: "Water Bubble" }, heightm: 0.8, weightkg: 3.6, color: "Blue", eggGroups: ["Water 1", "Bug"], requiredItem: "Masquerite", gen: 3, isNonstandard: null },
