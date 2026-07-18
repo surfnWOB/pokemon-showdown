@@ -23,6 +23,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	// Gen 1
 	parasectmega: { tier: "OU" },
 	venomothmega: { tier: "OU" },
+	magnetonmega: { tier: "OU" },
 	hitmonchanmega: { tier: "OU" },
 	dittomega: { tier: "OU" },
 
