@@ -1066,6 +1066,42 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 			this.add('rule', 'Endless Battle Clause: Forcing endless battles is banned');
 		},
 	},
+	gamblingaddictionmod: {
+		effectType: 'Rule',
+		name: 'Gambling Addiction Mod',
+		desc: "Suicune has a crippling gambling addiction. It happily uses RNG moves (inaccurate moves, or random-move moves like Metronome / Sleep Talk / Present). If ordered to use a non-RNG move it may instead blow off its turn to gamble — switching out for a random teammate, Roar-style. That chance starts at 10% and climbs the longer it goes without an RNG move. If it can't leave (no teammate to switch to) it loses the turn to withdrawals and takes damage.",
+		onBegin() {
+			this.add('rule', 'Gambling Addiction Mod: Suicune would rather be at the casino');
+		},
+		onBeforeMovePriority: 5,
+		onBeforeMove(pokemon, target, move) {
+			if (pokemon.baseSpecies.id !== 'suicune') return;
+			// An "RNG move" is one whose outcome is a gamble: imperfect accuracy,
+			// or a move that randomly picks/echoes another move.
+			const RANDOM_MOVES = ['metronome', 'sleeptalk', 'assist', 'copycat', 'mefirst', 'mirrormove', 'present', 'magnitude', 'naturepower', 'psywave'];
+			const acc = move.accuracy;
+			const isRng = RANDOM_MOVES.includes(move.id) || (acc !== true && typeof acc === 'number' && acc < 100);
+			if (isRng) {
+				// scratches the itch
+				pokemon.m.gamblingStreak = 0;
+				return;
+			}
+			const streak = pokemon.m.gamblingStreak || 0;
+			const chance = Math.min(100, 10 + 10 * streak);
+			if (this.randomChance(chance, 100)) {
+				if (this.canSwitch(pokemon.side)) {
+					this.add('-message', `${pokemon.name} blows off its turn and slips away to gamble at the casino!`);
+					pokemon.forceSwitchFlag = true;
+				} else {
+					this.add('-message', `${pokemon.name} is desperate to gamble but has nowhere to go — it loses its turn to withdrawals!`);
+					this.damage(Math.round(pokemon.baseMaxhp / 8), pokemon, pokemon);
+				}
+				pokemon.m.gamblingStreak = 0;
+				return false;
+			}
+			pokemon.m.gamblingStreak = streak + 1;
+		},
+	},
 	drypassclause: {
 		effectType: 'ValidatorRule',
 		name: 'DryPass Clause',
