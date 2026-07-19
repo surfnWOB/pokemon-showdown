@@ -1066,6 +1066,34 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 			this.add('rule', 'Endless Battle Clause: Forcing endless battles is banned');
 		},
 	},
+	cigaretteadsmod: {
+		effectType: 'Rule',
+		name: 'Cigarette Ads Mod',
+		desc: "Every 10 turns, Silph Co. Cigarettes airs an ad: Pok&eacute;mon not holding Cigarettes forfeit their turn to go buy some, and those holding another item may ditch it to buy Cigarettes instead. Fully-evolved Pok&eacute;mon are less impressionable and are unaffected.",
+		onBegin() {
+			this.add('rule', 'Cigarette Ads Mod: Every 10 turns, Silph Co. Cigarettes airs an ad');
+		},
+		// A Pokémon that can still evolve (the young, impressionable ones) and isn't
+		// already holding Cigarettes forfeits its move on ad turns to go buy a pack.
+		onBeforeMovePriority: 10,
+		onBeforeMove(pokemon) {
+			if (this.turn % 10 !== 0) return;
+			if (pokemon.hasItem('cigarettes') || !pokemon.species.nfe) return;
+			this.add('-message', `\u{1F4FA} Silph Co. Cigarettes: ${pokemon.name} drops everything and heads to the store to buy a pack!`);
+			return false;
+		},
+		// On ad turns, an impressionable Pokémon holding some other item may sell it off.
+		onResidualOrder: 26,
+		onResidual(pokemon) {
+			if (this.turn % 10 !== 0 || !pokemon.hp) return;
+			if (!pokemon.species.nfe || !pokemon.item || pokemon.hasItem('cigarettes')) return;
+			if (!this.randomChance(3, 10)) return;
+			const item = pokemon.getItem();
+			if (pokemon.takeItem()) {
+				this.add('-message', `${pokemon.name} sold its ${item.name} to buy Cigarettes!`);
+			}
+		},
+	},
 	drypassclause: {
 		effectType: 'ValidatorRule',
 		name: 'DryPass Clause',
