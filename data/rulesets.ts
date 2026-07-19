@@ -1066,6 +1066,55 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 			this.add('rule', 'Endless Battle Clause: Forcing endless battles is banned');
 		},
 	},
+	politicalaffiliationmod: {
+		effectType: 'Rule',
+		name: 'Political Affiliation Mod',
+		desc: "Every Pok&eacute;mon must hold a party badge (Solar Rosette = Solar Union, Lunar Rosette = Lunar Front, or Centrist Pin). While both the Solar Union and the Lunar Front are represented on the field, partisan Pok&eacute;mon may only select damaging moves (gridlock). Centrists are so boring they may only select status moves. Badges cannot be removed, and a Pok&eacute;mon that somehow loses its badge faints.",
+		onBegin() {
+			this.add('rule', 'Political Affiliation Mod: every Pokémon is affiliated; opposing parties on the field cause gridlock');
+		},
+		onValidateSet(set) {
+			const PARTIES: { [id: string]: string } = { solarrosette: 'Solar Union', lunarrosette: 'Lunar Front', centristpin: 'Centrist' };
+			const itemid = this.dex.items.get(set.item).id;
+			if (!PARTIES[itemid]) {
+				return [`${set.name || set.species} must hold a party badge (Solar Rosette, Lunar Rosette, or Centrist Pin) — no Pokémon may be politically unaffiliated.`];
+			}
+		},
+		onDisableMove(pokemon) {
+			const party = ({ solarrosette: 'solar', lunarrosette: 'lunar', centristpin: 'centrist' } as { [id: string]: string })[pokemon.item];
+			if (party === 'centrist') {
+				// too boring to do anything but talk: only status moves allowed
+				for (const moveSlot of pokemon.moveSlots) {
+					if (this.dex.moves.get(moveSlot.id).category !== 'Status') pokemon.disableMove(moveSlot.id);
+				}
+				return;
+			}
+			if (party !== 'solar' && party !== 'lunar') return;
+			// gridlock if both partisan parties are present among active Pokémon
+			const present = new Set<string>();
+			for (const active of this.getAllActive()) {
+				if (!active.hp) continue;
+				const p = ({ solarrosette: 'solar', lunarrosette: 'lunar' } as { [id: string]: string })[active.item];
+				if (p) present.add(p);
+			}
+			if (present.has('solar') && present.has('lunar')) {
+				for (const moveSlot of pokemon.moveSlots) {
+					if (this.dex.moves.get(moveSlot.id).category === 'Status') pokemon.disableMove(moveSlot.id);
+				}
+			}
+		},
+		// Failsafe: badges are un-removable, but if a Pokémon ever ends up without
+		// one it cannot bear life as an independent and faints.
+		onResidualOrder: 1,
+		onResidual(pokemon) {
+			if (!pokemon.hp) return;
+			const itemid = pokemon.item;
+			if (itemid !== 'solarrosette' && itemid !== 'lunarrosette' && itemid !== 'centristpin') {
+				this.add('-message', `${pokemon.name} lost its party badge and, unable to face life as an independent, fainted!`);
+				pokemon.faint();
+			}
+		},
+	},
 	drypassclause: {
 		effectType: 'ValidatorRule',
 		name: 'DryPass Clause',
