@@ -131,6 +131,39 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		gen: 3,
 		isNonstandard: null,
 	},
+	supremepower: {
+		// On switch-in, blanket the user's whole side with the Supreme Power aura:
+		// every ally on the field — now or later — gains Superpower, Cosmic Power,
+		// and Ancient Power as bonus move slots (see the `supremepoweraura` side
+		// condition in conditions.ts). onStart fires on switch-in for a natively
+		// held ability (cf. High Noon / Snow Warning above), and the Mega site in
+		// scripts.ts re-fires Start explicitly, so a Mega forme carrying it works too.
+		onStart(pokemon) {
+			pokemon.side.addSideCondition('supremepoweraura', pokemon);
+		},
+		// When the user leaves the field, the aura lingers 3 more turns so allies
+		// switching in keep the benefit. Ability End fires on switch-out
+		// (battle-actions.ts) and on faint (battle.ts); we hand the side condition a
+		// finite duration and the engine's residual loop counts it down to 0, then
+		// calls removeSideCondition. If another active ally still has Supreme Power
+		// (doubles), leave the aura indefinite.
+		onEnd(pokemon) {
+			const sideCondition = pokemon.side.sideConditions['supremepoweraura'];
+			if (!sideCondition) return;
+			const anotherHolder = pokemon.side.active.some(
+				ally => ally && ally !== pokemon && !ally.fainted && ally.hasAbility('supremepower')
+			);
+			if (!anotherHolder) sideCondition.duration = 3;
+		},
+		flags: {},
+		name: "Supreme Power",
+		desc: "On switch-in, every Pokemon on this Pokemon's side gains Superpower, Cosmic Power, and Ancient Power as extra moves. The effect lingers for 3 turns after this Pokemon leaves the field, so allies that switch in during that window gain the moves too.",
+		shortDesc: "Allies gain Superpower/Cosmic Power/Ancient Power; lasts 3 turns after user leaves.",
+		rating: 4,
+		num: 322,
+		gen: 3,
+		isNonstandard: null,
+	},
 
 	// Custom fork abilities (originally isNonstandard: "Future")
 	megasol: { inherit: true, gen: 3, isNonstandard: null },
