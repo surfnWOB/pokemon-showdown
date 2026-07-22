@@ -4819,6 +4819,38 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		banlist: ['Uber', 'Arena Trap', 'Drizzle ++ Swift Swim', 'Drought ++ Chlorophyll', 'Sand Rush', 'Shadow Tag', 'King\'s Rock', 'Razor Fang', 'Soul Dew', 'Assist', 'Swagger'],
 	},
 	{
+		name: "[Gen 5] Vehicular Manslaughter",
+		desc: `Gen 5 OU, but every priority move is a vehicle &mdash; and vehicles crash. A rare malfunction fatally wrecks both the driver and its target, after which the entire field skips the next turn to mourn.`,
+		mod: 'gen5vehicular',
+		ruleset: ['Standard', 'Evasion Abilities Clause', 'Sleep Moves Clause', 'Gems Clause', 'Baton Pass Stat Clause'],
+		banlist: ['Uber', 'Arena Trap', 'Drizzle ++ Swift Swim', 'Drought ++ Chlorophyll', 'Sand Rush', 'Shadow Tag', 'King\'s Rock', 'Razor Fang', 'Soul Dew', 'Assist', 'Swagger'],
+		onBegin() {
+			this.add('-message', `Welcome to Vehicular Manslaughter! Priority moves are vehicles. Drive safely.`);
+		},
+		onBeforeMove(pokemon, target, move) {
+			// The turn after a fatal crash, the whole field skips to mourn.
+			const mourning = this.field.pseudoWeather['mourning'];
+			if (mourning && this.turn > mourning.startTurn) {
+				this.add('cant', pokemon, 'Mourning');
+				this.add('-message', `${pokemon.name} bows its head at the mourning session and cannot move.`);
+				return false;
+			}
+			if (move.priority <= 0) return;
+			const vehicles = ['sedan', 'pickup truck', 'minivan', 'city bus', 'moped', 'forklift', 'sports car', 'tractor'];
+			const vehicle = this.sample(vehicles);
+			this.add('-message', `${pokemon.name} climbs into a ${vehicle} to use ${move.name}!`);
+			const foe = (target && target !== pokemon && target.side !== pokemon.side && !target.fainted) ? target : null;
+			if (foe && this.randomChance(1, 20)) {
+				this.add('-message', `The ${vehicle} malfunctions! ${pokemon.name} loses control and slams into ${foe.name}!`);
+				this.add('-message', `The crash is fatal — both ${pokemon.name} and ${foe.name} are lost at the scene.`);
+				pokemon.faint();
+				foe.faint();
+				this.field.addPseudoWeather('mourning', pokemon);
+				return false;
+			}
+		},
+	},
+	{
 		name: "[Gen 4] OU",
 		mod: 'gen4',
 		ruleset: ['Standard', 'Evasion Abilities Clause', 'Baton Pass Stat Trap Clause', 'Freeze Clause Mod', 'Sleep Moves Clause', '!Sleep Clause Mod'],
