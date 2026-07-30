@@ -1,3 +1,8 @@
 .git
 node_modules
 dist
+# Agent scratch worktrees (.claude/worktrees/<name>) are full checkouts of this
+# repo. Without this line COPY . . ships them, `node build` compiles them into
+# dist/ alongside the real sources (~3x the file count), and the container's
+# startup rebuild OOMs against mem_limit: 4g. See DEPLOY.md.
+.claude
