@@ -278,4 +278,34 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
 		},
 	},
+	inheritor: {
+		name: "Inheritor",
+		desc: "On switch-in, this Pokemon's moves are replaced by the moves of the last Pokemon " +
+			"that occupied this slot, at the PP that Pokemon had left. If no Pokemon has left the " +
+			"slot yet, nothing happens. The borrowed moves are lost when this Pokemon switches out.",
+		shortDesc: "On switch-in, copies the moveset of the ally that was last on the field.",
+		rating: 3,
+		num: 0,
+		gen: 3,
+		isNonstandard: null,
+		// The predecessor's moveset is recorded at the switch site (see scripts.ts), because
+		// a benched Pokemon's ability can't watch an ally leave the field.
+		//
+		// Leads inherit nothing: on the first switch-in of the battle no Pokemon has vacated
+		// the slot, so the handler returns early and this Pokemon keeps its own moves.
+		//
+		// Overwriting moveSlots (not baseMoveSlots) makes the effect self-cleaning:
+		// clearVolatile restores moveSlots from baseMoveSlots on switch-out, so the borrowed
+		// moveset reverts without an explicit onEnd, and re-entering re-inherits from whoever
+		// left most recently. PP carries over from the predecessor rather than resetting, so
+		// pivoting can't be used to launder a depleted moveset back to full.
+		onStart(pokemon) {
+			const inherited = (pokemon.side as any).lastActiveMoveSlots;
+			if (!inherited?.length) return;
+
+			pokemon.moveSlots = inherited.map((slot: any) => ({ ...slot, disabled: false, used: false }));
+			this.add('-ability', pokemon, 'Inheritor');
+			this.add('-message', `${pokemon.name} inherited ${inherited.map((s: any) => s.move).join(', ')}!`);
+		},
+	},
 };

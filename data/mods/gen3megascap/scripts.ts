@@ -76,5 +76,31 @@ export const Scripts: ModdedBattleScriptsData = {
 			}
 			return true;
 		},
+		// Inheritor support: remember the moveset of the Pokemon that just left this
+		// side's slot, so the replacement can copy it in its own switch-in handler.
+		// Nothing else in the engine records "who was here before", and an ability can't
+		// observe an ally's switch-out from the bench (its handlers aren't active), so
+		// the bookkeeping has to happen at the switch site.
+		//
+		// This wraps rather than replaces the base implementation: the snapshot is taken
+		// from the pre-switch occupant and only committed once the switch actually goes
+		// through (`switchIn` can bail out with false or 'pursuitfaint'). Recording here
+		// also lands before runSwitch fires the incoming Pokemon's Start event, so
+		// Inheritor reads the value already in place.
+		//
+		// The snapshot copies baseMoveSlots, not moveSlots, so a departing Transform /
+		// Mimic user passes on its real moves rather than borrowed ones. Each slot is
+		// cloned because moveSlots and baseMoveSlots share slot objects, so a live PP
+		// deduction would otherwise mutate an already-taken snapshot.
+		switchIn(pokemon, pos, sourceEffect = null, isDrag) {
+			const outgoing = pokemon.side.active[pos] || null;
+			const snapshot = outgoing ? outgoing.baseMoveSlots.map(slot => ({ ...slot })) : null;
+
+			const result = Object.getPrototypeOf(this).switchIn.call(this, pokemon, pos, sourceEffect, isDrag);
+			if (result === true && snapshot?.length) {
+				(pokemon.side as any).lastActiveMoveSlots = snapshot;
+			}
+			return result;
+		},
 	},
 };
