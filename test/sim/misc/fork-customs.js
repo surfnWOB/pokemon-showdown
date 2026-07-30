@@ -82,6 +82,7 @@ describe('Fork customs', () => {
 		}
 
 		assert.equal(Dex.formats.get('gen3zangouse', true).section, 'Archie Madness');
+		assert.equal(Dex.formats.get('rngmadhouse', true).section, 'Archie Madness');
 		assert.deepEqual(Dex.formats.get('gen3puretradebacks', true).ruleset, ['[Gen 3] OU']);
 	});
 
