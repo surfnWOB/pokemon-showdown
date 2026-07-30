@@ -312,13 +312,16 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 3] Monotype",
 		desc: "All Pok&eacute;mon on a team must share a type.",
 		mod: 'gen3',
-		ruleset: ['Standard', 'Same Type Clause'],
+		ruleset: ['Standard', 'Same Type Clause', 'One Boost Passer Clause', 'Speed Pass Clause'],
 		banlist: [
 			'Uber',
 			'Suicune', 'Jirachi', // OU in gen3 but too strong for Monotype (Water / Steel + Psychic)
 			'Shadow Tag',
 			'Focus Band', 'King\'s Rock', 'Quick Claw',
-			'Baton Pass',
+			// Baton Pass is legal, restricted exactly as [Gen 3] OU restricts it: no passer may
+			// boost its Speed, at most one passer may boost stats at all, and trapping passes
+			// are banned outright.
+			'Baton Pass + Block', 'Baton Pass + Mean Look', 'Baton Pass + Spider Web',
 		],
 	},
 	{
