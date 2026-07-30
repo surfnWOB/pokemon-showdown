@@ -321,6 +321,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Shadow Tag',
 			'Focus Band', 'King\'s Rock',
 		],
+		unbanlist: ['Sand Veil'], // OU bans it; Monotype keeps it for mono-Ground
 	},
 	{
 		name: "[Gen 3] Balanced Hackmons",
