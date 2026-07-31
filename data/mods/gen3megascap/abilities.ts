@@ -278,4 +278,53 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
 		},
 	},
+	arsenal: {
+		name: "Arsenal",
+		desc: "On switch-in, this Pokemon gains Psycho Boost, Shadow Ball, Doom Desire, and Recover " +
+			"in addition to the four moves on its set. Moves it already knows are not duplicated.",
+		shortDesc: "Also knows Psycho Boost, Shadow Ball, Doom Desire, and Recover.",
+		rating: 5,
+		num: 323,
+		gen: 3,
+		isNonstandard: null,
+		flags: {},
+		// The granted moves are appended to BOTH moveSlots and baseMoveSlots, and the
+		// same slot object is shared between the two arrays (as the engine already does
+		// for a set's own moves). That is deliberate: clearVolatile() rebuilds moveSlots
+		// from baseMoveSlots on every switch-out, so appending only to moveSlots would
+		// hand back full PP each time the Pokemon re-entered — free infinite Recover and
+		// Doom Desire. Sharing the object means PP spent on a granted move stays spent
+		// for the rest of the battle.
+		//
+		// Re-entry is idempotent because the guard checks baseMoveSlots, which already
+		// holds the granted slots by then; nothing is pushed a second time.
+		//
+		// PP is calculated with the usual three PP Ups, matching what every other move
+		// on a teambuilder set gets by default. The set's own four moves are untouched,
+		// so a set that already runs, say, Recover just keeps its own slot.
+		onStart(pokemon) {
+			const granted = ['psychoboost', 'shadowball', 'doomdesire', 'recover'];
+			const added = [];
+			for (const id of granted) {
+				if (pokemon.baseMoveSlots.some(slot => slot.id === id)) continue;
+				const move = this.dex.moves.get(id);
+				const maxpp = this.calculatePP(move);
+				const slot = {
+					move: move.name,
+					id: move.id,
+					pp: maxpp,
+					maxpp,
+					target: move.target,
+					disabled: false,
+					used: false,
+				};
+				pokemon.baseMoveSlots.push(slot);
+				pokemon.moveSlots.push(slot);
+				added.push(move.name);
+			}
+			if (!added.length) return;
+			this.add('-ability', pokemon, 'Arsenal');
+			this.add('-message', `${pokemon.name} can also use ${added.join(', ')}!`);
+		},
+	},
 };
