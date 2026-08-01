@@ -124,6 +124,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	desolateland: { inherit: true, gen: 3, isNonstandard: null },
 	// CAP-only abilities defined fully here (not in data/abilities.ts).
 
+	analytic: { inherit: true, gen: 3, isNonstandard: null },
 	cursedbody: { inherit: true, gen: 3, isNonstandard: null },
 	ironfist: { inherit: true, gen: 3, isNonstandard: null },
 	snowwarning: {
@@ -287,7 +288,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	},
 	unknownpower: {
 		name: "Unknown Power",
-		shortDesc: "Also knows Psycho Boost, Shadow Ball, Doom Desire, and Recover.",
+		shortDesc: "Also knows Psycho Boost, Ice Beam, Doom Desire, and Recover.",
 		onStart(pokemon) {
 			const granted = ['psychoboost', 'icebeam', 'doomdesire', 'recover'];
 			const added = [];
