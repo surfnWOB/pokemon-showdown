@@ -23,6 +23,26 @@ import { StaticServer } from '../lib/static-server';
 
 type StreamWorker = ProcessManager.StreamWorker;
 
+/**
+ * How often the server sends a downstream keepalive frame to each socket.
+ *
+ * The fork's client uses a raw WebSocket (the naked SockJS `/websocket`
+ * endpoint) with a client-driven ping instead of SockJS's built-in
+ * server-driven heartbeat. A client-driven ping can't keep a connection
+ * warm when the client is frozen (backgrounded/locked mobile tab), so the
+ * pipe idles out — Cloudflare cuts proxied WebSockets after ~100s of silence.
+ * This server-side heartbeat restores what SockJS gave us: it writes a tiny
+ * frame every interval regardless of client state, so the connection never
+ * idles out. The frame is `|queryresponse|ping|null` — the exact string the
+ * client already special-cases and silently swallows (see
+ * client-connection-worker.ts), so it has zero UI impact.
+ *
+ * Disable with `Config.socketkeepalive = false`, or set a number of ms to
+ * override the interval.
+ */
+const DEFAULT_KEEPALIVE_INTERVAL = 25 * 1000;
+const KEEPALIVE_MESSAGE = '|queryresponse|ping|null';
+
 export const Sockets = new class {
 	async onSpawn(worker: StreamWorker) {
 		const id = worker.workerid;
@@ -477,6 +497,22 @@ export class ServerStream extends Streams.ObjectReadWriteStream<string> {
 
 		this.push(`*${socketid}\n${socketip}\n${socket.protocol}`);
 
+		// Server-driven keepalive: keep the connection warm from our side so it
+		// never idles out (Cloudflare cuts idle proxied WebSockets at ~100s),
+		// even when the client is frozen and can't ping. See KEEPALIVE_MESSAGE.
+		let keepaliveInterval: NodeJS.Timeout | null = null;
+		if (Config.socketkeepalive !== false) {
+			const interval = typeof Config.socketkeepalive === 'number' ?
+				Config.socketkeepalive : DEFAULT_KEEPALIVE_INTERVAL;
+			if (interval > 0) {
+				keepaliveInterval = setInterval(() => {
+					try {
+						socket.write(KEEPALIVE_MESSAGE);
+					} catch {}
+				}, interval);
+			}
+		}
+
 		socket.on('data', message => {
 			// drop empty messages (DDoS?)
 			if (!message) return;
@@ -497,6 +533,7 @@ export class ServerStream extends Streams.ObjectReadWriteStream<string> {
 		});
 
 		socket.once('close', () => {
+			if (keepaliveInterval) clearInterval(keepaliveInterval);
 			this.push(`!${socketid}`);
 			this.sockets.delete(socketid);
 			for (const room of this.rooms.values()) room.delete(socketid);
