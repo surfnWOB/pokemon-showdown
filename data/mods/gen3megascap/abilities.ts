@@ -228,10 +228,13 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		isNonstandard: null,
 	},
 	saboteur: {
-		onChangeBoost(boost, target, source, effect) {
-			// only double drops WE inflict on someone else
-			if (!source || source === target) return;
-			if (source.ability !== 'saboteur') return; // or check via this.effectState.target
+		// Doubles every stat drop this Pokemon inflicts on another (Charm -2 -> -4).
+		// The ChangeBoost event dispatches to the TARGET being debuffed, so a
+		// source-side amplifier can't use onChangeBoost; it has to listen field-wide
+		// with onAnyChangeBoost and filter to drops we caused on someone else.
+		onAnyChangeBoost(boost, target, source, effect) {
+			const holder = this.effectState.target;
+			if (source !== holder || target === holder) return;
 			let i: BoostID;
 			for (i in boost) {
 				if (boost[i]! < 0) boost[i]! *= 2;
