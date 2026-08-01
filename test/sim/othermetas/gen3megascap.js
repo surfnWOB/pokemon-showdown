@@ -50,7 +50,7 @@ const capAddedMegas = {
 // Authoritative CAP spec transcribed from data/mods/gen3megascap/megas.md:
 //   id: [[hp, atk, def, spa, spd, spe] | null, types, first ability]
 // A null stat array marks a forme whose stats are still "TBD" in the md
-// (Kingler, both Sudowoodo formes, Armaldo); those carry provisional numbers in
+// (Kingler, both Sudowoodo formes); those carry provisional numbers in
 // the pokedex, so only their typing and ability are pinned here for now.
 const authoritativeMegaData = {
 	fearowmega: [[100, 100, 110, 35, 110, 100], ['Normal', 'Flying'], 'Anger Point'],
@@ -85,7 +85,7 @@ const authoritativeMegaData = {
 	flygonmega: [[80, 100, 120, 100, 80, 110], ['Ground', 'Dragon'], 'Sandy'],
 	solrockmega: [[90, 115, 110, 90, 85, 90], ['Rock', 'Psychic'], 'High Noon'],
 	cradilymega: [[100, 118, 107, 107, 107, 56], ['Grass', 'Rock'], 'Unaware'],
-	armaldomega: [null, ['Bug', 'Rock'], 'Spinner'],
+	armaldomega: [[110, 130, 130, 80, 80, 65], ['Bug', 'Rock'], 'Spinner'],
 	kecleonmegax: [[60, 120, 60, 110, 120, 105], ['Normal'], 'Color Change'],
 	kecleonmegay: [[100, 100, 120, 100, 100, 40], ['Normal'], 'Protean'],
 	walreinmega: [[125, 80, 100, 100, 115, 80], ['Water', 'Ice'], 'Snow Warning'],
