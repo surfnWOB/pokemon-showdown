@@ -5400,7 +5400,8 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 3] RU",
 		mod: 'gen3',
-		searchShow: false,
+		// surfnWOB fork: laddered on the side server (upstream ships this searchShow:false).
+		searchShow: true,
 		ruleset: ['Standard'],
 		banlist: ['Uber', 'OU', 'UUBL', 'UU', 'RUBL', 'Glalie', 'Smeargle + Ingrain', 'Arena Trap', 'Baton Pass', 'Swagger'],
 	},
