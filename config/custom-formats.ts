@@ -460,6 +460,15 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		bestOfDefault: true,
 		ruleset: ['Standard', 'Freeze Clause Mod'],
 	},
+	{
+		name: "[Gen 9] RNG Madhouse",
+		desc: `Deliberately terrible gen 9 OU: OHKO/Evasion/Baton Pass unbanned, every Pok&eacute;mon can use Guillotine/Fissure/Sheer Cold/Double Team/Confuse Ray, 33% full paralysis, permanent unclaused Freeze, halved crit rate but crits OHKO, flat 70% damage, Choice items only boost 1.3x, a 10% "yips" chance to whiff a turn, and a 20% chance the loser wins instead.`,
+		mod: 'rngmadhouse',
+		searchShow: true,
+		rated: true,
+		ruleset: ['Standard', '!OHKO Clause', '!Evasion Items Clause', '!Evasion Moves Clause', 'Yips Rule', 'Halved Crits Rule'],
+		banlist: [],
+	},
 	// Other
 	///////////////////////////////////////////////////////////////////
 
