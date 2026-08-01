@@ -148,10 +148,11 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		eggGroups: ["Water 1", "Water 3"], requiredItem: "Corsolite", gen: 3, isNonstandard: null,
 	},
 	octillery: { inherit: true, otherFormes: ["Octillery-Mega"] },
-	octillerymega: { // 224
-		inherit: true,
-		gen: 3,
-		isNonstandard: null,
+	octillerymega: {
+		num: 224, name: "Octillery-Mega", baseSpecies: "Octillery", forme: "Mega",
+		types: ["Water", "Steel"], baseStats: { hp: 90, atk: 103, def: 95, spa: 125, spd: 95, spe: 32 },
+		abilities: { 0: "Analytic" }, heightm: 0.9, weightkg: 28.5, color: "Red",
+		eggGroups: ["Water 1", "Water 2"], requiredItem: "Octillerite", gen: 3, isNonstandard: null,
 	},
 	mantine: { inherit: true, otherFormes: ["Mantine-Mega"] },
 	mantinemega: {
@@ -234,7 +235,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 	cradily: { inherit: true, otherFormes: ["Cradily-Mega"] },
 	cradilymega: { // 346
 		num: 346, name: "Cradily-Mega", baseSpecies: "Cradily", forme: "Mega",
-		types: ["Rock", "Grass"], baseStats: { hp: 100, atk: 117, def: 108, spa: 107, spd: 107, spe: 56 },
+		types: ["Rock", "Grass"], baseStats: { hp: 100, atk: 118, def: 107, spa: 107, spd: 107, spe: 56 },
 		abilities: { 0: "Unaware" }, heightm: 1.5, weightkg: 60.4, color: "Green",
 		eggGroups: ["Water 3"], requiredItem: "Cradilite", gen: 3, isNonstandard: null,
 	},
