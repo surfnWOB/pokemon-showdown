@@ -111,8 +111,9 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			move.type = 'Ice';
 			move.typeChangerBoosted = this.effect;
 			if (move.category !== 'Status') {
-				const specialTypes = ['Fire', 'Water', 'Grass', 'Ice', 'Electric', 'Dark', 'Psychic', 'Dragon'];
-				move.category = specialTypes.includes(move.type) ? 'Special' : 'Physical';
+				if (move.category !== 'Status') {
+					move.category = 'Special';
+				}
 			}
 		},
 		onBasePower(basePower, pokemon, target, move) {
@@ -122,42 +123,9 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	primordialsea: { inherit: true, gen: 3, isNonstandard: null },
 	desolateland: { inherit: true, gen: 3, isNonstandard: null },
 	// CAP-only abilities defined fully here (not in data/abilities.ts).
-	beautifulshine: {
-		onResidualOrder: 28,
-		onResidualSubOrder: 2,
-		onResidual(pokemon) {
-			if (pokemon.activeTurns) {
-				this.boost({ spa: 1, spd: 1 });
-			}
-		},
-		flags: {},
-		name: "Beautiful Shine",
-		rating: 4.5,
-		num: 314,
-		gen: 3,
-		isNonstandard: null,
-	},
+
 	cursedbody: { inherit: true, gen: 3, isNonstandard: null },
 	ironfist: { inherit: true, gen: 3, isNonstandard: null },
-	shady: {
-		onModifyMovePriority: -5,
-		onModifyMove(move) {
-			if (!move.ignoreImmunity) move.ignoreImmunity = {};
-			if (move.ignoreImmunity !== true) {
-				move.ignoreImmunity['Ghost'] = true;
-			}
-		},
-		// Intentionally no onTryBoost: CAP Shady only bypasses Normal's Ghost
-		// immunity; it does not block Intimidate.
-		flags: {},
-		name: "Shady",
-		desc: "This Pokemon's Ghost-type moves can hit Normal-type Pokemon.",
-		shortDesc: "This Pokemon's Ghost-type moves can hit Normal-type Pokemon.",
-		rating: 3,
-		num: 315,
-		gen: 3,
-		isNonstandard: null,
-	},
 	snowwarning: {
 		inherit: true,
 		gen: 3,
@@ -189,25 +157,9 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	infiltrator: { inherit: true, gen: 3, isNonstandard: null },
 	merciless: { inherit: true, gen: 3, isNonstandard: null },
 	regenerator: { inherit: true, gen: 3, isNonstandard: null },
-	polarswitch: {
-		// Absorbs incoming Electric-type attacks (except status moves like
-		// Thunder Wave) and raises the holder's Sp. Atk by one stage.
-		// num 322 avoids colliding with Lightning Rod (num 31).
-		onTryHit(target, source, move) {
-			if (target !== source && move.type === 'Electric' && move.id !== 'thunderwave') {
-				if (!this.boost({ spa: 1 })) {
-					this.add('-immune', target, '[from] ability: Polar Switch');
-				}
-				return null;
-			}
-		},
-		flags: { breakable: 1 },
-		name: "Polar Switch",
-		rating: 3,
-		num: 322,
-		gen: 3,
-		isNonstandard: null,
-	},
+	illusion: { inherit: true, gen: 3, isNonstandard: null },
+	angershell: { inherit: true, gen: 3, isNonstandard: null },
+
 	// Arena Trap is unchanged except that it no longer traps a foe that has Mega
 	// Evolved (or, defensively, Primal-reverted) — that new forme is flagged on the
 	// species, so such a Pokemon can pivot out freely. A base (non-Mega) Pokemon is
@@ -227,6 +179,8 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			if (pokemon.isGrounded(!pokemon.knownType)) pokemon.maybeTrapped = true;
 		},
 	},
+
+	// Custom abilities
 	highnoon: {
 		onStart(source) {
 			this.field.setWeather('sunnyday');
@@ -254,6 +208,187 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		gen: 3,
 		isNonstandard: null,
 	},
+	polarswitch: {
+		// Absorbs incoming Electric-type attacks (except status moves like
+		// Thunder Wave) and raises the holder's Sp. Atk by one stage.
+		// num 322 avoids colliding with Lightning Rod (num 31).
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Electric' && move.id !== 'thunderwave') {
+				if (!this.boost({ spa: 1 })) {
+					this.add('-immune', target, '[from] ability: Polar Switch');
+				}
+				return null;
+			}
+		},
+		flags: { breakable: 1 },
+		name: "Polar Switch",
+		rating: 3,
+		num: 322,
+		gen: 3,
+		isNonstandard: null,
+	},
+	saboteur: {
+		onChangeBoost(boost, target, source, effect) {
+			// only double drops WE inflict on someone else
+			if (!source || source === target) return;
+			if (source.ability !== 'saboteur') return; // or check via this.effectState.target
+			let i: BoostID;
+			for (i in boost) {
+				if (boost[i]! < 0) boost[i]! *= 2;
+			}
+		},
+		flags: {},
+		name: "Saboteur",
+		rating: 3,
+		num: 323,
+		isNonstandard: null,
+	},
+	shady: {
+		onModifyMovePriority: -5,
+		onModifyMove(move) {
+			if (!move.ignoreImmunity) move.ignoreImmunity = {};
+			if (move.ignoreImmunity !== true) {
+				move.ignoreImmunity['Ghost'] = true;
+			}
+		},
+		// Intentionally no onTryBoost: CAP Shady only bypasses Normal's Ghost
+		// immunity; it does not block Intimidate.
+		flags: {},
+		name: "Shady",
+		desc: "This Pokemon's Ghost-type moves can hit Normal-type Pokemon.",
+		shortDesc: "This Pokemon's Ghost-type moves can hit Normal-type Pokemon.",
+		rating: 3,
+		num: 315,
+		gen: 3,
+		isNonstandard: null,
+	},
+	beautifulshine: {
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (pokemon.activeTurns) {
+				this.boost({ spa: 1, spd: 1 });
+			}
+		},
+		flags: {},
+		name: "Beautiful Shine",
+		rating: 4.5,
+		num: 314,
+		gen: 3,
+		isNonstandard: null,
+	},
+	starscreens: {
+		// Implemented in moves.ts
+		flags: {},
+		name: "Star Screens",
+		rating: 3,
+		num: 324,
+		isNonstandard: null,
+	},
+	unknownpower: {
+		name: "Unknown Power",
+		shortDesc: "Also knows Psycho Boost, Shadow Ball, Doom Desire, and Recover.",
+		onStart(pokemon) {
+			const granted = ['psychoboost', 'icebeam', 'doomdesire', 'recover'];
+			const added = [];
+			for (const id of granted) {
+				if (pokemon.baseMoveSlots.some(slot => slot.id === id)) continue;
+				const move = this.dex.moves.get(id);
+				const maxpp = this.calculatePP(move);
+				const slot = { move: move.name, id: move.id, pp: maxpp, maxpp,
+					target: move.target, disabled: false, used: false };
+				pokemon.baseMoveSlots.push(slot);
+
+				pokemon.moveSlots.push(slot);
+				added.push(move.name);
+			}
+			if (!added.length) return;
+			this.add('-ability', pokemon, 'Unknown Power');
+			this.add('-message', `${pokemon.name} can also use ${added.join(', ')}!`);
+		},
+		rating: 3,
+		num: 325,
+		isNonstandard: null,
+	},
+	'3sodapops': {
+		onAnyInvulnerabilityPriority: 1,
+		onAnyInvulnerability(target, source, move) {
+			if (move && (source === this.effectState.target || target === this.effectState.target)) return 0;
+		},
+		onAnyAccuracy(accuracy, target, source, move) {
+			if (move && (source === this.effectState.target || target === this.effectState.target)) {
+				return true;
+			}
+			return accuracy;
+		},
+		flags: {},
+		name: "3 Soda Pops",
+		rating: 4,
+		num: 326,
+		isNonstandard: null,
+	},
+	spinner: {
+		onAfterHit(target, pokemon, move) {
+			if (!move.hasSheerForce) {
+				if (pokemon.removeVolatile('leechseed')) {
+					this.add('-end', pokemon, 'Leech Seed', '[from] ability: Spinner', `[of] ${pokemon}`);
+				}
+				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+				for (const condition of sideConditions) {
+					if (pokemon.side.removeSideCondition(condition)) {
+						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] ability: Spinner', `[of] ${pokemon}`);
+					}
+				}
+				if (pokemon.volatiles['partiallytrapped']) {
+					pokemon.removeVolatile('partiallytrapped');
+				}
+			}
+		},
+		onAfterSubDamage(damage, target, pokemon, move) {
+			if (!move.hasSheerForce) {
+				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+					this.add('-end', pokemon, 'Leech Seed', '[from] ability: Spinner', `[of] ${pokemon}`);
+				}
+				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+				for (const condition of sideConditions) {
+					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] ability: Spinner', `[of] ${pokemon}`);
+					}
+				}
+				if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+					pokemon.removeVolatile('partiallytrapped');
+				}
+			}
+		},
+		flags: {},
+		name: "Spinner",
+		rating: 4,
+		num: 327,
+		isNonstandard: null,
+	},
+	bandito: {
+		inherit: true,
+		gen: 3,
+		isNonstandard: null,
+		onModifyMove(move) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type !== 'Normal' || noModifyType.includes(move.id)) return;
+			move.type = 'Dark';
+			move.typeChangerBoosted = this.effect;
+			if (move.category !== 'Status') {
+				move.category = 'Special';
+			}
+		},
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+		},
+		flags: {},
+		name: "Bandito",
+		rating: 4,
+		num: 328,
+	},
 
 	// Custom fork abilities (originally isNonstandard: "Future")
 	megasol: { inherit: true, gen: 3, isNonstandard: null },
@@ -270,8 +405,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			move.type = 'Dragon';
 			move.typeChangerBoosted = this.effect;
 			if (move.category !== 'Status') {
-				const specialTypes = ['Fire', 'Water', 'Grass', 'Ice', 'Electric', 'Dark', 'Psychic', 'Dragon'];
-				move.category = specialTypes.includes(move.type) ? 'Special' : 'Physical';
+				move.category = 'Special';
 			}
 		},
 		onBasePower(basePower, pokemon, target, move) {
