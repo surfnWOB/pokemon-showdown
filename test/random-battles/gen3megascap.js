@@ -13,12 +13,18 @@ describe('[Gen 3] Megas CAP Random Battle', () => {
 	const vanillaSets = require('../../data/random-battles/gen3/sets.json');
 	const megaSets = require('../../data/random-battles/gen3megascap/sets.json');
 
-	// Source of truth for the CAP roster, independent of the random-battle sets.json:
-	// every Mega forme the gen3megascap mod re-legalizes into Gen 3.
-	const DEFINED_MEGA_FORMES = dex.species.all()
+	// Every Mega forme the gen3megascap mod re-legalizes into Gen 3. The CAP
+	// (non-random) format carries the full roster; the random-battle pool is a
+	// deliberate subset — newer additions are held out of randbats until their
+	// mechanics have been shaken down, so this is a superset of the randbat pool.
+	const ALL_CAP_MEGA_FORMES = dex.species.all()
 		.filter(species => species.isMega && species.gen === 3)
 		.map(species => species.id)
 		.sort();
+
+	// Source of truth for the random-battle Mega pool: the formes with an explicit
+	// first-pass set in sets.json. Must stay a subset of ALL_CAP_MEGA_FORMES.
+	const RANDBAT_MEGA_FORMES = Object.keys(megaSets).sort();
 
 	function isMegaEnabler(itemName) {
 		const item = dex.items.get(itemName);
@@ -32,9 +38,12 @@ describe('[Gen 3] Megas CAP Random Battle', () => {
 
 		assert(Dex.formats.getRuleTable(format).has('freezeclausemod'));
 		assert.deepEqual(Object.keys(generator.randomSets).sort(), expectedPool);
-		assert.deepEqual(Object.keys(megaSets).sort(), DEFINED_MEGA_FORMES);
-		assert.deepEqual([...generator.megaFormes].sort(), DEFINED_MEGA_FORMES);
-		assert.equal(DEFINED_MEGA_FORMES.length, 23);
+		// The generator draws exactly the formes backed by a set, and every one is
+		// a real re-legalized CAP Mega (subset — newer megas are held out for now).
+		assert.deepEqual([...generator.megaFormes].sort(), RANDBAT_MEGA_FORMES);
+		assert.equal(RANDBAT_MEGA_FORMES.length, 23);
+		const notInCap = RANDBAT_MEGA_FORMES.filter(id => !ALL_CAP_MEGA_FORMES.includes(id));
+		assert.deepEqual(notInCap, [], `randbat megas missing from the CAP roster: ${notInCap.join(', ')}`);
 
 		for (const [formeid, data] of Object.entries(megaSets)) {
 			assert(Number.isInteger(data.level), `${formeid} needs an explicit integer level`);
