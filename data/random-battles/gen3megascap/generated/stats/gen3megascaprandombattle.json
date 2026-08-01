@@ -5,26 +5,26 @@
       "Pressure": 1
     },
     "items": {
-      "Choice Band": 0.4939,
-      "Leftovers": 0.2556,
-      "Salac Berry": 0.2505
+      "Choice Band": 0.4906,
+      "Salac Berry": 0.2551,
+      "Leftovers": 0.2543
     },
     "roles": {
       "Setup Sweeper": {
-        "weight": 0.5061,
+        "weight": 0.5094,
         "abilities": {
           "Pressure": 1
         },
         "items": {
-          "Leftovers": 0.5051,
-          "Salac Berry": 0.4949
+          "Salac Berry": 0.5008,
+          "Leftovers": 0.4992
         },
         "moves": {
           "Hidden Power Fighting": 1,
           "Shadow Ball": 1,
           "Swords Dance": 1,
-          "Quick Attack": 0.5051,
-          "Double-Edge": 0.4949
+          "Double-Edge": 0.5008,
+          "Quick Attack": 0.4992
         },
         "ivs": {
           "def": 30,
@@ -34,7 +34,7 @@
         }
       },
       "Wallbreaker": {
-        "weight": 0.4939,
+        "weight": 0.4906,
         "abilities": {
           "Pressure": 1
         },
@@ -65,16 +65,16 @@
   "Aerodactyl": {
     "level": 73,
     "abilities": {
-      "Pressure": 0.5114,
-      "Rock Head": 0.4886
+      "Pressure": 0.5025,
+      "Rock Head": 0.4975
     },
     "items": {
-      "Liechi Berry": 0.5114,
-      "Choice Band": 0.4886
+      "Liechi Berry": 0.5025,
+      "Choice Band": 0.4975
     },
     "roles": {
       "Berry Sweeper": {
-        "weight": 0.5114,
+        "weight": 0.5025,
         "abilities": {
           "Pressure": 1
         },
@@ -99,7 +99,7 @@
         }
       },
       "Fast Attacker": {
-        "weight": 0.4886,
+        "weight": 0.4975,
         "abilities": {
           "Rock Head": 1
         },
@@ -135,30 +135,30 @@
       "Rock Head": 1
     },
     "items": {
-      "Leftovers": 0.8296,
-      "Choice Band": 0.1704
+      "Leftovers": 0.8294,
+      "Choice Band": 0.1706
     },
     "roles": {
       "Wallbreaker": {
-        "weight": 0.5155,
+        "weight": 0.5122,
         "abilities": {
           "Rock Head": 1
         },
         "items": {
-          "Leftovers": 0.6695,
-          "Choice Band": 0.3305
+          "Leftovers": 0.667,
+          "Choice Band": 0.333
         },
         "moves": {
           "Earthquake": 1,
           "Iron Tail": 1,
           "Rock Slide": 1,
-          "Thunder Wave": 0.3536,
-          "Double-Edge": 0.3305,
-          "Toxic": 0.3159
+          "Thunder Wave": 0.3426,
+          "Double-Edge": 0.333,
+          "Toxic": 0.3243
         }
       },
       "Generalist": {
-        "weight": 0.4845,
+        "weight": 0.4878,
         "abilities": {
           "Rock Head": 1
         },
@@ -177,19 +177,19 @@
   "Aipom": {
     "level": 93,
     "abilities": {
-      "Run Away": 0.5146,
-      "Pickup": 0.4854
+      "Run Away": 0.5035,
+      "Pickup": 0.4965
     },
     "items": {
-      "Leftovers": 0.668,
-      "Choice Band": 0.332
+      "Leftovers": 0.6754,
+      "Choice Band": 0.3246
     },
     "roles": {
       "Generalist": {
-        "weight": 0.3399,
+        "weight": 0.3441,
         "abilities": {
-          "Run Away": 0.5167,
-          "Pickup": 0.4833
+          "Run Away": 0.5148,
+          "Pickup": 0.4852
         },
         "items": {
           "Leftovers": 1
@@ -197,18 +197,37 @@
         "moves": {
           "Return": 1,
           "Substitute": 1,
-          "Brick Break": 0.4499,
-          "Shadow Ball": 0.4332,
-          "Baton Pass": 0.428,
-          "Toxic": 0.3573,
-          "Thunder Wave": 0.3316
+          "Brick Break": 0.4544,
+          "Shadow Ball": 0.4339,
+          "Baton Pass": 0.4134,
+          "Toxic": 0.353,
+          "Thunder Wave": 0.3453
+        }
+      },
+      "Fast Attacker": {
+        "weight": 0.3313,
+        "abilities": {
+          "Pickup": 0.508,
+          "Run Away": 0.492
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Return": 1,
+          "Shadow Ball": 1,
+          "Brick Break": 0.5933,
+          "Focus Punch": 0.4067,
+          "Substitute": 0.4067,
+          "Toxic": 0.3213,
+          "Thunder Wave": 0.272
         }
       },
       "Wallbreaker": {
-        "weight": 0.332,
+        "weight": 0.3246,
         "abilities": {
-          "Run Away": 0.525,
-          "Pickup": 0.475
+          "Run Away": 0.5034,
+          "Pickup": 0.4966
         },
         "items": {
           "Choice Band": 1
@@ -217,27 +236,8 @@
           "Baton Pass": 1,
           "Brick Break": 1,
           "Shadow Ball": 1,
-          "Double-Edge": 0.5329,
-          "Return": 0.4671
-        }
-      },
-      "Fast Attacker": {
-        "weight": 0.3281,
-        "abilities": {
-          "Run Away": 0.502,
-          "Pickup": 0.498
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Return": 1,
-          "Shadow Ball": 1,
-          "Brick Break": 0.6019,
-          "Focus Punch": 0.3981,
-          "Substitute": 0.3981,
-          "Toxic": 0.3196,
-          "Thunder Wave": 0.2823
+          "Double-Edge": 0.517,
+          "Return": 0.483
         }
       }
     }
@@ -263,11 +263,11 @@
           "Calm Mind": 1,
           "Fire Punch": 1,
           "Psychic": 1,
-          "Encore": 0.2118,
-          "Hidden Power Dark": 0.205,
-          "Recover": 0.2028,
-          "Substitute": 0.1975,
-          "Thunder Punch": 0.1828
+          "Encore": 0.2089,
+          "Hidden Power Dark": 0.2066,
+          "Recover": 0.204,
+          "Substitute": 0.1979,
+          "Thunder Punch": 0.1826
         },
         "evs": {
           "atk": 0
@@ -288,7 +288,7 @@
     },
     "roles": {
       "Setup Sweeper": {
-        "weight": 0.5024,
+        "weight": 0.5049,
         "abilities": {
           "Natural Cure": 1
         },
@@ -299,9 +299,9 @@
           "Dragon Dance": 1,
           "Earthquake": 1,
           "Hidden Power Flying": 1,
-          "Fire Blast": 0.3438,
-          "Rest": 0.3419,
-          "Heal Bell": 0.3143
+          "Fire Blast": 0.3468,
+          "Rest": 0.3353,
+          "Heal Bell": 0.3179
         },
         "ivs": {
           "hp": 30,
@@ -312,7 +312,7 @@
         }
       },
       "Bulky Support": {
-        "weight": 0.4976,
+        "weight": 0.4951,
         "abilities": {
           "Natural Cure": 1
         },
@@ -321,12 +321,12 @@
         },
         "moves": {
           "Dragon Claw": 1,
-          "Rest": 0.5312,
-          "Haze": 0.5149,
-          "Flamethrower": 0.5072,
-          "Earthquake": 0.4995,
-          "Toxic": 0.4784,
-          "Heal Bell": 0.4688
+          "Rest": 0.5255,
+          "Haze": 0.5167,
+          "Flamethrower": 0.5118,
+          "Earthquake": 0.4892,
+          "Heal Bell": 0.4784,
+          "Toxic": 0.4784
         }
       }
     }
@@ -351,9 +351,9 @@
         "moves": {
           "Hidden Power Ice": 1,
           "Thunderbolt": 1,
-          "Fire Punch": 0.6979,
-          "Toxic": 0.6775,
-          "Heal Bell": 0.6246
+          "Fire Punch": 0.6948,
+          "Toxic": 0.6807,
+          "Heal Bell": 0.6245
         },
         "evs": {
           "atk": 0
@@ -378,8 +378,8 @@
       "Intimidate": 1
     },
     "items": {
-      "Leftovers": 0.5087,
-      "Choice Band": 0.4913
+      "Leftovers": 0.5039,
+      "Choice Band": 0.4961
     },
     "roles": {
       "Wallbreaker": {
@@ -388,16 +388,16 @@
           "Intimidate": 1
         },
         "items": {
-          "Leftovers": 0.5087,
-          "Choice Band": 0.4913
+          "Leftovers": 0.5039,
+          "Choice Band": 0.4961
         },
         "moves": {
           "Earthquake": 1,
           "Sludge Bomb": 1,
-          "Rest": 0.5087,
-          "Sleep Talk": 0.5087,
-          "Hidden Power Ghost": 0.4913,
-          "Rock Slide": 0.4913
+          "Rest": 0.5039,
+          "Sleep Talk": 0.5039,
+          "Hidden Power Ghost": 0.4961,
+          "Rock Slide": 0.4961
         }
       }
     }
@@ -412,7 +412,7 @@
     },
     "roles": {
       "Wallbreaker": {
-        "weight": 0.3438,
+        "weight": 0.349,
         "abilities": {
           "Intimidate": 1
         },
@@ -431,7 +431,7 @@
         }
       },
       "Bulky Support": {
-        "weight": 0.3302,
+        "weight": 0.3325,
         "abilities": {
           "Intimidate": 1
         },
@@ -442,15 +442,15 @@
           "Flamethrower": 1,
           "Rest": 1,
           "Sleep Talk": 1,
-          "Hidden Power Grass": 0.55,
-          "Toxic": 0.45
+          "Hidden Power Grass": 0.5306,
+          "Toxic": 0.4694
         },
         "evs": {
           "atk": 0
         }
       },
       "Staller": {
-        "weight": 0.326,
+        "weight": 0.3185,
         "abilities": {
           "Intimidate": 1
         },
@@ -461,8 +461,8 @@
           "Flamethrower": 1,
           "Protect": 1,
           "Toxic": 1,
-          "Hidden Power Rock": 0.5065,
-          "Hidden Power Grass": 0.4935
+          "Hidden Power Rock": 0.502,
+          "Hidden Power Grass": 0.498
         }
       }
     }
@@ -470,18 +470,18 @@
   "Ariados": {
     "level": 98,
     "abilities": {
-      "Insomnia": 0.5079,
-      "Swarm": 0.4921
+      "Insomnia": 0.5066,
+      "Swarm": 0.4934
     },
     "items": {
       "Leftovers": 1
     },
     "roles": {
       "Setup Sweeper": {
-        "weight": 0.5048,
+        "weight": 0.5066,
         "abilities": {
-          "Insomnia": 0.5139,
-          "Swarm": 0.4861
+          "Insomnia": 0.5169,
+          "Swarm": 0.4831
         },
         "items": {
           "Leftovers": 1
@@ -498,10 +498,10 @@
         }
       },
       "Bulky Support": {
-        "weight": 0.4952,
+        "weight": 0.4934,
         "abilities": {
-          "Insomnia": 0.5018,
-          "Swarm": 0.4982
+          "Swarm": 0.504,
+          "Insomnia": 0.496
         },
         "items": {
           "Leftovers": 1
@@ -521,8 +521,8 @@
       "Battle Armor": 1
     },
     "items": {
-      "Choice Band": 0.6701,
-      "Leftovers": 0.3299
+      "Choice Band": 0.659,
+      "Leftovers": 0.341
     },
     "roles": {
       "Wallbreaker": {
@@ -531,16 +531,16 @@
           "Battle Armor": 1
         },
         "items": {
-          "Choice Band": 0.6701,
-          "Leftovers": 0.3299
+          "Choice Band": 0.659,
+          "Leftovers": 0.341
         },
         "moves": {
           "Earthquake": 1,
           "Hidden Power Bug": 1,
           "Rock Slide": 1,
-          "Double-Edge": 0.3515,
-          "Swords Dance": 0.3299,
-          "Rapid Spin": 0.3186
+          "Double-Edge": 0.3419,
+          "Swords Dance": 0.341,
+          "Rapid Spin": 0.3171
         },
         "ivs": {
           "atk": 30,
@@ -565,7 +565,7 @@
     },
     "roles": {
       "Bulky Attacker": {
-        "weight": 0.5037,
+        "weight": 0.5086,
         "abilities": {
           "Pressure": 1
         },
@@ -586,7 +586,7 @@
         }
       },
       "Staller": {
-        "weight": 0.4963,
+        "weight": 0.4914,
         "abilities": {
           "Pressure": 1
         },
@@ -597,8 +597,8 @@
           "Ice Beam": 1,
           "Protect": 1,
           "Toxic": 1,
-          "Hidden Power Fire": 0.5333,
-          "Heal Bell": 0.4667
+          "Hidden Power Fire": 0.5332,
+          "Heal Bell": 0.4668
         },
         "evs": {
           "atk": 0
@@ -615,12 +615,12 @@
       "Huge Power": 1
     },
     "items": {
-      "Leftovers": 0.6732,
-      "Choice Band": 0.3268
+      "Leftovers": 0.6705,
+      "Choice Band": 0.3295
     },
     "roles": {
       "Bulky Attacker": {
-        "weight": 0.3439,
+        "weight": 0.3398,
         "abilities": {
           "Huge Power": 1
         },
@@ -631,8 +631,8 @@
           "Focus Punch": 1,
           "Hidden Power Ghost": 1,
           "Substitute": 1,
-          "Body Slam": 0.5305,
-          "Return": 0.4695
+          "Body Slam": 0.5488,
+          "Return": 0.4512
         },
         "ivs": {
           "def": 30,
@@ -640,7 +640,7 @@
         }
       },
       "Bulky Support": {
-        "weight": 0.3293,
+        "weight": 0.3307,
         "abilities": {
           "Huge Power": 1
         },
@@ -651,12 +651,12 @@
           "Hydro Pump": 1,
           "Rest": 1,
           "Sleep Talk": 1,
-          "Return": 0.5137,
-          "Body Slam": 0.4863
+          "Return": 0.526,
+          "Body Slam": 0.474
         }
       },
       "Wallbreaker": {
-        "weight": 0.3268,
+        "weight": 0.3295,
         "abilities": {
           "Huge Power": 1
         },
@@ -667,8 +667,8 @@
           "Brick Break": 1,
           "Hidden Power Ghost": 1,
           "Hydro Pump": 1,
-          "Return": 0.5256,
-          "Double-Edge": 0.4744
+          "Return": 0.5176,
+          "Double-Edge": 0.4824
         },
         "ivs": {
           "def": 30,
@@ -683,26 +683,26 @@
       "Insomnia": 1
     },
     "items": {
-      "Salac Berry": 0.4958,
-      "Leftovers": 0.3437,
-      "Choice Band": 0.1606
+      "Salac Berry": 0.4828,
+      "Leftovers": 0.3512,
+      "Choice Band": 0.1661
     },
     "roles": {
       "Wallbreaker": {
-        "weight": 0.5042,
+        "weight": 0.5172,
         "abilities": {
           "Insomnia": 1
         },
         "items": {
-          "Leftovers": 0.6816,
-          "Choice Band": 0.3184
+          "Leftovers": 0.679,
+          "Choice Band": 0.321
         },
         "moves": {
           "Hidden Power Fighting": 1,
           "Shadow Ball": 1,
-          "Will-O-Wisp": 0.6816,
-          "Knock Off": 0.6618,
-          "Double-Edge": 0.6567
+          "Will-O-Wisp": 0.679,
+          "Double-Edge": 0.6619,
+          "Knock Off": 0.6591
         },
         "ivs": {
           "def": 30,
@@ -712,7 +712,7 @@
         }
       },
       "Berry Sweeper": {
-        "weight": 0.4958,
+        "weight": 0.4828,
         "abilities": {
           "Insomnia": 1
         },
@@ -830,12 +830,12 @@
       "Swarm": 1
     },
     "items": {
-      "Salac Berry": 0.8897,
-      "Choice Band": 0.1103
+      "Salac Berry": 0.8986,
+      "Choice Band": 0.1014
     },
     "roles": {
       "Setup Sweeper": {
-        "weight": 0.3493,
+        "weight": 0.3474,
         "abilities": {
           "Swarm": 1
         },
@@ -853,30 +853,8 @@
           "spd": 30
         }
       },
-      "Fast Attacker": {
-        "weight": 0.335,
-        "abilities": {
-          "Swarm": 1
-        },
-        "items": {
-          "Salac Berry": 0.6707,
-          "Choice Band": 0.3293
-        },
-        "moves": {
-          "Hidden Power Bug": 1,
-          "Sludge Bomb": 1,
-          "Brick Break": 0.6787,
-          "Swords Dance": 0.6707,
-          "Double-Edge": 0.6506
-        },
-        "ivs": {
-          "atk": 30,
-          "def": 30,
-          "spd": 30
-        }
-      },
       "Berry Sweeper": {
-        "weight": 0.3157,
+        "weight": 0.3285,
         "abilities": {
           "Swarm": 1
         },
@@ -888,6 +866,28 @@
           "Hidden Power Bug": 1,
           "Sludge Bomb": 1,
           "Swords Dance": 1
+        },
+        "ivs": {
+          "atk": 30,
+          "def": 30,
+          "spd": 30
+        }
+      },
+      "Fast Attacker": {
+        "weight": 0.3241,
+        "abilities": {
+          "Swarm": 1
+        },
+        "items": {
+          "Salac Berry": 0.687,
+          "Choice Band": 0.313
+        },
+        "moves": {
+          "Hidden Power Bug": 1,
+          "Sludge Bomb": 1,
+          "Swords Dance": 0.687,
+          "Brick Break": 0.6626,
+          "Double-Edge": 0.6504
         },
         "ivs": {
           "atk": 30,
@@ -921,9 +921,9 @@
           "Hidden Power Fire": 1,
           "Magical Leaf": 1,
           "Moonlight": 1,
-          "Leech Seed": 0.349,
-          "Sleep Powder": 0.3283,
-          "Stun Spore": 0.3227
+          "Leech Seed": 0.3434,
+          "Sleep Powder": 0.3317,
+          "Stun Spore": 0.3249
         },
         "evs": {
           "atk": 0
@@ -954,7 +954,7 @@
     },
     "roles": {
       "Bulky Support": {
-        "weight": 0.3398,
+        "weight": 0.3376,
         "abilities": {
           "Torrent": 1
         },
@@ -965,8 +965,8 @@
           "Rest": 1,
           "Sleep Talk": 1,
           "Surf": 1,
-          "Ice Beam": 0.5097,
-          "Toxic": 0.4903
+          "Ice Beam": 0.5046,
+          "Toxic": 0.4954
         },
         "evs": {
           "atk": 0
@@ -976,7 +976,7 @@
         }
       },
       "Bulky Attacker": {
-        "weight": 0.3301,
+        "weight": 0.3319,
         "abilities": {
           "Torrent": 1
         },
@@ -986,14 +986,14 @@
         "moves": {
           "Ice Beam": 1,
           "Surf": 1,
-          "Toxic": 0.526,
-          "Roar": 0.5153,
-          "Refresh": 0.4847,
-          "Rapid Spin": 0.474
+          "Toxic": 0.5185,
+          "Roar": 0.5132,
+          "Refresh": 0.4868,
+          "Rapid Spin": 0.4815
         }
       },
       "Staller": {
-        "weight": 0.3301,
+        "weight": 0.3306,
         "abilities": {
           "Torrent": 1
         },
@@ -1022,13 +1022,13 @@
       "Blaze": 1
     },
     "items": {
-      "Salac Berry": 0.5631,
-      "Leftovers": 0.3239,
-      "Choice Band": 0.113
+      "Salac Berry": 0.5545,
+      "Leftovers": 0.3296,
+      "Choice Band": 0.1159
     },
     "roles": {
       "Berry Sweeper": {
-        "weight": 0.3411,
+        "weight": 0.3368,
         "abilities": {
           "Blaze": 1
         },
@@ -1043,24 +1043,24 @@
         }
       },
       "Wallbreaker": {
-        "weight": 0.3351,
+        "weight": 0.3336,
         "abilities": {
           "Blaze": 1
         },
         "items": {
-          "Salac Berry": 0.6627,
-          "Choice Band": 0.3373
+          "Salac Berry": 0.6525,
+          "Choice Band": 0.3475
         },
         "moves": {
           "Fire Blast": 1,
           "Sky Uppercut": 1,
-          "Earthquake": 0.6698,
-          "Rock Slide": 0.6675,
-          "Swords Dance": 0.6627
+          "Earthquake": 0.6829,
+          "Rock Slide": 0.6646,
+          "Swords Dance": 0.6525
         }
       },
       "Fast Attacker": {
-        "weight": 0.3239,
+        "weight": 0.3296,
         "abilities": {
           "Blaze": 1
         },
@@ -1070,10 +1070,10 @@
         "moves": {
           "Fire Blast": 1,
           "Sky Uppercut": 1,
-          "Thunder Punch": 0.5228,
+          "Thunder Punch": 0.5203,
           "Earthquake": 0.5129,
-          "Rock Slide": 0.4982,
-          "Hidden Power Ice": 0.4661
+          "Rock Slide": 0.4895,
+          "Hidden Power Ice": 0.4772
         }
       }
     }
@@ -1088,7 +1088,7 @@
     },
     "roles": {
       "Staller": {
-        "weight": 0.5071,
+        "weight": 0.5062,
         "abilities": {
           "Natural Cure": 1
         },
@@ -1099,8 +1099,8 @@
           "Seismic Toss": 1,
           "Soft-Boiled": 1,
           "Toxic": 1,
-          "Thunder Wave": 0.5321,
-          "Aromatherapy": 0.4679
+          "Thunder Wave": 0.534,
+          "Aromatherapy": 0.466
         },
         "evs": {
           "atk": 0
@@ -1110,7 +1110,7 @@
         }
       },
       "Bulky Support": {
-        "weight": 0.4929,
+        "weight": 0.4938,
         "abilities": {
           "Natural Cure": 1
         },
@@ -1148,7 +1148,7 @@
     },
     "roles": {
       "Fast Attacker": {
-        "weight": 0.5095,
+        "weight": 0.5128,
         "abilities": {
           "Effect Spore": 1
         },
@@ -1158,11 +1158,11 @@
         "moves": {
           "Sky Uppercut": 1,
           "Spore": 1,
-          "Hidden Power Ghost": 0.5124,
-          "Hidden Power Rock": 0.4876,
-          "Substitute": 0.3498,
-          "Mach Punch": 0.3251,
-          "Swords Dance": 0.3251
+          "Hidden Power Ghost": 0.5245,
+          "Hidden Power Rock": 0.4755,
+          "Substitute": 0.3555,
+          "Mach Punch": 0.327,
+          "Swords Dance": 0.3175
         },
         "ivs": {
           "def": 30,
@@ -1170,7 +1170,7 @@
         }
       },
       "Generalist": {
-        "weight": 0.4905,
+        "weight": 0.4872,
         "abilities": {
           "Effect Spore": 1
         },
@@ -1181,8 +1181,8 @@
           "Focus Punch": 1,
           "Spore": 1,
           "Substitute": 1,
-          "Hidden Power Ghost": 0.5017,
-          "Hidden Power Rock": 0.4983
+          "Hidden Power Rock": 0.5004,
+          "Hidden Power Ghost": 0.4996
         },
         "ivs": {
           "def": 30,
@@ -1214,11 +1214,11 @@
         },
         "moves": {
           "Psychic": 1,
-          "Hidden Power Fire": 0.7029,
-          "Morning Sun": 0.7003,
-          "Sleep Powder": 0.6972,
-          "Stun Spore": 0.4524,
-          "Toxic": 0.4472
+          "Sleep Powder": 0.7043,
+          "Morning Sun": 0.7037,
+          "Hidden Power Fire": 0.6966,
+          "Stun Spore": 0.4485,
+          "Toxic": 0.447
         },
         "evs": {
           "atk": 0
@@ -1239,7 +1239,7 @@
     },
     "roles": {
       "Generalist": {
-        "weight": 0.5043,
+        "weight": 0.5031,
         "abilities": {
           "Sand Veil": 1
         },
@@ -1260,7 +1260,7 @@
         }
       },
       "Staller": {
-        "weight": 0.4957,
+        "weight": 0.4969,
         "abilities": {
           "Sand Veil": 1
         },
@@ -1296,10 +1296,10 @@
         "moves": {
           "Earthquake": 1,
           "Fire Blast": 1,
-          "Rest": 0.5041,
-          "Sleep Talk": 0.5041,
-          "Explosion": 0.4959,
-          "Toxic": 0.4959
+          "Rest": 0.5109,
+          "Sleep Talk": 0.5109,
+          "Explosion": 0.4891,
+          "Toxic": 0.4891
         }
       }
     }
@@ -1323,10 +1323,10 @@
         },
         "moves": {
           "Return": 1,
-          "Ice Beam": 0.7917,
-          "Thunderbolt": 0.7751,
-          "Fire Blast": 0.7636,
-          "Thunder Wave": 0.6695
+          "Ice Beam": 0.7877,
+          "Thunderbolt": 0.7749,
+          "Fire Blast": 0.7745,
+          "Thunder Wave": 0.6628
         }
       }
     }
@@ -1341,7 +1341,7 @@
     },
     "roles": {
       "Bulky Setup": {
-        "weight": 0.5052,
+        "weight": 0.5079,
         "abilities": {
           "Natural Cure": 1
         },
@@ -1352,8 +1352,8 @@
           "Calm Mind": 1,
           "Psychic": 1,
           "Recover": 1,
-          "Hidden Power Grass": 0.5169,
-          "Hidden Power Fire": 0.4831
+          "Hidden Power Grass": 0.5071,
+          "Hidden Power Fire": 0.4929
         },
         "evs": {
           "atk": 0
@@ -1364,7 +1364,7 @@
         }
       },
       "Staller": {
-        "weight": 0.4948,
+        "weight": 0.4921,
         "abilities": {
           "Natural Cure": 1
         },
@@ -1375,10 +1375,10 @@
           "Psychic": 1,
           "Recover": 1,
           "Toxic": 1,
-          "Hidden Power Grass": 0.2591,
-          "Leech Seed": 0.2546,
-          "Hidden Power Fire": 0.2476,
-          "Heal Bell": 0.2387
+          "Leech Seed": 0.2691,
+          "Hidden Power Grass": 0.2553,
+          "Heal Bell": 0.2452,
+          "Hidden Power Fire": 0.2304
         },
         "evs": {
           "atk": 0
@@ -1395,14 +1395,14 @@
       "Blaze": 1
     },
     "items": {
-      "Petaya Berry": 0.3504,
-      "Lum Berry": 0.3175,
-      "Choice Band": 0.1735,
-      "Salac Berry": 0.1585
+      "Petaya Berry": 0.3458,
+      "Lum Berry": 0.321,
+      "Choice Band": 0.17,
+      "Salac Berry": 0.1632
     },
     "roles": {
       "Berry Sweeper": {
-        "weight": 0.3504,
+        "weight": 0.3458,
         "abilities": {
           "Blaze": 1
         },
@@ -1425,20 +1425,20 @@
         }
       },
       "Wallbreaker": {
-        "weight": 0.3345,
+        "weight": 0.3341,
         "abilities": {
           "Blaze": 1
         },
         "items": {
-          "Choice Band": 0.5188,
-          "Lum Berry": 0.4812
+          "Choice Band": 0.5087,
+          "Lum Berry": 0.4913
         },
         "moves": {
           "Earthquake": 1,
           "Fire Blast": 1,
           "Hidden Power Flying": 1,
-          "Rock Slide": 0.5188,
-          "Dragon Dance": 0.4812
+          "Rock Slide": 0.5087,
+          "Dragon Dance": 0.4913
         },
         "ivs": {
           "hp": 30,
@@ -1449,20 +1449,20 @@
         }
       },
       "Setup Sweeper": {
-        "weight": 0.3151,
+        "weight": 0.32,
         "abilities": {
           "Blaze": 1
         },
         "items": {
-          "Salac Berry": 0.5031,
-          "Lum Berry": 0.4969
+          "Salac Berry": 0.5099,
+          "Lum Berry": 0.4901
         },
         "moves": {
           "Belly Drum": 1,
           "Earthquake": 1,
           "Hidden Power Flying": 1,
-          "Substitute": 0.5031,
-          "Rock Slide": 0.4969
+          "Substitute": 0.5099,
+          "Rock Slide": 0.4901
         },
         "ivs": {
           "hp": 30,
@@ -1497,9 +1497,9 @@
         "moves": {
           "Hidden Power Fire": 1,
           "Psychic": 1,
-          "Heal Bell": 0.9466,
-          "Calm Mind": 0.5388,
-          "Toxic": 0.5146
+          "Heal Bell": 0.9465,
+          "Calm Mind": 0.5305,
+          "Toxic": 0.523
         },
         "evs": {
           "atk": 0
@@ -1539,11 +1539,11 @@
         },
         "moves": {
           "Earthquake": 1,
-          "Toxic": 0.6178,
-          "Explosion": 0.6119,
-          "Ice Beam": 0.6031,
-          "Psychic": 0.596,
-          "Rapid Spin": 0.5712
+          "Toxic": 0.6154,
+          "Explosion": 0.6138,
+          "Ice Beam": 0.6051,
+          "Psychic": 0.5972,
+          "Rapid Spin": 0.5685
         }
       }
     }
@@ -1557,8 +1557,25 @@
       "Leftovers": 1
     },
     "roles": {
+      "Bulky Support": {
+        "weight": 0.501,
+        "abilities": {
+          "Cute Charm": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Return": 1,
+          "Soft-Boiled": 1,
+          "Shadow Ball": 0.5778,
+          "Fire Blast": 0.5728,
+          "Thunder Wave": 0.4469,
+          "Toxic": 0.4025
+        }
+      },
       "Bulky Setup": {
-        "weight": 0.5,
+        "weight": 0.499,
         "abilities": {
           "Cute Charm": 1
         },
@@ -1577,23 +1594,6 @@
         "ivs": {
           "atk": 0
         }
-      },
-      "Bulky Support": {
-        "weight": 0.5,
-        "abilities": {
-          "Cute Charm": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Return": 1,
-          "Soft-Boiled": 1,
-          "Shadow Ball": 0.5833,
-          "Fire Blast": 0.5766,
-          "Thunder Wave": 0.4524,
-          "Toxic": 0.3877
-        }
       }
     }
   },
@@ -1606,8 +1606,24 @@
       "Leftovers": 1
     },
     "roles": {
+      "Bulky Support": {
+        "weight": 0.5021,
+        "abilities": {
+          "Shell Armor": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Spikes": 1,
+          "Surf": 1,
+          "Toxic": 0.6746,
+          "Rapid Spin": 0.6663,
+          "Explosion": 0.6591
+        }
+      },
       "Bulky Attacker": {
-        "weight": 0.5058,
+        "weight": 0.4979,
         "abilities": {
           "Shell Armor": 1
         },
@@ -1618,25 +1634,9 @@
           "Ice Beam": 1,
           "Spikes": 1,
           "Surf": 1,
-          "Explosion": 0.3485,
-          "Toxic": 0.3371,
-          "Rapid Spin": 0.3144
-        }
-      },
-      "Bulky Support": {
-        "weight": 0.4942,
-        "abilities": {
-          "Shell Armor": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Spikes": 1,
-          "Surf": 1,
-          "Toxic": 0.673,
-          "Rapid Spin": 0.6709,
-          "Explosion": 0.6561
+          "Explosion": 0.3562,
+          "Toxic": 0.3344,
+          "Rapid Spin": 0.3094
         }
       }
     }
@@ -1662,9 +1662,9 @@
           "Ice Beam": 1,
           "Recover": 1,
           "Surf": 1,
-          "Explosion": 0.337,
-          "Calm Mind": 0.3326,
-          "Toxic": 0.3304
+          "Calm Mind": 0.3371,
+          "Toxic": 0.3366,
+          "Explosion": 0.3263
         }
       }
     }
@@ -1728,8 +1728,8 @@
           "Earthquake": 1,
           "Recover": 1,
           "Rock Slide": 1,
-          "Hidden Power Grass": 0.515,
-          "Toxic": 0.485
+          "Hidden Power Grass": 0.5174,
+          "Toxic": 0.4826
         }
       }
     }
@@ -1740,30 +1740,12 @@
       "Hyper Cutter": 1
     },
     "items": {
-      "Leftovers": 0.7887,
-      "Choice Band": 0.2113
+      "Leftovers": 0.7924,
+      "Choice Band": 0.2076
     },
     "roles": {
-      "Wallbreaker": {
-        "weight": 0.5012,
-        "abilities": {
-          "Hyper Cutter": 1
-        },
-        "items": {
-          "Leftovers": 0.5784,
-          "Choice Band": 0.4216
-        },
-        "moves": {
-          "Double-Edge": 1,
-          "Surf": 1,
-          "Brick Break": 0.5914,
-          "Swords Dance": 0.5784,
-          "Hidden Power Ghost": 0.4179,
-          "Hidden Power Flying": 0.4123
-        }
-      },
       "Fast Attacker": {
-        "weight": 0.4988,
+        "weight": 0.5069,
         "abilities": {
           "Hyper Cutter": 1
         },
@@ -1774,10 +1756,28 @@
           "Crunch": 1,
           "Double-Edge": 1,
           "Surf": 1,
-          "Brick Break": 0.2605,
-          "Hidden Power Electric": 0.2568,
-          "Ice Beam": 0.2455,
-          "Hidden Power Grass": 0.2371
+          "Brick Break": 0.2566,
+          "Hidden Power Electric": 0.2547,
+          "Ice Beam": 0.2491,
+          "Hidden Power Grass": 0.2396
+        }
+      },
+      "Wallbreaker": {
+        "weight": 0.4931,
+        "abilities": {
+          "Hyper Cutter": 1
+        },
+        "items": {
+          "Leftovers": 0.579,
+          "Choice Band": 0.421
+        },
+        "moves": {
+          "Double-Edge": 1,
+          "Surf": 1,
+          "Brick Break": 0.5907,
+          "Swords Dance": 0.579,
+          "Hidden Power Flying": 0.4171,
+          "Hidden Power Ghost": 0.4132
         }
       }
     }
@@ -1788,8 +1788,8 @@
       "Inner Focus": 1
     },
     "items": {
-      "Leftovers": 0.8413,
-      "Choice Band": 0.1587
+      "Leftovers": 0.8412,
+      "Choice Band": 0.1588
     },
     "roles": {
       "Fast Attacker": {
@@ -1798,16 +1798,16 @@
           "Inner Focus": 1
         },
         "items": {
-          "Leftovers": 0.8413,
-          "Choice Band": 0.1587
+          "Leftovers": 0.8412,
+          "Choice Band": 0.1588
         },
         "moves": {
           "Hidden Power Ground": 1,
           "Sludge Bomb": 1,
-          "Toxic": 0.5248,
-          "Aerial Ace": 0.5104,
-          "Haze": 0.4867,
-          "Shadow Ball": 0.4781
+          "Aerial Ace": 0.5254,
+          "Toxic": 0.5212,
+          "Haze": 0.486,
+          "Shadow Ball": 0.4674
         },
         "ivs": {
           "spa": 30,
@@ -1830,7 +1830,7 @@
     },
     "roles": {
       "Bulky Support": {
-        "weight": 0.5137,
+        "weight": 0.5035,
         "abilities": {
           "Cute Charm": 1
         },
@@ -1841,12 +1841,12 @@
           "Double-Edge": 1,
           "Protect": 1,
           "Wish": 1,
-          "Thunder Wave": 0.5,
-          "Toxic": 0.5
+          "Thunder Wave": 0.5097,
+          "Toxic": 0.4903
         }
       },
       "Generalist": {
-        "weight": 0.4863,
+        "weight": 0.4965,
         "abilities": {
           "Cute Charm": 1
         },
@@ -1883,9 +1883,9 @@
           "Aerial Ace": 1,
           "Hidden Power Ground": 1,
           "Ice Beam": 1,
-          "Double-Edge": 0.3421,
-          "Quick Attack": 0.3359,
-          "Focus Punch": 0.322
+          "Double-Edge": 0.3416,
+          "Focus Punch": 0.3354,
+          "Quick Attack": 0.323
         },
         "ivs": {
           "spa": 30,
@@ -1919,8 +1919,8 @@
           "Psycho Boost": 1,
           "Shadow Ball": 1,
           "Superpower": 1,
-          "Extreme Speed": 0.5384,
-          "Ice Beam": 0.4616
+          "Extreme Speed": 0.5238,
+          "Ice Beam": 0.4762
         }
       }
     }
@@ -1946,8 +1946,8 @@
           "Psycho Boost": 1,
           "Shadow Ball": 1,
           "Superpower": 1,
-          "Extreme Speed": 0.5119,
-          "Ice Beam": 0.4881
+          "Extreme Speed": 0.5094,
+          "Ice Beam": 0.4906
         }
       }
     }
@@ -2011,8 +2011,8 @@
           "Psycho Boost": 1,
           "Recover": 1,
           "Spikes": 1,
-          "Toxic": 0.5114,
-          "Superpower": 0.4886
+          "Superpower": 0.5025,
+          "Toxic": 0.4975
         }
       }
     }
@@ -2027,7 +2027,7 @@
     },
     "roles": {
       "Staller": {
-        "weight": 0.502,
+        "weight": 0.5035,
         "abilities": {
           "Thick Fat": 1
         },
@@ -2048,7 +2048,7 @@
         }
       },
       "Bulky Attacker": {
-        "weight": 0.498,
+        "weight": 0.4965,
         "abilities": {
           "Thick Fat": 1
         },
@@ -2058,10 +2058,10 @@
         "moves": {
           "Ice Beam": 1,
           "Surf": 1,
-          "Rest": 0.5015,
-          "Sleep Talk": 0.5015,
-          "Encore": 0.4985,
-          "Toxic": 0.4985
+          "Rest": 0.5095,
+          "Sleep Talk": 0.5095,
+          "Encore": 0.4905,
+          "Toxic": 0.4905
         },
         "evs": {
           "atk": 0
@@ -2130,12 +2130,12 @@
       "Early Bird": 1
     },
     "items": {
-      "Liechi Berry": 0.5081,
-      "Choice Band": 0.4919
+      "Liechi Berry": 0.5002,
+      "Choice Band": 0.4998
     },
     "roles": {
       "Berry Sweeper": {
-        "weight": 0.5081,
+        "weight": 0.5002,
         "abilities": {
           "Early Bird": 1
         },
@@ -2146,12 +2146,12 @@
           "Drill Peck": 1,
           "Flail": 1,
           "Substitute": 1,
-          "Hidden Power Ground": 0.537,
-          "Quick Attack": 0.463
+          "Hidden Power Ground": 0.5199,
+          "Quick Attack": 0.4801
         }
       },
       "Wallbreaker": {
-        "weight": 0.4919,
+        "weight": 0.4998,
         "abilities": {
           "Early Bird": 1
         },
@@ -2162,8 +2162,8 @@
           "Drill Peck": 1,
           "Hidden Power Ground": 1,
           "Quick Attack": 1,
-          "Return": 0.5044,
-          "Double-Edge": 0.4956
+          "Return": 0.5043,
+          "Double-Edge": 0.4957
         },
         "ivs": {
           "spa": 30,
@@ -2192,10 +2192,10 @@
         "moves": {
           "Earthquake": 1,
           "Rock Slide": 1,
-          "Rest": 0.5092,
-          "Sleep Talk": 0.5092,
-          "Rapid Spin": 0.4908,
-          "Toxic": 0.4908
+          "Rest": 0.5197,
+          "Sleep Talk": 0.5197,
+          "Rapid Spin": 0.4803,
+          "Toxic": 0.4803
         }
       }
     }
@@ -2206,13 +2206,13 @@
       "Inner Focus": 1
     },
     "items": {
-      "Choice Band": 0.5153,
-      "Leftovers": 0.319,
-      "Lum Berry": 0.1657
+      "Choice Band": 0.5181,
+      "Leftovers": 0.3078,
+      "Lum Berry": 0.174
     },
     "roles": {
       "Wallbreaker": {
-        "weight": 0.5153,
+        "weight": 0.5181,
         "abilities": {
           "Inner Focus": 1
         },
@@ -2222,9 +2222,9 @@
         "moves": {
           "Earthquake": 1,
           "Hidden Power Flying": 1,
-          "Brick Break": 0.6843,
-          "Double-Edge": 0.6612,
-          "Fire Blast": 0.6545
+          "Brick Break": 0.6698,
+          "Fire Blast": 0.666,
+          "Double-Edge": 0.6641
         },
         "ivs": {
           "hp": 30,
@@ -2235,21 +2235,21 @@
         }
       },
       "Setup Sweeper": {
-        "weight": 0.4847,
+        "weight": 0.4819,
         "abilities": {
           "Inner Focus": 1
         },
         "items": {
-          "Leftovers": 0.6582,
-          "Lum Berry": 0.3418
+          "Leftovers": 0.6389,
+          "Lum Berry": 0.3611
         },
         "moves": {
           "Dragon Dance": 1,
           "Earthquake": 1,
           "Hidden Power Flying": 1,
-          "Double-Edge": 0.3418,
-          "Substitute": 0.3337,
-          "Heal Bell": 0.3245
+          "Double-Edge": 0.3611,
+          "Substitute": 0.3306,
+          "Heal Bell": 0.3082
         },
         "ivs": {
           "hp": 30,
@@ -2313,25 +2313,8 @@
       "Leftovers": 1
     },
     "roles": {
-      "Bulky Setup": {
-        "weight": 0.5111,
-        "abilities": {
-          "Serene Grace": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Body Slam": 1,
-          "Curse": 1,
-          "Earthquake": 0.5201,
-          "Shadow Ball": 0.5201,
-          "Rest": 0.4799,
-          "Sleep Talk": 0.4799
-        }
-      },
       "Bulky Attacker": {
-        "weight": 0.4889,
+        "weight": 0.5008,
         "abilities": {
           "Serene Grace": 1
         },
@@ -2343,6 +2326,23 @@
           "Headbutt": 1,
           "Shadow Ball": 1,
           "Thunder Wave": 1
+        }
+      },
+      "Bulky Setup": {
+        "weight": 0.4992,
+        "abilities": {
+          "Serene Grace": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Body Slam": 1,
+          "Curse": 1,
+          "Earthquake": 0.5292,
+          "Shadow Ball": 0.5292,
+          "Rest": 0.4708,
+          "Sleep Talk": 0.4708
         }
       }
     }
@@ -2357,7 +2357,7 @@
     },
     "roles": {
       "Bulky Attacker": {
-        "weight": 0.3438,
+        "weight": 0.3494,
         "abilities": {
           "Pressure": 1
         },
@@ -2367,14 +2367,14 @@
         "moves": {
           "Seismic Toss": 1,
           "Shadow Ball": 1,
-          "Pain Split": 0.5,
-          "Rest": 0.5,
-          "Sleep Talk": 0.5,
-          "Will-O-Wisp": 0.5
+          "Rest": 0.5069,
+          "Sleep Talk": 0.5069,
+          "Pain Split": 0.4931,
+          "Will-O-Wisp": 0.4931
         }
       },
       "Generalist": {
-        "weight": 0.3372,
+        "weight": 0.3343,
         "abilities": {
           "Pressure": 1
         },
@@ -2385,12 +2385,12 @@
           "Focus Punch": 1,
           "Shadow Ball": 1,
           "Substitute": 1,
-          "Pain Split": 0.5,
-          "Will-O-Wisp": 0.5
+          "Pain Split": 0.5033,
+          "Will-O-Wisp": 0.4967
         }
       },
       "Bulky Support": {
-        "weight": 0.319,
+        "weight": 0.3162,
         "abilities": {
           "Pressure": 1
         },
@@ -2433,8 +2433,8 @@
           "Moonlight": 1,
           "Sludge Bomb": 1,
           "Toxic": 1,
-          "Whirlwind": 0.5053,
-          "Hidden Power Ground": 0.4947
+          "Whirlwind": 0.5116,
+          "Hidden Power Ground": 0.4884
         }
       }
     }
@@ -2445,30 +2445,12 @@
       "Static": 1
     },
     "items": {
-      "Leftovers": 0.5008,
-      "Petaya Berry": 0.4992
+      "Petaya Berry": 0.5019,
+      "Leftovers": 0.4981
     },
     "roles": {
-      "Fast Attacker": {
-        "weight": 0.5008,
-        "abilities": {
-          "Static": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Ice Punch": 1,
-          "Thunderbolt": 1,
-          "Focus Punch": 0.416,
-          "Substitute": 0.416,
-          "Fire Punch": 0.3994,
-          "Cross Chop": 0.3971,
-          "Hidden Power Grass": 0.3715
-        }
-      },
       "Berry Sweeper": {
-        "weight": 0.4992,
+        "weight": 0.5019,
         "abilities": {
           "Static": 1
         },
@@ -2479,12 +2461,30 @@
           "Ice Punch": 1,
           "Substitute": 1,
           "Thunderbolt": 1,
-          "Hidden Power Grass": 0.514,
-          "Fire Punch": 0.486
+          "Hidden Power Grass": 0.5195,
+          "Fire Punch": 0.4805
         },
         "evs": {
           "hp": 81,
           "atk": 0
+        }
+      },
+      "Fast Attacker": {
+        "weight": 0.4981,
+        "abilities": {
+          "Static": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Ice Punch": 1,
+          "Thunderbolt": 1,
+          "Focus Punch": 0.4295,
+          "Substitute": 0.4295,
+          "Fire Punch": 0.394,
+          "Cross Chop": 0.387,
+          "Hidden Power Grass": 0.3601
         }
       }
     }
@@ -2509,9 +2509,9 @@
         "moves": {
           "Hidden Power Ice": 1,
           "Thunderbolt": 1,
-          "Toxic": 0.6726,
+          "Toxic": 0.6746,
           "Explosion": 0.6641,
-          "Substitute": 0.6633
+          "Substitute": 0.6614
         },
         "ivs": {
           "def": 30
@@ -2532,7 +2532,7 @@
     },
     "roles": {
       "Bulky Support": {
-        "weight": 0.3503,
+        "weight": 0.351,
         "abilities": {
           "Pressure": 1
         },
@@ -2553,7 +2553,7 @@
         }
       },
       "Staller": {
-        "weight": 0.3294,
+        "weight": 0.3328,
         "abilities": {
           "Pressure": 1
         },
@@ -2574,7 +2574,7 @@
         }
       },
       "Bulky Setup": {
-        "weight": 0.3204,
+        "weight": 0.3162,
         "abilities": {
           "Pressure": 1
         },
@@ -2621,8 +2621,8 @@
           "Calm Mind": 1,
           "Hidden Power Fire": 1,
           "Psychic": 1,
-          "Morning Sun": 0.5047,
-          "Substitute": 0.4953
+          "Morning Sun": 0.5076,
+          "Substitute": 0.4924
         },
         "evs": {
           "atk": 0
@@ -2653,7 +2653,7 @@
     },
     "roles": {
       "Setup Sweeper": {
-        "weight": 0.3437,
+        "weight": 0.3411,
         "abilities": {
           "Chlorophyll": 1
         },
@@ -2676,7 +2676,7 @@
         }
       },
       "Wallbreaker": {
-        "weight": 0.3314,
+        "weight": 0.3392,
         "abilities": {
           "Chlorophyll": 1
         },
@@ -2685,17 +2685,17 @@
         },
         "moves": {
           "Psychic": 1,
-          "Hidden Power Fire": 0.6636,
-          "Giga Drain": 0.6556,
-          "Leech Seed": 0.3483,
-          "Substitute": 0.3483,
-          "Sleep Powder": 0.3364,
-          "Stun Spore": 0.3272,
-          "Explosion": 0.3205
+          "Giga Drain": 0.6542,
+          "Hidden Power Fire": 0.6542,
+          "Sleep Powder": 0.3552,
+          "Stun Spore": 0.3391,
+          "Leech Seed": 0.3378,
+          "Substitute": 0.3378,
+          "Explosion": 0.3217
         }
       },
       "Bulky Attacker": {
-        "weight": 0.3248,
+        "weight": 0.3197,
         "abilities": {
           "Chlorophyll": 1
         },
@@ -2705,10 +2705,10 @@
         "moves": {
           "Psychic": 1,
           "Synthesis": 1,
-          "Giga Drain": 0.6649,
-          "Hidden Power Fire": 0.6581,
-          "Stun Spore": 0.3392,
-          "Sleep Powder": 0.3378
+          "Giga Drain": 0.67,
+          "Hidden Power Fire": 0.6629,
+          "Stun Spore": 0.3385,
+          "Sleep Powder": 0.3286
         },
         "evs": {
           "atk": 0
@@ -2722,12 +2722,12 @@
       "Soundproof": 1
     },
     "items": {
-      "Choice Band": 0.5208,
-      "Leftovers": 0.4792
+      "Choice Band": 0.51,
+      "Leftovers": 0.49
     },
     "roles": {
       "Wallbreaker": {
-        "weight": 0.5208,
+        "weight": 0.51,
         "abilities": {
           "Soundproof": 1
         },
@@ -2738,12 +2738,12 @@
           "Earthquake": 1,
           "Overheat": 1,
           "Shadow Ball": 1,
-          "Double-Edge": 0.5112,
-          "Return": 0.4888
+          "Double-Edge": 0.5086,
+          "Return": 0.4914
         }
       },
       "Fast Attacker": {
-        "weight": 0.4792,
+        "weight": 0.49,
         "abilities": {
           "Soundproof": 1
         },
@@ -2753,10 +2753,10 @@
         "moves": {
           "Earthquake": 1,
           "Return": 1,
-          "Flamethrower": 0.5226,
-          "Substitute": 0.5009,
-          "Shadow Ball": 0.4983,
-          "Ice Beam": 0.4783
+          "Flamethrower": 0.5209,
+          "Substitute": 0.4987,
+          "Shadow Ball": 0.4962,
+          "Ice Beam": 0.4843
         }
       }
     }
@@ -2767,12 +2767,12 @@
       "Inner Focus": 1
     },
     "items": {
-      "Salac Berry": 0.5129,
-      "Stick": 0.4871
+      "Salac Berry": 0.5255,
+      "Stick": 0.4745
     },
     "roles": {
       "Berry Sweeper": {
-        "weight": 0.5129,
+        "weight": 0.5255,
         "abilities": {
           "Inner Focus": 1
         },
@@ -2794,7 +2794,7 @@
         }
       },
       "Setup Sweeper": {
-        "weight": 0.4871,
+        "weight": 0.4745,
         "abilities": {
           "Inner Focus": 1
         },
@@ -2839,8 +2839,8 @@
           "Drill Peck": 1,
           "Hidden Power Ground": 1,
           "Quick Attack": 1,
-          "Double-Edge": 0.5053,
-          "Return": 0.4947
+          "Double-Edge": 0.5049,
+          "Return": 0.4951
         },
         "ivs": {
           "spa": 30,
@@ -2859,8 +2859,8 @@
       "Torrent": 1
     },
     "items": {
-      "Salac Berry": 0.6691,
-      "Choice Band": 0.3309
+      "Salac Berry": 0.6645,
+      "Choice Band": 0.3355
     },
     "roles": {
       "Wallbreaker": {
@@ -2869,15 +2869,15 @@
           "Torrent": 1
         },
         "items": {
-          "Salac Berry": 0.6691,
-          "Choice Band": 0.3309
+          "Salac Berry": 0.6645,
+          "Choice Band": 0.3355
         },
         "moves": {
           "Earthquake": 1,
           "Hydro Pump": 1,
-          "Rock Slide": 0.6691,
-          "Swords Dance": 0.6691,
-          "Hidden Power Flying": 0.6618
+          "Rock Slide": 0.6773,
+          "Swords Dance": 0.6645,
+          "Hidden Power Flying": 0.6581
         }
       }
     }
@@ -2891,8 +2891,27 @@
       "Leftovers": 1
     },
     "roles": {
+      "Bulky Support": {
+        "weight": 0.5,
+        "abilities": {
+          "Flash Fire": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Flamethrower": 1,
+          "Protect": 1,
+          "Wish": 1,
+          "Toxic": 0.5087,
+          "Hidden Power Grass": 0.4913
+        },
+        "evs": {
+          "atk": 0
+        }
+      },
       "Wallbreaker": {
-        "weight": 0.5012,
+        "weight": 0.5,
         "abilities": {
           "Flash Fire": 1
         },
@@ -2909,25 +2928,6 @@
           "atk": 30,
           "spa": 30
         }
-      },
-      "Bulky Support": {
-        "weight": 0.4988,
-        "abilities": {
-          "Flash Fire": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Flamethrower": 1,
-          "Protect": 1,
-          "Wish": 1,
-          "Toxic": 0.5066,
-          "Hidden Power Grass": 0.4934
-        },
-        "evs": {
-          "atk": 0
-        }
       }
     }
   },
@@ -2937,12 +2937,12 @@
       "Levitate": 1
     },
     "items": {
-      "Leftovers": 0.6649,
-      "Choice Band": 0.3351
+      "Leftovers": 0.6583,
+      "Choice Band": 0.3417
     },
     "roles": {
       "Staller": {
-        "weight": 0.6649,
+        "weight": 0.6583,
         "abilities": {
           "Levitate": 1
         },
@@ -2952,15 +2952,15 @@
         "moves": {
           "Earthquake": 1,
           "Toxic": 1,
-          "Protect": 0.502,
-          "Dragon Claw": 0.4244,
-          "Fire Blast": 0.4157,
-          "Rock Slide": 0.4043,
-          "Substitute": 0.2537
+          "Protect": 0.4966,
+          "Dragon Claw": 0.4281,
+          "Fire Blast": 0.4152,
+          "Rock Slide": 0.4003,
+          "Substitute": 0.2598
         }
       },
       "Wallbreaker": {
-        "weight": 0.3351,
+        "weight": 0.3417,
         "abilities": {
           "Levitate": 1
         },
@@ -3026,12 +3026,12 @@
         },
         "moves": {
           "Spikes": 1,
-          "Toxic": 0.5141,
-          "Hidden Power Steel": 0.5072,
-          "Earthquake": 0.502,
-          "Rapid Spin": 0.4952,
-          "Hidden Power Bug": 0.4928,
-          "Explosion": 0.4887
+          "Toxic": 0.5147,
+          "Hidden Power Steel": 0.5094,
+          "Earthquake": 0.5058,
+          "Rapid Spin": 0.4926,
+          "Hidden Power Bug": 0.4906,
+          "Explosion": 0.4869
         },
         "ivs": {
           "spd": 30
@@ -3048,28 +3048,12 @@
       "Keen Eye": 1
     },
     "items": {
-      "Choice Band": 0.6642,
-      "Liechi Berry": 0.3358
+      "Choice Band": 0.6566,
+      "Liechi Berry": 0.3434
     },
     "roles": {
-      "Wallbreaker": {
-        "weight": 0.3405,
-        "abilities": {
-          "Keen Eye": 1
-        },
-        "items": {
-          "Choice Band": 1
-        },
-        "moves": {
-          "Brick Break": 1,
-          "Quick Attack": 1,
-          "Shadow Ball": 1,
-          "Return": 0.505,
-          "Double-Edge": 0.495
-        }
-      },
       "Berry Sweeper": {
-        "weight": 0.3358,
+        "weight": 0.3434,
         "abilities": {
           "Keen Eye": 1
         },
@@ -3083,8 +3067,24 @@
           "Substitute": 1
         }
       },
+      "Wallbreaker": {
+        "weight": 0.3345,
+        "abilities": {
+          "Keen Eye": 1
+        },
+        "items": {
+          "Choice Band": 1
+        },
+        "moves": {
+          "Brick Break": 1,
+          "Quick Attack": 1,
+          "Shadow Ball": 1,
+          "Return": 0.5128,
+          "Double-Edge": 0.4872
+        }
+      },
       "Fast Attacker": {
-        "weight": 0.3238,
+        "weight": 0.3221,
         "abilities": {
           "Keen Eye": 1
         },
@@ -3095,8 +3095,8 @@
           "Brick Break": 1,
           "Shadow Ball": 1,
           "Trick": 1,
-          "Double-Edge": 0.5166,
-          "Return": 0.4834
+          "Double-Edge": 0.5245,
+          "Return": 0.4755
         }
       }
     }
@@ -3121,11 +3121,11 @@
         "moves": {
           "Calm Mind": 1,
           "Psychic": 1,
-          "Thunderbolt": 0.6245,
-          "Fire Punch": 0.6209,
-          "Hypnosis": 0.2601,
-          "Will-O-Wisp": 0.2561,
-          "Substitute": 0.2383
+          "Fire Punch": 0.6258,
+          "Thunderbolt": 0.6191,
+          "Hypnosis": 0.2584,
+          "Will-O-Wisp": 0.2572,
+          "Substitute": 0.2394
         },
         "evs": {
           "atk": 0
@@ -3162,10 +3162,10 @@
         "moves": {
           "Ice Punch": 1,
           "Thunderbolt": 1,
-          "Substitute": 0.6022,
-          "Will-O-Wisp": 0.5672,
-          "Destiny Bond": 0.4167,
-          "Explosion": 0.4139
+          "Substitute": 0.5943,
+          "Will-O-Wisp": 0.5734,
+          "Destiny Bond": 0.4173,
+          "Explosion": 0.4149
         }
       }
     }
@@ -3180,7 +3180,7 @@
     },
     "roles": {
       "Setup Sweeper": {
-        "weight": 0.5023,
+        "weight": 0.51,
         "abilities": {
           "Early Bird": 1
         },
@@ -3190,17 +3190,17 @@
         "moves": {
           "Calm Mind": 1,
           "Psychic": 1,
-          "Thunderbolt": 0.667,
-          "Hidden Power Fire": 0.6515,
-          "Rest": 0.3621,
-          "Substitute": 0.3194
+          "Thunderbolt": 0.6726,
+          "Hidden Power Fire": 0.6414,
+          "Rest": 0.372,
+          "Substitute": 0.314
         },
         "evs": {
           "atk": 0
         }
       },
       "Wallbreaker": {
-        "weight": 0.4977,
+        "weight": 0.49,
         "abilities": {
           "Early Bird": 1
         },
@@ -3208,14 +3208,14 @@
           "Leftovers": 1
         },
         "moves": {
-          "Earthquake": 0.8168,
-          "Psychic": 0.8132,
-          "Return": 0.5092,
-          "Double-Edge": 0.4908,
-          "Protect": 0.37,
-          "Wish": 0.37,
-          "Thunder Wave": 0.3233,
-          "Toxic": 0.3068
+          "Earthquake": 0.8189,
+          "Psychic": 0.8115,
+          "Return": 0.5135,
+          "Double-Edge": 0.4865,
+          "Protect": 0.3695,
+          "Wish": 0.3695,
+          "Thunder Wave": 0.3333,
+          "Toxic": 0.2971
         }
       }
     }
@@ -3240,9 +3240,9 @@
         "moves": {
           "Ice Beam": 1,
           "Spikes": 1,
-          "Toxic": 0.673,
-          "Earthquake": 0.6664,
-          "Explosion": 0.6606
+          "Toxic": 0.674,
+          "Earthquake": 0.6652,
+          "Explosion": 0.6608
         }
       }
     }
@@ -3253,8 +3253,8 @@
       "Hyper Cutter": 1
     },
     "items": {
-      "Salac Berry": 0.6436,
-      "Leftovers": 0.3564
+      "Salac Berry": 0.6455,
+      "Leftovers": 0.3545
     },
     "roles": {
       "Setup Sweeper": {
@@ -3263,16 +3263,16 @@
           "Hyper Cutter": 1
         },
         "items": {
-          "Salac Berry": 0.6436,
-          "Leftovers": 0.3564
+          "Salac Berry": 0.6455,
+          "Leftovers": 0.3545
         },
         "moves": {
           "Earthquake": 1,
           "Hidden Power Flying": 1,
           "Swords Dance": 1,
-          "Quick Attack": 0.3564,
-          "Substitute": 0.3296,
-          "Rock Slide": 0.314
+          "Quick Attack": 0.3545,
+          "Substitute": 0.3254,
+          "Rock Slide": 0.32
         },
         "ivs": {
           "hp": 30,
@@ -3311,12 +3311,12 @@
         "moves": {
           "Calm Mind": 1,
           "Ice Beam": 1,
-          "Surf": 0.5099,
-          "Hydro Pump": 0.4901,
-          "Substitute": 0.2635,
-          "Hidden Power Electric": 0.2532,
-          "Hypnosis": 0.2495,
-          "Hidden Power Grass": 0.2338
+          "Surf": 0.5128,
+          "Hydro Pump": 0.4872,
+          "Substitute": 0.2631,
+          "Hidden Power Electric": 0.2595,
+          "Hypnosis": 0.2483,
+          "Hidden Power Grass": 0.2291
         },
         "evs": {
           "atk": 0
@@ -3333,12 +3333,12 @@
       "Rock Head": 1
     },
     "items": {
-      "Leftovers": 0.8445,
-      "Choice Band": 0.1555
+      "Leftovers": 0.8433,
+      "Choice Band": 0.1567
     },
     "roles": {
       "Staller": {
-        "weight": 0.5114,
+        "weight": 0.5016,
         "abilities": {
           "Rock Head": 1
         },
@@ -3353,20 +3353,20 @@
         }
       },
       "Bulky Attacker": {
-        "weight": 0.4886,
+        "weight": 0.4984,
         "abilities": {
           "Rock Head": 1
         },
         "items": {
-          "Leftovers": 0.6818,
-          "Choice Band": 0.3182
+          "Leftovers": 0.6857,
+          "Choice Band": 0.3143
         },
         "moves": {
           "Earthquake": 1,
           "Rock Slide": 1,
-          "Toxic": 0.6818,
-          "Double-Edge": 0.6638,
-          "Explosion": 0.6543
+          "Toxic": 0.6857,
+          "Double-Edge": 0.6639,
+          "Explosion": 0.6504
         }
       }
     }
@@ -3391,10 +3391,10 @@
         "moves": {
           "Ice Beam": 1,
           "Rain Dance": 1,
-          "Hidden Power Grass": 0.5214,
-          "Hydro Pump": 0.5011,
-          "Surf": 0.4989,
-          "Hidden Power Electric": 0.4786
+          "Hidden Power Grass": 0.5205,
+          "Hydro Pump": 0.5002,
+          "Surf": 0.4998,
+          "Hidden Power Electric": 0.4795
         },
         "evs": {
           "atk": 0
@@ -3417,12 +3417,12 @@
       "Intimidate": 1
     },
     "items": {
-      "Leftovers": 0.7825,
-      "Choice Band": 0.2175
+      "Leftovers": 0.7789,
+      "Choice Band": 0.2211
     },
     "roles": {
       "Bulky Attacker": {
-        "weight": 0.3347,
+        "weight": 0.3371,
         "abilities": {
           "Intimidate": 1
         },
@@ -3432,13 +3432,13 @@
         "moves": {
           "Earthquake": 1,
           "Return": 1,
-          "Shadow Ball": 0.6865,
-          "Thunder Wave": 0.6865,
-          "Heal Bell": 0.6271
+          "Thunder Wave": 0.7054,
+          "Shadow Ball": 0.6881,
+          "Heal Bell": 0.6064
         }
       },
       "Fast Attacker": {
-        "weight": 0.3331,
+        "weight": 0.3329,
         "abilities": {
           "Intimidate": 1
         },
@@ -3449,25 +3449,25 @@
           "Earthquake": 1,
           "Rest": 1,
           "Sleep Talk": 1,
-          "Double-Edge": 0.5235,
-          "Return": 0.4765
+          "Double-Edge": 0.5226,
+          "Return": 0.4774
         }
       },
       "Wallbreaker": {
-        "weight": 0.3322,
+        "weight": 0.33,
         "abilities": {
           "Intimidate": 1
         },
         "items": {
-          "Choice Band": 0.6548,
-          "Leftovers": 0.3452
+          "Choice Band": 0.67,
+          "Leftovers": 0.33
         },
         "moves": {
           "Double-Edge": 1,
           "Earthquake": 1,
           "Shadow Ball": 1,
-          "Overheat": 0.6548,
-          "Bulk Up": 0.3452
+          "Overheat": 0.67,
+          "Bulk Up": 0.33
         }
       }
     }
@@ -3478,12 +3478,12 @@
       "Drought": 1
     },
     "items": {
-      "Leftovers": 0.678,
-      "Salac Berry": 0.322
+      "Leftovers": 0.6685,
+      "Salac Berry": 0.3315
     },
     "roles": {
       "Wallbreaker": {
-        "weight": 0.5081,
+        "weight": 0.5002,
         "abilities": {
           "Drought": 1
         },
@@ -3498,21 +3498,21 @@
         }
       },
       "Setup Sweeper": {
-        "weight": 0.4919,
+        "weight": 0.4998,
         "abilities": {
           "Drought": 1
         },
         "items": {
-          "Salac Berry": 0.6546,
-          "Leftovers": 0.3454
+          "Salac Berry": 0.6633,
+          "Leftovers": 0.3367
         },
         "moves": {
           "Earthquake": 1,
           "Rock Slide": 1,
           "Swords Dance": 1,
-          "Thunder Wave": 0.3454,
-          "Hidden Power Bug": 0.3354,
-          "Substitute": 0.3192
+          "Hidden Power Bug": 0.3398,
+          "Thunder Wave": 0.3367,
+          "Substitute": 0.3236
         }
       }
     }
@@ -3538,8 +3538,8 @@
           "Calm Mind": 1,
           "Fire Punch": 1,
           "Psychic": 1,
-          "Hidden Power Dark": 0.517,
-          "Substitute": 0.483
+          "Hidden Power Dark": 0.5216,
+          "Substitute": 0.4784
         },
         "evs": {
           "atk": 0
@@ -3596,26 +3596,26 @@
       "Intimidate": 1
     },
     "items": {
-      "Lum Berry": 0.4973,
-      "Choice Band": 0.2538,
-      "Leftovers": 0.2489
+      "Lum Berry": 0.4884,
+      "Leftovers": 0.2563,
+      "Choice Band": 0.2553
     },
     "roles": {
       "Wallbreaker": {
-        "weight": 0.5106,
+        "weight": 0.5087,
         "abilities": {
           "Intimidate": 1
         },
         "items": {
-          "Lum Berry": 0.5029,
-          "Choice Band": 0.4971
+          "Choice Band": 0.5019,
+          "Lum Berry": 0.4981
         },
         "moves": {
           "Earthquake": 1,
           "Hidden Power Flying": 1,
           "Hydro Pump": 1,
-          "Dragon Dance": 0.5029,
-          "Double-Edge": 0.4971
+          "Double-Edge": 0.5019,
+          "Dragon Dance": 0.4981
         },
         "ivs": {
           "hp": 30,
@@ -3626,20 +3626,20 @@
         }
       },
       "Setup Sweeper": {
-        "weight": 0.4894,
+        "weight": 0.4913,
         "abilities": {
           "Intimidate": 1
         },
         "items": {
-          "Leftovers": 0.5086,
-          "Lum Berry": 0.4914
+          "Leftovers": 0.5217,
+          "Lum Berry": 0.4783
         },
         "moves": {
           "Dragon Dance": 1,
           "Earthquake": 1,
           "Hidden Power Flying": 1,
-          "Substitute": 0.5086,
-          "Double-Edge": 0.4914
+          "Substitute": 0.5217,
+          "Double-Edge": 0.4783
         },
         "ivs": {
           "hp": 30,
@@ -3661,16 +3661,16 @@
   "Hariyama": {
     "level": 83,
     "abilities": {
-      "Guts": 0.7526,
-      "Thick Fat": 0.2474
+      "Guts": 0.745,
+      "Thick Fat": 0.255
     },
     "items": {
-      "Leftovers": 0.9253,
-      "Choice Band": 0.0747
+      "Leftovers": 0.9234,
+      "Choice Band": 0.0766
     },
     "roles": {
       "Bulky Attacker": {
-        "weight": 0.5246,
+        "weight": 0.5183,
         "abilities": {
           "Guts": 1
         },
@@ -3681,27 +3681,27 @@
           "Cross Chop": 1,
           "Rest": 1,
           "Sleep Talk": 1,
-          "Hidden Power Ghost": 0.5291,
-          "Rock Slide": 0.4709
+          "Hidden Power Ghost": 0.5269,
+          "Rock Slide": 0.4731
         }
       },
       "Fast Attacker": {
-        "weight": 0.4754,
+        "weight": 0.4817,
         "abilities": {
-          "Thick Fat": 0.5204,
-          "Guts": 0.4796
+          "Thick Fat": 0.5294,
+          "Guts": 0.4706
         },
         "items": {
-          "Leftovers": 0.8428,
-          "Choice Band": 0.1572
+          "Leftovers": 0.841,
+          "Choice Band": 0.159
         },
         "moves": {
           "Cross Chop": 1,
-          "Earthquake": 0.7426,
-          "Rock Slide": 0.7089,
-          "Hidden Power Ghost": 0.7057,
-          "Bulk Up": 0.4234,
-          "Knock Off": 0.4194
+          "Earthquake": 0.7314,
+          "Rock Slide": 0.7236,
+          "Hidden Power Ghost": 0.704,
+          "Knock Off": 0.4221,
+          "Bulk Up": 0.419
         }
       }
     }
@@ -3709,16 +3709,16 @@
   "Heracross": {
     "level": 77,
     "abilities": {
-      "Guts": 0.6568,
-      "Swarm": 0.3432
+      "Guts": 0.6586,
+      "Swarm": 0.3414
     },
     "items": {
-      "Salac Berry": 0.675,
-      "Choice Band": 0.325
+      "Salac Berry": 0.6703,
+      "Choice Band": 0.3297
     },
     "roles": {
       "Berry Sweeper": {
-        "weight": 0.3432,
+        "weight": 0.3414,
         "abilities": {
           "Swarm": 1
         },
@@ -3729,12 +3729,28 @@
           "Megahorn": 1,
           "Reversal": 1,
           "Rock Slide": 1,
-          "Substitute": 0.5234,
-          "Endure": 0.4766
+          "Substitute": 0.5116,
+          "Endure": 0.4884
+        }
+      },
+      "Wallbreaker": {
+        "weight": 0.3297,
+        "abilities": {
+          "Guts": 1
+        },
+        "items": {
+          "Choice Band": 1
+        },
+        "moves": {
+          "Brick Break": 1,
+          "Megahorn": 1,
+          "Rock Slide": 1,
+          "Earthquake": 0.5133,
+          "Hidden Power Ghost": 0.4867
         }
       },
       "Setup Sweeper": {
-        "weight": 0.3318,
+        "weight": 0.3289,
         "abilities": {
           "Guts": 1
         },
@@ -3747,22 +3763,6 @@
           "Rock Slide": 1,
           "Swords Dance": 1
         }
-      },
-      "Wallbreaker": {
-        "weight": 0.325,
-        "abilities": {
-          "Guts": 1
-        },
-        "items": {
-          "Choice Band": 1
-        },
-        "moves": {
-          "Brick Break": 1,
-          "Megahorn": 1,
-          "Rock Slide": 1,
-          "Earthquake": 0.5345,
-          "Hidden Power Ghost": 0.4655
-        }
       }
     }
   },
@@ -3772,8 +3772,8 @@
       "Keen Eye": 1
     },
     "items": {
-      "Leftovers": 0.5725,
-      "Choice Band": 0.4275
+      "Leftovers": 0.565,
+      "Choice Band": 0.435
     },
     "roles": {
       "Fast Attacker": {
@@ -3782,18 +3782,18 @@
           "Keen Eye": 1
         },
         "items": {
-          "Leftovers": 0.5725,
-          "Choice Band": 0.4275
+          "Leftovers": 0.565,
+          "Choice Band": 0.435
         },
         "moves": {
           "Hidden Power Ghost": 1,
           "Sky Uppercut": 1,
-          "Rock Slide": 0.382,
-          "Mach Punch": 0.3816,
-          "Earthquake": 0.3671,
-          "Toxic": 0.3035,
-          "Rapid Spin": 0.2969,
-          "Bulk Up": 0.269
+          "Earthquake": 0.3803,
+          "Rock Slide": 0.3784,
+          "Mach Punch": 0.3737,
+          "Rapid Spin": 0.3026,
+          "Toxic": 0.3014,
+          "Bulk Up": 0.2636
         },
         "ivs": {
           "def": 30,
@@ -3838,27 +3838,27 @@
       "Limber": 1
     },
     "items": {
-      "Salac Berry": 0.4893,
-      "Choice Band": 0.2575,
-      "Leftovers": 0.2532
+      "Salac Berry": 0.4957,
+      "Choice Band": 0.2551,
+      "Leftovers": 0.2492
     },
     "roles": {
       "Fast Attacker": {
-        "weight": 0.5107,
+        "weight": 0.5043,
         "abilities": {
           "Limber": 1
         },
         "items": {
-          "Choice Band": 0.5042,
-          "Leftovers": 0.4958
+          "Choice Band": 0.5058,
+          "Leftovers": 0.4942
         },
         "moves": {
           "Brick Break": 1,
           "Hidden Power Ghost": 1,
-          "Earthquake": 0.5111,
-          "Mach Punch": 0.5004,
-          "Bulk Up": 0.4958,
-          "Rock Slide": 0.4927
+          "Earthquake": 0.505,
+          "Mach Punch": 0.5027,
+          "Rock Slide": 0.4981,
+          "Bulk Up": 0.4942
         },
         "ivs": {
           "def": 30,
@@ -3866,7 +3866,7 @@
         }
       },
       "Berry Sweeper": {
-        "weight": 0.4893,
+        "weight": 0.4957,
         "abilities": {
           "Limber": 1
         },
@@ -3877,8 +3877,8 @@
           "Hidden Power Ghost": 1,
           "Reversal": 1,
           "Substitute": 1,
-          "Earthquake": 0.5136,
-          "Rock Slide": 0.4864
+          "Earthquake": 0.5035,
+          "Rock Slide": 0.4965
         },
         "ivs": {
           "def": 30,
@@ -3897,8 +3897,8 @@
       "Intimidate": 1
     },
     "items": {
-      "Leftovers": 0.5753,
-      "Choice Band": 0.4247
+      "Leftovers": 0.5779,
+      "Choice Band": 0.4221
     },
     "roles": {
       "Fast Attacker": {
@@ -3907,18 +3907,18 @@
           "Intimidate": 1
         },
         "items": {
-          "Leftovers": 0.5753,
-          "Choice Band": 0.4247
+          "Leftovers": 0.5779,
+          "Choice Band": 0.4221
         },
         "moves": {
           "Brick Break": 1,
           "Hidden Power Ghost": 1,
-          "Earthquake": 0.3883,
-          "Mach Punch": 0.3758,
-          "Rock Slide": 0.3713,
-          "Toxic": 0.3106,
-          "Rapid Spin": 0.2893,
-          "Bulk Up": 0.2647
+          "Earthquake": 0.3914,
+          "Mach Punch": 0.3778,
+          "Rock Slide": 0.3638,
+          "Toxic": 0.3088,
+          "Rapid Spin": 0.2891,
+          "Bulk Up": 0.269
         },
         "ivs": {
           "def": 30,
@@ -3941,7 +3941,7 @@
     },
     "roles": {
       "Bulky Attacker": {
-        "weight": 0.514,
+        "weight": 0.5067,
         "abilities": {
           "Pressure": 1
         },
@@ -3951,14 +3951,14 @@
         "moves": {
           "Recover": 1,
           "Sacred Fire": 1,
-          "Earthquake": 0.6883,
-          "Thunderbolt": 0.6596,
-          "Toxic": 0.3367,
-          "Substitute": 0.3154
+          "Earthquake": 0.6834,
+          "Thunderbolt": 0.6503,
+          "Toxic": 0.3507,
+          "Substitute": 0.3157
         }
       },
       "Bulky Setup": {
-        "weight": 0.486,
+        "weight": 0.4933,
         "abilities": {
           "Pressure": 1
         },
@@ -3986,12 +3986,12 @@
       "Flash Fire": 1
     },
     "items": {
-      "Leftovers": 0.5118,
-      "Petaya Berry": 0.4882
+      "Leftovers": 0.5094,
+      "Petaya Berry": 0.4906
     },
     "roles": {
       "Fast Attacker": {
-        "weight": 0.5118,
+        "weight": 0.5094,
         "abilities": {
           "Flash Fire": 1
         },
@@ -4001,16 +4001,16 @@
         "moves": {
           "Crunch": 1,
           "Fire Blast": 1,
-          "Will-O-Wisp": 0.6957,
-          "Hidden Power Grass": 0.6548,
-          "Pursuit": 0.6496
+          "Will-O-Wisp": 0.6854,
+          "Hidden Power Grass": 0.6582,
+          "Pursuit": 0.6564
         },
         "evs": {
           "atk": 0
         }
       },
       "Berry Sweeper": {
-        "weight": 0.4882,
+        "weight": 0.4906,
         "abilities": {
           "Flash Fire": 1
         },
@@ -4042,8 +4042,8 @@
       "Swift Swim": 1
     },
     "items": {
-      "Petaya Berry": 0.6582,
-      "Leftovers": 0.3418
+      "Petaya Berry": 0.6563,
+      "Leftovers": 0.3437
     },
     "roles": {
       "Setup Sweeper": {
@@ -4052,17 +4052,17 @@
           "Swift Swim": 1
         },
         "items": {
-          "Petaya Berry": 0.6582,
-          "Leftovers": 0.3418
+          "Petaya Berry": 0.6563,
+          "Leftovers": 0.3437
         },
         "moves": {
           "Ice Beam": 1,
           "Rain Dance": 1,
-          "Hydro Pump": 0.512,
-          "Surf": 0.488,
-          "Double-Edge": 0.3418,
-          "Hidden Power Grass": 0.3333,
-          "Hidden Power Electric": 0.3249
+          "Hydro Pump": 0.51,
+          "Surf": 0.49,
+          "Double-Edge": 0.3437,
+          "Hidden Power Electric": 0.329,
+          "Hidden Power Grass": 0.3272
         }
       }
     }
@@ -4076,52 +4076,8 @@
       "Leftovers": 1
     },
     "roles": {
-      "Bulky Support": {
-        "weight": 0.3371,
-        "abilities": {
-          "Insomnia": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Protect": 1,
-          "Psychic": 1,
-          "Wish": 1,
-          "Toxic": 0.5134,
-          "Fire Punch": 0.4866
-        },
-        "evs": {
-          "atk": 0
-        },
-        "ivs": {
-          "atk": 0
-        }
-      },
-      "Setup Sweeper": {
-        "weight": 0.332,
-        "abilities": {
-          "Insomnia": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Calm Mind": 1,
-          "Fire Punch": 1,
-          "Psychic": 1,
-          "Thunder Wave": 0.5094,
-          "Substitute": 0.4906
-        },
-        "evs": {
-          "atk": 0
-        },
-        "ivs": {
-          "atk": 0
-        }
-      },
       "Staller": {
-        "weight": 0.3309,
+        "weight": 0.3364,
         "abilities": {
           "Insomnia": 1
         },
@@ -4133,6 +4089,50 @@
           "Seismic Toss": 1,
           "Toxic": 1,
           "Wish": 1
+        },
+        "evs": {
+          "atk": 0
+        },
+        "ivs": {
+          "atk": 0
+        }
+      },
+      "Bulky Support": {
+        "weight": 0.3333,
+        "abilities": {
+          "Insomnia": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Protect": 1,
+          "Psychic": 1,
+          "Wish": 1,
+          "Toxic": 0.5088,
+          "Fire Punch": 0.4912
+        },
+        "evs": {
+          "atk": 0
+        },
+        "ivs": {
+          "atk": 0
+        }
+      },
+      "Setup Sweeper": {
+        "weight": 0.3302,
+        "abilities": {
+          "Insomnia": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Calm Mind": 1,
+          "Fire Punch": 1,
+          "Psychic": 1,
+          "Thunder Wave": 0.5041,
+          "Substitute": 0.4959
         },
         "evs": {
           "atk": 0
@@ -4170,8 +4170,8 @@
           "Encore": 1,
           "Moonlight": 1,
           "Seismic Toss": 1,
-          "Toxic": 0.5045,
-          "Thunder Wave": 0.4955
+          "Toxic": 0.5122,
+          "Thunder Wave": 0.4878
         },
         "evs": {
           "atk": 0
@@ -4236,7 +4236,7 @@
     },
     "roles": {
       "Setup Sweeper": {
-        "weight": 0.5067,
+        "weight": 0.5075,
         "abilities": {
           "Serene Grace": 1
         },
@@ -4246,9 +4246,9 @@
         "moves": {
           "Calm Mind": 1,
           "Psychic": 1,
-          "Thunderbolt": 0.6761,
-          "Ice Punch": 0.6628,
-          "Fire Punch": 0.6611
+          "Thunderbolt": 0.6813,
+          "Fire Punch": 0.6606,
+          "Ice Punch": 0.6581
         },
         "evs": {
           "atk": 0
@@ -4258,7 +4258,7 @@
         }
       },
       "Bulky Support": {
-        "weight": 0.4933,
+        "weight": 0.4925,
         "abilities": {
           "Serene Grace": 1
         },
@@ -4267,11 +4267,11 @@
         },
         "moves": {
           "Psychic": 1,
-          "Protect": 0.715,
-          "Wish": 0.715,
-          "Toxic": 0.5392,
-          "Fire Punch": 0.5247,
-          "Body Slam": 0.506
+          "Protect": 0.7157,
+          "Wish": 0.7157,
+          "Toxic": 0.5396,
+          "Fire Punch": 0.5209,
+          "Body Slam": 0.5081
         }
       }
     }
@@ -4285,30 +4285,8 @@
       "Leftovers": 1
     },
     "roles": {
-      "Staller": {
-        "weight": 0.5028,
-        "abilities": {
-          "Volt Absorb": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Hidden Power Ice": 1,
-          "Protect": 1,
-          "Thunderbolt": 1,
-          "Toxic": 1
-        },
-        "evs": {
-          "atk": 0
-        },
-        "ivs": {
-          "atk": 2,
-          "def": 30
-        }
-      },
       "Fast Attacker": {
-        "weight": 0.4972,
+        "weight": 0.5013,
         "abilities": {
           "Volt Absorb": 1
         },
@@ -4320,6 +4298,28 @@
           "Hidden Power Ice": 1,
           "Substitute": 1,
           "Thunderbolt": 1
+        },
+        "evs": {
+          "atk": 0
+        },
+        "ivs": {
+          "atk": 2,
+          "def": 30
+        }
+      },
+      "Staller": {
+        "weight": 0.4987,
+        "abilities": {
+          "Volt Absorb": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Hidden Power Ice": 1,
+          "Protect": 1,
+          "Thunderbolt": 1,
+          "Toxic": 1
         },
         "evs": {
           "atk": 0
@@ -4347,31 +4347,8 @@
       "Leftovers": 1
     },
     "roles": {
-      "Generalist": {
-        "weight": 0.5049,
-        "abilities": {
-          "Chlorophyll": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Hidden Power Flying": 1,
-          "Synthesis": 0.7837,
-          "Sleep Powder": 0.7582,
-          "Toxic": 0.7418,
-          "Encore": 0.7163
-        },
-        "ivs": {
-          "hp": 30,
-          "atk": 30,
-          "def": 30,
-          "spa": 30,
-          "spd": 30
-        }
-      },
       "Staller": {
-        "weight": 0.4951,
+        "weight": 0.5056,
         "abilities": {
           "Chlorophyll": 1
         },
@@ -4383,6 +4360,29 @@
           "Leech Seed": 1,
           "Protect": 1,
           "Substitute": 1
+        },
+        "ivs": {
+          "hp": 30,
+          "atk": 30,
+          "def": 30,
+          "spa": 30,
+          "spd": 30
+        }
+      },
+      "Generalist": {
+        "weight": 0.4944,
+        "abilities": {
+          "Chlorophyll": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Hidden Power Flying": 1,
+          "Synthesis": 0.7853,
+          "Sleep Powder": 0.7577,
+          "Toxic": 0.7423,
+          "Encore": 0.7147
         },
         "ivs": {
           "hp": 30,
@@ -4422,8 +4422,8 @@
           "Calm Mind": 1,
           "Ice Beam": 1,
           "Psychic": 1,
-          "Substitute": 0.5122,
-          "Lovely Kiss": 0.4878
+          "Substitute": 0.5099,
+          "Lovely Kiss": 0.4901
         },
         "evs": {
           "atk": 0
@@ -4443,30 +4443,30 @@
   "Kabutops": {
     "level": 84,
     "abilities": {
-      "Battle Armor": 0.9782,
-      "Swift Swim": 0.0218
+      "Battle Armor": 0.9786,
+      "Swift Swim": 0.0214
     },
     "items": {
-      "Salac Berry": 0.6547,
-      "Choice Band": 0.3453
+      "Salac Berry": 0.6557,
+      "Choice Band": 0.3443
     },
     "roles": {
       "Wallbreaker": {
         "weight": 1,
         "abilities": {
-          "Battle Armor": 0.9782,
-          "Swift Swim": 0.0218
+          "Battle Armor": 0.9786,
+          "Swift Swim": 0.0214
         },
         "items": {
-          "Salac Berry": 0.6547,
-          "Choice Band": 0.3453
+          "Salac Berry": 0.6557,
+          "Choice Band": 0.3443
         },
         "moves": {
           "Rock Slide": 1,
           "Surf": 1,
-          "Brick Break": 0.6838,
-          "Hidden Power Flying": 0.6615,
-          "Swords Dance": 0.6547
+          "Brick Break": 0.676,
+          "Hidden Power Flying": 0.6682,
+          "Swords Dance": 0.6557
         }
       }
     }
@@ -4480,25 +4480,8 @@
       "Leftovers": 1
     },
     "roles": {
-      "Fast Attacker": {
-        "weight": 0.5004,
-        "abilities": {
-          "Early Bird": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Earthquake": 1,
-          "Shadow Ball": 0.6778,
-          "Toxic": 0.6711,
-          "Rest": 0.6511,
-          "Double-Edge": 0.5125,
-          "Return": 0.4875
-        }
-      },
       "Bulky Attacker": {
-        "weight": 0.4996,
+        "weight": 0.5019,
         "abilities": {
           "Early Bird": 1
         },
@@ -4509,8 +4492,25 @@
           "Earthquake": 1,
           "Protect": 1,
           "Wish": 1,
-          "Body Slam": 0.5234,
-          "Return": 0.4766
+          "Body Slam": 0.5169,
+          "Return": 0.4831
+        }
+      },
+      "Fast Attacker": {
+        "weight": 0.4981,
+        "abilities": {
+          "Early Bird": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Earthquake": 1,
+          "Shadow Ball": 0.6689,
+          "Rest": 0.6672,
+          "Toxic": 0.6638,
+          "Double-Edge": 0.5072,
+          "Return": 0.4928
         }
       }
     }
@@ -4521,8 +4521,8 @@
       "Color Change": 1
     },
     "items": {
-      "Leftovers": 0.5036,
-      "Choice Band": 0.4964
+      "Leftovers": 0.5066,
+      "Choice Band": 0.4934
     },
     "roles": {
       "Wallbreaker": {
@@ -4531,15 +4531,15 @@
           "Color Change": 1
         },
         "items": {
-          "Leftovers": 0.5036,
-          "Choice Band": 0.4964
+          "Leftovers": 0.5066,
+          "Choice Band": 0.4934
         },
         "moves": {
           "Brick Break": 1,
           "Return": 1,
           "Shadow Ball": 1,
-          "Thunder Wave": 0.5036,
-          "Trick": 0.4964
+          "Thunder Wave": 0.5066,
+          "Trick": 0.4934
         }
       }
     }
@@ -4602,8 +4602,8 @@
       "Swift Swim": 1
     },
     "items": {
-      "Petaya Berry": 0.6979,
-      "Leftovers": 0.3021
+      "Petaya Berry": 0.6939,
+      "Leftovers": 0.3061
     },
     "roles": {
       "Setup Sweeper": {
@@ -4612,17 +4612,17 @@
           "Swift Swim": 1
         },
         "items": {
-          "Petaya Berry": 0.6979,
-          "Leftovers": 0.3021
+          "Petaya Berry": 0.6939,
+          "Leftovers": 0.3061
         },
         "moves": {
           "Ice Beam": 1,
           "Rain Dance": 1,
-          "Hydro Pump": 0.5228,
-          "Surf": 0.4772,
+          "Hydro Pump": 0.516,
+          "Surf": 0.484,
           "Hidden Power Electric": 0.3507,
-          "Hidden Power Grass": 0.3472,
-          "Substitute": 0.3021
+          "Hidden Power Grass": 0.3432,
+          "Substitute": 0.3061
         },
         "evs": {
           "atk": 0
@@ -4642,27 +4642,8 @@
       "Salac Berry": 1
     },
     "roles": {
-      "Setup Sweeper": {
-        "weight": 0.5029,
-        "abilities": {
-          "Hyper Cutter": 1
-        },
-        "items": {
-          "Salac Berry": 1
-        },
-        "moves": {
-          "Double-Edge": 1,
-          "Surf": 1,
-          "Swords Dance": 1,
-          "Hidden Power Ground": 0.5009,
-          "Hidden Power Ghost": 0.4991
-        },
-        "ivs": {
-          "spd": 30
-        }
-      },
       "Bulky Setup": {
-        "weight": 0.4971,
+        "weight": 0.5007,
         "abilities": {
           "Hyper Cutter": 1
         },
@@ -4677,6 +4658,25 @@
         },
         "ivs": {
           "def": 30,
+          "spd": 30
+        }
+      },
+      "Setup Sweeper": {
+        "weight": 0.4993,
+        "abilities": {
+          "Hyper Cutter": 1
+        },
+        "items": {
+          "Salac Berry": 1
+        },
+        "moves": {
+          "Double-Edge": 1,
+          "Surf": 1,
+          "Swords Dance": 1,
+          "Hidden Power Ghost": 0.5,
+          "Hidden Power Ground": 0.5
+        },
+        "ivs": {
           "spd": 30
         }
       }
@@ -4704,11 +4704,11 @@
         },
         "moves": {
           "Surf": 1,
-          "Rest": 0.7082,
-          "Sleep Talk": 0.7082,
-          "Calm Mind": 0.5329,
-          "Ice Beam": 0.5307,
-          "Thunder": 0.5199
+          "Rest": 0.7025,
+          "Sleep Talk": 0.7025,
+          "Ice Beam": 0.541,
+          "Calm Mind": 0.5333,
+          "Thunder": 0.5207
         },
         "evs": {
           "atk": 0
@@ -4745,10 +4745,10 @@
         "moves": {
           "Surf": 1,
           "Thunderbolt": 1,
-          "Ice Beam": 0.5045,
-          "Toxic": 0.5045,
-          "Rest": 0.4955,
-          "Sleep Talk": 0.4955
+          "Rest": 0.5007,
+          "Sleep Talk": 0.5007,
+          "Ice Beam": 0.4993,
+          "Toxic": 0.4993
         },
         "evs": {
           "atk": 0
@@ -4775,7 +4775,7 @@
     },
     "roles": {
       "Fast Attacker": {
-        "weight": 0.5164,
+        "weight": 0.5035,
         "abilities": {
           "Water Absorb": 1
         },
@@ -4785,10 +4785,10 @@
         "moves": {
           "Ice Beam": 1,
           "Thunderbolt": 1,
-          "Rest": 0.5342,
-          "Sleep Talk": 0.5342,
-          "Heal Bell": 0.4658,
-          "Toxic": 0.4658
+          "Rest": 0.5333,
+          "Sleep Talk": 0.5333,
+          "Heal Bell": 0.4667,
+          "Toxic": 0.4667
         },
         "evs": {
           "atk": 0
@@ -4798,7 +4798,7 @@
         }
       },
       "Bulky Attacker": {
-        "weight": 0.4836,
+        "weight": 0.4965,
         "abilities": {
           "Water Absorb": 1
         },
@@ -4808,11 +4808,11 @@
         "moves": {
           "Ice Beam": 1,
           "Surf": 1,
-          "Thunderbolt": 0.4201,
-          "Toxic": 0.4127,
-          "Rest": 0.3971,
-          "Sleep Talk": 0.3971,
-          "Heal Bell": 0.373
+          "Thunderbolt": 0.4238,
+          "Toxic": 0.4157,
+          "Rest": 0.3915,
+          "Sleep Talk": 0.3915,
+          "Heal Bell": 0.3774
         },
         "evs": {
           "atk": 0
@@ -4839,7 +4839,7 @@
     },
     "roles": {
       "Bulky Setup": {
-        "weight": 0.5059,
+        "weight": 0.5057,
         "abilities": {
           "Levitate": 1
         },
@@ -4850,15 +4850,15 @@
           "Calm Mind": 1,
           "Psychic": 1,
           "Recover": 1,
-          "Hidden Power Fire": 0.5037,
-          "Dragon Claw": 0.4963
+          "Hidden Power Fire": 0.5151,
+          "Dragon Claw": 0.4849
         },
         "evs": {
           "atk": 0
         }
       },
       "Setup Sweeper": {
-        "weight": 0.4941,
+        "weight": 0.4943,
         "abilities": {
           "Levitate": 1
         },
@@ -4893,7 +4893,7 @@
     },
     "roles": {
       "Setup Sweeper": {
-        "weight": 0.5026,
+        "weight": 0.5024,
         "abilities": {
           "Levitate": 1
         },
@@ -4914,7 +4914,7 @@
         }
       },
       "Bulky Setup": {
-        "weight": 0.4974,
+        "weight": 0.4976,
         "abilities": {
           "Levitate": 1
         },
@@ -4925,8 +4925,8 @@
           "Calm Mind": 1,
           "Psychic": 1,
           "Recover": 1,
-          "Dragon Claw": 0.5139,
-          "Hidden Power Fire": 0.4861
+          "Dragon Claw": 0.5068,
+          "Hidden Power Fire": 0.4932
         },
         "evs": {
           "atk": 0
@@ -4989,7 +4989,7 @@
     },
     "roles": {
       "Staller": {
-        "weight": 0.3532,
+        "weight": 0.3605,
         "abilities": {
           "Own Tempo": 1
         },
@@ -5010,7 +5010,7 @@
         }
       },
       "Bulky Attacker": {
-        "weight": 0.3389,
+        "weight": 0.3262,
         "abilities": {
           "Own Tempo": 1
         },
@@ -5025,7 +5025,7 @@
         }
       },
       "Bulky Support": {
-        "weight": 0.3078,
+        "weight": 0.3133,
         "abilities": {
           "Own Tempo": 1
         },
@@ -5036,8 +5036,8 @@
           "Protect": 1,
           "Seismic Toss": 1,
           "Wish": 1,
-          "Heal Bell": 0.5082,
-          "Knock Off": 0.4918
+          "Heal Bell": 0.5013,
+          "Knock Off": 0.4987
         },
         "evs": {
           "atk": 0
@@ -5054,13 +5054,13 @@
       "Pickup": 1
     },
     "items": {
-      "Silk Scarf": 0.5008,
-      "Salac Berry": 0.2534,
-      "Lum Berry": 0.2458
+      "Silk Scarf": 0.5104,
+      "Salac Berry": 0.2499,
+      "Lum Berry": 0.2397
     },
     "roles": {
       "Setup Sweeper": {
-        "weight": 0.5008,
+        "weight": 0.5104,
         "abilities": {
           "Pickup": 1
         },
@@ -5082,20 +5082,20 @@
         }
       },
       "Bulky Setup": {
-        "weight": 0.4992,
+        "weight": 0.4896,
         "abilities": {
           "Pickup": 1
         },
         "items": {
-          "Salac Berry": 0.5076,
-          "Lum Berry": 0.4924
+          "Salac Berry": 0.5104,
+          "Lum Berry": 0.4896
         },
         "moves": {
           "Belly Drum": 1,
           "Hidden Power Ground": 1,
           "Return": 1,
-          "Substitute": 0.5076,
-          "Shadow Ball": 0.4924
+          "Substitute": 0.5104,
+          "Shadow Ball": 0.4896
         },
         "ivs": {
           "spa": 30,
@@ -5129,8 +5129,8 @@
           "Hidden Power Grass": 1,
           "Ice Beam": 1,
           "Rain Dance": 1,
-          "Surf": 0.5002,
-          "Hydro Pump": 0.4998
+          "Hydro Pump": 0.5025,
+          "Surf": 0.4975
         },
         "evs": {
           "atk": 0
@@ -5159,7 +5159,7 @@
     },
     "roles": {
       "Bulky Setup": {
-        "weight": 0.5131,
+        "weight": 0.5137,
         "abilities": {
           "Pressure": 1
         },
@@ -5180,7 +5180,7 @@
         }
       },
       "Staller": {
-        "weight": 0.4869,
+        "weight": 0.4863,
         "abilities": {
           "Pressure": 1
         },
@@ -5191,8 +5191,8 @@
           "Psychic": 1,
           "Recover": 1,
           "Toxic": 1,
-          "Substitute": 0.5147,
-          "Earthquake": 0.4853
+          "Substitute": 0.5165,
+          "Earthquake": 0.4835
         }
       }
     }
@@ -5207,7 +5207,7 @@
     },
     "roles": {
       "Bulky Attacker": {
-        "weight": 0.5072,
+        "weight": 0.5017,
         "abilities": {
           "Levitate": 1
         },
@@ -5216,15 +5216,15 @@
         },
         "moves": {
           "Psychic": 1,
-          "Ice Beam": 0.7475,
-          "Hidden Power Fire": 0.745,
-          "Hypnosis": 0.5076,
-          "Toxic": 0.5059,
-          "Explosion": 0.4941
+          "Ice Beam": 0.7525,
+          "Hidden Power Fire": 0.7475,
+          "Hypnosis": 0.5102,
+          "Toxic": 0.5017,
+          "Explosion": 0.4881
         }
       },
       "Setup Sweeper": {
-        "weight": 0.4928,
+        "weight": 0.4983,
         "abilities": {
           "Levitate": 1
         },
@@ -5234,9 +5234,9 @@
         "moves": {
           "Calm Mind": 1,
           "Psychic": 1,
-          "Hidden Power Fire": 0.7599,
-          "Ice Beam": 0.7487,
-          "Hypnosis": 0.4914
+          "Hidden Power Fire": 0.7628,
+          "Ice Beam": 0.7355,
+          "Hypnosis": 0.5017
         },
         "evs": {
           "atk": 0
@@ -5265,8 +5265,8 @@
           "Protect": 1,
           "Surf": 1,
           "Toxic": 1,
-          "Ice Beam": 0.5024,
-          "Substitute": 0.4976
+          "Substitute": 0.5014,
+          "Ice Beam": 0.4986
         },
         "evs": {
           "atk": 0
@@ -5329,29 +5329,29 @@
       "Guts": 1
     },
     "items": {
-      "Leftovers": 0.8271,
-      "Choice Band": 0.1729
+      "Leftovers": 0.8336,
+      "Choice Band": 0.1664
     },
     "roles": {
       "Fast Attacker": {
-        "weight": 0.5094,
+        "weight": 0.5107,
         "abilities": {
           "Guts": 1
         },
         "items": {
-          "Leftovers": 0.6606,
-          "Choice Band": 0.3394
+          "Leftovers": 0.6742,
+          "Choice Band": 0.3258
         },
         "moves": {
           "Cross Chop": 1,
-          "Hidden Power Ghost": 0.7873,
-          "Rock Slide": 0.7829,
-          "Earthquake": 0.7692,
-          "Bulk Up": 0.6606
+          "Hidden Power Ghost": 0.7823,
+          "Rock Slide": 0.7758,
+          "Earthquake": 0.7678,
+          "Bulk Up": 0.6742
         }
       },
       "Bulky Attacker": {
-        "weight": 0.4906,
+        "weight": 0.4893,
         "abilities": {
           "Guts": 1
         },
@@ -5362,8 +5362,8 @@
           "Cross Chop": 1,
           "Rest": 1,
           "Sleep Talk": 1,
-          "Hidden Power Ghost": 0.5049,
-          "Rock Slide": 0.4951
+          "Hidden Power Ghost": 0.5076,
+          "Rock Slide": 0.4924
         }
       }
     }
@@ -5377,28 +5377,8 @@
       "Leftovers": 1
     },
     "roles": {
-      "Bulky Support": {
-        "weight": 0.5003,
-        "abilities": {
-          "Flame Body": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Rest": 1,
-          "Sleep Talk": 1,
-          "Toxic": 0.5179,
-          "Flamethrower": 0.5138,
-          "Fire Blast": 0.4862,
-          "Hidden Power Grass": 0.4821
-        },
-        "evs": {
-          "atk": 0
-        }
-      },
       "Staller": {
-        "weight": 0.4997,
+        "weight": 0.501,
         "abilities": {
           "Flame Body": 1
         },
@@ -5409,8 +5389,8 @@
           "Hidden Power Grass": 1,
           "Protect": 1,
           "Toxic": 1,
-          "Fire Blast": 0.5062,
-          "Flamethrower": 0.4938
+          "Fire Blast": 0.5087,
+          "Flamethrower": 0.4913
         },
         "evs": {
           "atk": 0
@@ -5418,6 +5398,26 @@
         "ivs": {
           "atk": 2,
           "spa": 30
+        }
+      },
+      "Bulky Support": {
+        "weight": 0.499,
+        "abilities": {
+          "Flame Body": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Rest": 1,
+          "Sleep Talk": 1,
+          "Toxic": 0.5149,
+          "Flamethrower": 0.5015,
+          "Fire Blast": 0.4985,
+          "Hidden Power Grass": 0.4851
+        },
+        "evs": {
+          "atk": 0
         }
       }
     },
@@ -5457,12 +5457,12 @@
       "Flame Body": 1
     },
     "items": {
-      "Leftovers": 0.5147,
-      "Petaya Berry": 0.4853
+      "Leftovers": 0.5072,
+      "Petaya Berry": 0.4928
     },
     "roles": {
       "Fast Attacker": {
-        "weight": 0.5147,
+        "weight": 0.5072,
         "abilities": {
           "Flame Body": 1
         },
@@ -5471,18 +5471,18 @@
         },
         "moves": {
           "Thunder Punch": 1,
-          "Fire Blast": 0.5076,
-          "Flamethrower": 0.4924,
-          "Toxic": 0.3863,
-          "Cross Chop": 0.3614,
-          "Focus Punch": 0.3502,
-          "Substitute": 0.3502,
-          "Hidden Power Grass": 0.29,
-          "Hidden Power Ice": 0.2618
+          "Fire Blast": 0.5016,
+          "Flamethrower": 0.4984,
+          "Toxic": 0.3815,
+          "Cross Chop": 0.3613,
+          "Focus Punch": 0.354,
+          "Substitute": 0.354,
+          "Hidden Power Grass": 0.2871,
+          "Hidden Power Ice": 0.2621
         }
       },
       "Berry Sweeper": {
-        "weight": 0.4853,
+        "weight": 0.4928,
         "abilities": {
           "Flame Body": 1
         },
@@ -5492,10 +5492,10 @@
         "moves": {
           "Substitute": 1,
           "Thunder Punch": 1,
-          "Flamethrower": 0.5128,
-          "Hidden Power Grass": 0.5102,
-          "Hidden Power Ice": 0.4898,
-          "Fire Blast": 0.4872
+          "Hidden Power Grass": 0.5145,
+          "Flamethrower": 0.5029,
+          "Fire Blast": 0.4971,
+          "Hidden Power Ice": 0.4855
         },
         "evs": {
           "hp": 73,
@@ -5516,30 +5516,8 @@
       "Leftovers": 1
     },
     "roles": {
-      "Bulky Attacker": {
-        "weight": 0.502,
-        "abilities": {
-          "Magnet Pull": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Hidden Power Ice": 1,
-          "Rest": 1,
-          "Sleep Talk": 1,
-          "Thunderbolt": 1
-        },
-        "evs": {
-          "atk": 0
-        },
-        "ivs": {
-          "atk": 2,
-          "def": 30
-        }
-      },
       "Staller": {
-        "weight": 0.498,
+        "weight": 0.5011,
         "abilities": {
           "Magnet Pull": 1
         },
@@ -5551,6 +5529,28 @@
           "Protect": 1,
           "Thunderbolt": 1,
           "Toxic": 1
+        },
+        "evs": {
+          "atk": 0
+        },
+        "ivs": {
+          "atk": 2,
+          "def": 30
+        }
+      },
+      "Bulky Attacker": {
+        "weight": 0.4989,
+        "abilities": {
+          "Magnet Pull": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Hidden Power Ice": 1,
+          "Rest": 1,
+          "Sleep Talk": 1,
+          "Thunderbolt": 1
         },
         "evs": {
           "atk": 0
@@ -5575,35 +5575,12 @@
       "Static": 1
     },
     "items": {
-      "Leftovers": 0.6627,
-      "Petaya Berry": 0.3373
+      "Leftovers": 0.6683,
+      "Petaya Berry": 0.3317
     },
     "roles": {
-      "Berry Sweeper": {
-        "weight": 0.3373,
-        "abilities": {
-          "Static": 1
-        },
-        "items": {
-          "Petaya Berry": 1
-        },
-        "moves": {
-          "Crunch": 1,
-          "Hidden Power Ice": 1,
-          "Substitute": 1,
-          "Thunderbolt": 1
-        },
-        "evs": {
-          "hp": 81,
-          "atk": 0
-        },
-        "ivs": {
-          "atk": 2,
-          "def": 30
-        }
-      },
       "Staller": {
-        "weight": 0.3342,
+        "weight": 0.3347,
         "abilities": {
           "Static": 1
         },
@@ -5625,7 +5602,7 @@
         }
       },
       "Bulky Attacker": {
-        "weight": 0.3285,
+        "weight": 0.3336,
         "abilities": {
           "Static": 1
         },
@@ -5636,10 +5613,33 @@
           "Hidden Power Ice": 1,
           "Substitute": 1,
           "Thunderbolt": 1,
-          "Thunder Wave": 0.5216,
-          "Toxic": 0.4784
+          "Thunder Wave": 0.5092,
+          "Toxic": 0.4908
         },
         "evs": {
+          "atk": 0
+        },
+        "ivs": {
+          "atk": 2,
+          "def": 30
+        }
+      },
+      "Berry Sweeper": {
+        "weight": 0.3317,
+        "abilities": {
+          "Static": 1
+        },
+        "items": {
+          "Petaya Berry": 1
+        },
+        "moves": {
+          "Crunch": 1,
+          "Hidden Power Ice": 1,
+          "Substitute": 1,
+          "Thunderbolt": 1
+        },
+        "evs": {
+          "hp": 81,
           "atk": 0
         },
         "ivs": {
@@ -5659,16 +5659,16 @@
   "Mantine": {
     "level": 86,
     "abilities": {
-      "Water Absorb": 0.666,
-      "Swift Swim": 0.334
+      "Water Absorb": 0.6651,
+      "Swift Swim": 0.3349
     },
     "items": {
-      "Leftovers": 0.666,
-      "Petaya Berry": 0.334
+      "Leftovers": 0.6651,
+      "Petaya Berry": 0.3349
     },
     "roles": {
       "Bulky Support": {
-        "weight": 0.3518,
+        "weight": 0.3521,
         "abilities": {
           "Water Absorb": 1
         },
@@ -5677,18 +5677,18 @@
         },
         "moves": {
           "Surf": 1,
-          "Rest": 0.7113,
-          "Sleep Talk": 0.7113,
-          "Ice Beam": 0.5372,
-          "Toxic": 0.5238,
-          "Hidden Power Grass": 0.5164
+          "Rest": 0.6973,
+          "Sleep Talk": 0.6973,
+          "Ice Beam": 0.5415,
+          "Toxic": 0.5386,
+          "Hidden Power Grass": 0.5252
         },
         "evs": {
           "atk": 0
         }
       },
       "Setup Sweeper": {
-        "weight": 0.334,
+        "weight": 0.3349,
         "abilities": {
           "Swift Swim": 1
         },
@@ -5699,8 +5699,8 @@
           "Hidden Power Grass": 1,
           "Ice Beam": 1,
           "Rain Dance": 1,
-          "Hydro Pump": 0.511,
-          "Surf": 0.489
+          "Surf": 0.5023,
+          "Hydro Pump": 0.4977
         },
         "evs": {
           "atk": 0
@@ -5711,7 +5711,7 @@
         }
       },
       "Staller": {
-        "weight": 0.3141,
+        "weight": 0.313,
         "abilities": {
           "Water Absorb": 1
         },
@@ -5722,8 +5722,8 @@
           "Protect": 1,
           "Surf": 1,
           "Toxic": 1,
-          "Haze": 0.5033,
-          "Ice Beam": 0.4967
+          "Haze": 0.5008,
+          "Ice Beam": 0.4992
         },
         "evs": {
           "atk": 0
@@ -5783,7 +5783,7 @@
     },
     "roles": {
       "Generalist": {
-        "weight": 0.5057,
+        "weight": 0.5059,
         "abilities": {
           "Rock Head": 1
         },
@@ -5798,7 +5798,7 @@
         }
       },
       "Setup Sweeper": {
-        "weight": 0.4943,
+        "weight": 0.4941,
         "abilities": {
           "Rock Head": 1
         },
@@ -5835,8 +5835,8 @@
           "Hydro Pump": 1,
           "Ice Beam": 1,
           "Substitute": 1,
-          "Toxic": 0.52,
-          "Stun Spore": 0.48
+          "Toxic": 0.5276,
+          "Stun Spore": 0.4724
         },
         "evs": {
           "atk": 0
@@ -5900,27 +5900,8 @@
       "Leftovers": 1
     },
     "roles": {
-      "Bulky Support": {
-        "weight": 0.5034,
-        "abilities": {
-          "Intimidate": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Focus Punch": 1,
-          "Hidden Power Steel": 1,
-          "Substitute": 1,
-          "Rock Slide": 0.5008,
-          "Toxic": 0.4992
-        },
-        "ivs": {
-          "spd": 30
-        }
-      },
       "Setup Sweeper": {
-        "weight": 0.4966,
+        "weight": 0.501,
         "abilities": {
           "Intimidate": 1
         },
@@ -5931,8 +5912,27 @@
           "Brick Break": 1,
           "Hidden Power Steel": 1,
           "Swords Dance": 1,
-          "Substitute": 0.5053,
-          "Rock Slide": 0.4947
+          "Substitute": 0.5049,
+          "Rock Slide": 0.4951
+        },
+        "ivs": {
+          "spd": 30
+        }
+      },
+      "Bulky Support": {
+        "weight": 0.499,
+        "abilities": {
+          "Intimidate": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Focus Punch": 1,
+          "Hidden Power Steel": 1,
+          "Substitute": 1,
+          "Rock Slide": 0.5045,
+          "Toxic": 0.4955
         },
         "ivs": {
           "spd": 30
@@ -5949,13 +5949,13 @@
       "Pure Power": 1
     },
     "items": {
-      "Salac Berry": 0.4401,
-      "Choice Band": 0.3355,
-      "Leftovers": 0.2244
+      "Salac Berry": 0.4381,
+      "Choice Band": 0.3383,
+      "Leftovers": 0.2235
     },
     "roles": {
       "Wallbreaker": {
-        "weight": 0.3355,
+        "weight": 0.3383,
         "abilities": {
           "Pure Power": 1
         },
@@ -5969,8 +5969,26 @@
           "Shadow Ball": 1
         }
       },
+      "Setup Sweeper": {
+        "weight": 0.3314,
+        "abilities": {
+          "Pure Power": 1
+        },
+        "items": {
+          "Leftovers": 0.6744,
+          "Salac Berry": 0.3256
+        },
+        "moves": {
+          "Brick Break": 1,
+          "Bulk Up": 1,
+          "Shadow Ball": 1,
+          "Recover": 0.3501,
+          "Substitute": 0.3256,
+          "Rock Slide": 0.3244
+        }
+      },
       "Berry Sweeper": {
-        "weight": 0.3339,
+        "weight": 0.3302,
         "abilities": {
           "Pure Power": 1
         },
@@ -5982,24 +6000,6 @@
           "Reversal": 1,
           "Shadow Ball": 1,
           "Substitute": 1
-        }
-      },
-      "Setup Sweeper": {
-        "weight": 0.3306,
-        "abilities": {
-          "Pure Power": 1
-        },
-        "items": {
-          "Leftovers": 0.6788,
-          "Salac Berry": 0.3212
-        },
-        "moves": {
-          "Brick Break": 1,
-          "Bulk Up": 1,
-          "Shadow Ball": 1,
-          "Recover": 0.3526,
-          "Rock Slide": 0.3262,
-          "Substitute": 0.3212
         }
       }
     }
@@ -6013,24 +6013,8 @@
       "Leftovers": 1
     },
     "roles": {
-      "Bulky Setup": {
-        "weight": 0.5008,
-        "abilities": {
-          "Overgrow": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Earthquake": 1,
-          "Swords Dance": 1,
-          "Synthesis": 1,
-          "Body Slam": 0.5059,
-          "Hidden Power Rock": 0.4941
-        }
-      },
       "Staller": {
-        "weight": 0.4992,
+        "weight": 0.5095,
         "abilities": {
           "Overgrow": 1
         },
@@ -6041,12 +6025,28 @@
           "Hidden Power Grass": 1,
           "Synthesis": 1,
           "Toxic": 1,
-          "Earthquake": 0.3437,
-          "Leech Seed": 0.3357,
-          "Body Slam": 0.3206
+          "Leech Seed": 0.3468,
+          "Earthquake": 0.3406,
+          "Body Slam": 0.3125
         },
         "ivs": {
           "spa": 30
+        }
+      },
+      "Bulky Setup": {
+        "weight": 0.4905,
+        "abilities": {
+          "Overgrow": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Earthquake": 1,
+          "Swords Dance": 1,
+          "Synthesis": 1,
+          "Body Slam": 0.5045,
+          "Hidden Power Rock": 0.4955
         }
       }
     }
@@ -6057,12 +6057,12 @@
       "Clear Body": 1
     },
     "items": {
-      "Leftovers": 0.5099,
-      "Choice Band": 0.4901
+      "Leftovers": 0.5125,
+      "Choice Band": 0.4875
     },
     "roles": {
       "Setup Sweeper": {
-        "weight": 0.5099,
+        "weight": 0.5125,
         "abilities": {
           "Clear Body": 1
         },
@@ -6073,13 +6073,13 @@
           "Agility": 1,
           "Earthquake": 1,
           "Meteor Mash": 1,
-          "Psychic": 0.3395,
-          "Rock Slide": 0.3361,
-          "Explosion": 0.3243
+          "Rock Slide": 0.348,
+          "Psychic": 0.3314,
+          "Explosion": 0.3206
         }
       },
       "Wallbreaker": {
-        "weight": 0.4901,
+        "weight": 0.4875,
         "abilities": {
           "Clear Body": 1
         },
@@ -6106,7 +6106,7 @@
     },
     "roles": {
       "Bulky Support": {
-        "weight": 0.3437,
+        "weight": 0.3403,
         "abilities": {
           "Synchronize": 1
         },
@@ -6116,31 +6116,31 @@
         "moves": {
           "Psychic": 1,
           "Soft-Boiled": 1,
-          "Explosion": 0.5203,
-          "Flamethrower": 0.4988,
-          "Transform": 0.4952,
-          "Thunder Wave": 0.4857
+          "Explosion": 0.5241,
+          "Thunder Wave": 0.4959,
+          "Transform": 0.4959,
+          "Flamethrower": 0.4841
         }
       },
       "Setup Sweeper": {
-        "weight": 0.3302,
+        "weight": 0.3335,
         "abilities": {
           "Synchronize": 1
         },
         "items": {
-          "Salac Berry": 0.5255,
-          "Leftovers": 0.4745
+          "Salac Berry": 0.5204,
+          "Leftovers": 0.4796
         },
         "moves": {
           "Earthquake": 1,
           "Rock Slide": 1,
           "Swords Dance": 1,
-          "Explosion": 0.5255,
-          "Soft-Boiled": 0.4745
+          "Explosion": 0.5204,
+          "Soft-Boiled": 0.4796
         }
       },
       "Bulky Setup": {
-        "weight": 0.3261,
+        "weight": 0.3263,
         "abilities": {
           "Synchronize": 1
         },
@@ -6151,8 +6151,8 @@
           "Calm Mind": 1,
           "Psychic": 1,
           "Soft-Boiled": 1,
-          "Flamethrower": 0.5019,
-          "Thunderbolt": 0.4981
+          "Thunderbolt": 0.5061,
+          "Flamethrower": 0.4939
         },
         "evs": {
           "atk": 0
@@ -6173,7 +6173,7 @@
     },
     "roles": {
       "Bulky Setup": {
-        "weight": 0.5093,
+        "weight": 0.5089,
         "abilities": {
           "Pressure": 1
         },
@@ -6194,7 +6194,7 @@
         }
       },
       "Setup Sweeper": {
-        "weight": 0.4907,
+        "weight": 0.4911,
         "abilities": {
           "Pressure": 1
         },
@@ -6205,8 +6205,8 @@
           "Calm Mind": 1,
           "Psychic": 1,
           "Thunderbolt": 1,
-          "Flamethrower": 0.5138,
-          "Ice Beam": 0.4862
+          "Flamethrower": 0.5088,
+          "Ice Beam": 0.4912
         },
         "evs": {
           "atk": 0
@@ -6243,9 +6243,9 @@
         "moves": {
           "Crunch": 1,
           "Hidden Power Fighting": 1,
-          "Toxic": 0.6993,
-          "Double-Edge": 0.6796,
-          "Heal Bell": 0.6211
+          "Toxic": 0.6992,
+          "Double-Edge": 0.6784,
+          "Heal Bell": 0.6224
         },
         "ivs": {
           "def": 30,
@@ -6345,8 +6345,8 @@
           "Recover": 1,
           "Surf": 1,
           "Toxic": 1,
-          "Refresh": 0.5228,
-          "Ice Beam": 0.4772
+          "Refresh": 0.5133,
+          "Ice Beam": 0.4867
         },
         "evs": {
           "atk": 0
@@ -6384,9 +6384,9 @@
           "Body Slam": 1,
           "Earthquake": 1,
           "Milk Drink": 1,
-          "Toxic": 0.3529,
-          "Curse": 0.345,
-          "Heal Bell": 0.3022
+          "Toxic": 0.3503,
+          "Curse": 0.3415,
+          "Heal Bell": 0.3082
         }
       }
     }
@@ -6401,7 +6401,7 @@
     },
     "roles": {
       "Staller": {
-        "weight": 0.3441,
+        "weight": 0.3518,
         "abilities": {
           "Minus": 1
         },
@@ -6423,7 +6423,7 @@
         }
       },
       "Fast Attacker": {
-        "weight": 0.3354,
+        "weight": 0.3317,
         "abilities": {
           "Minus": 1
         },
@@ -6434,9 +6434,9 @@
           "Hidden Power Ice": 1,
           "Substitute": 1,
           "Thunderbolt": 1,
-          "Encore": 0.3545,
-          "Baton Pass": 0.3322,
-          "Toxic": 0.3134
+          "Encore": 0.354,
+          "Baton Pass": 0.3306,
+          "Toxic": 0.3154
         },
         "evs": {
           "atk": 0
@@ -6447,7 +6447,7 @@
         }
       },
       "Bulky Support": {
-        "weight": 0.3205,
+        "weight": 0.3165,
         "abilities": {
           "Minus": 1
         },
@@ -6458,8 +6458,8 @@
           "Protect": 1,
           "Thunderbolt": 1,
           "Wish": 1,
-          "Toxic": 0.5086,
-          "Hidden Power Ice": 0.4914
+          "Toxic": 0.519,
+          "Hidden Power Ice": 0.481
         },
         "evs": {
           "atk": 0
@@ -6480,7 +6480,7 @@
     },
     "roles": {
       "Setup Sweeper": {
-        "weight": 0.3358,
+        "weight": 0.3367,
         "abilities": {
           "Levitate": 1
         },
@@ -6501,25 +6501,8 @@
           "def": 30
         }
       },
-      "Bulky Support": {
-        "weight": 0.3328,
-        "abilities": {
-          "Levitate": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Shadow Ball": 1,
-          "Pain Split": 0.7319,
-          "Hidden Power Ice": 0.6923,
-          "Thunderbolt": 0.6923,
-          "Toxic": 0.4525,
-          "Thunder Wave": 0.431
-        }
-      },
       "Staller": {
-        "weight": 0.3313,
+        "weight": 0.3352,
         "abilities": {
           "Levitate": 1
         },
@@ -6531,6 +6514,23 @@
           "Perish Song": 1,
           "Protect": 1,
           "Shadow Ball": 1
+        }
+      },
+      "Bulky Support": {
+        "weight": 0.328,
+        "abilities": {
+          "Levitate": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Shadow Ball": 1,
+          "Pain Split": 0.727,
+          "Hidden Power Ice": 0.6901,
+          "Thunderbolt": 0.6855,
+          "Toxic": 0.4574,
+          "Thunder Wave": 0.4401
         }
       }
     }
@@ -6555,11 +6555,11 @@
         "moves": {
           "Hidden Power Grass": 1,
           "Morning Sun": 1,
-          "Flamethrower": 0.5015,
-          "Fire Blast": 0.4985,
-          "Will-O-Wisp": 0.347,
-          "Toxic": 0.3382,
-          "Substitute": 0.3148
+          "Flamethrower": 0.5113,
+          "Fire Blast": 0.4887,
+          "Will-O-Wisp": 0.3468,
+          "Toxic": 0.341,
+          "Substitute": 0.3122
         },
         "evs": {
           "atk": 0
@@ -6598,11 +6598,11 @@
         "moves": {
           "Calm Mind": 1,
           "Psychic": 1,
-          "Thunderbolt": 0.6329,
-          "Fire Punch": 0.6102,
-          "Substitute": 0.2544,
-          "Encore": 0.2532,
-          "Hypnosis": 0.2493
+          "Thunderbolt": 0.6263,
+          "Fire Punch": 0.6104,
+          "Hypnosis": 0.2641,
+          "Encore": 0.2522,
+          "Substitute": 0.247
         },
         "evs": {
           "atk": 0
@@ -6625,25 +6625,25 @@
       "Sticky Hold": 1
     },
     "items": {
-      "Leftovers": 0.8223,
-      "Choice Band": 0.1777
+      "Leftovers": 0.8203,
+      "Choice Band": 0.1797
     },
     "roles": {
       "Wallbreaker": {
-        "weight": 0.5065,
+        "weight": 0.5172,
         "abilities": {
           "Sticky Hold": 1
         },
         "items": {
-          "Leftovers": 0.6491,
-          "Choice Band": 0.3509
+          "Leftovers": 0.6526,
+          "Choice Band": 0.3474
         },
         "moves": {
           "Hidden Power Ground": 1,
           "Sludge Bomb": 1,
-          "Explosion": 0.6777,
-          "Fire Blast": 0.6731,
-          "Toxic": 0.6491
+          "Fire Blast": 0.6745,
+          "Explosion": 0.673,
+          "Toxic": 0.6526
         },
         "ivs": {
           "spa": 30,
@@ -6651,7 +6651,7 @@
         }
       },
       "Setup Sweeper": {
-        "weight": 0.4935,
+        "weight": 0.4828,
         "abilities": {
           "Sticky Hold": 1
         },
@@ -6681,12 +6681,12 @@
       "Insomnia": 1
     },
     "items": {
-      "Leftovers": 0.5029,
-      "Choice Band": 0.4971
+      "Leftovers": 0.5046,
+      "Choice Band": 0.4954
     },
     "roles": {
       "Bulky Attacker": {
-        "weight": 0.5029,
+        "weight": 0.5046,
         "abilities": {
           "Insomnia": 1
         },
@@ -6696,10 +6696,10 @@
         "moves": {
           "Drill Peck": 1,
           "Hidden Power Ground": 1,
-          "Pursuit": 0.6005,
-          "Shadow Ball": 0.5773,
-          "Toxic": 0.4129,
-          "Thunder Wave": 0.4093
+          "Pursuit": 0.6022,
+          "Shadow Ball": 0.5722,
+          "Toxic": 0.4187,
+          "Thunder Wave": 0.4069
         },
         "ivs": {
           "spa": 30,
@@ -6707,7 +6707,7 @@
         }
       },
       "Wallbreaker": {
-        "weight": 0.4971,
+        "weight": 0.4954,
         "abilities": {
           "Insomnia": 1
         },
@@ -6718,8 +6718,8 @@
           "Double-Edge": 1,
           "Drill Peck": 1,
           "Shadow Ball": 1,
-          "Hidden Power Fighting": 0.5063,
-          "Hidden Power Ground": 0.4937
+          "Hidden Power Fighting": 0.518,
+          "Hidden Power Ground": 0.482
         },
         "ivs": {
           "spa": 30,
@@ -6738,47 +6738,47 @@
       "Poison Point": 1
     },
     "items": {
-      "Leftovers": 0.5149,
-      "Choice Band": 0.4851
+      "Leftovers": 0.5153,
+      "Choice Band": 0.4847
     },
     "roles": {
       "Wallbreaker": {
-        "weight": 0.5081,
+        "weight": 0.5061,
         "abilities": {
           "Poison Point": 1
         },
         "items": {
-          "Choice Band": 0.8954,
-          "Leftovers": 0.1046
+          "Choice Band": 0.8912,
+          "Leftovers": 0.1088
         },
         "moves": {
           "Earthquake": 1,
           "Sludge Bomb": 1,
-          "Ice Beam": 0.4343,
-          "Shadow Ball": 0.4092,
-          "Megahorn": 0.4075,
-          "Rock Slide": 0.3766,
-          "Fire Blast": 0.3724
+          "Ice Beam": 0.446,
+          "Shadow Ball": 0.412,
+          "Megahorn": 0.4003,
+          "Fire Blast": 0.3738,
+          "Rock Slide": 0.3679
         }
       },
       "Fast Attacker": {
-        "weight": 0.4919,
+        "weight": 0.4939,
         "abilities": {
           "Poison Point": 1
         },
         "items": {
-          "Leftovers": 0.9386,
-          "Choice Band": 0.0614
+          "Leftovers": 0.9319,
+          "Choice Band": 0.0681
         },
         "moves": {
           "Earthquake": 1,
           "Sludge Bomb": 1,
-          "Shadow Ball": 0.3552,
-          "Substitute": 0.3466,
-          "Ice Beam": 0.3371,
-          "Fire Blast": 0.3319,
-          "Megahorn": 0.3172,
-          "Thunderbolt": 0.312
+          "Shadow Ball": 0.3566,
+          "Substitute": 0.343,
+          "Fire Blast": 0.3353,
+          "Ice Beam": 0.3328,
+          "Megahorn": 0.3174,
+          "Thunderbolt": 0.3149
         }
       }
     }
@@ -6789,12 +6789,12 @@
       "Poison Point": 1
     },
     "items": {
-      "Leftovers": 0.578,
-      "Choice Band": 0.422
+      "Leftovers": 0.5718,
+      "Choice Band": 0.4282
     },
     "roles": {
       "Wallbreaker": {
-        "weight": 0.5128,
+        "weight": 0.5203,
         "abilities": {
           "Poison Point": 1
         },
@@ -6805,14 +6805,14 @@
         "moves": {
           "Earthquake": 1,
           "Sludge Bomb": 1,
-          "Ice Beam": 0.5157,
-          "Fire Blast": 0.5052,
-          "Rock Slide": 0.4948,
-          "Shadow Ball": 0.4843
+          "Ice Beam": 0.5093,
+          "Fire Blast": 0.5044,
+          "Rock Slide": 0.5044,
+          "Shadow Ball": 0.4819
         }
       },
       "Fast Attacker": {
-        "weight": 0.4872,
+        "weight": 0.4797,
         "abilities": {
           "Poison Point": 1
         },
@@ -6822,11 +6822,11 @@
         "moves": {
           "Earthquake": 1,
           "Sludge Bomb": 1,
-          "Substitute": 0.4251,
-          "Ice Beam": 0.4098,
-          "Fire Blast": 0.3988,
-          "Thunderbolt": 0.3853,
-          "Shadow Ball": 0.381
+          "Ice Beam": 0.4171,
+          "Substitute": 0.4154,
+          "Fire Blast": 0.4049,
+          "Thunderbolt": 0.3857,
+          "Shadow Ball": 0.377
         }
       }
     }
@@ -6850,12 +6850,12 @@
         },
         "moves": {
           "Hidden Power Grass": 1,
-          "Substitute": 0.6027,
-          "Hypnosis": 0.5698,
-          "Fire Blast": 0.5091,
-          "Flamethrower": 0.4909,
-          "Toxic": 0.4144,
-          "Will-O-Wisp": 0.4131
+          "Substitute": 0.6018,
+          "Hypnosis": 0.5692,
+          "Fire Blast": 0.5023,
+          "Flamethrower": 0.4977,
+          "Will-O-Wisp": 0.417,
+          "Toxic": 0.412
         },
         "evs": {
           "atk": 0
@@ -6880,9 +6880,9 @@
       "Speed Boost": 1
     },
     "items": {
-      "Choice Band": 0.3494,
-      "Lum Berry": 0.3364,
-      "Liechi Berry": 0.3142
+      "Lum Berry": 0.3461,
+      "Choice Band": 0.3416,
+      "Liechi Berry": 0.3123
     },
     "roles": {
       "Fast Attacker": {
@@ -6891,16 +6891,16 @@
           "Speed Boost": 1
         },
         "items": {
-          "Choice Band": 0.3494,
-          "Lum Berry": 0.3364,
-          "Liechi Berry": 0.3142
+          "Lum Berry": 0.3461,
+          "Choice Band": 0.3416,
+          "Liechi Berry": 0.3123
         },
         "moves": {
           "Aerial Ace": 1,
           "Hidden Power Ground": 1,
-          "Double-Edge": 0.6954,
-          "Silver Wind": 0.6541,
-          "Swords Dance": 0.6506
+          "Double-Edge": 0.6902,
+          "Swords Dance": 0.6584,
+          "Silver Wind": 0.6514
         },
         "ivs": {
           "spa": 30,
@@ -6933,9 +6933,9 @@
         "moves": {
           "Return": 1,
           "Toxic": 1,
-          "Hidden Power Fire": 0.677,
-          "Whirlwind": 0.664,
-          "Hypnosis": 0.659
+          "Hidden Power Fire": 0.6878,
+          "Whirlwind": 0.6569,
+          "Hypnosis": 0.6553
         }
       }
     }
@@ -6995,8 +6995,8 @@
           "Earthquake": 1,
           "Explosion": 1,
           "Rock Slide": 1,
-          "Toxic": 0.5074,
-          "Thunder Wave": 0.4926
+          "Toxic": 0.5076,
+          "Thunder Wave": 0.4924
         }
       }
     }
@@ -7011,7 +7011,7 @@
     },
     "roles": {
       "Bulky Support": {
-        "weight": 0.5101,
+        "weight": 0.5029,
         "abilities": {
           "Suction Cups": 1
         },
@@ -7022,8 +7022,8 @@
           "Fire Blast": 1,
           "Surf": 1,
           "Thunder Wave": 1,
-          "Hidden Power Grass": 0.5065,
-          "Hidden Power Electric": 0.4935
+          "Hidden Power Grass": 0.5083,
+          "Hidden Power Electric": 0.4917
         },
         "evs": {
           "atk": 0
@@ -7033,7 +7033,7 @@
         }
       },
       "Bulky Attacker": {
-        "weight": 0.4899,
+        "weight": 0.4971,
         "abilities": {
           "Suction Cups": 1
         },
@@ -7044,8 +7044,8 @@
           "Ice Beam": 1,
           "Surf": 1,
           "Thunder Wave": 1,
-          "Hidden Power Electric": 0.5157,
-          "Hidden Power Grass": 0.4843
+          "Hidden Power Electric": 0.5018,
+          "Hidden Power Grass": 0.4982
         },
         "evs": {
           "atk": 0
@@ -7065,40 +7065,16 @@
   "Omastar": {
     "level": 84,
     "abilities": {
-      "Swift Swim": 0.5042,
-      "Shell Armor": 0.4958
+      "Swift Swim": 0.5169,
+      "Shell Armor": 0.4831
     },
     "items": {
-      "Leftovers": 0.5042,
-      "Petaya Berry": 0.4958
+      "Petaya Berry": 0.5108,
+      "Leftovers": 0.4892
     },
     "roles": {
-      "Bulky Attacker": {
-        "weight": 0.5042,
-        "abilities": {
-          "Shell Armor": 0.9835,
-          "Swift Swim": 0.0165
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Hidden Power Grass": 1,
-          "Ice Beam": 1,
-          "Spikes": 1,
-          "Hydro Pump": 0.5236,
-          "Surf": 0.4764
-        },
-        "evs": {
-          "atk": 0
-        },
-        "ivs": {
-          "atk": 2,
-          "spa": 30
-        }
-      },
       "Setup Sweeper": {
-        "weight": 0.4958,
+        "weight": 0.5108,
         "abilities": {
           "Swift Swim": 1
         },
@@ -7109,8 +7085,32 @@
           "Hidden Power Grass": 1,
           "Ice Beam": 1,
           "Rain Dance": 1,
-          "Hydro Pump": 0.5156,
-          "Surf": 0.4844
+          "Hydro Pump": 0.5293,
+          "Surf": 0.4707
+        },
+        "evs": {
+          "atk": 0
+        },
+        "ivs": {
+          "atk": 2,
+          "spa": 30
+        }
+      },
+      "Bulky Attacker": {
+        "weight": 0.4892,
+        "abilities": {
+          "Shell Armor": 0.9875,
+          "Swift Swim": 0.0125
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Hidden Power Grass": 1,
+          "Ice Beam": 1,
+          "Spikes": 1,
+          "Hydro Pump": 0.53,
+          "Surf": 0.47
         },
         "evs": {
           "atk": 0
@@ -7150,9 +7150,9 @@
           "Hidden Power Bug": 1,
           "Return": 1,
           "Spore": 1,
-          "Giga Drain": 0.3518,
-          "Stun Spore": 0.3474,
-          "Aromatherapy": 0.3008
+          "Giga Drain": 0.3499,
+          "Stun Spore": 0.3431,
+          "Aromatherapy": 0.3071
         },
         "ivs": {
           "atk": 30,
@@ -7213,7 +7213,7 @@
     },
     "roles": {
       "Staller": {
-        "weight": 0.5112,
+        "weight": 0.5139,
         "abilities": {
           "Keen Eye": 1
         },
@@ -7234,7 +7234,7 @@
         }
       },
       "Bulky Support": {
-        "weight": 0.4888,
+        "weight": 0.4861,
         "abilities": {
           "Keen Eye": 1
         },
@@ -7245,8 +7245,8 @@
           "Rest": 1,
           "Sleep Talk": 1,
           "Surf": 1,
-          "Toxic": 0.5214,
-          "Ice Beam": 0.4786
+          "Toxic": 0.5179,
+          "Ice Beam": 0.4821
         },
         "evs": {
           "atk": 0
@@ -7269,30 +7269,30 @@
       "Limber": 1
     },
     "items": {
-      "Liechi Berry": 0.499,
-      "Leftovers": 0.3422,
-      "Choice Band": 0.1589
+      "Liechi Berry": 0.4954,
+      "Leftovers": 0.346,
+      "Choice Band": 0.1586
     },
     "roles": {
       "Fast Attacker": {
-        "weight": 0.501,
+        "weight": 0.5046,
         "abilities": {
           "Limber": 1
         },
         "items": {
-          "Leftovers": 0.6829,
-          "Choice Band": 0.3171
+          "Leftovers": 0.6857,
+          "Choice Band": 0.3143
         },
         "moves": {
           "Return": 1,
-          "Hidden Power Ground": 0.7798,
-          "Shadow Ball": 0.769,
-          "Iron Tail": 0.7682,
-          "Hypnosis": 0.6829
+          "Iron Tail": 0.7783,
+          "Hidden Power Ground": 0.7734,
+          "Shadow Ball": 0.7626,
+          "Hypnosis": 0.6857
         }
       },
       "Berry Sweeper": {
-        "weight": 0.499,
+        "weight": 0.4954,
         "abilities": {
           "Limber": 1
         },
@@ -7321,13 +7321,13 @@
       "Keen Eye": 1
     },
     "items": {
-      "Liechi Berry": 0.5175,
-      "Leftovers": 0.2431,
-      "Choice Band": 0.2394
+      "Liechi Berry": 0.5203,
+      "Leftovers": 0.2486,
+      "Choice Band": 0.2311
     },
     "roles": {
       "Berry Sweeper": {
-        "weight": 0.5175,
+        "weight": 0.5203,
         "abilities": {
           "Keen Eye": 1
         },
@@ -7349,21 +7349,21 @@
         }
       },
       "Fast Attacker": {
-        "weight": 0.4825,
+        "weight": 0.4797,
         "abilities": {
           "Keen Eye": 1
         },
         "items": {
-          "Leftovers": 0.5039,
-          "Choice Band": 0.4961
+          "Leftovers": 0.5182,
+          "Choice Band": 0.4818
         },
         "moves": {
           "Aerial Ace": 1,
           "Hidden Power Ground": 1,
-          "Return": 0.5059,
-          "Toxic": 0.5039,
-          "Quick Attack": 0.4961,
-          "Double-Edge": 0.4941
+          "Toxic": 0.5182,
+          "Double-Edge": 0.5054,
+          "Return": 0.4946,
+          "Quick Attack": 0.4818
         },
         "ivs": {
           "spa": 30,
@@ -7386,7 +7386,7 @@
     },
     "roles": {
       "Wallbreaker": {
-        "weight": 0.5092,
+        "weight": 0.5076,
         "abilities": {
           "Static": 1
         },
@@ -7408,7 +7408,7 @@
         }
       },
       "Fast Attacker": {
-        "weight": 0.4908,
+        "weight": 0.4924,
         "abilities": {
           "Static": 1
         },
@@ -7419,8 +7419,8 @@
           "Hidden Power Ice": 1,
           "Surf": 1,
           "Thunderbolt": 1,
-          "Encore": 0.5251,
-          "Substitute": 0.4749
+          "Encore": 0.5091,
+          "Substitute": 0.4909
         },
         "evs": {
           "atk": 0
@@ -7445,30 +7445,30 @@
       "Oblivious": 1
     },
     "items": {
-      "Leftovers": 0.7403,
-      "Choice Band": 0.2597
+      "Leftovers": 0.7353,
+      "Choice Band": 0.2647
     },
     "roles": {
       "Wallbreaker": {
-        "weight": 0.523,
+        "weight": 0.5295,
         "abilities": {
           "Oblivious": 1
         },
         "items": {
-          "Leftovers": 0.5033,
-          "Choice Band": 0.4967
+          "Choice Band": 0.5,
+          "Leftovers": 0.5
         },
         "moves": {
           "Earthquake": 1,
           "Ice Beam": 1,
-          "Rest": 0.5033,
-          "Sleep Talk": 0.5033,
-          "Double-Edge": 0.4967,
-          "Rock Slide": 0.4967
+          "Double-Edge": 0.5,
+          "Rest": 0.5,
+          "Rock Slide": 0.5,
+          "Sleep Talk": 0.5
         }
       },
       "Staller": {
-        "weight": 0.477,
+        "weight": 0.4705,
         "abilities": {
           "Oblivious": 1
         },
@@ -7490,32 +7490,12 @@
       "Hyper Cutter": 1
     },
     "items": {
-      "Choice Band": 0.5024,
-      "Salac Berry": 0.4976
+      "Salac Berry": 0.5006,
+      "Choice Band": 0.4994
     },
     "roles": {
-      "Wallbreaker": {
-        "weight": 0.5024,
-        "abilities": {
-          "Hyper Cutter": 1
-        },
-        "items": {
-          "Choice Band": 1
-        },
-        "moves": {
-          "Double-Edge": 1,
-          "Earthquake": 1,
-          "Hidden Power Bug": 1,
-          "Rock Slide": 1
-        },
-        "ivs": {
-          "atk": 30,
-          "def": 30,
-          "spd": 30
-        }
-      },
       "Setup Sweeper": {
-        "weight": 0.4976,
+        "weight": 0.5006,
         "abilities": {
           "Hyper Cutter": 1
         },
@@ -7527,6 +7507,26 @@
           "Hidden Power Bug": 1,
           "Rock Slide": 1,
           "Swords Dance": 1
+        },
+        "ivs": {
+          "atk": 30,
+          "def": 30,
+          "spd": 30
+        }
+      },
+      "Wallbreaker": {
+        "weight": 0.4994,
+        "abilities": {
+          "Hyper Cutter": 1
+        },
+        "items": {
+          "Choice Band": 1
+        },
+        "moves": {
+          "Double-Edge": 1,
+          "Earthquake": 1,
+          "Hidden Power Bug": 1,
+          "Rock Slide": 1
         },
         "ivs": {
           "atk": 30,
@@ -7550,8 +7550,8 @@
       "Leftovers": 1
     },
     "roles": {
-      "Bulky Support": {
-        "weight": 0.3365,
+      "Fast Attacker": {
+        "weight": 0.3385,
         "abilities": {
           "Plus": 1
         },
@@ -7559,18 +7559,23 @@
           "Leftovers": 1
         },
         "moves": {
-          "Protect": 1,
+          "Hidden Power Ice": 1,
+          "Substitute": 1,
           "Thunderbolt": 1,
-          "Wish": 1,
-          "Hidden Power Ice": 0.5074,
-          "Toxic": 0.4926
+          "Baton Pass": 0.3436,
+          "Encore": 0.3333,
+          "Toxic": 0.323
         },
         "evs": {
           "atk": 0
+        },
+        "ivs": {
+          "atk": 2,
+          "def": 30
         }
       },
       "Staller": {
-        "weight": 0.3327,
+        "weight": 0.3335,
         "abilities": {
           "Plus": 1
         },
@@ -7591,8 +7596,8 @@
           "def": 30
         }
       },
-      "Fast Attacker": {
-        "weight": 0.3308,
+      "Bulky Support": {
+        "weight": 0.328,
         "abilities": {
           "Plus": 1
         },
@@ -7600,19 +7605,14 @@
           "Leftovers": 1
         },
         "moves": {
-          "Hidden Power Ice": 1,
-          "Substitute": 1,
+          "Protect": 1,
           "Thunderbolt": 1,
-          "Baton Pass": 0.3461,
-          "Encore": 0.3287,
-          "Toxic": 0.3252
+          "Wish": 1,
+          "Hidden Power Ice": 0.5012,
+          "Toxic": 0.4988
         },
         "evs": {
           "atk": 0
-        },
-        "ivs": {
-          "atk": 2,
-          "def": 30
         }
       }
     },
@@ -7629,8 +7629,30 @@
       "Leftovers": 1
     },
     "roles": {
+      "Bulky Support": {
+        "weight": 0.3335,
+        "abilities": {
+          "Water Absorb": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Rest": 1,
+          "Sleep Talk": 1,
+          "Surf": 1,
+          "Toxic": 0.5068,
+          "Ice Beam": 0.4932
+        },
+        "evs": {
+          "atk": 0
+        },
+        "ivs": {
+          "atk": 0
+        }
+      },
       "Staller": {
-        "weight": 0.3445,
+        "weight": 0.3335,
         "abilities": {
           "Water Absorb": 1
         },
@@ -7650,30 +7672,8 @@
           "atk": 0
         }
       },
-      "Bulky Support": {
-        "weight": 0.3311,
-        "abilities": {
-          "Water Absorb": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Rest": 1,
-          "Sleep Talk": 1,
-          "Surf": 1,
-          "Toxic": 0.5054,
-          "Ice Beam": 0.4946
-        },
-        "evs": {
-          "atk": 0
-        },
-        "ivs": {
-          "atk": 0
-        }
-      },
       "Bulky Attacker": {
-        "weight": 0.3244,
+        "weight": 0.333,
         "abilities": {
           "Water Absorb": 1
         },
@@ -7683,10 +7683,10 @@
         "moves": {
           "Ice Beam": 1,
           "Surf": 1,
-          "Hypnosis": 0.5283,
-          "Toxic": 0.5048,
-          "Hidden Power Grass": 0.491,
-          "Rest": 0.4759
+          "Hypnosis": 0.5293,
+          "Toxic": 0.4993,
+          "Rest": 0.4925,
+          "Hidden Power Grass": 0.4789
         },
         "evs": {
           "atk": 0
@@ -7708,7 +7708,7 @@
     },
     "roles": {
       "Generalist": {
-        "weight": 0.3368,
+        "weight": 0.3371,
         "abilities": {
           "Water Absorb": 1
         },
@@ -7719,12 +7719,12 @@
           "Focus Punch": 1,
           "Hydro Pump": 1,
           "Substitute": 1,
-          "Toxic": 0.5068,
-          "Ice Beam": 0.4932
+          "Toxic": 0.5108,
+          "Ice Beam": 0.4892
         }
       },
       "Bulky Attacker": {
-        "weight": 0.3327,
+        "weight": 0.3335,
         "abilities": {
           "Water Absorb": 1
         },
@@ -7734,31 +7734,31 @@
         "moves": {
           "Brick Break": 1,
           "Hydro Pump": 1,
-          "Ice Beam": 0.3625,
-          "Rest": 0.3338,
-          "Sleep Talk": 0.3338,
-          "Hidden Power Ghost": 0.3283,
-          "Hypnosis": 0.3283,
-          "Toxic": 0.3133
+          "Ice Beam": 0.3478,
+          "Hypnosis": 0.3465,
+          "Hidden Power Ghost": 0.3356,
+          "Rest": 0.3329,
+          "Sleep Talk": 0.3329,
+          "Toxic": 0.3043
         }
       },
       "Setup Sweeper": {
-        "weight": 0.3305,
+        "weight": 0.3294,
         "abilities": {
           "Water Absorb": 1
         },
         "items": {
-          "Leftovers": 0.7383,
-          "Salac Berry": 0.2617
+          "Leftovers": 0.7373,
+          "Salac Berry": 0.2627
         },
         "moves": {
           "Brick Break": 1,
           "Bulk Up": 1,
           "Hydro Pump": 1,
-          "Substitute": 0.2617,
-          "Hidden Power Ghost": 0.2562,
-          "Hypnosis": 0.2507,
-          "Earthquake": 0.2314
+          "Substitute": 0.2627,
+          "Hypnosis": 0.2503,
+          "Hidden Power Ghost": 0.2476,
+          "Earthquake": 0.2393
         }
       }
     }
@@ -7783,10 +7783,10 @@
         "moves": {
           "Recover": 1,
           "Return": 1,
-          "Thunderbolt": 0.5886,
-          "Ice Beam": 0.5854,
-          "Toxic": 0.4286,
-          "Thunder Wave": 0.3974
+          "Thunderbolt": 0.5865,
+          "Ice Beam": 0.5852,
+          "Toxic": 0.4302,
+          "Thunder Wave": 0.3982
         }
       }
     }
@@ -7797,48 +7797,48 @@
       "Vital Spirit": 1
     },
     "items": {
-      "Leftovers": 0.3996,
-      "Liechi Berry": 0.3318,
-      "Salac Berry": 0.1625,
-      "Choice Band": 0.1061
+      "Leftovers": 0.3931,
+      "Liechi Berry": 0.3305,
+      "Salac Berry": 0.1666,
+      "Choice Band": 0.1098
     },
     "roles": {
       "Setup Sweeper": {
-        "weight": 0.3349,
+        "weight": 0.3363,
         "abilities": {
           "Vital Spirit": 1
         },
         "items": {
-          "Leftovers": 0.5149,
-          "Salac Berry": 0.4851
+          "Leftovers": 0.5045,
+          "Salac Berry": 0.4955
         },
         "moves": {
           "Bulk Up": 1,
           "Cross Chop": 1,
-          "Rock Slide": 0.762,
-          "Hidden Power Ghost": 0.7529,
-          "Substitute": 0.4851
+          "Rock Slide": 0.7562,
+          "Hidden Power Ghost": 0.7483,
+          "Substitute": 0.4955
         }
       },
       "Fast Attacker": {
-        "weight": 0.3333,
+        "weight": 0.3332,
         "abilities": {
           "Vital Spirit": 1
         },
         "items": {
-          "Leftovers": 0.6816,
-          "Choice Band": 0.3184
+          "Leftovers": 0.6705,
+          "Choice Band": 0.3295
         },
         "moves": {
           "Cross Chop": 1,
-          "Hidden Power Ghost": 0.7977,
-          "Earthquake": 0.7632,
-          "Rock Slide": 0.7575,
-          "Bulk Up": 0.6816
+          "Hidden Power Ghost": 0.786,
+          "Rock Slide": 0.7735,
+          "Earthquake": 0.77,
+          "Bulk Up": 0.6705
         }
       },
       "Berry Sweeper": {
-        "weight": 0.3318,
+        "weight": 0.3305,
         "abilities": {
           "Vital Spirit": 1
         },
@@ -7867,25 +7867,8 @@
       "Leftovers": 1
     },
     "roles": {
-      "Bulky Attacker": {
-        "weight": 0.5034,
-        "abilities": {
-          "Water Absorb": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Earthquake": 1,
-          "Surf": 1,
-          "Ice Beam": 0.5097,
-          "Toxic": 0.5097,
-          "Rest": 0.4903,
-          "Sleep Talk": 0.4903
-        }
-      },
       "Staller": {
-        "weight": 0.4966,
+        "weight": 0.5077,
         "abilities": {
           "Water Absorb": 1
         },
@@ -7897,6 +7880,23 @@
           "Ice Beam": 1,
           "Protect": 1,
           "Toxic": 1
+        }
+      },
+      "Bulky Attacker": {
+        "weight": 0.4923,
+        "abilities": {
+          "Water Absorb": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Earthquake": 1,
+          "Surf": 1,
+          "Ice Beam": 0.5081,
+          "Toxic": 0.5081,
+          "Rest": 0.4919,
+          "Sleep Talk": 0.4919
         }
       }
     }
@@ -7930,8 +7930,8 @@
   "Qwilfish": {
     "level": 82,
     "abilities": {
-      "Poison Point": 0.9833,
-      "Swift Swim": 0.0167
+      "Poison Point": 0.9819,
+      "Swift Swim": 0.0181
     },
     "items": {
       "Leftovers": 1
@@ -7940,8 +7940,8 @@
       "Fast Attacker": {
         "weight": 1,
         "abilities": {
-          "Poison Point": 0.9833,
-          "Swift Swim": 0.0167
+          "Poison Point": 0.9819,
+          "Swift Swim": 0.0181
         },
         "items": {
           "Leftovers": 1
@@ -7950,8 +7950,8 @@
           "Hydro Pump": 1,
           "Sludge Bomb": 1,
           "Spikes": 1,
-          "Self-Destruct": 0.5244,
-          "Destiny Bond": 0.4756
+          "Self-Destruct": 0.5222,
+          "Destiny Bond": 0.4778
         }
       }
     }
@@ -7962,12 +7962,12 @@
       "Static": 1
     },
     "items": {
-      "Leftovers": 0.5105,
-      "Petaya Berry": 0.4895
+      "Leftovers": 0.5037,
+      "Petaya Berry": 0.4963
     },
     "roles": {
       "Fast Attacker": {
-        "weight": 0.5105,
+        "weight": 0.5037,
         "abilities": {
           "Static": 1
         },
@@ -7977,10 +7977,10 @@
         "moves": {
           "Hidden Power Ice": 1,
           "Thunderbolt": 1,
-          "Surf": 0.5948,
-          "Encore": 0.5804,
-          "Thunder Wave": 0.4341,
-          "Toxic": 0.3907
+          "Surf": 0.589,
+          "Encore": 0.5797,
+          "Thunder Wave": 0.4327,
+          "Toxic": 0.3986
         },
         "evs": {
           "atk": 0
@@ -7991,7 +7991,7 @@
         }
       },
       "Berry Sweeper": {
-        "weight": 0.4895,
+        "weight": 0.4963,
         "abilities": {
           "Static": 1
         },
@@ -8032,7 +8032,7 @@
     },
     "roles": {
       "Setup Sweeper": {
-        "weight": 0.5092,
+        "weight": 0.5069,
         "abilities": {
           "Pressure": 1
         },
@@ -8043,8 +8043,8 @@
           "Calm Mind": 1,
           "Hidden Power Ice": 1,
           "Thunderbolt": 1,
-          "Substitute": 0.5188,
-          "Crunch": 0.4812
+          "Substitute": 0.5015,
+          "Crunch": 0.4985
         },
         "evs": {
           "atk": 0
@@ -8055,7 +8055,7 @@
         }
       },
       "Bulky Attacker": {
-        "weight": 0.4908,
+        "weight": 0.4931,
         "abilities": {
           "Pressure": 1
         },
@@ -8106,8 +8106,8 @@
           "Fire Blast": 1,
           "Substitute": 1,
           "Toxic": 1,
-          "Hidden Power Grass": 0.5023,
-          "Hidden Power Rock": 0.4977
+          "Hidden Power Rock": 0.5004,
+          "Hidden Power Grass": 0.4996
         }
       }
     }
@@ -8118,12 +8118,52 @@
       "Guts": 1
     },
     "items": {
-      "Choice Band": 0.6584,
-      "Liechi Berry": 0.3416
+      "Choice Band": 0.6721,
+      "Liechi Berry": 0.3279
     },
     "roles": {
+      "Fast Attacker": {
+        "weight": 0.3429,
+        "abilities": {
+          "Guts": 1
+        },
+        "items": {
+          "Choice Band": 1
+        },
+        "moves": {
+          "Facade": 1,
+          "Hidden Power Ground": 1,
+          "Shadow Ball": 1,
+          "Return": 0.5024,
+          "Double-Edge": 0.4976
+        },
+        "ivs": {
+          "spa": 30,
+          "spd": 30
+        }
+      },
+      "Wallbreaker": {
+        "weight": 0.3292,
+        "abilities": {
+          "Guts": 1
+        },
+        "items": {
+          "Choice Band": 1
+        },
+        "moves": {
+          "Hidden Power Ground": 1,
+          "Quick Attack": 1,
+          "Shadow Ball": 1,
+          "Double-Edge": 0.516,
+          "Return": 0.484
+        },
+        "ivs": {
+          "spa": 30,
+          "spd": 30
+        }
+      },
       "Berry Sweeper": {
-        "weight": 0.3416,
+        "weight": 0.3279,
         "abilities": {
           "Guts": 1
         },
@@ -8139,46 +8179,6 @@
         "evs": {
           "hp": 81
         }
-      },
-      "Fast Attacker": {
-        "weight": 0.3362,
-        "abilities": {
-          "Guts": 1
-        },
-        "items": {
-          "Choice Band": 1
-        },
-        "moves": {
-          "Facade": 1,
-          "Hidden Power Ground": 1,
-          "Shadow Ball": 1,
-          "Double-Edge": 0.5074,
-          "Return": 0.4926
-        },
-        "ivs": {
-          "spa": 30,
-          "spd": 30
-        }
-      },
-      "Wallbreaker": {
-        "weight": 0.3222,
-        "abilities": {
-          "Guts": 1
-        },
-        "items": {
-          "Choice Band": 1
-        },
-        "moves": {
-          "Hidden Power Ground": 1,
-          "Quick Attack": 1,
-          "Shadow Ball": 1,
-          "Double-Edge": 0.5269,
-          "Return": 0.4731
-        },
-        "ivs": {
-          "spa": 30,
-          "spd": 30
-        }
       }
     }
   },
@@ -8188,35 +8188,12 @@
       "Air Lock": 1
     },
     "items": {
-      "Choice Band": 0.5139,
-      "Lum Berry": 0.4861
+      "Choice Band": 0.5,
+      "Lum Berry": 0.5
     },
     "roles": {
-      "Wallbreaker": {
-        "weight": 0.5139,
-        "abilities": {
-          "Air Lock": 1
-        },
-        "items": {
-          "Choice Band": 1
-        },
-        "moves": {
-          "Earthquake": 1,
-          "Extreme Speed": 1,
-          "Hidden Power Flying": 1,
-          "Overheat": 0.5097,
-          "Rock Slide": 0.4903
-        },
-        "ivs": {
-          "hp": 30,
-          "atk": 30,
-          "def": 30,
-          "spa": 30,
-          "spd": 30
-        }
-      },
       "Setup Sweeper": {
-        "weight": 0.4861,
+        "weight": 0.5,
         "abilities": {
           "Air Lock": 1
         },
@@ -8227,8 +8204,31 @@
           "Dragon Dance": 1,
           "Earthquake": 1,
           "Hidden Power Flying": 1,
-          "Overheat": 0.5082,
-          "Rock Slide": 0.4918
+          "Rock Slide": 0.5079,
+          "Overheat": 0.4921
+        },
+        "ivs": {
+          "hp": 30,
+          "atk": 30,
+          "def": 30,
+          "spa": 30,
+          "spd": 30
+        }
+      },
+      "Wallbreaker": {
+        "weight": 0.5,
+        "abilities": {
+          "Air Lock": 1
+        },
+        "items": {
+          "Choice Band": 1
+        },
+        "moves": {
+          "Earthquake": 1,
+          "Extreme Speed": 1,
+          "Hidden Power Flying": 1,
+          "Overheat": 0.5099,
+          "Rock Slide": 0.4901
         },
         "ivs": {
           "hp": 30,
@@ -8257,7 +8257,7 @@
     },
     "roles": {
       "Staller": {
-        "weight": 0.5041,
+        "weight": 0.5009,
         "abilities": {
           "Clear Body": 1
         },
@@ -8278,7 +8278,7 @@
         }
       },
       "Bulky Attacker": {
-        "weight": 0.4959,
+        "weight": 0.4991,
         "abilities": {
           "Clear Body": 1
         },
@@ -8288,10 +8288,10 @@
         "moves": {
           "Ice Beam": 1,
           "Thunderbolt": 1,
-          "Explosion": 0.5269,
-          "Thunder Wave": 0.5269,
-          "Rest": 0.4731,
-          "Sleep Talk": 0.4731
+          "Explosion": 0.516,
+          "Thunder Wave": 0.516,
+          "Rest": 0.484,
+          "Sleep Talk": 0.484
         }
       }
     }
@@ -8302,12 +8302,12 @@
       "Clear Body": 1
     },
     "items": {
-      "Leftovers": 0.8953,
-      "Choice Band": 0.1047
+      "Leftovers": 0.8927,
+      "Choice Band": 0.1073
     },
     "roles": {
       "Bulky Attacker": {
-        "weight": 0.5099,
+        "weight": 0.5067,
         "abilities": {
           "Clear Body": 1
         },
@@ -8317,29 +8317,29 @@
         "moves": {
           "Earthquake": 1,
           "Rock Slide": 1,
-          "Explosion": 0.6039,
-          "Rest": 0.3961,
-          "Sleep Talk": 0.3961,
-          "Toxic": 0.3028,
-          "Thunder Wave": 0.3011
+          "Explosion": 0.602,
+          "Rest": 0.398,
+          "Sleep Talk": 0.398,
+          "Thunder Wave": 0.3019,
+          "Toxic": 0.3002
         }
       },
       "Fast Attacker": {
-        "weight": 0.4901,
+        "weight": 0.4933,
         "abilities": {
           "Clear Body": 1
         },
         "items": {
-          "Leftovers": 0.7864,
-          "Choice Band": 0.2136
+          "Leftovers": 0.7825,
+          "Choice Band": 0.2175
         },
         "moves": {
           "Earthquake": 1,
           "Rock Slide": 1,
-          "Superpower": 0.5869,
-          "Curse": 0.5613,
-          "Rest": 0.4422,
-          "Explosion": 0.4095
+          "Superpower": 0.5895,
+          "Curse": 0.5616,
+          "Rest": 0.4341,
+          "Explosion": 0.4148
         }
       }
     }
@@ -8385,32 +8385,32 @@
   "Relicanth": {
     "level": 88,
     "abilities": {
-      "Swift Swim": 0.6089,
-      "Rock Head": 0.3911
+      "Swift Swim": 0.6065,
+      "Rock Head": 0.3935
     },
     "items": {
-      "Leftovers": 0.801,
-      "Choice Band": 0.199
+      "Leftovers": 0.7931,
+      "Choice Band": 0.2069
     },
     "roles": {
       "Bulky Attacker": {
         "weight": 1,
         "abilities": {
-          "Swift Swim": 0.6089,
-          "Rock Head": 0.3911
+          "Swift Swim": 0.6065,
+          "Rock Head": 0.3935
         },
         "items": {
-          "Leftovers": 0.801,
-          "Choice Band": 0.199
+          "Leftovers": 0.7931,
+          "Choice Band": 0.2069
         },
         "moves": {
           "Earthquake": 1,
           "Rock Slide": 1,
-          "Toxic": 0.4141,
-          "Hidden Power Flying": 0.412,
-          "Double-Edge": 0.4002,
-          "Rest": 0.3869,
-          "Sleep Talk": 0.3869
+          "Hidden Power Flying": 0.41,
+          "Double-Edge": 0.4023,
+          "Toxic": 0.3985,
+          "Rest": 0.3946,
+          "Sleep Talk": 0.3946
         }
       }
     }
@@ -8421,12 +8421,12 @@
       "Rock Head": 1
     },
     "items": {
-      "Choice Band": 0.5063,
-      "Leftovers": 0.4937
+      "Choice Band": 0.5027,
+      "Leftovers": 0.4973
     },
     "roles": {
       "Wallbreaker": {
-        "weight": 0.5063,
+        "weight": 0.5027,
         "abilities": {
           "Rock Head": 1
         },
@@ -8441,7 +8441,7 @@
         }
       },
       "Fast Attacker": {
-        "weight": 0.4937,
+        "weight": 0.4973,
         "abilities": {
           "Rock Head": 1
         },
@@ -8451,9 +8451,9 @@
         "moves": {
           "Earthquake": 1,
           "Rock Slide": 1,
-          "Megahorn": 0.6847,
-          "Swords Dance": 0.6621,
-          "Substitute": 0.6532
+          "Megahorn": 0.6712,
+          "Swords Dance": 0.6702,
+          "Substitute": 0.6586
         }
       }
     }
@@ -8468,7 +8468,7 @@
     },
     "roles": {
       "Bulky Support": {
-        "weight": 0.511,
+        "weight": 0.5155,
         "abilities": {
           "Natural Cure": 1
         },
@@ -8479,8 +8479,8 @@
           "Hidden Power Grass": 1,
           "Spikes": 1,
           "Synthesis": 1,
-          "Toxic": 0.5367,
-          "Aromatherapy": 0.4633
+          "Toxic": 0.5293,
+          "Aromatherapy": 0.4707
         },
         "evs": {
           "atk": 0
@@ -8491,7 +8491,7 @@
         }
       },
       "Bulky Attacker": {
-        "weight": 0.489,
+        "weight": 0.4845,
         "abilities": {
           "Natural Cure": 1
         },
@@ -8532,7 +8532,7 @@
     },
     "roles": {
       "Bulky Attacker": {
-        "weight": 0.503,
+        "weight": 0.5063,
         "abilities": {
           "Keen Eye": 1
         },
@@ -8547,7 +8547,7 @@
         }
       },
       "Bulky Support": {
-        "weight": 0.497,
+        "weight": 0.4937,
         "abilities": {
           "Keen Eye": 1
         },
@@ -8575,12 +8575,12 @@
       "Intimidate": 1
     },
     "items": {
-      "Lum Berry": 0.5072,
-      "Choice Band": 0.4928
+      "Lum Berry": 0.5091,
+      "Choice Band": 0.4909
     },
     "roles": {
       "Setup Sweeper": {
-        "weight": 0.5072,
+        "weight": 0.5091,
         "abilities": {
           "Intimidate": 1
         },
@@ -8591,8 +8591,8 @@
           "Dragon Dance": 1,
           "Earthquake": 1,
           "Hidden Power Flying": 1,
-          "Rock Slide": 0.5019,
-          "Fire Blast": 0.4981
+          "Rock Slide": 0.5029,
+          "Fire Blast": 0.4971
         },
         "ivs": {
           "hp": 30,
@@ -8603,7 +8603,7 @@
         }
       },
       "Wallbreaker": {
-        "weight": 0.4928,
+        "weight": 0.4909,
         "abilities": {
           "Intimidate": 1
         },
@@ -8613,10 +8613,10 @@
         "moves": {
           "Earthquake": 1,
           "Hidden Power Flying": 1,
-          "Rock Slide": 0.5105,
-          "Double-Edge": 0.5035,
-          "Brick Break": 0.4995,
-          "Fire Blast": 0.4865
+          "Rock Slide": 0.5175,
+          "Double-Edge": 0.5085,
+          "Fire Blast": 0.4875,
+          "Brick Break": 0.4865
         },
         "ivs": {
           "hp": 30,
@@ -8641,9 +8641,9 @@
       "Sand Veil": 1
     },
     "items": {
-      "Leftovers": 0.4605,
-      "Salac Berry": 0.3501,
-      "Choice Band": 0.1894
+      "Leftovers": 0.4492,
+      "Salac Berry": 0.3569,
+      "Choice Band": 0.194
     },
     "roles": {
       "Bulky Attacker": {
@@ -8652,17 +8652,17 @@
           "Sand Veil": 1
         },
         "items": {
-          "Leftovers": 0.4605,
-          "Salac Berry": 0.3501,
-          "Choice Band": 0.1894
+          "Leftovers": 0.4492,
+          "Salac Berry": 0.3569,
+          "Choice Band": 0.194
         },
         "moves": {
           "Earthquake": 1,
           "Rock Slide": 1,
-          "Hidden Power Bug": 0.7654,
-          "Toxic": 0.4605,
-          "Rapid Spin": 0.424,
-          "Swords Dance": 0.3501
+          "Hidden Power Bug": 0.7691,
+          "Toxic": 0.4492,
+          "Rapid Spin": 0.4248,
+          "Swords Dance": 0.3569
         }
       }
     }
@@ -8673,31 +8673,12 @@
       "Overgrow": 1
     },
     "items": {
-      "Leftovers": 0.6683,
-      "Petaya Berry": 0.3317
+      "Leftovers": 0.6691,
+      "Petaya Berry": 0.3309
     },
     "roles": {
-      "Fast Attacker": {
-        "weight": 0.335,
-        "abilities": {
-          "Overgrow": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Earthquake": 1,
-          "Leaf Blade": 1,
-          "Toxic": 1,
-          "Hidden Power Ice": 0.5165,
-          "Hidden Power Fire": 0.4835
-        },
-        "ivs": {
-          "atk": 30
-        }
-      },
       "Staller": {
-        "weight": 0.3333,
+        "weight": 0.3386,
         "abilities": {
           "Overgrow": 1
         },
@@ -8708,8 +8689,8 @@
           "Leaf Blade": 1,
           "Leech Seed": 1,
           "Substitute": 1,
-          "Hidden Power Ice": 0.508,
-          "Hidden Power Fire": 0.492
+          "Hidden Power Ice": 0.5226,
+          "Hidden Power Fire": 0.4774
         },
         "evs": {
           "atk": 0
@@ -8719,7 +8700,7 @@
         }
       },
       "Berry Sweeper": {
-        "weight": 0.3317,
+        "weight": 0.3309,
         "abilities": {
           "Overgrow": 1
         },
@@ -8730,8 +8711,8 @@
           "Leaf Blade": 1,
           "Substitute": 1,
           "Thunder Punch": 1,
-          "Hidden Power Fire": 0.5167,
-          "Hidden Power Ice": 0.4833
+          "Hidden Power Fire": 0.5104,
+          "Hidden Power Ice": 0.4896
         },
         "evs": {
           "hp": 81,
@@ -8739,6 +8720,25 @@
         },
         "ivs": {
           "atk": 2
+        }
+      },
+      "Fast Attacker": {
+        "weight": 0.3305,
+        "abilities": {
+          "Overgrow": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Earthquake": 1,
+          "Leaf Blade": 1,
+          "Toxic": 1,
+          "Hidden Power Ice": 0.5061,
+          "Hidden Power Fire": 0.4939
+        },
+        "ivs": {
+          "atk": 30
         }
       }
     }
@@ -8749,8 +8749,8 @@
       "Swarm": 1
     },
     "items": {
-      "Leftovers": 0.5112,
-      "Salac Berry": 0.4888
+      "Leftovers": 0.5107,
+      "Salac Berry": 0.4893
     },
     "roles": {
       "Setup Sweeper": {
@@ -8759,15 +8759,15 @@
           "Swarm": 1
         },
         "items": {
-          "Leftovers": 0.5112,
-          "Salac Berry": 0.4888
+          "Leftovers": 0.5107,
+          "Salac Berry": 0.4893
         },
         "moves": {
           "Steel Wing": 1,
           "Swords Dance": 1,
-          "Hidden Power Ground": 0.7506,
-          "Silver Wind": 0.7382,
-          "Morning Sun": 0.5112
+          "Silver Wind": 0.7463,
+          "Hidden Power Ground": 0.743,
+          "Morning Sun": 0.5107
         }
       }
     }
@@ -8778,9 +8778,9 @@
       "Swarm": 1
     },
     "items": {
-      "Liechi Berry": 0.3408,
-      "Choice Band": 0.3398,
-      "Lum Berry": 0.3195
+      "Liechi Berry": 0.342,
+      "Choice Band": 0.3351,
+      "Lum Berry": 0.3228
     },
     "roles": {
       "Fast Attacker": {
@@ -8789,16 +8789,16 @@
           "Swarm": 1
         },
         "items": {
-          "Liechi Berry": 0.3408,
-          "Choice Band": 0.3398,
-          "Lum Berry": 0.3195
+          "Liechi Berry": 0.342,
+          "Choice Band": 0.3351,
+          "Lum Berry": 0.3228
         },
         "moves": {
           "Aerial Ace": 1,
           "Hidden Power Ground": 1,
-          "Silver Wind": 0.6736,
-          "Double-Edge": 0.6662,
-          "Swords Dance": 0.6602
+          "Silver Wind": 0.6727,
+          "Swords Dance": 0.6649,
+          "Double-Edge": 0.6624
         },
         "ivs": {
           "spa": 30,
@@ -8817,8 +8817,8 @@
       "Swift Swim": 1
     },
     "items": {
-      "Leftovers": 0.5955,
-      "Petaya Berry": 0.4045
+      "Leftovers": 0.5924,
+      "Petaya Berry": 0.4076
     },
     "roles": {
       "Setup Sweeper": {
@@ -8827,16 +8827,16 @@
           "Swift Swim": 1
         },
         "items": {
-          "Leftovers": 0.5955,
-          "Petaya Berry": 0.4045
+          "Leftovers": 0.5924,
+          "Petaya Berry": 0.4076
         },
         "moves": {
           "Hydro Pump": 1,
           "Rain Dance": 1,
-          "Megahorn": 0.5955,
-          "Ice Beam": 0.567,
-          "Hidden Power Grass": 0.4199,
-          "Hidden Power Electric": 0.4177
+          "Megahorn": 0.5924,
+          "Ice Beam": 0.5684,
+          "Hidden Power Electric": 0.422,
+          "Hidden Power Grass": 0.4172
         }
       }
     }
@@ -8861,9 +8861,9 @@
         "moves": {
           "Earthquake": 1,
           "Sludge Bomb": 1,
-          "Hidden Power Grass": 0.6705,
-          "Flamethrower": 0.6694,
-          "Crunch": 0.6601
+          "Flamethrower": 0.6719,
+          "Hidden Power Grass": 0.6656,
+          "Crunch": 0.6625
         }
       }
     }
@@ -8874,12 +8874,12 @@
       "Rough Skin": 1
     },
     "items": {
-      "Choice Band": 0.503,
-      "Petaya Berry": 0.497
+      "Choice Band": 0.508,
+      "Petaya Berry": 0.492
     },
     "roles": {
       "Wallbreaker": {
-        "weight": 0.503,
+        "weight": 0.508,
         "abilities": {
           "Rough Skin": 1
         },
@@ -8901,7 +8901,7 @@
         }
       },
       "Berry Sweeper": {
-        "weight": 0.497,
+        "weight": 0.492,
         "abilities": {
           "Rough Skin": 1
         },
@@ -8912,9 +8912,9 @@
           "Crunch": 1,
           "Hydro Pump": 1,
           "Substitute": 1,
-          "Hidden Power Electric": 0.3528,
-          "Hidden Power Grass": 0.3424,
-          "Ice Beam": 0.3048
+          "Hidden Power Electric": 0.3493,
+          "Hidden Power Grass": 0.3397,
+          "Ice Beam": 0.311
         },
         "evs": {
           "hp": 77,
@@ -8929,12 +8929,12 @@
       "Wonder Guard": 1
     },
     "items": {
-      "Lum Berry": 0.5215,
-      "Choice Band": 0.4785
+      "Lum Berry": 0.5183,
+      "Choice Band": 0.4817
     },
     "roles": {
       "Fast Attacker": {
-        "weight": 0.5215,
+        "weight": 0.5183,
         "abilities": {
           "Wonder Guard": 1
         },
@@ -8945,8 +8945,8 @@
           "Hidden Power Fighting": 1,
           "Shadow Ball": 1,
           "Silver Wind": 1,
-          "Toxic": 0.5303,
-          "Agility": 0.4697
+          "Toxic": 0.5174,
+          "Agility": 0.4826
         },
         "ivs": {
           "def": 30,
@@ -8956,7 +8956,7 @@
         }
       },
       "Wallbreaker": {
-        "weight": 0.4785,
+        "weight": 0.4817,
         "abilities": {
           "Wonder Guard": 1
         },
@@ -9025,19 +9025,19 @@
   "Shiftry": {
     "level": 91,
     "abilities": {
-      "Early Bird": 0.9911,
-      "Chlorophyll": 0.0089
+      "Early Bird": 0.9913,
+      "Chlorophyll": 0.0087
     },
     "items": {
-      "Salac Berry": 0.5058,
-      "Leftovers": 0.4942
+      "Salac Berry": 0.5039,
+      "Leftovers": 0.4961
     },
     "roles": {
       "Setup Sweeper": {
-        "weight": 0.5058,
+        "weight": 0.5039,
         "abilities": {
-          "Early Bird": 0.9912,
-          "Chlorophyll": 0.0088
+          "Early Bird": 0.9909,
+          "Chlorophyll": 0.0091
         },
         "items": {
           "Salac Berry": 1
@@ -9050,10 +9050,10 @@
         }
       },
       "Staller": {
-        "weight": 0.4942,
+        "weight": 0.4961,
         "abilities": {
-          "Early Bird": 0.991,
-          "Chlorophyll": 0.009
+          "Early Bird": 0.9917,
+          "Chlorophyll": 0.0083
         },
         "items": {
           "Leftovers": 1
@@ -9109,7 +9109,7 @@
     },
     "roles": {
       "Generalist": {
-        "weight": 0.3437,
+        "weight": 0.3379,
         "abilities": {
           "Keen Eye": 1
         },
@@ -9124,7 +9124,7 @@
         }
       },
       "Bulky Support": {
-        "weight": 0.3339,
+        "weight": 0.334,
         "abilities": {
           "Keen Eye": 1
         },
@@ -9139,7 +9139,7 @@
         }
       },
       "Staller": {
-        "weight": 0.3224,
+        "weight": 0.3281,
         "abilities": {
           "Keen Eye": 1
         },
@@ -9182,8 +9182,8 @@
           "Earthquake": 1,
           "Hyper Beam": 1,
           "Shadow Ball": 1,
-          "Double-Edge": 0.5062,
-          "Return": 0.4938
+          "Double-Edge": 0.5017,
+          "Return": 0.4983
         }
       }
     }
@@ -9197,33 +9197,8 @@
       "Leftovers": 1
     },
     "roles": {
-      "Bulky Support": {
-        "weight": 0.3402,
-        "abilities": {
-          "Own Tempo": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Psychic": 1,
-          "Surf": 1,
-          "Fire Blast": 0.3796,
-          "Ice Beam": 0.3641,
-          "Rest": 0.3515,
-          "Sleep Talk": 0.3515,
-          "Toxic": 0.2913,
-          "Thunder Wave": 0.2619
-        },
-        "evs": {
-          "atk": 0
-        },
-        "ivs": {
-          "atk": 0
-        }
-      },
       "Bulky Setup": {
-        "weight": 0.334,
+        "weight": 0.339,
         "abilities": {
           "Own Tempo": 1
         },
@@ -9243,8 +9218,33 @@
           "atk": 0
         }
       },
+      "Bulky Support": {
+        "weight": 0.3363,
+        "abilities": {
+          "Own Tempo": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Psychic": 1,
+          "Surf": 1,
+          "Fire Blast": 0.3719,
+          "Ice Beam": 0.3691,
+          "Rest": 0.3526,
+          "Sleep Talk": 0.3526,
+          "Toxic": 0.2851,
+          "Thunder Wave": 0.2686
+        },
+        "evs": {
+          "atk": 0
+        },
+        "ivs": {
+          "atk": 0
+        }
+      },
       "Setup Sweeper": {
-        "weight": 0.3259,
+        "weight": 0.3247,
         "abilities": {
           "Own Tempo": 1
         },
@@ -9282,7 +9282,7 @@
     },
     "roles": {
       "Bulky Setup": {
-        "weight": 0.3431,
+        "weight": 0.3386,
         "abilities": {
           "Own Tempo": 1
         },
@@ -9303,7 +9303,7 @@
         }
       },
       "Setup Sweeper": {
-        "weight": 0.3306,
+        "weight": 0.3343,
         "abilities": {
           "Own Tempo": 1
         },
@@ -9324,7 +9324,7 @@
         }
       },
       "Bulky Support": {
-        "weight": 0.3263,
+        "weight": 0.3271,
         "abilities": {
           "Own Tempo": 1
         },
@@ -9334,12 +9334,12 @@
         "moves": {
           "Psychic": 1,
           "Surf": 1,
-          "Fire Blast": 0.3947,
-          "Ice Beam": 0.3903,
-          "Rest": 0.3225,
-          "Sleep Talk": 0.3225,
-          "Toxic": 0.2901,
-          "Thunder Wave": 0.2798
+          "Ice Beam": 0.4003,
+          "Fire Blast": 0.393,
+          "Rest": 0.3217,
+          "Sleep Talk": 0.3217,
+          "Toxic": 0.2853,
+          "Thunder Wave": 0.278
         },
         "evs": {
           "atk": 0
@@ -9388,44 +9388,44 @@
       "Inner Focus": 1
     },
     "items": {
-      "Liechi Berry": 0.5388,
-      "Lum Berry": 0.2897,
-      "Choice Band": 0.1715
+      "Liechi Berry": 0.5407,
+      "Lum Berry": 0.2821,
+      "Choice Band": 0.1773
     },
     "roles": {
       "Wallbreaker": {
-        "weight": 0.5009,
+        "weight": 0.5057,
         "abilities": {
           "Inner Focus": 1
         },
         "items": {
-          "Lum Berry": 0.3432,
-          "Choice Band": 0.3423,
-          "Liechi Berry": 0.3144
+          "Choice Band": 0.3505,
+          "Lum Berry": 0.3348,
+          "Liechi Berry": 0.3147
         },
         "moves": {
           "Brick Break": 1,
           "Shadow Ball": 1,
-          "Hidden Power Flying": 0.6721,
-          "Double-Edge": 0.6703,
-          "Swords Dance": 0.6577
+          "Double-Edge": 0.6774,
+          "Hidden Power Flying": 0.6731,
+          "Swords Dance": 0.6495
         }
       },
       "Setup Sweeper": {
-        "weight": 0.4991,
+        "weight": 0.4943,
         "abilities": {
           "Inner Focus": 1
         },
         "items": {
-          "Liechi Berry": 0.764,
-          "Lum Berry": 0.236
+          "Liechi Berry": 0.7719,
+          "Lum Berry": 0.2281
         },
         "moves": {
           "Brick Break": 1,
           "Shadow Ball": 1,
           "Swords Dance": 1,
-          "Substitute": 0.5127,
-          "Hidden Power Flying": 0.4873
+          "Substitute": 0.5152,
+          "Hidden Power Flying": 0.4848
         }
       }
     }
@@ -9433,15 +9433,31 @@
   "Snorlax": {
     "level": 71,
     "abilities": {
-      "Thick Fat": 0.5119,
-      "Immunity": 0.4881
+      "Thick Fat": 0.5006,
+      "Immunity": 0.4994
     },
     "items": {
       "Leftovers": 1
     },
     "roles": {
+      "Bulky Setup": {
+        "weight": 0.3338,
+        "abilities": {
+          "Immunity": 0.5,
+          "Thick Fat": 0.5
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Body Slam": 1,
+          "Curse": 1,
+          "Earthquake": 1,
+          "Rest": 1
+        }
+      },
       "Bulky Support": {
-        "weight": 0.3396,
+        "weight": 0.3338,
         "abilities": {
           "Thick Fat": 1
         },
@@ -9455,24 +9471,8 @@
           "Sleep Talk": 1
         }
       },
-      "Bulky Setup": {
-        "weight": 0.3332,
-        "abilities": {
-          "Thick Fat": 0.5172,
-          "Immunity": 0.4828
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Body Slam": 1,
-          "Curse": 1,
-          "Earthquake": 1,
-          "Rest": 1
-        }
-      },
       "Setup Sweeper": {
-        "weight": 0.3272,
+        "weight": 0.3325,
         "abilities": {
           "Immunity": 1
         },
@@ -9483,8 +9483,8 @@
           "Body Slam": 1,
           "Curse": 1,
           "Earthquake": 1,
-          "Shadow Ball": 0.5085,
-          "Self-Destruct": 0.4915
+          "Self-Destruct": 0.5095,
+          "Shadow Ball": 0.4905
         }
       }
     }
@@ -9495,12 +9495,12 @@
       "Levitate": 1
     },
     "items": {
-      "Leftovers": 0.5071,
-      "Choice Band": 0.4929
+      "Leftovers": 0.5093,
+      "Choice Band": 0.4907
     },
     "roles": {
       "Staller": {
-        "weight": 0.5071,
+        "weight": 0.5093,
         "abilities": {
           "Levitate": 1
         },
@@ -9515,7 +9515,7 @@
         }
       },
       "Wallbreaker": {
-        "weight": 0.4929,
+        "weight": 0.4907,
         "abilities": {
           "Levitate": 1
         },
@@ -9567,7 +9567,7 @@
     },
     "roles": {
       "Bulky Support": {
-        "weight": 0.5108,
+        "weight": 0.5075,
         "abilities": {
           "Own Tempo": 1
         },
@@ -9588,7 +9588,7 @@
         }
       },
       "Staller": {
-        "weight": 0.4892,
+        "weight": 0.4925,
         "abilities": {
           "Own Tempo": 1
         },
@@ -9599,9 +9599,9 @@
           "Protect": 1,
           "Seismic Toss": 1,
           "Toxic": 1,
-          "Shadow Ball": 0.3527,
-          "Encore": 0.3283,
-          "Substitute": 0.319
+          "Shadow Ball": 0.3486,
+          "Encore": 0.3284,
+          "Substitute": 0.3229
         }
       }
     }
@@ -9612,8 +9612,8 @@
       "Intimidate": 1
     },
     "items": {
-      "Leftovers": 0.8335,
-      "Choice Band": 0.1665
+      "Leftovers": 0.8312,
+      "Choice Band": 0.1688
     },
     "roles": {
       "Wallbreaker": {
@@ -9622,16 +9622,16 @@
           "Intimidate": 1
         },
         "items": {
-          "Leftovers": 0.8335,
-          "Choice Band": 0.1665
+          "Leftovers": 0.8312,
+          "Choice Band": 0.1688
         },
         "moves": {
           "Earthquake": 1,
           "Return": 1,
-          "Shadow Ball": 0.512,
-          "Hypnosis": 0.5029,
-          "Thunder Wave": 0.4979,
-          "Thunderbolt": 0.4871
+          "Shadow Ball": 0.5172,
+          "Hypnosis": 0.5002,
+          "Thunder Wave": 0.4969,
+          "Thunderbolt": 0.4857
         }
       }
     }
@@ -9656,10 +9656,10 @@
         "moves": {
           "Psychic": 1,
           "Recover": 1,
-          "Thunderbolt": 0.5192,
-          "Surf": 0.5107,
-          "Hydro Pump": 0.4893,
-          "Ice Beam": 0.4808
+          "Thunderbolt": 0.5135,
+          "Surf": 0.5019,
+          "Hydro Pump": 0.4981,
+          "Ice Beam": 0.4865
         },
         "evs": {
           "atk": 0
@@ -9682,12 +9682,12 @@
       "Rock Head": 1
     },
     "items": {
-      "Leftovers": 0.9012,
-      "Choice Band": 0.0988
+      "Leftovers": 0.9003,
+      "Choice Band": 0.0997
     },
     "roles": {
       "Staller": {
-        "weight": 0.5045,
+        "weight": 0.5043,
         "abilities": {
           "Rock Head": 1
         },
@@ -9698,28 +9698,28 @@
           "Earthquake": 1,
           "Protect": 1,
           "Toxic": 1,
-          "Double-Edge": 0.5169,
-          "Hidden Power Rock": 0.4831
+          "Double-Edge": 0.5341,
+          "Hidden Power Rock": 0.4659
         }
       },
       "Bulky Attacker": {
-        "weight": 0.4955,
+        "weight": 0.4957,
         "abilities": {
           "Rock Head": 1
         },
         "items": {
-          "Leftovers": 0.8007,
-          "Choice Band": 0.1993
+          "Leftovers": 0.799,
+          "Choice Band": 0.201
         },
         "moves": {
           "Earthquake": 1,
           "Iron Tail": 1,
-          "Roar": 0.3607,
-          "Double-Edge": 0.3425,
-          "Toxic": 0.3399,
-          "Hidden Power Rock": 0.3348,
-          "Rest": 0.3123,
-          "Explosion": 0.3097
+          "Roar": 0.3588,
+          "Double-Edge": 0.344,
+          "Hidden Power Rock": 0.3371,
+          "Toxic": 0.3345,
+          "Rest": 0.3215,
+          "Explosion": 0.3042
         }
       }
     }
@@ -9730,12 +9730,12 @@
       "Rock Head": 1
     },
     "items": {
-      "Leftovers": 0.842,
-      "Choice Band": 0.158
+      "Leftovers": 0.8403,
+      "Choice Band": 0.1597
     },
     "roles": {
       "Generalist": {
-        "weight": 0.5012,
+        "weight": 0.507,
         "abilities": {
           "Rock Head": 1
         },
@@ -9746,25 +9746,25 @@
           "Focus Punch": 1,
           "Rock Slide": 1,
           "Substitute": 1,
-          "Toxic": 0.5183,
-          "Explosion": 0.4817
+          "Toxic": 0.5198,
+          "Explosion": 0.4802
         }
       },
       "Bulky Attacker": {
-        "weight": 0.4988,
+        "weight": 0.493,
         "abilities": {
           "Rock Head": 1
         },
         "items": {
-          "Leftovers": 0.6833,
-          "Choice Band": 0.3167
+          "Leftovers": 0.6761,
+          "Choice Band": 0.3239
         },
         "moves": {
           "Earthquake": 1,
           "Rock Slide": 1,
-          "Toxic": 0.6833,
-          "Explosion": 0.6678,
-          "Double-Edge": 0.649
+          "Toxic": 0.6761,
+          "Explosion": 0.6661,
+          "Double-Edge": 0.6578
         }
       }
     }
@@ -9779,7 +9779,7 @@
     },
     "roles": {
       "Bulky Setup": {
-        "weight": 0.5079,
+        "weight": 0.5084,
         "abilities": {
           "Pressure": 1
         },
@@ -9800,7 +9800,7 @@
         }
       },
       "Bulky Attacker": {
-        "weight": 0.4921,
+        "weight": 0.4916,
         "abilities": {
           "Pressure": 1
         },
@@ -9811,8 +9811,8 @@
           "Calm Mind": 1,
           "Ice Beam": 1,
           "Surf": 1,
-          "Rest": 0.5105,
-          "Substitute": 0.4895
+          "Rest": 0.5068,
+          "Substitute": 0.4932
         },
         "evs": {
           "atk": 0
@@ -9839,7 +9839,7 @@
     },
     "roles": {
       "Bulky Attacker": {
-        "weight": 0.5099,
+        "weight": 0.5075,
         "abilities": {
           "Chlorophyll": 1
         },
@@ -9850,8 +9850,8 @@
           "Hidden Power Fire": 1,
           "Razor Leaf": 1,
           "Synthesis": 1,
-          "Leech Seed": 0.5078,
-          "Toxic": 0.4922
+          "Leech Seed": 0.5019,
+          "Toxic": 0.4981
         },
         "evs": {
           "atk": 0
@@ -9863,7 +9863,7 @@
         }
       },
       "Fast Attacker": {
-        "weight": 0.4901,
+        "weight": 0.4925,
         "abilities": {
           "Chlorophyll": 1
         },
@@ -9901,8 +9901,8 @@
       "Liquid Ooze": 1
     },
     "items": {
-      "Leftovers": 0.968,
-      "Choice Band": 0.032
+      "Leftovers": 0.967,
+      "Choice Band": 0.033
     },
     "roles": {
       "Bulky Attacker": {
@@ -9911,19 +9911,19 @@
           "Liquid Ooze": 1
         },
         "items": {
-          "Leftovers": 0.968,
-          "Choice Band": 0.032
+          "Leftovers": 0.967,
+          "Choice Band": 0.033
         },
         "moves": {
           "Sludge Bomb": 1,
-          "Ice Beam": 0.5464,
-          "Shadow Ball": 0.5375,
-          "Hidden Power Ground": 0.5343,
-          "Encore": 0.3165,
-          "Yawn": 0.2799,
-          "Pain Split": 0.2662,
-          "Toxic": 0.2615,
-          "Explosion": 0.2576
+          "Shadow Ball": 0.548,
+          "Ice Beam": 0.5468,
+          "Hidden Power Ground": 0.5317,
+          "Encore": 0.3043,
+          "Yawn": 0.2779,
+          "Toxic": 0.2658,
+          "Pain Split": 0.2639,
+          "Explosion": 0.2616
         }
       }
     }
@@ -9938,7 +9938,7 @@
     },
     "roles": {
       "Bulky Support": {
-        "weight": 0.3375,
+        "weight": 0.3387,
         "abilities": {
           "Torrent": 1
         },
@@ -9949,29 +9949,12 @@
           "Earthquake": 1,
           "Rest": 1,
           "Sleep Talk": 1,
-          "Hydro Pump": 0.5081,
-          "Surf": 0.4919
-        }
-      },
-      "Staller": {
-        "weight": 0.333,
-        "abilities": {
-          "Torrent": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Earthquake": 1,
-          "Toxic": 1,
-          "Surf": 0.512,
-          "Refresh": 0.5015,
-          "Ice Beam": 0.4985,
-          "Hydro Pump": 0.488
+          "Hydro Pump": 0.5036,
+          "Surf": 0.4964
         }
       },
       "Bulky Attacker": {
-        "weight": 0.3295,
+        "weight": 0.3333,
         "abilities": {
           "Torrent": 1
         },
@@ -9982,8 +9965,25 @@
           "Earthquake": 1,
           "Protect": 1,
           "Toxic": 1,
-          "Hydro Pump": 0.5083,
-          "Surf": 0.4917
+          "Hydro Pump": 0.5162,
+          "Surf": 0.4838
+        }
+      },
+      "Staller": {
+        "weight": 0.3279,
+        "abilities": {
+          "Torrent": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Earthquake": 1,
+          "Toxic": 1,
+          "Ice Beam": 0.5022,
+          "Surf": 0.5007,
+          "Hydro Pump": 0.4993,
+          "Refresh": 0.4978
         }
       }
     }
@@ -9998,7 +9998,7 @@
     },
     "roles": {
       "Fast Attacker": {
-        "weight": 0.5092,
+        "weight": 0.5073,
         "abilities": {
           "Guts": 1
         },
@@ -10009,8 +10009,8 @@
           "Aerial Ace": 1,
           "Facade": 1,
           "Hidden Power Ground": 1,
-          "Double-Edge": 0.5081,
-          "Return": 0.4919
+          "Double-Edge": 0.5105,
+          "Return": 0.4895
         },
         "ivs": {
           "spa": 30,
@@ -10018,7 +10018,7 @@
         }
       },
       "Wallbreaker": {
-        "weight": 0.4908,
+        "weight": 0.4927,
         "abilities": {
           "Guts": 1
         },
@@ -10029,8 +10029,8 @@
           "Aerial Ace": 1,
           "Hidden Power Ground": 1,
           "Quick Attack": 1,
-          "Return": 0.5114,
-          "Double-Edge": 0.4886
+          "Return": 0.5157,
+          "Double-Edge": 0.4843
         },
         "ivs": {
           "spa": 30,
@@ -10053,7 +10053,7 @@
     },
     "roles": {
       "Bulky Support": {
-        "weight": 0.5085,
+        "weight": 0.5112,
         "abilities": {
           "Chlorophyll": 1
         },
@@ -10063,10 +10063,10 @@
         "moves": {
           "Hidden Power Grass": 1,
           "Morning Sun": 1,
-          "Sleep Powder": 0.6086,
-          "Leech Seed": 0.5679,
-          "Stun Spore": 0.4177,
-          "Toxic": 0.4058
+          "Sleep Powder": 0.6075,
+          "Leech Seed": 0.5725,
+          "Stun Spore": 0.4108,
+          "Toxic": 0.4092
         },
         "evs": {
           "atk": 0
@@ -10077,7 +10077,7 @@
         }
       },
       "Setup Sweeper": {
-        "weight": 0.4915,
+        "weight": 0.4888,
         "abilities": {
           "Chlorophyll": 1
         },
@@ -10088,8 +10088,8 @@
           "Hidden Power Fire": 1,
           "Solar Beam": 1,
           "Sunny Day": 1,
-          "Sleep Powder": 0.505,
-          "Morning Sun": 0.495
+          "Sleep Powder": 0.5112,
+          "Morning Sun": 0.4888
         },
         "evs": {
           "atk": 0
@@ -10146,8 +10146,8 @@
   "Tentacruel": {
     "level": 79,
     "abilities": {
-      "Clear Body": 0.5051,
-      "Liquid Ooze": 0.4949
+      "Clear Body": 0.5025,
+      "Liquid Ooze": 0.4975
     },
     "items": {
       "Leftovers": 1
@@ -10156,19 +10156,19 @@
       "Bulky Attacker": {
         "weight": 1,
         "abilities": {
-          "Clear Body": 0.5051,
-          "Liquid Ooze": 0.4949
+          "Clear Body": 0.5025,
+          "Liquid Ooze": 0.4975
         },
         "items": {
           "Leftovers": 1
         },
         "moves": {
           "Sludge Bomb": 1,
-          "Ice Beam": 0.6946,
-          "Toxic": 0.6674,
-          "Rapid Spin": 0.6379,
-          "Surf": 0.506,
-          "Hydro Pump": 0.494
+          "Ice Beam": 0.6988,
+          "Toxic": 0.6605,
+          "Rapid Spin": 0.6406,
+          "Surf": 0.509,
+          "Hydro Pump": 0.491
         }
       }
     }
@@ -10183,7 +10183,7 @@
     },
     "roles": {
       "Staller": {
-        "weight": 0.5115,
+        "weight": 0.5114,
         "abilities": {
           "Serene Grace": 1
         },
@@ -10194,10 +10194,10 @@
           "Seismic Toss": 1,
           "Soft-Boiled": 1,
           "Toxic": 1,
-          "Flamethrower": 0.2724,
-          "Charm": 0.2578,
-          "Thunder Wave": 0.2459,
-          "Encore": 0.2239
+          "Flamethrower": 0.2702,
+          "Charm": 0.2557,
+          "Thunder Wave": 0.2457,
+          "Encore": 0.2284
         },
         "evs": {
           "atk": 0
@@ -10207,7 +10207,7 @@
         }
       },
       "Bulky Support": {
-        "weight": 0.4885,
+        "weight": 0.4886,
         "abilities": {
           "Serene Grace": 1
         },
@@ -10256,8 +10256,8 @@
           "Explosion": 1,
           "Hidden Power Grass": 1,
           "Toxic": 1,
-          "Fire Blast": 0.505,
-          "Flamethrower": 0.495
+          "Fire Blast": 0.5099,
+          "Flamethrower": 0.4901
         },
         "ivs": {
           "atk": 30,
@@ -10279,31 +10279,8 @@
       "Leftovers": 1
     },
     "roles": {
-      "Staller": {
-        "weight": 0.5081,
-        "abilities": {
-          "Chlorophyll": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Hidden Power Flying": 1,
-          "Synthesis": 1,
-          "Toxic": 1,
-          "Leech Seed": 0.501,
-          "Earthquake": 0.499
-        },
-        "ivs": {
-          "hp": 30,
-          "atk": 30,
-          "def": 30,
-          "spa": 30,
-          "spd": 30
-        }
-      },
       "Setup Sweeper": {
-        "weight": 0.4919,
+        "weight": 0.5082,
         "abilities": {
           "Chlorophyll": 1
         },
@@ -10315,6 +10292,29 @@
           "Hidden Power Flying": 1,
           "Swords Dance": 1,
           "Synthesis": 1
+        },
+        "ivs": {
+          "hp": 30,
+          "atk": 30,
+          "def": 30,
+          "spa": 30,
+          "spd": 30
+        }
+      },
+      "Staller": {
+        "weight": 0.4918,
+        "abilities": {
+          "Chlorophyll": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Hidden Power Flying": 1,
+          "Synthesis": 1,
+          "Toxic": 1,
+          "Leech Seed": 0.5005,
+          "Earthquake": 0.4995
         },
         "ivs": {
           "hp": 30,
@@ -10339,12 +10339,12 @@
       "Blaze": 1
     },
     "items": {
-      "Leftovers": 0.5226,
-      "Petaya Berry": 0.4774
+      "Leftovers": 0.5143,
+      "Petaya Berry": 0.4857
     },
     "roles": {
       "Fast Attacker": {
-        "weight": 0.5226,
+        "weight": 0.5143,
         "abilities": {
           "Blaze": 1
         },
@@ -10353,17 +10353,17 @@
         },
         "moves": {
           "Thunder Punch": 1,
-          "Flamethrower": 0.5101,
-          "Fire Blast": 0.4899,
-          "Hidden Power Ice": 0.404,
-          "Focus Punch": 0.4016,
-          "Substitute": 0.4016,
-          "Toxic": 0.3984,
-          "Earthquake": 0.3943
+          "Flamethrower": 0.5061,
+          "Fire Blast": 0.4939,
+          "Hidden Power Ice": 0.4047,
+          "Toxic": 0.4039,
+          "Earthquake": 0.3982,
+          "Focus Punch": 0.3966,
+          "Substitute": 0.3966
         }
       },
       "Berry Sweeper": {
-        "weight": 0.4774,
+        "weight": 0.4857,
         "abilities": {
           "Blaze": 1
         },
@@ -10373,10 +10373,10 @@
         "moves": {
           "Substitute": 1,
           "Thunder Punch": 1,
-          "Hidden Power Grass": 0.5195,
-          "Flamethrower": 0.5018,
-          "Fire Blast": 0.4982,
-          "Hidden Power Ice": 0.4805
+          "Hidden Power Grass": 0.5169,
+          "Flamethrower": 0.503,
+          "Fire Blast": 0.497,
+          "Hidden Power Ice": 0.4831
         },
         "evs": {
           "hp": 81,
@@ -10394,31 +10394,31 @@
       "Sand Stream": 1
     },
     "items": {
-      "Leftovers": 0.4917,
-      "Lum Berry": 0.3384,
-      "Choice Band": 0.1699
+      "Leftovers": 0.4864,
+      "Lum Berry": 0.3364,
+      "Choice Band": 0.1772
     },
     "roles": {
       "Wallbreaker": {
-        "weight": 0.3444,
+        "weight": 0.352,
         "abilities": {
           "Sand Stream": 1
         },
         "items": {
-          "Leftovers": 0.5066,
-          "Choice Band": 0.4934
+          "Choice Band": 0.5036,
+          "Leftovers": 0.4964
         },
         "moves": {
           "Earthquake": 1,
           "Rock Slide": 1,
-          "Rest": 0.5066,
-          "Sleep Talk": 0.5066,
-          "Fire Blast": 0.4934,
-          "Hidden Power Flying": 0.4934
+          "Fire Blast": 0.5036,
+          "Hidden Power Flying": 0.5036,
+          "Rest": 0.4964,
+          "Sleep Talk": 0.4964
         }
       },
       "Setup Sweeper": {
-        "weight": 0.3384,
+        "weight": 0.3364,
         "abilities": {
           "Sand Stream": 1
         },
@@ -10429,12 +10429,12 @@
           "Dragon Dance": 1,
           "Earthquake": 1,
           "Rock Slide": 1,
-          "Fire Blast": 0.5082,
-          "Hidden Power Flying": 0.4918
+          "Fire Blast": 0.503,
+          "Hidden Power Flying": 0.497
         }
       },
       "Bulky Attacker": {
-        "weight": 0.3172,
+        "weight": 0.3117,
         "abilities": {
           "Sand Stream": 1
         },
@@ -10444,12 +10444,12 @@
         "moves": {
           "Crunch": 1,
           "Rock Slide": 1,
-          "Earthquake": 0.3645,
-          "Ice Beam": 0.355,
-          "Fire Blast": 0.3471,
+          "Earthquake": 0.3683,
+          "Fire Blast": 0.3506,
+          "Ice Beam": 0.3393,
           "Pursuit": 0.3328,
-          "Toxic": 0.3233,
-          "Thunder Wave": 0.2773
+          "Toxic": 0.3183,
+          "Thunder Wave": 0.2908
         }
       }
     }
@@ -10464,7 +10464,7 @@
     },
     "roles": {
       "Bulky Support": {
-        "weight": 0.5028,
+        "weight": 0.5014,
         "abilities": {
           "Synchronize": 1
         },
@@ -10485,7 +10485,7 @@
         }
       },
       "Staller": {
-        "weight": 0.4972,
+        "weight": 0.4986,
         "abilities": {
           "Synchronize": 1
         },
@@ -10496,8 +10496,8 @@
           "Protect": 1,
           "Toxic": 1,
           "Wish": 1,
-          "Hidden Power Ground": 0.5056,
-          "Hidden Power Fire": 0.4944
+          "Hidden Power Ground": 0.5143,
+          "Hidden Power Fire": 0.4857
         },
         "ivs": {
           "spa": 30
@@ -10511,8 +10511,8 @@
       "Levitate": 1
     },
     "items": {
-      "Choice Band": 0.821,
-      "Twisted Spoon": 0.179
+      "Choice Band": 0.824,
+      "Twisted Spoon": 0.176
     },
     "roles": {
       "Fast Attacker": {
@@ -10521,16 +10521,16 @@
           "Levitate": 1
         },
         "items": {
-          "Choice Band": 0.821,
-          "Twisted Spoon": 0.179
+          "Choice Band": 0.824,
+          "Twisted Spoon": 0.176
         },
         "moves": {
-          "Hidden Power Psychic": 0.179,
-          "Hidden Power Ghost": 0.1689,
-          "Hidden Power Rock": 0.1663,
-          "Hidden Power Flying": 0.1659,
-          "Hidden Power Ground": 0.1612,
-          "Hidden Power Fighting": 0.1587
+          "Hidden Power Psychic": 0.176,
+          "Hidden Power Ghost": 0.1751,
+          "Hidden Power Flying": 0.1682,
+          "Hidden Power Ground": 0.1644,
+          "Hidden Power Fighting": 0.1609,
+          "Hidden Power Rock": 0.1553
         }
       }
     }
@@ -10541,12 +10541,12 @@
       "Guts": 1
     },
     "items": {
-      "Choice Band": 0.6668,
-      "Leftovers": 0.3332
+      "Choice Band": 0.668,
+      "Leftovers": 0.332
     },
     "roles": {
       "Fast Attacker": {
-        "weight": 0.3336,
+        "weight": 0.3381,
         "abilities": {
           "Guts": 1
         },
@@ -10565,7 +10565,7 @@
         }
       },
       "Setup Sweeper": {
-        "weight": 0.3332,
+        "weight": 0.332,
         "abilities": {
           "Guts": 1
         },
@@ -10584,7 +10584,7 @@
         }
       },
       "Wallbreaker": {
-        "weight": 0.3332,
+        "weight": 0.3299,
         "abilities": {
           "Guts": 1
         },
@@ -10629,8 +10629,8 @@
           "Protect": 1,
           "Surf": 1,
           "Wish": 1,
-          "Ice Beam": 0.508,
-          "Toxic": 0.492
+          "Ice Beam": 0.5026,
+          "Toxic": 0.4974
         },
         "evs": {
           "atk": 0
@@ -10657,7 +10657,7 @@
     },
     "roles": {
       "Bulky Support": {
-        "weight": 0.5107,
+        "weight": 0.5157,
         "abilities": {
           "Shield Dust": 1
         },
@@ -10666,14 +10666,14 @@
         },
         "moves": {
           "Sludge Bomb": 1,
-          "Sleep Powder": 0.7659,
-          "Signal Beam": 0.7507,
-          "Psychic": 0.7444,
-          "Hidden Power Fire": 0.7391
+          "Sleep Powder": 0.7712,
+          "Signal Beam": 0.7535,
+          "Psychic": 0.7403,
+          "Hidden Power Fire": 0.735
         }
       },
       "Generalist": {
-        "weight": 0.4893,
+        "weight": 0.4843,
         "abilities": {
           "Shield Dust": 1
         },
@@ -10683,11 +10683,11 @@
         "moves": {
           "Sludge Bomb": 1,
           "Substitute": 1,
-          "Signal Beam": 0.4114,
-          "Psychic": 0.4104,
-          "Sleep Powder": 0.4049,
-          "Baton Pass": 0.3909,
-          "Hidden Power Fire": 0.3825
+          "Psychic": 0.4167,
+          "Sleep Powder": 0.4055,
+          "Signal Beam": 0.3989,
+          "Baton Pass": 0.396,
+          "Hidden Power Fire": 0.3829
         }
       }
     }
@@ -10732,12 +10732,12 @@
       "Overgrow": 1
     },
     "items": {
-      "Leftovers": 0.8203,
-      "Salac Berry": 0.1797
+      "Leftovers": 0.8223,
+      "Salac Berry": 0.1777
     },
     "roles": {
       "Staller": {
-        "weight": 0.5083,
+        "weight": 0.5089,
         "abilities": {
           "Overgrow": 1
         },
@@ -10748,26 +10748,26 @@
           "Leech Seed": 1,
           "Sludge Bomb": 1,
           "Substitute": 1,
-          "Hidden Power Grass": 0.5027,
-          "Sleep Powder": 0.4973
+          "Sleep Powder": 0.5082,
+          "Hidden Power Grass": 0.4918
         }
       },
       "Setup Sweeper": {
-        "weight": 0.4917,
+        "weight": 0.4911,
         "abilities": {
           "Overgrow": 1
         },
         "items": {
-          "Leftovers": 0.6346,
-          "Salac Berry": 0.3654
+          "Leftovers": 0.6381,
+          "Salac Berry": 0.3619
         },
         "moves": {
           "Earthquake": 1,
           "Sludge Bomb": 1,
           "Swords Dance": 1,
-          "Hidden Power Ghost": 0.3654,
-          "Synthesis": 0.3226,
-          "Sleep Powder": 0.312
+          "Hidden Power Ghost": 0.3619,
+          "Synthesis": 0.3255,
+          "Sleep Powder": 0.3126
         }
       }
     }
@@ -10782,7 +10782,7 @@
     },
     "roles": {
       "Setup Sweeper": {
-        "weight": 0.349,
+        "weight": 0.344,
         "abilities": {
           "Chlorophyll": 1
         },
@@ -10793,8 +10793,28 @@
           "Hidden Power Ground": 1,
           "Sludge Bomb": 1,
           "Swords Dance": 1,
-          "Sleep Powder": 0.5018,
-          "Synthesis": 0.4982
+          "Sleep Powder": 0.5036,
+          "Synthesis": 0.4964
+        },
+        "ivs": {
+          "spa": 30,
+          "spd": 30
+        }
+      },
+      "Bulky Attacker": {
+        "weight": 0.33,
+        "abilities": {
+          "Chlorophyll": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Hidden Power Ground": 1,
+          "Sludge Bomb": 1,
+          "Synthesis": 1,
+          "Sleep Powder": 0.5249,
+          "Magical Leaf": 0.4751
         },
         "ivs": {
           "spa": 30,
@@ -10802,7 +10822,7 @@
         }
       },
       "Fast Attacker": {
-        "weight": 0.3263,
+        "weight": 0.3259,
         "abilities": {
           "Chlorophyll": 1
         },
@@ -10819,26 +10839,6 @@
           "atk": 30,
           "spa": 30,
           "spe": 30
-        }
-      },
-      "Bulky Attacker": {
-        "weight": 0.3247,
-        "abilities": {
-          "Chlorophyll": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Hidden Power Ground": 1,
-          "Sludge Bomb": 1,
-          "Synthesis": 1,
-          "Sleep Powder": 0.5139,
-          "Magical Leaf": 0.4861
-        },
-        "ivs": {
-          "spa": 30,
-          "spd": 30
         }
       }
     },
@@ -10866,10 +10866,10 @@
         "moves": {
           "Bulk Up": 1,
           "Slack Off": 1,
-          "Shadow Ball": 0.5038,
-          "Return": 0.5029,
-          "Body Slam": 0.4971,
-          "Earthquake": 0.4962
+          "Body Slam": 0.5033,
+          "Earthquake": 0.5025,
+          "Shadow Ball": 0.4975,
+          "Return": 0.4967
         }
       }
     }
@@ -10894,10 +10894,10 @@
         "moves": {
           "Sludge Bomb": 1,
           "Synthesis": 1,
-          "Sleep Powder": 0.6093,
-          "Aromatherapy": 0.5491,
-          "Hidden Power Fire": 0.4234,
-          "Hidden Power Grass": 0.4181
+          "Sleep Powder": 0.6095,
+          "Aromatherapy": 0.5498,
+          "Hidden Power Fire": 0.4258,
+          "Hidden Power Grass": 0.4149
         }
       }
     }
@@ -10923,8 +10923,8 @@
           "Moonlight": 1,
           "Seismic Toss": 1,
           "Signal Beam": 1,
-          "Toxic": 0.5083,
-          "Thunder Wave": 0.4917
+          "Toxic": 0.5082,
+          "Thunder Wave": 0.4918
         }
       }
     }
@@ -10977,7 +10977,7 @@
     },
     "roles": {
       "Bulky Support": {
-        "weight": 0.5054,
+        "weight": 0.5096,
         "abilities": {
           "Water Veil": 1
         },
@@ -10988,8 +10988,8 @@
           "Rest": 1,
           "Sleep Talk": 1,
           "Surf": 1,
-          "Ice Beam": 0.5049,
-          "Toxic": 0.4951
+          "Ice Beam": 0.5066,
+          "Toxic": 0.4934
         },
         "evs": {
           "atk": 0
@@ -10999,7 +10999,7 @@
         }
       },
       "Bulky Attacker": {
-        "weight": 0.4946,
+        "weight": 0.4904,
         "abilities": {
           "Water Veil": 1
         },
@@ -11009,9 +11009,9 @@
         "moves": {
           "Ice Beam": 1,
           "Surf": 1,
-          "Self-Destruct": 0.6826,
-          "Toxic": 0.679,
-          "Hidden Power Grass": 0.6384
+          "Self-Destruct": 0.6801,
+          "Toxic": 0.6801,
+          "Hidden Power Grass": 0.6399
         }
       }
     }
@@ -11026,7 +11026,7 @@
     },
     "roles": {
       "Bulky Attacker": {
-        "weight": 0.5028,
+        "weight": 0.5035,
         "abilities": {
           "Thick Fat": 1
         },
@@ -11036,10 +11036,10 @@
         "moves": {
           "Ice Beam": 1,
           "Surf": 1,
-          "Encore": 0.5201,
-          "Toxic": 0.5201,
-          "Rest": 0.4799,
-          "Sleep Talk": 0.4799
+          "Encore": 0.5167,
+          "Toxic": 0.5167,
+          "Rest": 0.4833,
+          "Sleep Talk": 0.4833
         },
         "evs": {
           "atk": 0
@@ -11049,7 +11049,7 @@
         }
       },
       "Staller": {
-        "weight": 0.4972,
+        "weight": 0.4965,
         "abilities": {
           "Thick Fat": 1
         },
@@ -11135,10 +11135,10 @@
         "moves": {
           "Fire Blast": 1,
           "Sludge Bomb": 1,
-          "Haze": 0.6026,
-          "Will-O-Wisp": 0.5753,
-          "Pain Split": 0.4228,
-          "Explosion": 0.3993
+          "Haze": 0.5938,
+          "Will-O-Wisp": 0.5812,
+          "Pain Split": 0.4254,
+          "Explosion": 0.3995
         }
       }
     }
@@ -11152,8 +11152,25 @@
       "Leftovers": 1
     },
     "roles": {
+      "Bulky Attacker": {
+        "weight": 0.5081,
+        "abilities": {
+          "Oblivious": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Earthquake": 1,
+          "Surf": 1,
+          "Rest": 0.515,
+          "Sleep Talk": 0.515,
+          "Ice Beam": 0.485,
+          "Toxic": 0.485
+        }
+      },
       "Staller": {
-        "weight": 0.5012,
+        "weight": 0.4919,
         "abilities": {
           "Oblivious": 1
         },
@@ -11165,23 +11182,6 @@
           "Ice Beam": 1,
           "Protect": 1,
           "Toxic": 1
-        }
-      },
-      "Bulky Attacker": {
-        "weight": 0.4988,
-        "abilities": {
-          "Oblivious": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Earthquake": 1,
-          "Surf": 1,
-          "Rest": 0.5182,
-          "Sleep Talk": 0.5182,
-          "Ice Beam": 0.4818,
-          "Toxic": 0.4818
         }
       }
     }
@@ -11195,8 +11195,39 @@
       "Leftovers": 1
     },
     "roles": {
+      "Bulky Support": {
+        "weight": 0.3362,
+        "abilities": {
+          "Cute Charm": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Double-Edge": 1,
+          "Protect": 1,
+          "Wish": 1,
+          "Toxic": 0.5184,
+          "Thunder Wave": 0.4816
+        }
+      },
+      "Bulky Attacker": {
+        "weight": 0.3349,
+        "abilities": {
+          "Cute Charm": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Body Slam": 1,
+          "Fire Blast": 1,
+          "Protect": 1,
+          "Wish": 1
+        }
+      },
       "Staller": {
-        "weight": 0.3385,
+        "weight": 0.3289,
         "abilities": {
           "Cute Charm": 1
         },
@@ -11214,37 +11245,6 @@
         },
         "ivs": {
           "atk": 0
-        }
-      },
-      "Bulky Attacker": {
-        "weight": 0.331,
-        "abilities": {
-          "Cute Charm": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Body Slam": 1,
-          "Fire Blast": 1,
-          "Protect": 1,
-          "Wish": 1
-        }
-      },
-      "Bulky Support": {
-        "weight": 0.3305,
-        "abilities": {
-          "Cute Charm": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Double-Edge": 1,
-          "Protect": 1,
-          "Wish": 1,
-          "Toxic": 0.5115,
-          "Thunder Wave": 0.4885
         }
       }
     }
@@ -11290,15 +11290,15 @@
   "Xatu": {
     "level": 84,
     "abilities": {
-      "Synchronize": 0.6799,
-      "Early Bird": 0.3201
+      "Synchronize": 0.6813,
+      "Early Bird": 0.3187
     },
     "items": {
       "Leftovers": 1
     },
     "roles": {
       "Bulky Attacker": {
-        "weight": 0.3438,
+        "weight": 0.3492,
         "abilities": {
           "Synchronize": 1
         },
@@ -11321,7 +11321,7 @@
         }
       },
       "Bulky Support": {
-        "weight": 0.3362,
+        "weight": 0.3321,
         "abilities": {
           "Synchronize": 1
         },
@@ -11332,8 +11332,8 @@
           "Protect": 1,
           "Psychic": 1,
           "Wish": 1,
-          "Toxic": 0.5113,
-          "Thunder Wave": 0.4887
+          "Toxic": 0.5143,
+          "Thunder Wave": 0.4857
         },
         "evs": {
           "atk": 0
@@ -11343,7 +11343,7 @@
         }
       },
       "Setup Sweeper": {
-        "weight": 0.3201,
+        "weight": 0.3187,
         "abilities": {
           "Early Bird": 1
         },
@@ -11373,32 +11373,32 @@
   "Yanma": {
     "level": 92,
     "abilities": {
-      "Compound Eyes": 0.6665,
-      "Speed Boost": 0.3335
+      "Compound Eyes": 0.6672,
+      "Speed Boost": 0.3328
     },
     "items": {
-      "Liechi Berry": 0.4987,
-      "Leftovers": 0.4207,
-      "Choice Band": 0.0806
+      "Liechi Berry": 0.4895,
+      "Leftovers": 0.4237,
+      "Choice Band": 0.0868
     },
     "roles": {
       "Fast Attacker": {
-        "weight": 0.5013,
+        "weight": 0.5105,
         "abilities": {
-          "Compound Eyes": 0.8392,
-          "Speed Boost": 0.1608
+          "Compound Eyes": 0.83,
+          "Speed Boost": 0.17
         },
         "items": {
-          "Leftovers": 0.8392,
-          "Choice Band": 0.1608
+          "Leftovers": 0.83,
+          "Choice Band": 0.17
         },
         "moves": {
           "Aerial Ace": 1,
           "Hidden Power Ground": 1,
-          "Hypnosis": 0.5307,
-          "Toxic": 0.4955,
-          "Signal Beam": 0.4905,
-          "Double-Edge": 0.4834
+          "Hypnosis": 0.53,
+          "Double-Edge": 0.497,
+          "Toxic": 0.487,
+          "Signal Beam": 0.486
         },
         "ivs": {
           "spa": 30,
@@ -11406,10 +11406,10 @@
         }
       },
       "Berry Sweeper": {
-        "weight": 0.4987,
+        "weight": 0.4895,
         "abilities": {
-          "Speed Boost": 0.5071,
-          "Compound Eyes": 0.4929
+          "Speed Boost": 0.5026,
+          "Compound Eyes": 0.4974
         },
         "items": {
           "Liechi Berry": 1
@@ -11418,8 +11418,8 @@
           "Hidden Power Flying": 1,
           "Reversal": 1,
           "Substitute": 1,
-          "Shadow Ball": 0.5071,
-          "Hypnosis": 0.4929
+          "Shadow Ball": 0.5026,
+          "Hypnosis": 0.4974
         },
         "evs": {
           "hp": 81
@@ -11444,9 +11444,9 @@
       "Immunity": 1
     },
     "items": {
-      "Salac Berry": 0.3375,
-      "Choice Band": 0.3321,
-      "Leftovers": 0.3304
+      "Choice Band": 0.3412,
+      "Salac Berry": 0.3296,
+      "Leftovers": 0.3292
     },
     "roles": {
       "Fast Attacker": {
@@ -11455,16 +11455,16 @@
           "Immunity": 1
         },
         "items": {
-          "Salac Berry": 0.3375,
-          "Choice Band": 0.3321,
-          "Leftovers": 0.3304
+          "Choice Band": 0.3412,
+          "Salac Berry": 0.3296,
+          "Leftovers": 0.3292
         },
         "moves": {
           "Return": 1,
           "Shadow Ball": 1,
-          "Brick Break": 0.6696,
-          "Swords Dance": 0.6679,
-          "Quick Attack": 0.6625
+          "Brick Break": 0.6708,
+          "Quick Attack": 0.6704,
+          "Swords Dance": 0.6588
         }
       }
     }
@@ -11478,30 +11478,8 @@
       "Leftovers": 1
     },
     "roles": {
-      "Bulky Attacker": {
-        "weight": 0.3342,
-        "abilities": {
-          "Pressure": 1
-        },
-        "items": {
-          "Leftovers": 1
-        },
-        "moves": {
-          "Hidden Power Ice": 1,
-          "Rest": 1,
-          "Sleep Talk": 1,
-          "Thunderbolt": 1
-        },
-        "evs": {
-          "atk": 0
-        },
-        "ivs": {
-          "atk": 2,
-          "def": 30
-        }
-      },
       "Staller": {
-        "weight": 0.3338,
+        "weight": 0.3348,
         "abilities": {
           "Pressure": 1
         },
@@ -11523,7 +11501,7 @@
         }
       },
       "Fast Attacker": {
-        "weight": 0.332,
+        "weight": 0.3335,
         "abilities": {
           "Pressure": 1
         },
@@ -11534,9 +11512,31 @@
           "Hidden Power Ice": 1,
           "Substitute": 1,
           "Thunderbolt": 1,
-          "Thunder Wave": 0.3342,
-          "Baton Pass": 0.3329,
-          "Toxic": 0.3329
+          "Baton Pass": 0.3423,
+          "Toxic": 0.3302,
+          "Thunder Wave": 0.3275
+        },
+        "evs": {
+          "atk": 0
+        },
+        "ivs": {
+          "atk": 2,
+          "def": 30
+        }
+      },
+      "Bulky Attacker": {
+        "weight": 0.3317,
+        "abilities": {
+          "Pressure": 1
+        },
+        "items": {
+          "Leftovers": 1
+        },
+        "moves": {
+          "Hidden Power Ice": 1,
+          "Rest": 1,
+          "Sleep Talk": 1,
+          "Thunderbolt": 1
         },
         "evs": {
           "atk": 0
