@@ -329,36 +329,24 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		isNonstandard: null,
 	},
 	spinner: {
-		onAfterHit(target, pokemon, move) {
-			if (!move.hasSheerForce) {
-				if (pokemon.removeVolatile('leechseed')) {
-					this.add('-end', pokemon, 'Leech Seed', '[from] ability: Spinner', `[of] ${pokemon}`);
-				}
-				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
-				for (const condition of sideConditions) {
-					if (pokemon.side.removeSideCondition(condition)) {
-						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] ability: Spinner', `[of] ${pokemon}`);
-					}
-				}
-				if (pokemon.volatiles['partiallytrapped']) {
-					pokemon.removeVolatile('partiallytrapped');
+		// Fires on the move's user and dispatches to its ability (unlike onAfterHit/
+		// onAfterSubDamage, which only run the move's own callback). A successful
+		// Normal-type move spins away the user's entry hazards, Leech Seed, and
+		// binding — Rapid Spin bolted onto every Normal move. The call site already
+		// skips Sheer Force, so no hasSheerForce guard is needed here.
+		onAfterMoveSecondarySelf(source, target, move) {
+			if (move.type !== 'Normal') return;
+			if (source.hp && source.removeVolatile('leechseed')) {
+				this.add('-end', source, 'Leech Seed', '[from] ability: Spinner', `[of] ${source}`);
+			}
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+			for (const condition of sideConditions) {
+				if (source.hp && source.side.removeSideCondition(condition)) {
+					this.add('-sideend', source.side, this.dex.conditions.get(condition).name, '[from] ability: Spinner', `[of] ${source}`);
 				}
 			}
-		},
-		onAfterSubDamage(damage, target, pokemon, move) {
-			if (!move.hasSheerForce) {
-				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
-					this.add('-end', pokemon, 'Leech Seed', '[from] ability: Spinner', `[of] ${pokemon}`);
-				}
-				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
-				for (const condition of sideConditions) {
-					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
-						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] ability: Spinner', `[of] ${pokemon}`);
-					}
-				}
-				if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
-					pokemon.removeVolatile('partiallytrapped');
-				}
+			if (source.hp && source.volatiles['partiallytrapped']) {
+				source.removeVolatile('partiallytrapped');
 			}
 		},
 		flags: {},
