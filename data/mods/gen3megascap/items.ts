@@ -45,7 +45,7 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 		num: 2659, gen: 3, isNonstandard: null,
 	},
 	flareite: {
-		name: "Flaerite", spritenum: 786, megaStone: { "Flareon": "Flareon-Mega" }, itemUser: ["Flareon"],
+		name: "Flareite", spritenum: 786, megaStone: { "Flareon": "Flareon-Mega" }, itemUser: ["Flareon"],
 		onTakeItem(item, source) { return !item.megaStone?.[source.baseSpecies.baseSpecies]; },
 		num: 2664, gen: 3, isNonstandard: null,
 	},
