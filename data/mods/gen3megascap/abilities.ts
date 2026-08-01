@@ -111,9 +111,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			move.type = 'Ice';
 			move.typeChangerBoosted = this.effect;
 			if (move.category !== 'Status') {
-				if (move.category !== 'Status') {
-					move.category = 'Special';
-				}
+				move.category = 'Special';
 			}
 		},
 		onBasePower(basePower, pokemon, target, move) {
