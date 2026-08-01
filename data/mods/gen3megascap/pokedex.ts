@@ -103,7 +103,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 	ledianmega: { // 166
 		num: 166, name: "Ledian-Mega", baseSpecies: "Ledian", forme: "Mega",
 		types: ["Bug", "Psychic"], baseStats: { hp: 90, atk: 35, def: 110, spa: 75, spd: 120, spe: 100 },
-		abilities: { 0: "Star Screens" }, heightm: 1.4, weightkg: 35.6, color: "Red",
+		abilities: { 0: "Star Screen" }, heightm: 1.4, weightkg: 35.6, color: "Red",
 		eggGroups: ["Bug"], requiredItem: "Lediate", gen: 3, isNonstandard: null,
 	},
 	sudowoodo: { inherit: true, otherFormes: ["Sudowoodo-Mega-X", "Sudowoodo-Mega-Y"] },
@@ -235,14 +235,14 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 	cradily: { inherit: true, otherFormes: ["Cradily-Mega"] },
 	cradilymega: { // 346
 		num: 346, name: "Cradily-Mega", baseSpecies: "Cradily", forme: "Mega",
-		types: ["Rock", "Grass"], baseStats: { hp: 100, atk: 118, def: 107, spa: 107, spd: 107, spe: 56 },
+		types: ["Grass", "Rock"], baseStats: { hp: 100, atk: 118, def: 107, spa: 107, spd: 107, spe: 56 },
 		abilities: { 0: "Unaware" }, heightm: 1.5, weightkg: 60.4, color: "Green",
 		eggGroups: ["Water 3"], requiredItem: "Cradilite", gen: 3, isNonstandard: null,
 	},
 	armaldo: { inherit: true, otherFormes: ["Armaldo-Mega"] },
 	armaldomega: { // 348
 		num: 348, name: "Armaldo-Mega", baseSpecies: "Armaldo", forme: "Mega",
-		types: ["Rock", "Bug"], baseStats: { hp: 75, atk: 125, def: 100, spa: 70, spd: 80, spe: 45 },
+		types: ["Bug", "Rock"], baseStats: { hp: 75, atk: 125, def: 100, spa: 70, spd: 80, spe: 45 },
 		abilities: { 0: "Spinner" }, heightm: 1.5, weightkg: 68.2, color: "Gray",
 		eggGroups: ["Water 3"], requiredItem: "Armaldite", gen: 3, isNonstandard: null,
 	},
