@@ -120,6 +120,61 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		zMove: { boost: { def: 1 } },
 		contestType: "Clever",
 	},
+	// Star Screen (Ledian-Mega) also doubles Safeguard, so it needs the same
+	// durationCallback treatment as Reflect / Light Screen above. The rest of the
+	// condition is copied verbatim from the base move.
+	safeguard: {
+		num: 219,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Safeguard",
+		pp: 25,
+		priority: 0,
+		flags: { snatch: 1, metronome: 1 },
+		sideCondition: 'safeguard',
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasAbility('starscreen')) {
+					return 10;
+				}
+				return 5;
+			},
+			onSetStatus(status, target, source, effect) {
+				if (!effect || !source) return;
+				if (effect.id === 'yawn') return;
+				if (effect.effectType === 'Move' && effect.infiltrates && !target.isAlly(source)) return;
+				if (target !== source) {
+					this.debug('interrupting setStatus');
+					if (effect.id === 'synchronize' || (effect.effectType === 'Move' && !effect.secondaries)) {
+						this.add('-activate', target, 'move: Safeguard');
+					}
+					return null;
+				}
+			},
+			onTryAddVolatile(status, target, source, effect) {
+				if (!effect || !source) return;
+				if (effect.effectType === 'Move' && effect.infiltrates && !target.isAlly(source)) return;
+				if ((status.id === 'confusion' || status.id === 'yawn') && target !== source) {
+					if (effect.effectType === 'Move' && !effect.secondaries) this.add('-activate', target, 'move: Safeguard');
+					return null;
+				}
+			},
+			onSideStart(side) {
+				this.add('-sidestart', side, 'Safeguard');
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 3,
+			onSideEnd(side) {
+				this.add('-sideend', side, 'Safeguard');
+			},
+		},
+		target: "allySide",
+		type: "Normal",
+		zMove: { boost: { spe: 1 } },
+		contestType: "Beautiful",
+	},
 	synthesis: {
 		inherit: true,
 		onHit(pokemon) {
