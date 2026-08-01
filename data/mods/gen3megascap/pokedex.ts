@@ -242,7 +242,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 	armaldo: { inherit: true, otherFormes: ["Armaldo-Mega"] },
 	armaldomega: { // 348
 		num: 348, name: "Armaldo-Mega", baseSpecies: "Armaldo", forme: "Mega",
-		types: ["Bug", "Rock"], baseStats: { hp: 75, atk: 125, def: 100, spa: 70, spd: 80, spe: 45 },
+		types: ["Bug", "Rock"], baseStats: { hp: 110, atk: 130, def: 130, spa: 80, spd: 80, spe: 65 },
 		abilities: { 0: "Spinner" }, heightm: 1.5, weightkg: 68.2, color: "Gray",
 		eggGroups: ["Water 3"], requiredItem: "Armaldite", gen: 3, isNonstandard: null,
 	},
