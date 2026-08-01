@@ -348,6 +348,7 @@ export interface EventMethods {
 	onAnyBeforeSwitchIn?: (this: Battle, pokemon: Pokemon) => void;
 	onAnyBeforeSwitchOut?: (this: Battle, pokemon: Pokemon) => void;
 	onAnyTryBoost?: (this: Battle, boost: SparseBoostsTable, target: Pokemon, source: Pokemon, effect: Effect) => void;
+	onAnyChangeBoost?: (this: Battle, boost: SparseBoostsTable, target: Pokemon, source: Pokemon, effect: Effect) => void;
 	onAnyChargeMove?: CommonHandlers['VoidSourceMove'];
 	onAnyCriticalHit?: ((this: Battle, pokemon: Pokemon, source: null, move: ActiveMove) => boolean | void) | boolean;
 	onAnyDamage?: (
