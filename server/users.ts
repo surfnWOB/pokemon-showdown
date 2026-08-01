@@ -1637,6 +1637,12 @@ function socketConnect(
 	const connection = new Connection(id, worker, socketid, null, ip, protocol);
 	connections.set(id, connection);
 
+	// TEMP disconnect diagnostics (see socketDisconnect). Pairs with DISCONNECT
+	// lines so an instant reconnect after a drop is visible in the log.
+	if (Config.logdisconnects) {
+		console.log(`CONNECT    id=${id} ip=${ip} transport=${protocol || '?'}`);
+	}
+
 	const banned = Punishments.checkIpBanned(connection);
 	if (banned) {
 		return connection.destroy();
@@ -1673,6 +1679,22 @@ function socketDisconnect(worker: ProcessManager.StreamWorker, workerid: number,
 
 	const connection = connections.get(id);
 	if (!connection) return;
+	// TEMP disconnect diagnostics (toggle with Config.logdisconnects in config.js).
+	// SockJS gives no WS close code, so we log the next-best signal: transport,
+	// how long the connection lived, and how long it was idle before dropping.
+	// A short idle time before a drop points at a network/proxy cut; a ~matching
+	// duration≈idle with an instant reconnect is the auto-reconnect signature.
+	if (Config.logdisconnects) {
+		const now = Date.now();
+		const durationS = Math.round((now - connection.connectedAt) / 1000);
+		const idleS = Math.round((now - connection.lastActiveTime) / 1000);
+		const who = connection.user ? `${connection.user.id}${connection.user.named ? '' : '(guest)'}` : '(nouser)';
+		const rooms = [...connection.inRooms].join(',') || '-';
+		console.log(
+			`DISCONNECT id=${id} user=${who} ip=${connection.ip} transport=${connection.protocol || '?'} ` +
+			`duration=${durationS}s idle=${idleS}s rooms=${rooms}`
+		);
+	}
 	connection.onDisconnect();
 }
 function socketDisconnectAll(worker: ProcessManager.StreamWorker, workerid: number) {
