@@ -21,16 +21,28 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	// both OU and UU already).
 
 	// Gen 1
+	fearowmega: { tier: "OU" },
+	wigglytuffmega: { tier: "OU" },
 	parasectmega: { tier: "OU" },
 	venomothmega: { tier: "OU" },
+	rapidashmega: { tier: "OU" },
+	kinglermega: { tier: "OU" },
 	hitmonchanmega: { tier: "OU" },
 	dittomega: { tier: "OU" },
+	flareonmega: { tier: "OU" },
 
 	// Gen 2
+	furretmegax: { tier: "OU" },
+	furretmegay: { tier: "OU" },
 	noctowlmega: { tier: "OU" },
+	ledianmega: { tier: "OU" },
+	sudowoodomegax: { tier: "OU" },
+	sudowoodomegay: { tier: "OU" },
 	quagsiremega: { tier: "OU" },
+	unownmega: { tier: "OU" },
 	magcargomega: { tier: "OU" },
 	corsolamega: { tier: "OU" },
+	octillerymega: { tier: "OU" },
 	mantinemega: { tier: "OU" },
 
 	// Gen 3
@@ -46,6 +58,8 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	solrockmega: { tier: "OU" },
 	kecleonmegax: { tier: "OU" },
 	kecleonmegay: { tier: "OU" },
+	cradilymega: { tier: "OU" },
+	armaldomega: { tier: "OU" },
 	walreinmega: { tier: "OU" },
 	luvdiscmega: { tier: "OU" },
 

@@ -123,6 +123,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	// CAP-only abilities defined fully here (not in data/abilities.ts).
 
 	analytic: { inherit: true, gen: 3, isNonstandard: null },
+	angerpoint: { inherit: true, gen: 3, isNonstandard: null },
 	cursedbody: { inherit: true, gen: 3, isNonstandard: null },
 	ironfist: { inherit: true, gen: 3, isNonstandard: null },
 	snowwarning: {
@@ -240,6 +241,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		name: "Saboteur",
 		rating: 3,
 		num: 323,
+		gen: 3,
 		isNonstandard: null,
 	},
 	shady: {
@@ -276,12 +278,13 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		gen: 3,
 		isNonstandard: null,
 	},
-	starscreens: {
+	starscreen: {
 		// Implemented in moves.ts
 		flags: {},
-		name: "Star Screens",
+		name: "Star Screen",
 		rating: 3,
 		num: 324,
+		gen: 3,
 		isNonstandard: null,
 	},
 	unknownpower: {
@@ -307,6 +310,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		},
 		rating: 3,
 		num: 325,
+		gen: 3,
 		isNonstandard: null,
 	},
 	'3sodapops': {
@@ -324,6 +328,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		name: "3 Soda Pops",
 		rating: 4,
 		num: 326,
+		gen: 3,
 		isNonstandard: null,
 	},
 	spinner: {
@@ -351,6 +356,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		name: "Spinner",
 		rating: 4,
 		num: 327,
+		gen: 3,
 		isNonstandard: null,
 	},
 	bandito: {

@@ -6,12 +6,31 @@ const { Battle, Dex } = require('./../../../dist/sim');
 const { Format } = require('./../../../dist/sim/dex-formats');
 const { TeamValidator } = require('./../../../dist/sim/team-validator');
 
+// Every CAP-added Mega forme -> [base species, Mega Stone]. Kept in num order.
 const capAddedMegas = {
+	fearowmega: ['Fearow', 'Fearite'],
+	wigglytuffmega: ['Wigglytuff', 'Wigglytite'],
 	parasectmega: ['Parasect', 'Parasectite'],
 	venomothmega: ['Venomoth', 'Venomite'],
+	rapidashmega: ['Rapidash', 'Rapidasite'],
+	kinglermega: ['Kingler', 'Kinglerite'],
+	hitmonchanmega: ['Hitmonchan', 'Hitmonchanite'],
+	dittomega: ['Ditto', 'Dittite'],
+	flareonmega: ['Flareon', 'Flareite'],
+	furretmegax: ['Furret', 'Furretite X'],
+	furretmegay: ['Furret', 'Furretite Y'],
+	noctowlmega: ['Noctowl', 'Noctite'],
+	ledianmega: ['Ledian', 'Lediate'],
+	sudowoodomegax: ['Sudowoodo', 'Sudowoodite X'],
+	sudowoodomegay: ['Sudowoodo', 'Sudowoodite Y'],
 	quagsiremega: ['Quagsire', 'Quagsite'],
+	unownmega: ['Unown', 'Unknown Stone'],
 	magcargomega: ['Magcargo', 'Magcargoite'],
 	corsolamega: ['Corsola', 'Corsolite'],
+	octillerymega: ['Octillery', 'Octillerite'],
+	mantinemega: ['Mantine', 'Mantite'],
+	mightyenamegax: ['Mightyena', 'Mightyenite X'],
+	mightyenamegay: ['Mightyena', 'Mightyenite Y'],
 	beautiflymega: ['Beautifly', 'Beautiflite'],
 	masquerainmega: ['Masquerain', 'Masquerite'],
 	shedinjamega: ['Shedinja', 'Shedinjite'],
@@ -20,31 +39,53 @@ const capAddedMegas = {
 	grumpigmega: ['Grumpig', 'Grumpigite'],
 	flygonmega: ['Flygon', 'Flygonite'],
 	solrockmega: ['Solrock', 'Sole Rock'],
+	cradilymega: ['Cradily', 'Cradilite'],
+	armaldomega: ['Armaldo', 'Armaldite'],
 	kecleonmegax: ['Kecleon', 'Kecleite X'],
 	kecleonmegay: ['Kecleon', 'Kecleite Y'],
+	walreinmega: ['Walrein', 'Walrite'],
 	luvdiscmega: ['Luvdisc', 'Luvdite'],
 };
 
+// Authoritative CAP spec transcribed from data/mods/gen3megascap/megas.md:
+//   id: [[hp, atk, def, spa, spd, spe] | null, types, first ability]
+// A null stat array marks a forme whose stats are still "TBD" in the md
+// (Kingler, both Sudowoodo formes, Armaldo); those carry provisional numbers in
+// the pokedex, so only their typing and ability are pinned here for now.
 const authoritativeMegaData = {
+	fearowmega: [[100, 100, 110, 35, 110, 100], ['Normal', 'Flying'], 'Anger Point'],
+	wigglytuffmega: [[140, 70, 60, 115, 60, 80], ['Normal'], 'Saboteur'],
 	parasectmega: [[90, 135, 100, 50, 100, 30], ['Bug', 'Ghost'], 'Regenerator'],
-	venomothmega: [[85, 110, 80, 70, 80, 120], ['Bug', 'Poison'], 'Merciless'],
+	venomothmega: [[85, 130, 80, 50, 80, 120], ['Bug', 'Poison'], 'Merciless'],
+	rapidashmega: [[100, 120, 90, 105, 80, 105], ['Fire', 'Steel'], '3 Soda Pops'],
+	kinglermega: [null, ['Water', 'Normal'], 'Anger Shell'],
 	hitmonchanmega: [[50, 105, 79, 110, 110, 101], ['Fighting'], 'Iron Fist'],
 	dittomega: [[90, 50, 50, 50, 50, 50], ['Normal'], 'Imposter'],
-	noctowlmega: [[80, 125, 61, 91, 96, 99], ['Ghost', 'Flying'], 'Shady'],
+	flareonmega: [[65, 130, 60, 100, 110, 95], ['Fire', 'Normal'], 'Adaptability'],
+	furretmegax: [[90, 125, 75, 44, 75, 110], ['Fighting'], 'Guts'],
+	furretmegay: [[80, 66, 64, 110, 85, 115], ['Dark'], 'Bandito'],
+	noctowlmega: [[80, 135, 58, 86, 96, 105], ['Ghost', 'Flying'], 'Shady'],
+	ledianmega: [[90, 35, 110, 75, 120, 100], ['Bug', 'Psychic'], 'Star Screen'],
+	sudowoodomegax: [null, ['Fighting'], 'Illusion'],
+	sudowoodomegay: [null, ['Rock'], 'Illusion'],
 	quagsiremega: [[110, 95, 110, 90, 90, 35], ['Water', 'Ground'], 'Unaware'],
-	magcargomega: [[80, 100, 125, 100, 125, 30], ['Fire', 'Rock'], 'Earth Eater'],
-	corsolamega: [[90, 70, 115, 120, 115, 30], ['Water', 'Psychic'], 'Natural Cure'],
+	unownmega: [[80, 100, 80, 100, 80, 110], ['Psychic'], 'Unknown Power'],
+	magcargomega: [[80, 110, 125, 110, 125, 30], ['Fire', 'Rock'], 'Earth Eater'],
+	corsolamega: [[105, 55, 115, 120, 115, 30], ['Water', 'Psychic'], 'Natural Cure'],
+	octillerymega: [[90, 103, 95, 125, 95, 32], ['Water', 'Steel'], 'Analytic'],
 	mantinemega: [[90, 65, 100, 120, 110, 100], ['Water', 'Dragon'], 'Dragonize'],
 	mightyenamegax: [[61, 110, 60, 119, 60, 110], ['Dark'], 'Serene Grace'],
 	mightyenamegay: [[100, 100, 100, 35, 110, 95], ['Dark', 'Poison'], 'Fur Coat'],
 	beautiflymega: [[90, 10, 90, 130, 90, 116], ['Grass', 'Flying'], 'Mega Sol'],
 	masquerainmega: [[91, 80, 84, 90, 110, 95], ['Bug', 'Water'], 'Water Bubble'],
-	shedinjamega: [[4, 110, 45, 51, 30, 96], ['Bug', 'Ghost'], 'Wonder Guard'],
+	shedinjamega: [[4, 121, 40, 30, 30, 110], ['Bug', 'Ghost'], 'Wonder Guard'],
 	volbeatmega: [[85, 65, 75, 90, 90, 125], ['Bug', 'Electric'], 'Polar Switch'],
 	illumisemega: [[70, 70, 90, 125, 90, 85], ['Bug', 'Electric'], 'Prankster'],
-	grumpigmega: [[100, 60, 80, 125, 125, 80], ['Psychic'], 'Opportunist'],
+	grumpigmega: [[100, 60, 80, 125, 125, 80], ['Psychic', 'Dark'], 'Opportunist'],
 	flygonmega: [[80, 100, 120, 100, 80, 110], ['Ground', 'Dragon'], 'Sandy'],
 	solrockmega: [[90, 115, 110, 90, 85, 90], ['Rock', 'Psychic'], 'High Noon'],
+	cradilymega: [[100, 118, 107, 107, 107, 56], ['Grass', 'Rock'], 'Unaware'],
+	armaldomega: [null, ['Bug', 'Rock'], 'Spinner'],
 	kecleonmegax: [[60, 120, 60, 110, 120, 105], ['Normal'], 'Color Change'],
 	kecleonmegay: [[100, 100, 120, 100, 100, 40], ['Normal'], 'Protean'],
 	walreinmega: [[125, 80, 100, 100, 115, 80], ['Water', 'Ice'], 'Snow Warning'],
@@ -96,7 +137,8 @@ describe('[Gen 3] Megas CAP', () => {
 
 		assert.equal(dex.abilities.get('megasol').isNonstandard, null);
 		assert.equal(dex.abilities.get('shady').isNonstandard, null);
-		assert.deepEqual(dex.species.get('hitmonchan').abilities, { 0: 'Keen Eye', 1: 'Iron Fist' });
+		// Base Hitmonchan keeps only Keen Eye; Iron Fist is granted on Mega Evolution.
+		assert.deepEqual(dex.species.get('hitmonchan').abilities, { 0: 'Keen Eye' });
 		assert.deepEqual(dex.species.get('beautiflymega').baseStats,
 			{ hp: 90, atk: 10, def: 90, spa: 130, spd: 90, spe: 116 });
 		assert.deepEqual(dex.species.get('beautiflymega').types, ['Grass', 'Flying']);
@@ -109,16 +151,16 @@ describe('[Gen 3] Megas CAP', () => {
 	it('matches the authoritative ADV Megas CAP stats, typings, and abilities', () => {
 		const dex = Dex.mod('gen3megascap');
 		const actualMegaData = {};
-		for (const id of Object.keys(authoritativeMegaData)) {
+		for (const [id, [expectedStats]] of Object.entries(authoritativeMegaData)) {
 			const species = dex.species.get(id);
 			const ability = dex.abilities.get(species.abilities[0]);
 			assert.equal(ability.exists, true, `${species.abilities[0]} should exist`);
 			assert.equal(ability.isNonstandard, null, `${species.abilities[0]} should be legal in Gen 3`);
-			actualMegaData[id] = [
-				['hp', 'atk', 'def', 'spa', 'spd', 'spe'].map(stat => species.baseStats[stat]),
-				species.types,
-				species.abilities[0],
-			];
+			// Formes with "TBD" stats in the md carry a null stat array; only their
+			// typing and ability are pinned, so mirror null back for the comparison.
+			const stats = expectedStats === null ?
+				null : ['hp', 'atk', 'def', 'spa', 'spd', 'spe'].map(stat => species.baseStats[stat]);
+			actualMegaData[id] = [stats, species.types, species.abilities[0]];
 		}
 		assert.deepEqual(actualMegaData, authoritativeMegaData);
 		assert.equal(dex.abilities.get('sandy').name, 'Sandy');
@@ -151,8 +193,10 @@ describe('[Gen 3] Megas CAP', () => {
 		const dex = Dex.mod('gen3megascap');
 		for (const [id, [baseName, itemName]] of Object.entries(capAddedMegas)) {
 			const base = dex.species.get(baseName);
+			// Ditto's only legal move is Transform; everything else can run Hidden Power.
+			const move = baseName === 'Ditto' ? 'transform' : 'hiddenpower';
 			const errors = TeamValidator.get('gen3megascap').validateTeam([
-				{ species: baseName, item: itemName, ability: base.abilities[0], moves: ['hiddenpower'], evs: { hp: 1 } },
+				{ species: baseName, item: itemName, ability: base.abilities[0], moves: [move], evs: { hp: 1 } },
 			]);
 			assert(!errors, `${id} should be legal, got: ${JSON.stringify(errors)}`);
 		}

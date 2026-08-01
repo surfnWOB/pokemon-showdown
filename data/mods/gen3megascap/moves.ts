@@ -19,7 +19,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		condition: {
 			duration: 5,
 			durationCallback(target, source, effect) {
-				if (source?.hasAbility('starscreens')) {
+				if (source?.hasAbility('starscreen')) {
 					return 10;
 				}
 				if (source?.hasItem('lightclay')) {
@@ -89,7 +89,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		condition: {
 			duration: 5,
 			durationCallback(target, source, effect) {
-				if (source?.hasAbility('starscreens')) {
+				if (source?.hasAbility('starscreen')) {
 					return 10;
 				}
 				if (source?.hasItem('lightclay')) {
