@@ -1,7 +1,6 @@
-const PLA_STATUS_IDS = ['plafrostbite', 'pladrowsy', 'plaparalysis', 'plapoison'];
-
 function statusDuration(sourceEffect: Effect | null) {
-	if (sourceEffect?.id === 'rest') return 3;
+	if (sourceEffect?.id === 'rest') return 4;
+	if (sourceEffect?.id === 'darkvoid') return 3;
 	return sourceEffect?.effectType === 'Move' && (sourceEffect as Move).category !== 'Status' ? 3 : 5;
 }
 
@@ -9,24 +8,32 @@ function refreshStatus(target: Pokemon, id: string, sourceEffect: Effect | null)
 	target.volatiles[id].duration = statusDuration(sourceEffect);
 }
 
-function endPLAStatus(target: Pokemon, name: string) {
-	target.removeVolatile(name);
-}
-
-function statDuration(sourceEffect: Effect | null, id: string) {
+function statDuration(sourceEffect: Effect | null) {
+	if (sourceEffect?.effectType === 'Move' && (sourceEffect as Move).category !== 'Status') return 3;
 	switch (sourceEffect?.id) {
-	case 'swordsdance': case 'nastyplot': return 4;
-	case 'bulkup': case 'calmmind': case 'mysticalfire': case 'shelter': case 'victorydance': return 3;
-	case 'ancientpower': case 'ominouswind': case 'closecombat': case 'crunch': return 2;
-	default: return id === 'plapowerboost' || id === 'plaguardboost' ? 2 : 2;
+	case 'shelter': case 'bulkup': case 'calmmind': case 'victorydance': return 4;
+	default: return 5;
 	}
 }
 
 function refreshStat(target: Pokemon, id: string, sourceEffect: Effect | null) {
-	target.volatiles[id].duration = statDuration(sourceEffect, id);
+	target.volatiles[id].duration = statDuration(sourceEffect);
 }
 
 export const Conditions: import('../../../sim/dex-conditions').ModdedConditionDataTable = {
+	lockedmove: {
+		inherit: true,
+		onModifyDamage() {
+			if (['iceball', 'rollout', 'petaldance', 'outrage', 'ragingfury'].includes(this.effectState.move)) {
+				return this.chainModify(1.5);
+			}
+		},
+		onSourceModifyDamage() {
+			if (['iceball', 'rollout', 'petaldance', 'outrage', 'ragingfury'].includes(this.effectState.move)) {
+				return this.chainModify(4 / 3);
+			}
+		},
+	},
 	plafrostbite: {
 		name: 'Frostbite',
 		durationCallback(target, source, sourceEffect) {
@@ -35,6 +42,7 @@ export const Conditions: import('../../../sim/dex-conditions').ModdedConditionDa
 		onStart(target) {
 			this.add('-start', target, 'Frostbite');
 		},
+		onSetStatus() { return false; },
 		onRestart(target, source, sourceEffect) {
 			refreshStatus(target, 'plafrostbite', sourceEffect);
 			this.add('-start', target, 'Frostbite', '[refresh]');
@@ -58,6 +66,7 @@ export const Conditions: import('../../../sim/dex-conditions').ModdedConditionDa
 		onStart(target) {
 			this.add('-start', target, 'Drowsy');
 		},
+		onSetStatus() { return false; },
 		onRestart(target, source, sourceEffect) {
 			refreshStatus(target, 'pladrowsy', sourceEffect);
 			this.add('-start', target, 'Drowsy', '[refresh]');
@@ -84,6 +93,7 @@ export const Conditions: import('../../../sim/dex-conditions').ModdedConditionDa
 		onStart(target) {
 			this.add('-start', target, 'Paralysis');
 		},
+		onSetStatus() { return false; },
 		onRestart(target, source, sourceEffect) {
 			refreshStatus(target, 'plaparalysis', sourceEffect);
 			this.add('-start', target, 'Paralysis', '[refresh]');
@@ -111,6 +121,7 @@ export const Conditions: import('../../../sim/dex-conditions').ModdedConditionDa
 		onStart(target) {
 			this.add('-start', target, 'Poison');
 		},
+		onSetStatus() { return false; },
 		onRestart(target, source, sourceEffect) {
 			refreshStatus(target, 'plapoison', sourceEffect);
 			this.add('-start', target, 'Poison', '[refresh]');
@@ -125,34 +136,34 @@ export const Conditions: import('../../../sim/dex-conditions').ModdedConditionDa
 	},
 	plapowerboost: {
 		name: 'Power Boost',
-		durationCallback(target, source, sourceEffect) { return statDuration(sourceEffect, 'plapowerboost'); },
+		durationCallback(target, source, sourceEffect) { return statDuration(sourceEffect); },
 		onRestart(target, source, sourceEffect) { refreshStat(target, 'plapowerboost', sourceEffect); },
 		onModifyAtk() { return this.chainModify(1.5); },
 		onModifySpA() { return this.chainModify(1.5); },
 	},
 	plaguardboost: {
 		name: 'Guard Boost',
-		durationCallback(target, source, sourceEffect) { return statDuration(sourceEffect, 'plaguardboost'); },
+		durationCallback(target, source, sourceEffect) { return statDuration(sourceEffect); },
 		onRestart(target, source, sourceEffect) { refreshStat(target, 'plaguardboost', sourceEffect); },
 		onModifyDef() { return this.chainModify(1.5); },
 		onModifySpD() { return this.chainModify(1.5); },
 	},
 	plapowerdrop: {
 		name: 'Power Drop',
-		durationCallback(target, source, sourceEffect) { return statDuration(sourceEffect, 'plapowerdrop'); },
+		durationCallback(target, source, sourceEffect) { return statDuration(sourceEffect); },
 		onRestart(target, source, sourceEffect) { refreshStat(target, 'plapowerdrop', sourceEffect); },
 		onModifyAtk() { return this.chainModify(2 / 3); },
 		onModifySpA() { return this.chainModify(2 / 3); },
 	},
 	plaguarddrop: {
 		name: 'Guard Drop',
-		durationCallback(target, source, sourceEffect) { return statDuration(sourceEffect, 'plaguarddrop'); },
+		durationCallback(target, source, sourceEffect) { return statDuration(sourceEffect); },
 		onRestart(target, source, sourceEffect) { refreshStat(target, 'plaguarddrop', sourceEffect); },
 		onModifyDef() { return this.chainModify(2 / 3); },
 		onModifySpD() { return this.chainModify(2 / 3); },
 	},
 	plaobscured: {
-		name: 'Obscured', duration: 3,
+		name: 'Obscured', duration: 4,
 		onRestart(target, source, sourceEffect) { refreshStat(target, 'plaobscured', sourceEffect); },
 		onModifyAccuracy(accuracy) { return this.chainModify(3 / 4); },
 	},
@@ -170,17 +181,20 @@ export const Conditions: import('../../../sim/dex-conditions').ModdedConditionDa
 		name: 'Splinters', duration: 3,
 		onStart(target, source, sourceEffect) {
 			this.effectState.type = sourceEffect?.type || 'Rock';
-			this.add('-start', target, 'Splinters');
+			this.add('-start', target, `Splinters${this.effectState.duration}`);
 		},
 		onRestart(target, source, sourceEffect) {
 			target.volatiles['plasplinters'].duration = 3;
 			target.volatiles['plasplinters'].type = sourceEffect?.type || 'Rock';
+			this.add('-start', target, 'Splinters3');
 		},
 		onEnd(target) { this.add('-end', target, 'Splinters'); },
 		onResidualOrder: 10,
 		onResidual(pokemon) {
 			const source = this.effectState.source as Pokemon;
 			if (!source?.hp) return;
+			const duration = pokemon.volatiles['plasplinters'].duration;
+			this.add('-start', pokemon, `Splinters${duration}`);
 			const move = this.dex.getActiveMove({
 				id: 'splinters', name: 'Splinters', effectType: 'Move', basePower: 25,
 				category: 'Physical', type: this.effectState.type, accuracy: true, pp: 1,
@@ -199,11 +213,3 @@ export const Conditions: import('../../../sim/dex-conditions').ModdedConditionDa
 		onModifySpe() { return this.chainModify(0.5); },
 	},
 };
-
-export function applyPLAStatus(target: Pokemon, status: string, source: Pokemon, sourceEffect: Effect) {
-	if (status === 'plafrostbite' && target.hasType('Ice')) return false;
-	for (const id of PLA_STATUS_IDS) {
-		if (id !== status && target.volatiles[id]) endPLAStatus(target, id);
-	}
-	return target.addVolatile(status, source, sourceEffect);
-}

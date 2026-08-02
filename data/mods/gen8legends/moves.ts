@@ -1,4 +1,3 @@
-﻿import { applyPLAStatus } from './conditions';
 
 function applyPLAStat(target: Pokemon, status: string, source: Pokemon, move: ActiveMove) {
 	const opposite: { [k: string]: string } = {
@@ -11,6 +10,28 @@ function applyPLAStat(target: Pokemon, status: string, source: Pokemon, move: Ac
 
 function thawFrostbite(target: Pokemon) {
 	if (target.volatiles['plafrostbite']) target.removeVolatile('plafrostbite');
+}
+
+function thawDrowsiness(target: Pokemon) {
+	if (target.volatiles['pladrowsy']) target.removeVolatile('pladrowsy');
+}
+
+const PLA_STATUS_IDS = ['plafrostbite', 'pladrowsy', 'plaparalysis', 'plapoison'];
+const PLA_STATUS_IMMUNITIES: { [k: string]: string } = {
+	plafrostbite: 'frz', pladrowsy: 'slp', plaparalysis: 'par', plapoison: 'psn',
+};
+
+function applyPLAStatus(target: Pokemon, status: string, source: Pokemon, sourceEffect: Effect) {
+	const vanillaStatus = PLA_STATUS_IMMUNITIES[status];
+	if (target.status || !target.runStatusImmunity(vanillaStatus, true)) return false;
+	if (target.side.getSideCondition('safeguard') && !target.isAlly(source) && !(sourceEffect as Move).infiltrates) {
+		target.battle.add('-activate', target, 'move: Safeguard');
+		return false;
+	}
+	for (const id of PLA_STATUS_IDS) {
+		if (id !== status && target.volatiles[id]) target.removeVolatile(id);
+	}
+	return target.addVolatile(status, source, sourceEffect);
 }
 
 export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
@@ -170,8 +191,6 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 60,
 		pp: 20,
 		accuracy: 100,
-		secondary: undefined,
-		secondary: undefined,
 		secondary: undefined
 	},
 
@@ -262,6 +281,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		pp: 10,
 		accuracy: 90,
+		status: undefined,
 		onHit(target, source, move) { return applyPLAStatus(target, 'pladrowsy', source, move); }
 	},
 
@@ -305,6 +325,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 80,
 		pp: 10,
 		accuracy: 100,
+		critRatio: 1,
 	},
 
 	dragonpulse: {
@@ -436,6 +457,8 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		pp: 20,
 		accuracy: true,
+		volatileStatus: undefined,
+		onHit(target, source, move) { return target.addVolatile('placritboost', source, move); },
 	},
 
 	gigaimpact: {
@@ -512,6 +535,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		pp: 20,
 		accuracy: 70,
+		status: undefined,
 		onHit(target, source, move) { return applyPLAStatus(target, 'pladrowsy', source, move); }
 	},
 
@@ -535,7 +559,10 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 65,
 		pp: 15,
 		accuracy: 95,
-		secondaries: [{ chance: 10, onHit(target, source, move) { applyPLAStatus(target, 'plafrostbite', source, move); } }]
+		secondaries: [
+			{ chance: 10, volatileStatus: 'flinch' },
+			{ chance: 10, onHit(target, source, move) { applyPLAStatus(target, 'plafrostbite', source, move); } },
+		]
 	},
 
 	icepunch: {
@@ -790,6 +817,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		pp: 20,
 		accuracy: 90,
+		status: undefined,
 		onHit(target, source, move) { return applyPLAStatus(target, 'plapoison', source, move); }
 	},
 
@@ -805,6 +833,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		pp: 20,
 		accuracy: 80,
+		status: undefined,
 		onHit(target, source, move) { return applyPLAStatus(target, 'plapoison', source, move); }
 	},
 
@@ -891,7 +920,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		},
 		onHit(target, source, move) {
 		const result = applyPLAStatus(target, 'pladrowsy', source, move);
-		if (result) this.heal(target.maxhp);
+		if (result) this.heal(target.baseMaxhp * 3 / 4);
 		return result;
 		}
 	},
@@ -949,7 +978,9 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 150,
 		pp: 5,
 		accuracy: 100,
-		selfdestruct: undefined, recoil: [80, 100]
+		selfdestruct: undefined,
+		recoil: undefined,
+		self: { onHit(target) { return this.damage(target.baseMaxhp * 4 / 5, target); } },
 	},
 
 	shadowball: {
@@ -1006,6 +1037,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		pp: 20,
 		accuracy: 80,
+		status: undefined,
 		onHit(target, source, move) { return applyPLAStatus(target, 'pladrowsy', source, move); }
 	},
 
@@ -1042,6 +1074,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 65,
 		pp: 20,
 		accuracy: 100,
+		onModifyMove(move, source) { thawDrowsiness(source); },
 		secondary: { chance: 30, onHit(target, source, move) { applyPLAStatus(target, 'plaparalysis', source, move); } }
 	},
 
@@ -1050,7 +1083,8 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 40,
 		pp: 20,
 		accuracy: 100,
-		category: 'Physical', target: 'normal', sideCondition: undefined, secondary: { chance: 100, volatileStatus: 'plasplinters' }
+		category: 'Physical', target: 'normal', sideCondition: undefined,
+		flags: { protect: 1, mirror: 1 }, secondary: { chance: 100, volatileStatus: 'plasplinters' }
 	},
 
 	splash: {
@@ -1063,6 +1097,8 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		pp: 10,
 		accuracy: 100,
+		status: undefined,
+		onHit(target, source, move) { return applyPLAStatus(target, 'pladrowsy', source, move); },
 	},
 
 	springtidestorm: {
@@ -1077,7 +1113,8 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 40,
 		pp: 20,
 		accuracy: 100,
-		category: 'Physical', target: 'normal', sideCondition: undefined, secondary: { chance: 100, volatileStatus: 'plasplinters' }
+		category: 'Physical', target: 'normal', sideCondition: undefined,
+		flags: { protect: 1, mirror: 1 }, secondary: { chance: 100, volatileStatus: 'plasplinters' }
 	},
 
 	steelbeam: {
@@ -1120,6 +1157,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		pp: 20,
 		accuracy: 80,
+		status: undefined,
 		onHit(target, source, move) { return applyPLAStatus(target, 'plaparalysis', source, move); }
 	},
 
@@ -1177,7 +1215,10 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 65,
 		pp: 15,
 		accuracy: 95,
-		secondaries: [{ chance: 10, onHit(target, source, move) { applyPLAStatus(target, 'plaparalysis', source, move); } }]
+		secondaries: [
+			{ chance: 10, volatileStatus: 'flinch' },
+			{ chance: 10, onHit(target, source, move) { applyPLAStatus(target, 'plaparalysis', source, move); } },
+		]
 	},
 
 	thunderpunch: {
@@ -1185,6 +1226,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 75,
 		pp: 10,
 		accuracy: 100,
+		secondary: { chance: 10, onHit(target, source, move) { applyPLAStatus(target, 'plaparalysis', source, move); } },
 	},
 
 	thundershock: {
@@ -1199,6 +1241,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		pp: 20,
 		accuracy: 90,
+		status: undefined,
 		onHit(target, source, move) { return applyPLAStatus(target, 'plaparalysis', source, move); }
 	},
 
@@ -1249,6 +1292,8 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 120,
 		pp: 5,
 		accuracy: 100,
+		onModifyMove(move, source) { thawDrowsiness(source); },
+		secondary: { chance: 10, onHit(target, source, move) { applyPLAStatus(target, 'plaparalysis', source, move); } },
 	},
 
 	waterpulse: {
@@ -1272,6 +1317,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 95,
 		pp: 5,
 		accuracy: 80,
+		secondary: { chance: 30, onHit(target, source, move) { applyPLAStatus(target, 'plaparalysis', source, move); } },
 	},
 
 	wildcharge: {
@@ -1279,6 +1325,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 85,
 		pp: 10,
 		accuracy: 100,
+		onModifyMove(move, source) { thawDrowsiness(source); },
 	},
 
 	woodhammer: {
@@ -1293,6 +1340,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 80,
 		pp: 10,
 		accuracy: 100,
+		critRatio: 1,
 	},
 
 	zenheadbutt: {
