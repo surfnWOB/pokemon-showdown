@@ -169,12 +169,12 @@ export const Conditions: import('../../../sim/dex-conditions').ModdedConditionDa
 	plasplinters: {
 		name: 'Splinters', duration: 3,
 		onStart(target, source, sourceEffect) {
-			this.effectState.type = sourceEffect?.type || 'Rock';
+			this.effectState.type = (sourceEffect as ActiveMove)?.type || 'Rock';
 			this.add('-start', target, 'Splinters');
 		},
 		onRestart(target, source, sourceEffect) {
 			target.volatiles['plasplinters'].duration = 3;
-			target.volatiles['plasplinters'].type = sourceEffect?.type || 'Rock';
+			target.volatiles['plasplinters'].type = (sourceEffect as ActiveMove)?.type || 'Rock';
 		},
 		onEnd(target) { this.add('-end', target, 'Splinters'); },
 		onResidualOrder: 10,
@@ -182,10 +182,10 @@ export const Conditions: import('../../../sim/dex-conditions').ModdedConditionDa
 			const source = this.effectState.source as Pokemon;
 			if (!source?.hp) return;
 			const move = this.dex.getActiveMove({
-				id: 'splinters', name: 'Splinters', effectType: 'Move', basePower: 25,
+				id: 'splinters' as ID, name: 'Splinters', effectType: 'Move', basePower: 25,
 				category: 'Physical', type: this.effectState.type, accuracy: true, pp: 1,
 				priority: 0, target: 'normal', noDamageVariance: true,
-			});
+			} as unknown as ActiveMove);
 			const damage = this.actions.getDamage(source, pokemon, move, true);
 			if (damage) this.damage(damage, pokemon, source, move);
 		},

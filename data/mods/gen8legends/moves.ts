@@ -183,8 +183,6 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		pp: 20,
 		accuracy: 100,
 		secondary: undefined,
-		secondary: undefined,
-		secondary: undefined,
 	},
 
 	bulletpunch: {
