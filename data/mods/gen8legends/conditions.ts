@@ -9,8 +9,12 @@ function refreshStatus(target: Pokemon, id: string, sourceEffect: Effect | null)
 	target.volatiles[id].duration = statusDuration(sourceEffect);
 }
 
-function endPLAStatus(target: Pokemon, name: string) {
-	target.removeVolatile(name);
+// PLA statuses are mutually exclusive (a mon holds at most one at a time), so
+// starting one clears any other. Moves apply them with target.addVolatile(...).
+function clearOtherPLAStatuses(target: Pokemon, keep: string) {
+	for (const id of PLA_STATUS_IDS) {
+		if (id !== keep && target.volatiles[id]) target.removeVolatile(id);
+	}
 }
 
 function statDuration(sourceEffect: Effect | null, id: string) {
@@ -33,6 +37,8 @@ export const Conditions: import('../../../sim/dex-conditions').ModdedConditionDa
 			return statusDuration(sourceEffect);
 		},
 		onStart(target) {
+			if (target.hasType('Ice')) return false;
+			clearOtherPLAStatuses(target, 'plafrostbite');
 			this.add('-start', target, 'Frostbite');
 		},
 		onRestart(target, source, sourceEffect) {
@@ -56,6 +62,7 @@ export const Conditions: import('../../../sim/dex-conditions').ModdedConditionDa
 			return statusDuration(sourceEffect);
 		},
 		onStart(target) {
+			clearOtherPLAStatuses(target, 'pladrowsy');
 			this.add('-start', target, 'Drowsy');
 		},
 		onRestart(target, source, sourceEffect) {
@@ -82,6 +89,7 @@ export const Conditions: import('../../../sim/dex-conditions').ModdedConditionDa
 			return statusDuration(sourceEffect);
 		},
 		onStart(target) {
+			clearOtherPLAStatuses(target, 'plaparalysis');
 			this.add('-start', target, 'Paralysis');
 		},
 		onRestart(target, source, sourceEffect) {
@@ -109,6 +117,7 @@ export const Conditions: import('../../../sim/dex-conditions').ModdedConditionDa
 			return statusDuration(sourceEffect);
 		},
 		onStart(target) {
+			clearOtherPLAStatuses(target, 'plapoison');
 			this.add('-start', target, 'Poison');
 		},
 		onRestart(target, source, sourceEffect) {
@@ -199,11 +208,3 @@ export const Conditions: import('../../../sim/dex-conditions').ModdedConditionDa
 		onModifySpe() { return this.chainModify(0.5); },
 	},
 };
-
-export function applyPLAStatus(target: Pokemon, status: string, source: Pokemon, sourceEffect: Effect) {
-	if (status === 'plafrostbite' && target.hasType('Ice')) return false;
-	for (const id of PLA_STATUS_IDS) {
-		if (id !== status && target.volatiles[id]) endPLAStatus(target, id);
-	}
-	return target.addVolatile(status, source, sourceEffect);
-}

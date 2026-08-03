@@ -1,6 +1,4 @@
-﻿import { applyPLAStatus } from './conditions';
-
-function applyPLAStat(target: Pokemon, status: string, source: Pokemon, move: ActiveMove) {
+﻿function applyPLAStat(target: Pokemon, status: string, source: Pokemon, move: ActiveMove) {
 	const opposite: { [k: string]: string } = {
 		plapowerboost: 'plapowerdrop', plapowerdrop: 'plapowerboost',
 		plaguardboost: 'plaguarddrop', plaguarddrop: 'plaguardboost',
@@ -111,7 +109,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 60,
 		pp: 15,
 		accuracy: 100,
-		secondary: { chance: 50, onHit(target, source, move) { applyPLAStatus(target, 'plapoison', source, move); } },
+		secondary: { chance: 50, onHit(target, source, move) { target.addVolatile('plapoison', source, move); } },
 	},
 
 	bite: {
@@ -126,7 +124,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 60,
 		pp: 15,
 		accuracy: 100,
-		secondary: { chance: 30, onHit(target, source, move) { applyPLAStatus(target, 'plafrostbite', source, move); } },
+		secondary: { chance: 30, onHit(target, source, move) { target.addVolatile('plafrostbite', source, move); } },
 	},
 
 	bleakwindstorm: {
@@ -134,7 +132,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 95,
 		pp: 5,
 		accuracy: 80,
-		secondary: { chance: 30, onHit(target, source, move) { applyPLAStatus(target, 'plafrostbite', source, move); } },
+		secondary: { chance: 30, onHit(target, source, move) { target.addVolatile('plafrostbite', source, move); } },
 	},
 
 	blizzard: {
@@ -142,7 +140,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 100,
 		pp: 5,
 		accuracy: 75,
-		secondary: { chance: 10, onHit(target, source, move) { applyPLAStatus(target, 'plafrostbite', source, move); } },
+		secondary: { chance: 10, onHit(target, source, move) { target.addVolatile('plafrostbite', source, move); } },
 	},
 
 	bravebird: {
@@ -246,7 +244,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 70,
 		pp: 15,
 		accuracy: 100,
-		secondary: { chance: 10, onHit(target, source, move) { applyPLAStatus(target, 'plapoison', source, move); } },
+		secondary: { chance: 10, onHit(target, source, move) { target.addVolatile('plapoison', source, move); } },
 	},
 
 	crunch: {
@@ -276,7 +274,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		pp: 10,
 		accuracy: 90,
-		onHit(target, source, move) { return applyPLAStatus(target, 'pladrowsy', source, move); },
+		onHit(target, source, move) { return target.addVolatile('pladrowsy', source, move); },
 	},
 
 	dazzlinggleam: {
@@ -291,7 +289,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 60,
 		pp: 15,
 		accuracy: 100,
-		secondary: { chance: 30, onHit(target, source, move) { applyPLAStatus(target, 'pladrowsy', source, move); } },
+		secondary: { chance: 30, onHit(target, source, move) { target.addVolatile('pladrowsy', source, move); } },
 	},
 
 	doubleedge: {
@@ -526,7 +524,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		pp: 20,
 		accuracy: 70,
-		onHit(target, source, move) { return applyPLAStatus(target, 'pladrowsy', source, move); },
+		onHit(target, source, move) { return target.addVolatile('pladrowsy', source, move); },
 	},
 
 	iceball: {
@@ -541,7 +539,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 80,
 		pp: 10,
 		accuracy: 100,
-		secondary: { chance: 10, onHit(target, source, move) { applyPLAStatus(target, 'plafrostbite', source, move); } },
+		secondary: { chance: 10, onHit(target, source, move) { target.addVolatile('plafrostbite', source, move); } },
 	},
 
 	icefang: {
@@ -549,7 +547,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 65,
 		pp: 15,
 		accuracy: 95,
-		secondaries: [{ chance: 10, onHit(target, source, move) { applyPLAStatus(target, 'plafrostbite', source, move); } }],
+		secondaries: [{ chance: 10, onHit(target, source, move) { target.addVolatile('plafrostbite', source, move); } }],
 	},
 
 	icepunch: {
@@ -557,7 +555,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 75,
 		pp: 10,
 		accuracy: 100,
-		secondary: { chance: 10, onHit(target, source, move) { applyPLAStatus(target, 'plafrostbite', source, move); } },
+		secondary: { chance: 10, onHit(target, source, move) { target.addVolatile('plafrostbite', source, move); } },
 	},
 
 	iceshard: {
@@ -812,7 +810,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		pp: 20,
 		accuracy: 90,
-		onHit(target, source, move) { return applyPLAStatus(target, 'plapoison', source, move); },
+		onHit(target, source, move) { return target.addVolatile('plapoison', source, move); },
 	},
 
 	poisonjab: {
@@ -820,14 +818,14 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 80,
 		pp: 10,
 		accuracy: 100,
-		secondary: { chance: 30, onHit(target, source, move) { applyPLAStatus(target, 'plapoison', source, move); } },
+		secondary: { chance: 30, onHit(target, source, move) { target.addVolatile('plapoison', source, move); } },
 	},
 
 	poisonpowder: {
 		inherit: true,
 		pp: 20,
 		accuracy: 80,
-		onHit(target, source, move) { return applyPLAStatus(target, 'plapoison', source, move); },
+		onHit(target, source, move) { return target.addVolatile('plapoison', source, move); },
 	},
 
 	poisonsting: {
@@ -835,7 +833,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 30,
 		pp: 20,
 		accuracy: 100,
-		secondary: { chance: 30, onHit(target, source, move) { applyPLAStatus(target, 'plapoison', source, move); } },
+		secondary: { chance: 30, onHit(target, source, move) { target.addVolatile('plapoison', source, move); } },
 	},
 
 	powdersnow: {
@@ -843,7 +841,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 40,
 		pp: 25,
 		accuracy: 100,
-		secondary: { chance: 10, onHit(target, source, move) { applyPLAStatus(target, 'plafrostbite', source, move); } },
+		secondary: { chance: 10, onHit(target, source, move) { target.addVolatile('plafrostbite', source, move); } },
 	},
 
 	powergem: {
@@ -912,7 +910,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			}
 		},
 		onHit(target, source, move) {
-			const result = applyPLAStatus(target, 'pladrowsy', source, move);
+			const result = target.addVolatile('pladrowsy', source, move);
 			if (result) this.heal(target.maxhp);
 			return result;
 		},
@@ -1032,7 +1030,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		pp: 20,
 		accuracy: 80,
-		onHit(target, source, move) { return applyPLAStatus(target, 'pladrowsy', source, move); },
+		onHit(target, source, move) { return target.addVolatile('pladrowsy', source, move); },
 	},
 
 	sludgebomb: {
@@ -1040,7 +1038,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 80,
 		pp: 10,
 		accuracy: 100,
-		secondary: { chance: 30, onHit(target, source, move) { applyPLAStatus(target, 'plapoison', source, move); } },
+		secondary: { chance: 30, onHit(target, source, move) { target.addVolatile('plapoison', source, move); } },
 	},
 
 	snarl: {
@@ -1068,7 +1066,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 65,
 		pp: 20,
 		accuracy: 100,
-		secondary: { chance: 30, onHit(target, source, move) { applyPLAStatus(target, 'plaparalysis', source, move); } },
+		secondary: { chance: 30, onHit(target, source, move) { target.addVolatile('plaparalysis', source, move); } },
 	},
 
 	spikes: {
@@ -1146,7 +1144,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		pp: 20,
 		accuracy: 80,
-		onHit(target, source, move) { return applyPLAStatus(target, 'plaparalysis', source, move); },
+		onHit(target, source, move) { return target.addVolatile('plaparalysis', source, move); },
 	},
 
 	swift: {
@@ -1187,7 +1185,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 100,
 		pp: 5,
 		accuracy: 75,
-		secondary: { chance: 30, onHit(target, source, move) { applyPLAStatus(target, 'plaparalysis', source, move); } },
+		secondary: { chance: 30, onHit(target, source, move) { target.addVolatile('plaparalysis', source, move); } },
 	},
 
 	thunderbolt: {
@@ -1195,7 +1193,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 80,
 		pp: 10,
 		accuracy: 100,
-		secondary: { chance: 10, onHit(target, source, move) { applyPLAStatus(target, 'plaparalysis', source, move); } },
+		secondary: { chance: 10, onHit(target, source, move) { target.addVolatile('plaparalysis', source, move); } },
 	},
 
 	thunderfang: {
@@ -1203,7 +1201,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 65,
 		pp: 15,
 		accuracy: 95,
-		secondaries: [{ chance: 10, onHit(target, source, move) { applyPLAStatus(target, 'plaparalysis', source, move); } }],
+		secondaries: [{ chance: 10, onHit(target, source, move) { target.addVolatile('plaparalysis', source, move); } }],
 	},
 
 	thunderpunch: {
@@ -1218,14 +1216,14 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 40,
 		pp: 25,
 		accuracy: 100,
-		secondary: { chance: 10, onHit(target, source, move) { applyPLAStatus(target, 'plaparalysis', source, move); } },
+		secondary: { chance: 10, onHit(target, source, move) { target.addVolatile('plaparalysis', source, move); } },
 	},
 
 	thunderwave: {
 		inherit: true,
 		pp: 20,
 		accuracy: 90,
-		onHit(target, source, move) { return applyPLAStatus(target, 'plaparalysis', source, move); },
+		onHit(target, source, move) { return target.addVolatile('plaparalysis', source, move); },
 	},
 
 	triattack: {
@@ -1237,7 +1235,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			chance: 20,
 			onHit(target, source, move) {
 				const status = this.sample(['plafrostbite', 'plaparalysis', 'plapoison']);
-				applyPLAStatus(target, status, source, move);
+				target.addVolatile(status, source, move);
 			},
 		},
 	},
