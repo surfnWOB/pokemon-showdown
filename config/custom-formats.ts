@@ -444,6 +444,19 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		banlist: ['Sand Veil', 'Soundproof', 'King\'s Rock', 'Assist', 'Baton Pass + Block', 'Baton Pass + Mean Look', 'Baton Pass + Spider Web', 'Swagger'],
 	},
 	{
+		name: "[Gen 3] ADV ES",
+		desc: "Gen 3 OU but every Pok&eacute;mon can learn and has to run Extreme Speed.",
+		mod: 'gen3es',
+		searchShow: false,
+		ruleset: ['Standard', 'One Boost Passer Clause', 'Accuracy Trap Clause', 'Freeze Clause Mod'],
+		banlist: ['Uber', 'Soundproof + Baton Pass', 'Smeargle + Ingrain', 'Sand Veil + Sand Stream', 'Assist', 'Baton Pass + Block', 'Baton Pass + Mean Look', 'Baton Pass + Spider Web', 'Swagger', 'Quick Claw', 'Confuse Ray', 'Teeter Dance', 'Dynamic Punch', 'Sand-Attack', 'Focus Band', 'Flash', 'Mud Slap', 'Smokescreen', 'Kinesis', 'Agility + Baton Pass', 'Speed Boost + Baton Pass', 'Dragon Dance + Baton Pass', 'Silver Wind + Baton Pass', 'Ancientpower + Baton Pass'],
+		onValidateSet(set) {
+			if (!set.moves.map(this.toID).includes('extremespeed' as ID)) {
+				return [`${set.name || set.species} must run Extreme Speed.`];
+			}
+		},
+	},
+	{
 		name: "[Gen 3] Megas CAP",
 		desc: "Gen 3 OU with the CAP Mega Evolution and Primal Reversion roster (no Fairy type, no Mega Rayquaza).",
 		mod: 'gen3megascap',
