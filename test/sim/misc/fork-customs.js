@@ -366,9 +366,10 @@ describe('Fork customs', () => {
 		assert(errors && errors.some(e => /Light Ball/.test(e)), `expected Light Ball banned from ADV 200 UU, got: ${JSON.stringify(errors)}`);
 	});
 
-	it('gen3adv200: Gorebyss, Medicham, Flygon, Ninjask are the only sub-OU mons banned from ADV 200 UU', () => {
-		// These four are UU by tier (not caught by the 'OU' banlist target), so each
-		// must be named individually. Guard that the ban lands...
+	it('gen3adv200: Gorebyss, Medicham, Flygon, Ninjask are UUBL and banned from ADV 200 UU', () => {
+		// The four are retagged UUBL in the mod (banned from UU, legal in OU+),
+		// and ADV 200 UU bans the whole UUBL tier. Guard the tier tag + the ban...
+		const adv = Dex.mod('gen3adv200');
 		const { TeamValidator } = require('./../../../dist/sim/team-validator');
 		const sets = {
 			Gorebyss: { ability: 'Swift Swim', moves: ['surf'] },
@@ -377,8 +378,8 @@ describe('Fork customs', () => {
 			Ninjask: { ability: 'Speed Boost', moves: ['swordsdance'] },
 		};
 		for (const [species, set] of Object.entries(sets)) {
-			assert.equal(Dex.mod('gen3adv200').species.get(species).tier, 'UU',
-				`${species} should be UU (else the individual ban is redundant/wrong)`);
+			assert.equal(adv.species.get(species).tier, 'UUBL',
+				`${species} should be UUBL`);
 			const errors = TeamValidator.get('gen3adv200uu').validateTeam([
 				{ species, ...set, evs: { hp: 4 }, level: 100 },
 			]);
@@ -386,15 +387,11 @@ describe('Fork customs', () => {
 				`expected ${species} banned from ADV 200 UU, got: ${JSON.stringify(errors)}`);
 		}
 
-		// ...and that they are the ONLY named sub-OU species bans — every other
-		// banlist entry is a tier tag, item, or move, not a below-OU Pokemon.
-		const format = Dex.formats.get('gen3adv200uu', true);
-		const namedMonBans = format.banlist.filter(entry => {
-			const species = Dex.mod('gen3adv200').species.get(entry);
-			return species.exists && species.tier !== 'OU' && species.tier !== 'Uber';
-		});
-		assert.deepEqual(namedMonBans.sort(), ['Flygon', 'Gorebyss', 'Medicham', 'Ninjask'],
-			`unexpected sub-OU species bans: ${JSON.stringify(namedMonBans)}`);
+		// ...and that UUBL is exactly this set of four — no other mon leaks into
+		// the banned tier, so the 'UUBL' banlist target removes only these.
+		const uubl = adv.species.all().filter(s => s.tier === 'UUBL' && !s.isNonstandard).map(s => s.name);
+		assert.deepEqual(uubl.sort(), ['Flygon', 'Gorebyss', 'Medicham', 'Ninjask'],
+			`unexpected UUBL members: ${JSON.stringify(uubl)}`);
 	});
 	// gen3mega backports Gen 6 Mega Evolution onto a gen: 3 engine. From Gen 5 on,
 	// gaining an ability mid-battle fires its switch-in effect; mainline does this via
