@@ -365,6 +365,37 @@ describe('Fork customs', () => {
 		]);
 		assert(errors && errors.some(e => /Light Ball/.test(e)), `expected Light Ball banned from ADV 200 UU, got: ${JSON.stringify(errors)}`);
 	});
+
+	it('gen3adv200: Gorebyss, Medicham, Flygon, Ninjask are the only sub-OU mons banned from ADV 200 UU', () => {
+		// These four are UU by tier (not caught by the 'OU' banlist target), so each
+		// must be named individually. Guard that the ban lands...
+		const { TeamValidator } = require('./../../../dist/sim/team-validator');
+		const sets = {
+			Gorebyss: { ability: 'Swift Swim', moves: ['surf'] },
+			Medicham: { ability: 'Pure Power', moves: ['brickbreak'] },
+			Flygon: { ability: 'Levitate', moves: ['earthquake'] },
+			Ninjask: { ability: 'Speed Boost', moves: ['swordsdance'] },
+		};
+		for (const [species, set] of Object.entries(sets)) {
+			assert.equal(Dex.mod('gen3adv200').species.get(species).tier, 'UU',
+				`${species} should be UU (else the individual ban is redundant/wrong)`);
+			const errors = TeamValidator.get('gen3adv200uu').validateTeam([
+				{ species, ...set, evs: { hp: 4 }, level: 100 },
+			]);
+			assert(errors && errors.some(e => new RegExp(species).test(e)),
+				`expected ${species} banned from ADV 200 UU, got: ${JSON.stringify(errors)}`);
+		}
+
+		// ...and that they are the ONLY named sub-OU species bans — every other
+		// banlist entry is a tier tag, item, or move, not a below-OU Pokemon.
+		const format = Dex.formats.get('gen3adv200uu', true);
+		const namedMonBans = format.banlist.filter(entry => {
+			const species = Dex.mod('gen3adv200').species.get(entry);
+			return species.exists && species.tier !== 'OU' && species.tier !== 'Uber';
+		});
+		assert.deepEqual(namedMonBans.sort(), ['Flygon', 'Gorebyss', 'Medicham', 'Ninjask'],
+			`unexpected sub-OU species bans: ${JSON.stringify(namedMonBans)}`);
+	});
 	// gen3mega backports Gen 6 Mega Evolution onto a gen: 3 engine. From Gen 5 on,
 	// gaining an ability mid-battle fires its switch-in effect; mainline does this via
 	// formeChange -> setAbility, but that Start is gated `gen > 3` (off here), so the mod
