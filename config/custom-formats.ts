@@ -202,7 +202,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		desc: `ADV 200 below the top tier &mdash; the 23 OU Pok&eacute;mon are banned, leaving the UU pool legal.`,
 		mod: 'gen3adv200',
 		ruleset: ['Standard', 'One Boost Passer Clause'],
-		banlist: ['Uber', 'OU', 'Light Ball', 'Swagger'],
+		banlist: ['Uber', 'OU', 'UUBL', 'Light Ball', 'Swagger'],
 	},
 	{
 		name: "[Gen 3] ADV 200 LC",
