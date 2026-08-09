@@ -739,7 +739,7 @@ export class TeamValidator {
 		let rockHeadBasculin = false;
 		if (!set.ability) set.ability = 'No Ability';
 		if (ruleTable.has('obtainableabilities')) {
-			if (dex.gen <= 2 || dex.currentMod === 'gen7letsgo') {
+			if (dex.gen <= 2 || dex.currentMod === 'gen7letsgo' || dex.currentMod === 'gen8legends') {
 				set.ability = 'No Ability';
 			} else {
 				if (!ability.name || ability.name === 'No Ability') {

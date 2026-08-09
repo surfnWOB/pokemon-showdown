@@ -4448,6 +4448,24 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		column: 4,
 	},
 	{
+		name: "[Gen 8] Legends: Arceus",
+		mod: 'gen8legends',
+		ruleset: [
+			'Obtainable',
+			'Species Clause',
+			'HP Percentage Mod',
+			'Cancel Mod',
+			'Endless Battle Clause',
+		],
+		banlist: [
+			'Arceus',
+			'Dialga', 'Dialga-Origin',
+			'Palkia', 'Palkia-Origin',
+			'Giratina', 'Giratina-Origin',
+			'Darkrai', 'Shaymin-Sky', 'Cresselia',
+		],
+	},
+	{
 		name: "[Gen 8] UU",
 		mod: 'gen8',
 		searchShow: false,
