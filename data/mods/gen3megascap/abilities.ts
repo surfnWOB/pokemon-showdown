@@ -338,10 +338,10 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		// Fires on the move's user and dispatches to its ability (unlike onAfterHit/
 		// onAfterSubDamage, which only run the move's own callback). A successful
 		// Normal-type move spins away the user's entry hazards, Leech Seed, and
-		// binding — Rapid Spin bolted onto every Normal move. The call site already
-		// skips Sheer Force, so no hasSheerForce guard is needed here.
+		// binding — Rapid Spin bolted onto every damaging Normal move. The call site
+		// already skips Sheer Force, so no hasSheerForce guard is needed here.
 		onAfterMoveSecondarySelf(source, target, move) {
-			if (move.type !== 'Normal') return;
+			if (move.type !== 'Normal' || move.category === 'Status') return;
 			if (source.hp && source.removeVolatile('leechseed')) {
 				this.add('-end', source, 'Leech Seed', '[from] ability: Spinner', `[of] ${source}`);
 			}
