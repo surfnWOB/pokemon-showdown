@@ -3,6 +3,7 @@
 const assert = require('assert').strict;
 
 global.Ladders = require('../../dist/server/ladders').Ladders;
+const { Monitor } = require('../../dist/server/monitor');
 const { makeUser } = require('../users-utils');
 
 describe('Matchmaker', () => {
@@ -157,8 +158,10 @@ describe('Matchmaker', () => {
 
 	describe('with ladder bots (Config.ladderbots)', () => {
 		let prevLadderbots;
+		let prevCountPrepBattle;
 		beforeEach(function () {
 			prevLadderbots = Config.ladderbots;
+			prevCountPrepBattle = Monitor.countPrepBattle;
 			Config.ladderbots = ['SimBot'];
 			this.bot = makeUser('SimBot', '192.168.0.9');
 			this.bot.battleSettings.team = 'Gengar||||lick||252,252,4,,,|||||';
@@ -167,7 +170,24 @@ describe('Matchmaker', () => {
 
 		afterEach(function () {
 			Config.ladderbots = prevLadderbots;
+			Monitor.countPrepBattle = prevCountPrepBattle;
 			this.bot = destroyPlayer(this.bot);
+		});
+
+		it('should reserve the IP-wide validation budget for humans', async function () {
+			let calls = 0;
+			Monitor.countPrepBattle = () => {
+				calls++;
+				return true;
+			};
+
+			const botReady = await Ladders(FORMATID).prepBattle(this.bot.connections[0], 'unrated');
+			assert(botReady, 'an allowlisted ladder bot should bypass the shared-IP validation limiter');
+			assert.equal(calls, 0, 'the bot must not consume a token from the human validation budget');
+
+			const humanReady = await Ladders(FORMATID).prepBattle(this.p1.connections[0], 'unrated');
+			assert.equal(humanReady, null, 'ordinary users must remain subject to the validation limiter');
+			assert.equal(calls, 1, 'the limiter should still run exactly once for the ordinary user');
 		});
 
 		it('should backfill a lone human with a waiting bot', function () {
