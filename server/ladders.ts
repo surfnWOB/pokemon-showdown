@@ -55,7 +55,13 @@ class Ladder extends LadderStore {
 		if (Monitor.countConcurrentBattle(gameCount, connection)) {
 			return null;
 		}
-		if (Monitor.countPrepBattle(connection.ip, connection)) {
+		// Trusted ladder bots deliberately keep one search open in several formats. Multiple bots
+		// share an IP in production, so counting those searches against the IP-wide 12-per-3-minute
+		// validation limit can consume the entire budget and make a direct challenge fail after the
+		// bot has already accepted it. Config.ladderbots is an explicit authenticated-account
+		// allowlist already used by matchmaking; exempt only those accounts while preserving the
+		// abuse limit unchanged for every ordinary user on the same IP.
+		if (!Ladder.isLadderBot(userid) && Monitor.countPrepBattle(connection.ip, connection)) {
 			return null;
 		}
 
