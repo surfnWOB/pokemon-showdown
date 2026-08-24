@@ -4,7 +4,7 @@ const assert = require('assert').strict;
 
 global.Ladders = require('../../dist/server/ladders').Ladders;
 const { Monitor } = require('../../dist/server/monitor');
-const { makeUser } = require('../users-utils');
+const { makeConnection, makeUser } = require('../users-utils');
 
 describe('Matchmaker', () => {
 	const FORMATID = 'gen7ou';
@@ -188,6 +188,24 @@ describe('Matchmaker', () => {
 			const humanReady = await Ladders(FORMATID).prepBattle(this.p1.connections[0], 'unrated');
 			assert.equal(humanReady, null, 'ordinary users must remain subject to the validation limiter');
 			assert.equal(calls, 1, 'the limiter should still run exactly once for the ordinary user');
+		});
+
+		it('should isolate the team uploaded by each bot connection', async function () {
+			const sidecarConnection = this.bot.connections[0];
+			const ladderConnection = makeConnection('192.168.0.9');
+			this.bot.mergeConnection(ladderConnection);
+
+			const validSidecarTeam = 'Gengar||||lick||252,252,4,,,|||||';
+			const invalidLadderTeam = Array(6).fill(validSidecarTeam).join(']');
+			Chat.parse(`/utm ${validSidecarTeam}`, null, this.bot, sidecarConnection);
+			Chat.parse(`/utm ${invalidLadderTeam}`, null, this.bot, ladderConnection);
+
+			assert.equal(this.bot.battleSettings.team, invalidLadderTeam, 'the shared user state should reflect the last upload');
+			assert.equal(sidecarConnection.battleTeam, validSidecarTeam, 'the accepting socket must retain its own team');
+
+			const ready = await Ladders(FORMATID).prepBattle(sidecarConnection, 'unrated');
+			assert(ready, 'the sidecar team should validate despite the other socket upload');
+			assert.equal(Teams.unpack(ready.settings.team).length, 1, 'validation must use the one-Pokémon sidecar team');
 		});
 
 		it('should backfill a lone human with a waiting bot', function () {

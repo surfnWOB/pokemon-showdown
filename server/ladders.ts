@@ -37,7 +37,14 @@ class Ladder extends LadderStore {
 		// all validation for a battle goes through here
 		const user = connection.user;
 		const userid = user.id;
-		if (team === null) team = user.battleSettings.team;
+		if (team === null) {
+			// Multiple automation clients intentionally share each trusted bot account.
+			// Their /utm commands must not race through User#battleSettings: a six-Pokémon
+			// ladder team from one socket can otherwise overwrite a three-Pokémon 1v1
+			// team immediately before another socket accepts a challenge.
+			team = Ladder.isLadderBot(userid) && connection.battleTeam ?
+				connection.battleTeam : user.battleSettings.team;
+		}
 
 		if (Rooms.global.lockdown && Rooms.global.lockdown !== 'pre') {
 			let message = `The server is restarting. Battles will be available again in a few minutes.`;
