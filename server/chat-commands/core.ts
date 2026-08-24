@@ -1622,7 +1622,8 @@ export const commands: Chat.ChatCommands = {
 
 	saveteam: 'useteam',
 	utm: 'useteam',
-	useteam(target, room, user) {
+	useteam(target, room, user, connection) {
+		connection.battleTeam = target;
 		user.battleSettings.team = target;
 	},
 	useteamhelp: [`/useteam [packed team] - Sets your team for your next battles to the given [team].`],

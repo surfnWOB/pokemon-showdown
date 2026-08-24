@@ -235,6 +235,8 @@ export class Connection {
 	user: User;
 	challenge: string;
 	autojoins: string;
+	/** Last team uploaded on this socket; isolates trusted bots with concurrent clients. */
+	battleTeam: string;
 	/** The last bot html page this connection requested, formatted as `${bot.id}-${pageid}` */
 	lastRequestedPage: string | null;
 	lastActiveTime: number;
@@ -270,6 +272,7 @@ export class Connection {
 
 		this.challenge = '';
 		this.autojoins = '';
+		this.battleTeam = '';
 		this.lastRequestedPage = null;
 		this.lastActiveTime = now;
 		this.openPages = null;
