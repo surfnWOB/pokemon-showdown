@@ -193,6 +193,17 @@ describe('Fork customs', () => {
 		], 'gen3uubl');
 	});
 
+	it('gen3frlgou: [Gen 3] FRLG OU is ladderable and keeps the FRLG mod', () => {
+		// Upstream ships the format challenge-only. The side server deliberately exposes it
+		// on the ladder for the two local bots; pin that one-line visibility override so an
+		// upstream sync cannot silently hide it again.
+		const frlg = Dex.formats.get('gen3frlgou', true);
+		assert(frlg.exists && frlg.mod === 'gen3frlg', 'gen3frlgou must exist on the gen3frlg mod');
+		assert(frlg.searchShow !== false, '[Gen 3] FRLG OU must stay ladderable (searchShow !== false)');
+		assert(frlg.challengeShow !== false, '[Gen 3] FRLG OU must stay challengeable');
+		Dex.formats.getRuleTable(frlg);
+	});
+
 	it('gen3nfe: [Gen 3] NFE is ladderable/challengeable and matches the reference challenge', () => {
 		// Named form of the reference challenge:
 		//   gen3nu @@@ Not Fully Evolved, -Chansey, -Diglett, -Dragonair, -Haunter,
