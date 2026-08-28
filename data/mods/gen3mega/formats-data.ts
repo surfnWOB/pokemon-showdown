@@ -17,8 +17,8 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	// ==========================================================================
 
 	// --- Mega forms & Primals -------------------------------------------------
-	// Tiering follows the rules above. Uber / AG Megas are untouched (banned from
-	// both OU and UU already).
+	// Tiering follows the rules above. Uber / AG Megas are otherwise untouched
+	// (banned from both OU and UU already).
 
 	// Gen 1
 	venusaurmega: { tier: "UU" },
@@ -83,8 +83,9 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	latiosmega: { tier: "Uber" },
 
 	// Primals
-	kyogreprimal: { tier: "Uber" },
-	groudonprimal: { tier: "Uber" },
+	// Temporarily banned to AG for the Discord Tour; restore these to Uber afterward.
+	kyogreprimal: { tier: "AG" },
+	groudonprimal: { tier: "AG" },
 
 	// --- Base forms: usage-based OU/UU overrides ------------------------------
 	// Overrides the inherited Gen 3 (ADV) tier for base species in this metagame.

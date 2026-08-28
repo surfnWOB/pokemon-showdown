@@ -75,7 +75,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 3] Megas Ubers",
-		desc: "Gen 3 Megas with Ubers unbanned. Only AG-tier Megas (Mega Salamence) stay banned.",
+		desc: "Gen 3 Megas with Ubers unbanned. Mega Salamence, Primal Groudon, and Primal Kyogre are temporarily banned to AG for the Discord Tour.",
 		mod: 'gen3mega',
 		ruleset: ['Standard', 'One Boost Passer Clause', 'Accuracy Trap Clause', 'Freeze Clause Mod', 'Speed Pass Clause'],
 		banlist: ['AG', 'Wobbuffet + Leftovers', 'Wynaut + Leftovers', 'Smeargle + Ingrain', 'Sand Veil', 'Soundproof', 'Assist', 'Baton Pass + Block', 'Baton Pass + Mean Look', 'Baton Pass + Spider Web', 'Swagger'],
@@ -125,7 +125,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 3] Megas Ubers Doubles",
-		desc: "Gen 3 Megas Doubles with Ubers unbanned. Only AG-tier Megas stay banned. Explosion and Self-Destruct are legal.",
+		desc: "Gen 3 Megas Doubles with Ubers unbanned. Mega Salamence, Primal Groudon, and Primal Kyogre are temporarily banned to AG for the Discord Tour. Explosion and Self-Destruct are legal.",
 		mod: 'gen3mega',
 		gameType: 'doubles',
 		ruleset: ['Standard', '!Switch Priority Clause Mod'],
