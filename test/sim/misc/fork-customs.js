@@ -443,12 +443,14 @@ describe('Fork customs', () => {
 		assert.equal(battle.field.weather, 'desolateland', 'Desolate Land set on Primal Reversion');
 	});
 
-	it('gen3mega: tier flips — M-Salamence banned to AG, M-Kangaskhan kept OU (M-Medicham stays Uber)', () => {
+	it('gen3mega: tier flips — M-Salamence and Primals banned to AG, M-Kangaskhan kept OU (M-Medicham stays Uber)', () => {
 		// formats-data.ts tiers drive the [Gen 3] Megas `banlist: ['Uber']` (the 'Uber' tag
 		// also covers AG) and the [Gen 3] Megas Ubers `banlist: ['AG']`. The validator swaps
 		// in the stone-induced Mega forme (`tierSpecies`) before tier-matching.
 		const dex = Dex.mod('gen3mega');
 		assert.equal(dex.species.get('salamencemega').tier, 'AG');
+		assert.equal(dex.species.get('groudonprimal').tier, 'AG');
+		assert.equal(dex.species.get('kyogreprimal').tier, 'AG');
 		// M-Kangaskhan (Parental Bond) is kept OU by exception (new to the format) despite
 		// sub-4.52% usage — the fixed-damage combo is complex-banned rather than tier-banned.
 		assert.equal(dex.species.get('kangaskhanmega').tier, 'OU');
@@ -462,6 +464,18 @@ describe('Fork customs', () => {
 		assert(salOu && salOu.some(e => /Salamence/.test(e)), `expected M-Salamence banned from [Gen 3] Megas, got: ${JSON.stringify(salOu)}`);
 		const salUbers = TeamValidator.get('gen3megasubers').validateTeam([salSet]);
 		assert(salUbers && salUbers.some(e => /Salamence/.test(e)), `expected M-Salamence (AG) banned from [Gen 3] Megas Ubers too, got: ${JSON.stringify(salUbers)}`);
+
+		// The Discord Tour temporarily places both Primals in AG, banning their orb-induced
+		// formes from Megas Ubers while leaving them available in Megas AG.
+		for (const primalSet of [
+			{ species: 'Groudon', ability: 'Drought', item: 'redorb', moves: ['earthquake', 'rockslide', 'swordsdance', 'rest'], evs: { hp: 4 }, level: 100 },
+			{ species: 'Kyogre', ability: 'Drizzle', item: 'blueorb', moves: ['surf', 'icebeam', 'calmmind', 'rest'], evs: { hp: 4 }, level: 100 },
+		]) {
+			const primalUbers = TeamValidator.get('gen3megasubers').validateTeam([primalSet]);
+			assert(primalUbers && primalUbers.some(e => /AG/.test(e)),
+				`expected ${primalSet.species}-Primal banned from [Gen 3] Megas Ubers, got: ${JSON.stringify(primalUbers)}`);
+			assert.legalTeam([primalSet], 'gen3megasag');
+		}
 
 		// M-Medicham stays Uber-banned from [Gen 3] Megas, legal in Ubers.
 		const medichamErrors = TeamValidator.get('gen3megas').validateTeam([
