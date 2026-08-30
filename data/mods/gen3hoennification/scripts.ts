@@ -6,6 +6,15 @@ export const Scripts: ModdedBattleScriptsData = {
 		customTiers: ['Uber', 'OU', 'UU', 'NFE', 'LC'],
 	},
 	init() {
+		// Mega formes are part of Hoennification's tier data, so their stones must be
+		// available even though the root item data records their original later generation.
+		for (const id in this.data.Items) {
+			if (!this.data.Items[id]?.megaStone) continue;
+			const item = this.modData('Items', id);
+			item.gen = 3;
+			item.isNonstandard = null;
+		}
+
 		const specialTypes = ['Fire', 'Water', 'Grass', 'Ice', 'Electric', 'Dark', 'Psychic', 'Dragon'];
 		let newCategory = '';
 		for (const i in this.data.Moves) {
