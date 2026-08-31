@@ -108,6 +108,14 @@ describe('Fork customs', () => {
 		assert.legalTeam([
 			{ species: 'Raichu', ability: 'Static', item: 'Raichunite X', moves: ['thunderbolt'], evs: { hp: 4 } },
 		], 'gen3hoennificationou');
+
+		const battle = common.createBattle({ formatid: 'gen3hoennificationou' }, [
+			[{ species: 'Raichu', ability: 'static', item: 'raichunitex', moves: ['thunderbolt'] }],
+			[{ species: 'Snorlax', ability: 'immunity', moves: ['tackle'] }],
+		]);
+		battle.makeChoices('move thunderbolt mega', 'move tackle');
+		assert.equal(battle.p1.active[0].species.id, 'raichumegax');
+		assert.equal(battle.p1.active[0].ability, 'illuminate');
 	});
 
 	it('gen3tera: a Pokemon can Terastallize (guards the bonustypemod seam)', () => {
