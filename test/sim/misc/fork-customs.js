@@ -94,6 +94,30 @@ describe('Fork customs', () => {
 		assert.equal(Dex.mod('gen3tradebacks').species.get('dugtrio').tier, 'Uber');
 	});
 
+	it('gen3hoennification: Mega Stones are legal Gen 3 items', () => {
+		const megaStones = Dex.mod('gen3hoennification').items.all().filter(item => item.megaStone);
+		assert(megaStones.length > 0, 'expected Hoennification to include Mega Stones');
+		for (const item of megaStones) {
+			assert.equal(item.gen, 3, `${item.name} should be marked as a Gen 3 item`);
+			assert.equal(item.isNonstandard, null, `${item.name} should be obtainable`);
+		}
+
+		assert.legalTeam([
+			{ species: 'Charizard', ability: 'Blaze', item: 'Charizardite X', moves: ['flamethrower'], evs: { hp: 4 } },
+		], 'gen3hoennificationou');
+		assert.legalTeam([
+			{ species: 'Raichu', ability: 'Static', item: 'Raichunite X', moves: ['thunderbolt'], evs: { hp: 4 } },
+		], 'gen3hoennificationou');
+
+		const battle = common.createBattle({ formatid: 'gen3hoennificationou' }, [
+			[{ species: 'Raichu', ability: 'static', item: 'raichunitex', moves: ['thunderbolt'] }],
+			[{ species: 'Snorlax', ability: 'immunity', moves: ['tackle'] }],
+		]);
+		battle.makeChoices('move thunderbolt mega', 'move tackle');
+		assert.equal(battle.p1.active[0].species.id, 'raichumegax');
+		assert.equal(battle.p1.active[0].ability, 'illuminate');
+	});
+
 	it('gen3tera: a Pokemon can Terastallize (guards the bonustypemod seam)', () => {
 		const battle = common.createBattle({ formatid: 'gen3tera' }, [
 			[{ species: 'Aerodactyl', ability: 'rockhead', moves: ['rockslide', 'earthquake'], teraType: 'Rock' }],
