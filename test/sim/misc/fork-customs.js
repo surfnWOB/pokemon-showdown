@@ -94,28 +94,39 @@ describe('Fork customs', () => {
 		assert.equal(Dex.mod('gen3tradebacks').species.get('dugtrio').tier, 'Uber');
 	});
 
-	it('gen3hoennification: Mega Stones are legal Gen 3 items', () => {
-		const megaStones = Dex.mod('gen3hoennification').items.all().filter(item => item.megaStone);
-		assert(megaStones.length > 0, 'expected Hoennification to include Mega Stones');
-		for (const item of megaStones) {
-			assert.equal(item.gen, 3, `${item.name} should be marked as a Gen 3 item`);
-			assert.equal(item.isNonstandard, null, `${item.name} should be obtainable`);
+	it('gen3hoennification: Mega formes are standalone Pokemon that do not use Mega Stones', () => {
+		const { TeamValidator } = require('./../../../dist/sim/team-validator');
+		const megaFormes = Dex.mod('gen3hoennification').species.all().filter(species => species.name.includes('-Mega'));
+		assert(megaFormes.length > 0, 'expected Hoennification to include Mega formes');
+		for (const species of megaFormes) {
+			assert(!species.battleOnly, `${species.name} should be selectable outside battle`);
 		}
 
 		assert.legalTeam([
-			{ species: 'Charizard', ability: 'Blaze', item: 'Charizardite X', moves: ['flamethrower'], evs: { hp: 4 } },
+			{ species: 'Charizard-Mega-X', ability: 'Illuminate', item: 'Leftovers', moves: ['flamethrower'], evs: { hp: 4 } },
 		], 'gen3hoennificationou');
 		assert.legalTeam([
-			{ species: 'Raichu', ability: 'Static', item: 'Raichunite X', moves: ['thunderbolt'], evs: { hp: 4 } },
+			{ species: 'Raichu-Mega-X', ability: 'Illuminate', item: 'Leftovers', moves: ['thunderbolt'], evs: { hp: 4 } },
 		], 'gen3hoennificationou');
+		assert.legalTeam([
+			{ species: 'Zygarde-Mega', ability: 'Illuminate', item: 'Leftovers', moves: ['earthquake'], evs: { hp: 4 } },
+		], 'gen3hoennificationubers');
+		const stoneErrors = TeamValidator.get('gen3hoennificationou').validateTeam([
+			{ species: 'Raichu', ability: 'Static', item: 'Raichunite X', moves: ['thunderbolt'], evs: { hp: 4 } },
+		]);
+		assert(
+			stoneErrors?.some(error => error.includes("Raichu's item Raichunite X does not exist in Gen 3")),
+			`base Pokemon should not be able to Mega Evolve with a Mega Stone: ${JSON.stringify(stoneErrors)}`
+		);
 
 		const battle = common.createBattle({ formatid: 'gen3hoennificationou' }, [
-			[{ species: 'Raichu', ability: 'static', item: 'raichunitex', moves: ['thunderbolt'] }],
+			[{ species: 'Raichu-Mega-X', ability: 'illuminate', item: 'leftovers', moves: ['thunderbolt'] }],
 			[{ species: 'Snorlax', ability: 'immunity', moves: ['tackle'] }],
 		]);
-		battle.makeChoices('move thunderbolt mega', 'move tackle');
 		assert.equal(battle.p1.active[0].species.id, 'raichumegax');
 		assert.equal(battle.p1.active[0].ability, 'illuminate');
+		assert.equal(battle.p1.active[0].item, 'leftovers');
+		assert(!battle.p1.active[0].canMegaEvo, 'standalone Mega formes must not offer in-battle Mega Evolution');
 	});
 
 	it('gen3tera: a Pokemon can Terastallize (guards the bonustypemod seam)', () => {

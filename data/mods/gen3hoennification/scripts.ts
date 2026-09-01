@@ -6,13 +6,18 @@ export const Scripts: ModdedBattleScriptsData = {
 		customTiers: ['Uber', 'OU', 'UU', 'NFE', 'LC'],
 	},
 	init() {
-		// Mega formes are part of Hoennification's tier data, so their stones must be
-		// available even though the root item data records their original later generation.
-		for (const id in this.data.Items) {
-			if (!this.data.Items[id]?.megaStone) continue;
-			const item = this.modData('Items', id);
-			item.gen = 3;
-			item.isNonstandard = null;
+		// Hoennification treats Mega formes as ordinary, selectable Pokemon. Strip the
+		// transformation metadata that the base engine would otherwise use to force
+		// them back to their base forme during validation.
+		for (const id in this.data.Pokedex) {
+			if (!this.data.Pokedex[id]?.name.includes('-Mega')) continue;
+			const species = this.modData('Pokedex', id);
+			delete species.forme;
+			delete species.battleOnly;
+			delete species.requiredItem;
+			delete species.requiredItems;
+			delete species.requiredMove;
+			delete species.requiredAbility;
 		}
 
 		const specialTypes = ['Fire', 'Water', 'Grass', 'Ice', 'Electric', 'Dark', 'Psychic', 'Dragon'];
