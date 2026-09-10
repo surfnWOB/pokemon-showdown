@@ -212,6 +212,14 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		banlist: ['Meditite', 'Wynaut', 'Deep Sea Tooth', 'Swagger'],
 	},
 	{
+		name: "[Gen 3] ADV 200 Box",
+		desc: `ADV 200 with the additional resources distributed through Pok&eacute;mon Box: Ruby &amp; Sapphire.`,
+		mod: 'gen3adv200box',
+		searchShow: false,
+		ruleset: ['Standard', 'One Boost Passer Clause'],
+		banlist: ['Uber', 'Swagger'],
+	},
+	{
 		name: "[Gen 3] Tier Shift",
 		desc: "Gen 3 OU with Tier Shift: OU is legal but unboosted; lower-tier Pokémon get stat boosts excluding HP (UUBL and OU-by-technicality +5, UU/RUBL +10, RU/NUBL +15, NU/PUBL +20, PU/ZUBL +30, ZU +35, SU/LC/NFE +40).",
 		mod: 'gen3',
