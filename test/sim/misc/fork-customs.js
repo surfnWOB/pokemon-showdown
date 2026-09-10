@@ -383,6 +383,40 @@ describe('Fork customs', () => {
 		assert.notEqual(Dex.mod('gen3rs').species.get('alakazam').tier, 'OU');
 	});
 
+	it('gen3adv200box: copies ADV 200 rules on an isolated Pokemon Box mod', () => {
+		const base = Dex.formats.get('gen3adv200', true);
+		const box = Dex.formats.get('gen3adv200box', true);
+		assert(box.exists, 'expected [Gen 3] ADV 200 Box to exist');
+		assert.equal(box.mod, 'gen3adv200box');
+		assert.deepEqual(box.ruleset, base.ruleset);
+		assert.deepEqual(box.banlist, base.banlist);
+		assert.equal(box.searchShow, base.searchShow);
+	});
+
+	it('gen3adv200box: legalizes only the Pokemon Box gifts and Enigma Berry', () => {
+		const { TeamValidator } = require('./../../../dist/sim/team-validator');
+		const gifts = [
+			{ species: 'Zigzagoon', ability: 'Pickup', moves: ['extremespeed'], shiny: true, evs: { hp: 4 } },
+			{ species: 'Pichu', ability: 'Static', moves: ['surf'], shiny: true, evs: { hp: 4 } },
+			{ species: 'Swablu', ability: 'Natural Cure', moves: ['falseswipe'], shiny: true, evs: { hp: 4 } },
+			{ species: 'Skitty', ability: 'Cute Charm', moves: ['payday'], shiny: true, evs: { hp: 4 } },
+		];
+		for (const set of gifts) {
+			assert.legalTeam([{ ...set }], 'gen3adv200box');
+			const baseErrors = TeamValidator.get('gen3adv200').validateTeam([{ ...set }]);
+			assert(baseErrors?.length, `${set.species}'s Box move should remain illegal in stock ADV 200`);
+		}
+
+		assert.legalTeam([{
+			species: 'Zigzagoon', ability: 'Pickup', item: 'Enigma Berry', moves: ['tackle'], evs: { hp: 4 },
+		}], 'gen3adv200box');
+		const baseItemErrors = TeamValidator.get('gen3adv200').validateTeam([{
+			species: 'Zigzagoon', ability: 'Pickup', item: 'Enigma Berry', moves: ['tackle'], evs: { hp: 4 },
+		}]);
+		assert(baseItemErrors?.some(error => error.includes('Enigma Berry')),
+			`Enigma Berry should remain illegal in stock ADV 200: ${JSON.stringify(baseItemErrors)}`);
+	});
+
 	it('gen3adv200: ADV 200 UU allows the UU pool but bans OU (guards the OU banlist)', () => {
 		// An all-UU team is legal...
 		assert.legalTeam([
