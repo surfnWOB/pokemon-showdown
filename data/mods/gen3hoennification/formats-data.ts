@@ -3406,7 +3406,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "LC",
 	},
 	urshifu: {
-		tier: "Uber",
+		tier: "OU",
 	},
 	urshifurapidstrike: {
 		tier: "OU",
