@@ -22,7 +22,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "OU",
 	},
 	charizardmegax: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	charizardmegay: {
 		tier: "Uber",
@@ -370,7 +370,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "OU",
 	},
 	slowbromega: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	slowbrogalar: {
 		tier: "OU",
@@ -658,7 +658,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "Uber",
 	},
 	mew: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	chikorita: {
 		tier: "LC",
@@ -826,7 +826,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "OU",
 	},
 	wobbuffet: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	girafarig: {
 		tier: "LC",
@@ -928,7 +928,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "OU",
 	},
 	houndoommega: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	kingdra: {
 		tier: "OU",
@@ -1009,7 +1009,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "OU",
 	},
 	sceptilemega: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	torchic: {
 		tier: "LC",
@@ -1171,7 +1171,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "OU",
 	},
 	sableyemega: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	mawile: {
 		tier: "OU",
@@ -1381,7 +1381,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "Uber",
 	},
 	wynaut: {
-		tier: "LC",
+		tier: "Uber",
 	},
 	snorunt: {
 		tier: "LC",
@@ -1450,13 +1450,13 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "OU",
 	},
 	latias: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	latiasmega: {
 		tier: "Uber",
 	},
 	latios: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	latiosmega: {
 		tier: "Uber",
@@ -1489,10 +1489,10 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "Uber",
 	},
 	deoxysdefense: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	deoxysspeed: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	turtwig: {
 		tier: "LC",
@@ -1630,7 +1630,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "OU",
 	},
 	lopunnymega: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	mismagius: {
 		tier: "OU",
@@ -1681,10 +1681,10 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "NFE",
 	},
 	garchomp: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	garchompmega: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	munchlax: {
 		tier: "LC",
@@ -1696,7 +1696,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "OU",
 	},
 	lucariomega: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	hippopotas: {
 		tier: "LC",
@@ -1855,7 +1855,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "Uber",
 	},
 	darkrai: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	shaymin: {
 		tier: "OU",
@@ -2167,7 +2167,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "LC",
 	},
 	archeops: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	trubbish: {
 		tier: "LC",
@@ -2200,7 +2200,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "NFE",
 	},
 	gothitelle: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	solosis: {
 		tier: "LC",
@@ -2395,7 +2395,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "OU",
 	},
 	terrakion: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	virizion: {
 		tier: "OU",
@@ -2422,7 +2422,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "OU",
 	},
 	landorustherian: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	kyurem: {
 		tier: "OU",
@@ -2635,7 +2635,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "OU",
 	},
 	hawlucha: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	dedenne: {
 		tier: "OU",
@@ -3073,7 +3073,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "OU",
 	},
 	celesteela: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	kartana: {
 		tier: "OU",
@@ -3106,7 +3106,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "LC",
 	},
 	naganadel: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	stakataka: {
 		tier: "OU",
@@ -3115,7 +3115,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "OU",
 	},
 	zeraora: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	meltan: {
 		tier: "OU",
@@ -3406,7 +3406,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "LC",
 	},
 	urshifu: {
-		tier: "Uber",
+		tier: "OU",
 	},
 	urshifurapidstrike: {
 		tier: "OU",
@@ -3616,7 +3616,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "LC",
 	},
 	toedscruel: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	klawf: {
 		tier: "OU",
@@ -3787,7 +3787,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "OU",
 	},
 	tinglu: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	chiyu: {
 		tier: "OU",
@@ -3805,7 +3805,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "Uber",
 	},
 	walkingwake: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	ironleaves: {
 		tier: "OU",
@@ -3871,7 +3871,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "OU",
 	},
 	ironboulder: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	ironcrown: {
 		tier: "OU",
@@ -3907,7 +3907,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "OU",
 	},
 	raichumegay: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	clefablemega: {
 		tier: "OU",
@@ -3952,10 +3952,10 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "Uber",
 	},
 	chimechomega: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	absolmegaz: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	staraptormega: {
 		tier: "OU",
@@ -3979,7 +3979,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "Uber",
 	},
 	froslassmega: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	heatranmega: {
 		tier: "Uber",
@@ -4015,10 +4015,10 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "OU",
 	},
 	chandeluremega: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	golurkmega: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	chesnaughtmega: {
 		tier: "Uber",
@@ -4081,7 +4081,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "OU",
 	},
 	pyroarmega: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	floettemega: {
 		tier: "OU",
