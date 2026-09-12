@@ -3616,7 +3616,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "LC",
 	},
 	toedscruel: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	klawf: {
 		tier: "Illegal",
