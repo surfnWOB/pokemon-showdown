@@ -1,4 +1,4 @@
-// Loose annotation: entries use custom mod viability tiers (S/A/B/C/D, "Tour Ban") outside PS's strict tier union.
+// Loose annotation: entries use custom mod viability tiers (S/A/B/C/D, "Uber") outside PS's strict tier union.
 export const FormatsData: { [k: string]: AnyObject } = {
 	bulbasaur: {
 		tier: "LC",
@@ -928,7 +928,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "OU",
 	},
 	houndoommega: {
-		tier: "Tour Ban",
+		tier: "Uber",
 	},
 	kingdra: {
 		tier: "OU",
@@ -1171,7 +1171,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "OU",
 	},
 	sableyemega: {
-		tier: "Tour Ban",
+		tier: "Uber",
 	},
 	mawile: {
 		tier: "UU",
@@ -1273,7 +1273,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "NFE",
 	},
 	flygon: {
-		tier: "Tour Ban",
+		tier: "OU",
 	},
 	cacnea: {
 		tier: "LC",
@@ -1450,13 +1450,13 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "OU",
 	},
 	latias: {
-		tier: "Tour Ban",
+		tier: "Uber",
 	},
 	latiasmega: {
 		tier: "Uber",
 	},
 	latios: {
-		tier: "Tour Ban",
+		tier: "Uber",
 	},
 	latiosmega: {
 		tier: "Uber",
@@ -3805,7 +3805,7 @@ export const FormatsData: { [k: string]: AnyObject } = {
 		tier: "Illegal",
 	},
 	walkingwake: {
-		tier: "Tour Ban",
+		tier: "Uber",
 	},
 	ironleaves: {
 		tier: "Illegal",
