@@ -86,10 +86,10 @@ describe('Fork customs', () => {
 		assert.deepEqual(Dex.formats.get('gen3puretradebacks', true).ruleset, ['[Gen 3] OU']);
 	});
 
-	it('retains the synchronized PR16 Hoennification and Tradebacks tiering', () => {
+	it('retains the synchronized Hoennification and Tradebacks tiering', () => {
 		const hoennification = Dex.mod('gen3hoennification');
-		assert.equal(hoennification.species.get('latias').tier, 'OU');
-		assert.equal(hoennification.species.get('latios').tier, 'OU');
+		assert.equal(hoennification.species.get('latias').tier, 'Uber');
+		assert.equal(hoennification.species.get('latios').tier, 'Uber');
 		assert.equal(hoennification.species.get('xurkitree').tier, 'OU');
 		assert.equal(Dex.mod('gen3tradebacks').species.get('dugtrio').tier, 'Uber');
 	});
@@ -104,7 +104,7 @@ describe('Fork customs', () => {
 
 		assert.legalTeam([
 			{ species: 'Charizard-Mega-X', ability: 'Illuminate', item: 'Leftovers', moves: ['flamethrower'], evs: { hp: 4 } },
-		], 'gen3hoennificationou');
+		], 'gen3hoennificationubers');
 		assert.legalTeam([
 			{ species: 'Raichu-Mega-X', ability: 'Illuminate', item: 'Leftovers', moves: ['thunderbolt'], evs: { hp: 4 } },
 		], 'gen3hoennificationou');
