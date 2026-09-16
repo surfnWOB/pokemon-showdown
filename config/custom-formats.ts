@@ -611,6 +611,28 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Groudon', 'Ho-Oh', 'Kyogre', 'Lugia', 'Mewtwo', 'Palkia', 'Rayquaza', 'Reshiram', 'Shaymin-Sky', 'Zekrom',
 		],
 	},
+	// [Gen 8] Legends: Arceus &mdash; register the gen8legends mod as a playable format.
+	// Mod data + team-validator No Ability waiver already present; format registration
+	// was lost in the master rebuild conflict (formats.ts → ours). Restored here to
+	// match the post-split custom-formats pattern.
+	{
+		name: "[Gen 8] Legends: Arceus",
+		mod: 'gen8legends',
+		ruleset: [
+			'Obtainable',
+			'Species Clause',
+			'HP Percentage Mod',
+			'Cancel Mod',
+			'Endless Battle Clause',
+		],
+		banlist: [
+			'Arceus',
+			'Dialga', 'Dialga-Origin',
+			'Palkia', 'Palkia-Origin',
+			'Giratina', 'Giratina-Origin',
+			'Darkrai', 'Shaymin-Sky', 'Cresselia',
+		],
+	},
 	{
 		name: "[Gen 8] National Dex AG",
 		threads: [
