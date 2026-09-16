@@ -6,7 +6,6 @@
     ],
     "items": [
       "Choice Band",
-      "Leftovers",
       "Salac Berry"
     ],
     "roles": {
@@ -15,13 +14,11 @@
           "Pressure"
         ],
         "items": [
-          "Leftovers",
           "Salac Berry"
         ],
         "moves": [
           "Double-Edge",
           "Hidden Power Fighting",
-          "Quick Attack",
           "Shadow Ball",
           "Swords Dance"
         ],
@@ -161,9 +158,10 @@
         ],
         "moves": [
           "Focus Punch",
-          "Iron Tail",
           "Rock Slide",
-          "Substitute"
+          "Substitute",
+          "Thunder Wave",
+          "Toxic"
         ]
       }
     }
@@ -256,8 +254,7 @@
           "Hidden Power Dark",
           "Psychic",
           "Recover",
-          "Substitute",
-          "Thunder Punch"
+          "Substitute"
         ],
         "evs": {
           "atk": 0
@@ -287,7 +284,6 @@
         "moves": [
           "Dragon Dance",
           "Earthquake",
-          "Fire Blast",
           "Heal Bell",
           "Hidden Power Flying",
           "Rest"
@@ -311,7 +307,6 @@
           "Dragon Claw",
           "Earthquake",
           "Flamethrower",
-          "Haze",
           "Heal Bell",
           "Rest",
           "Toxic"
@@ -415,6 +410,21 @@
           "spa": 30
         }
       },
+      "Staller": {
+        "abilities": [
+          "Intimidate"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Flamethrower",
+          "Hidden Power Grass",
+          "Hidden Power Rock",
+          "Protect",
+          "Toxic"
+        ]
+      },
       "Bulky Support": {
         "abilities": [
           "Intimidate"
@@ -432,21 +442,6 @@
         "evs": {
           "atk": 0
         }
-      },
-      "Staller": {
-        "abilities": [
-          "Intimidate"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Flamethrower",
-          "Hidden Power Grass",
-          "Hidden Power Rock",
-          "Protect",
-          "Toxic"
-        ]
       }
     }
   },
@@ -536,7 +531,7 @@
     }
   },
   "Articuno": {
-    "level": 80,
+    "level": 79,
     "abilities": [
       "Pressure"
     ],
@@ -544,6 +539,24 @@
       "Leftovers"
     ],
     "roles": {
+      "Staller": {
+        "abilities": [
+          "Pressure"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Heal Bell",
+          "Hidden Power Fire",
+          "Ice Beam",
+          "Protect",
+          "Toxic"
+        ],
+        "evs": {
+          "atk": 0
+        }
+      },
       "Bulky Attacker": {
         "abilities": [
           "Pressure"
@@ -563,24 +576,6 @@
         "ivs": {
           "atk": 0
         }
-      },
-      "Staller": {
-        "abilities": [
-          "Pressure"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Heal Bell",
-          "Hidden Power Fire",
-          "Ice Beam",
-          "Protect",
-          "Toxic"
-        ],
-        "evs": {
-          "atk": 0
-        }
       }
     },
     "evs": {
@@ -597,6 +592,25 @@
       "Leftovers"
     ],
     "roles": {
+      "Wallbreaker": {
+        "abilities": [
+          "Huge Power"
+        ],
+        "items": [
+          "Choice Band"
+        ],
+        "moves": [
+          "Brick Break",
+          "Double-Edge",
+          "Hidden Power Ghost",
+          "Hydro Pump",
+          "Return"
+        ],
+        "ivs": {
+          "def": 30,
+          "spd": 30
+        }
+      },
       "Bulky Attacker": {
         "abilities": [
           "Huge Power"
@@ -630,25 +644,6 @@
           "Return",
           "Sleep Talk"
         ]
-      },
-      "Wallbreaker": {
-        "abilities": [
-          "Huge Power"
-        ],
-        "items": [
-          "Choice Band"
-        ],
-        "moves": [
-          "Brick Break",
-          "Double-Edge",
-          "Hidden Power Ghost",
-          "Hydro Pump",
-          "Return"
-        ],
-        "ivs": {
-          "def": 30,
-          "spd": 30
-        }
       }
     }
   },
@@ -805,6 +800,27 @@
       "Salac Berry"
     ],
     "roles": {
+      "Fast Attacker": {
+        "abilities": [
+          "Swarm"
+        ],
+        "items": [
+          "Choice Band",
+          "Salac Berry"
+        ],
+        "moves": [
+          "Brick Break",
+          "Double-Edge",
+          "Hidden Power Bug",
+          "Sludge Bomb",
+          "Swords Dance"
+        ],
+        "ivs": {
+          "atk": 30,
+          "def": 30,
+          "spd": 30
+        }
+      },
       "Setup Sweeper": {
         "abilities": [
           "Swarm"
@@ -832,27 +848,6 @@
         ],
         "moves": [
           "Endure",
-          "Hidden Power Bug",
-          "Sludge Bomb",
-          "Swords Dance"
-        ],
-        "ivs": {
-          "atk": 30,
-          "def": 30,
-          "spd": 30
-        }
-      },
-      "Fast Attacker": {
-        "abilities": [
-          "Swarm"
-        ],
-        "items": [
-          "Choice Band",
-          "Salac Berry"
-        ],
-        "moves": [
-          "Brick Break",
-          "Double-Edge",
           "Hidden Power Bug",
           "Sludge Bomb",
           "Swords Dance"
@@ -941,22 +936,6 @@
           "atk": 0
         }
       },
-      "Bulky Attacker": {
-        "abilities": [
-          "Torrent"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Ice Beam",
-          "Rapid Spin",
-          "Refresh",
-          "Roar",
-          "Surf",
-          "Toxic"
-        ]
-      },
       "Staller": {
         "abilities": [
           "Torrent"
@@ -977,6 +956,22 @@
         "ivs": {
           "atk": 0
         }
+      },
+      "Bulky Attacker": {
+        "abilities": [
+          "Torrent"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Ice Beam",
+          "Rapid Spin",
+          "Refresh",
+          "Roar",
+          "Surf",
+          "Toxic"
+        ]
       }
     }
   },
@@ -991,20 +986,6 @@
       "Salac Berry"
     ],
     "roles": {
-      "Berry Sweeper": {
-        "abilities": [
-          "Blaze"
-        ],
-        "items": [
-          "Salac Berry"
-        ],
-        "moves": [
-          "Endure",
-          "Fire Blast",
-          "Reversal",
-          "Swords Dance"
-        ]
-      },
       "Wallbreaker": {
         "abilities": [
           "Blaze"
@@ -1018,6 +999,20 @@
           "Fire Blast",
           "Rock Slide",
           "Sky Uppercut",
+          "Swords Dance"
+        ]
+      },
+      "Berry Sweeper": {
+        "abilities": [
+          "Blaze"
+        ],
+        "items": [
+          "Salac Berry"
+        ],
+        "moves": [
+          "Endure",
+          "Fire Blast",
+          "Reversal",
           "Swords Dance"
         ]
       },
@@ -1048,6 +1043,26 @@
       "Leftovers"
     ],
     "roles": {
+      "Bulky Support": {
+        "abilities": [
+          "Natural Cure"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Protect",
+          "Seismic Toss",
+          "Toxic",
+          "Wish"
+        ],
+        "evs": {
+          "atk": 0
+        },
+        "ivs": {
+          "atk": 0
+        }
+      },
       "Staller": {
         "abilities": [
           "Natural Cure"
@@ -1061,26 +1076,6 @@
           "Soft-Boiled",
           "Thunder Wave",
           "Toxic"
-        ],
-        "evs": {
-          "atk": 0
-        },
-        "ivs": {
-          "atk": 0
-        }
-      },
-      "Bulky Support": {
-        "abilities": [
-          "Natural Cure"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Protect",
-          "Seismic Toss",
-          "Toxic",
-          "Wish"
         ],
         "evs": {
           "atk": 0
@@ -1549,21 +1544,6 @@
       "Leftovers"
     ],
     "roles": {
-      "Bulky Support": {
-        "abilities": [
-          "Shell Armor"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Explosion",
-          "Rapid Spin",
-          "Spikes",
-          "Surf",
-          "Toxic"
-        ]
-      },
       "Bulky Attacker": {
         "abilities": [
           "Shell Armor"
@@ -1574,6 +1554,21 @@
         "moves": [
           "Explosion",
           "Ice Beam",
+          "Rapid Spin",
+          "Spikes",
+          "Surf",
+          "Toxic"
+        ]
+      },
+      "Bulky Support": {
+        "abilities": [
+          "Shell Armor"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Explosion",
           "Rapid Spin",
           "Spikes",
           "Surf",
@@ -1682,23 +1677,6 @@
       "Leftovers"
     ],
     "roles": {
-      "Fast Attacker": {
-        "abilities": [
-          "Hyper Cutter"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Brick Break",
-          "Crunch",
-          "Double-Edge",
-          "Hidden Power Electric",
-          "Hidden Power Grass",
-          "Ice Beam",
-          "Surf"
-        ]
-      },
       "Wallbreaker": {
         "abilities": [
           "Hyper Cutter"
@@ -1714,6 +1692,23 @@
           "Hidden Power Ghost",
           "Surf",
           "Swords Dance"
+        ]
+      },
+      "Fast Attacker": {
+        "abilities": [
+          "Hyper Cutter"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Brick Break",
+          "Crunch",
+          "Double-Edge",
+          "Hidden Power Electric",
+          "Hidden Power Grass",
+          "Ice Beam",
+          "Surf"
         ]
       }
     }
@@ -1764,6 +1759,20 @@
       "Leftovers"
     ],
     "roles": {
+      "Generalist": {
+        "abilities": [
+          "Cute Charm"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Body Slam",
+          "Heal Bell",
+          "Protect",
+          "Wish"
+        ]
+      },
       "Bulky Support": {
         "abilities": [
           "Cute Charm"
@@ -1776,20 +1785,6 @@
           "Protect",
           "Thunder Wave",
           "Toxic",
-          "Wish"
-        ]
-      },
-      "Generalist": {
-        "abilities": [
-          "Cute Charm"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Body Slam",
-          "Heal Bell",
-          "Protect",
           "Wish"
         ]
       }
@@ -2058,21 +2053,6 @@
       "Liechi Berry"
     ],
     "roles": {
-      "Berry Sweeper": {
-        "abilities": [
-          "Early Bird"
-        ],
-        "items": [
-          "Liechi Berry"
-        ],
-        "moves": [
-          "Drill Peck",
-          "Flail",
-          "Hidden Power Ground",
-          "Quick Attack",
-          "Substitute"
-        ]
-      },
       "Wallbreaker": {
         "abilities": [
           "Early Bird"
@@ -2091,6 +2071,21 @@
           "spa": 30,
           "spd": 30
         }
+      },
+      "Berry Sweeper": {
+        "abilities": [
+          "Early Bird"
+        ],
+        "items": [
+          "Liechi Berry"
+        ],
+        "moves": [
+          "Drill Peck",
+          "Flail",
+          "Hidden Power Ground",
+          "Quick Attack",
+          "Substitute"
+        ]
       }
     }
   },
@@ -2163,12 +2158,11 @@
           "Lum Berry"
         ],
         "moves": [
-          "Double-Edge",
+          "Brick Break",
           "Dragon Dance",
           "Earthquake",
           "Heal Bell",
-          "Hidden Power Flying",
-          "Substitute"
+          "Hidden Power Flying"
         ],
         "ivs": {
           "hp": 30,
@@ -2272,6 +2266,21 @@
       "Leftovers"
     ],
     "roles": {
+      "Generalist": {
+        "abilities": [
+          "Pressure"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Focus Punch",
+          "Pain Split",
+          "Shadow Ball",
+          "Substitute",
+          "Will-O-Wisp"
+        ]
+      },
       "Bulky Attacker": {
         "abilities": [
           "Pressure"
@@ -2285,21 +2294,6 @@
           "Seismic Toss",
           "Shadow Ball",
           "Sleep Talk",
-          "Will-O-Wisp"
-        ]
-      },
-      "Generalist": {
-        "abilities": [
-          "Pressure"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Focus Punch",
-          "Pain Split",
-          "Shadow Ball",
-          "Substitute",
           "Will-O-Wisp"
         ]
       },
@@ -2432,7 +2426,7 @@
     }
   },
   "Entei": {
-    "level": 78,
+    "level": 77,
     "abilities": [
       "Pressure"
     ],
@@ -2451,26 +2445,6 @@
           "Flamethrower",
           "Rest",
           "Sleep Talk",
-          "Toxic"
-        ],
-        "evs": {
-          "atk": 0
-        },
-        "ivs": {
-          "atk": 0
-        }
-      },
-      "Staller": {
-        "abilities": [
-          "Pressure"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Flamethrower",
-          "Protect",
-          "Substitute",
           "Toxic"
         ],
         "evs": {
@@ -2499,6 +2473,26 @@
         "ivs": {
           "atk": 2,
           "spa": 30
+        }
+      },
+      "Staller": {
+        "abilities": [
+          "Pressure"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Flamethrower",
+          "Protect",
+          "Substitute",
+          "Toxic"
+        ],
+        "evs": {
+          "atk": 0
+        },
+        "ivs": {
+          "atk": 0
         }
       }
     },
@@ -2671,6 +2665,24 @@
       "Stick"
     ],
     "roles": {
+      "Setup Sweeper": {
+        "abilities": [
+          "Inner Focus"
+        ],
+        "items": [
+          "Stick"
+        ],
+        "moves": [
+          "Agility",
+          "Hidden Power Ground",
+          "Return",
+          "Swords Dance"
+        ],
+        "ivs": {
+          "spa": 30,
+          "spd": 30
+        }
+      },
       "Berry Sweeper": {
         "abilities": [
           "Inner Focus"
@@ -2688,24 +2700,6 @@
           "hp": 30,
           "atk": 30,
           "def": 30,
-          "spa": 30,
-          "spd": 30
-        }
-      },
-      "Setup Sweeper": {
-        "abilities": [
-          "Inner Focus"
-        ],
-        "items": [
-          "Stick"
-        ],
-        "moves": [
-          "Agility",
-          "Hidden Power Ground",
-          "Return",
-          "Swords Dance"
-        ],
-        "ivs": {
           "spa": 30,
           "spd": 30
         }
@@ -2787,24 +2781,6 @@
       "Leftovers"
     ],
     "roles": {
-      "Bulky Support": {
-        "abilities": [
-          "Flash Fire"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Flamethrower",
-          "Hidden Power Grass",
-          "Protect",
-          "Toxic",
-          "Wish"
-        ],
-        "evs": {
-          "atk": 0
-        }
-      },
       "Wallbreaker": {
         "abilities": [
           "Flash Fire"
@@ -2821,6 +2797,26 @@
         "ivs": {
           "atk": 30,
           "spa": 30
+        }
+      },
+      "Bulky Support": {
+        "abilities": [
+          "Flash Fire"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Flamethrower",
+          "Protect",
+          "Toxic",
+          "Wish"
+        ],
+        "evs": {
+          "atk": 0
+        },
+        "ivs": {
+          "atk": 0
         }
       }
     }
@@ -3298,21 +3294,6 @@
       "Leftovers"
     ],
     "roles": {
-      "Bulky Attacker": {
-        "abilities": [
-          "Intimidate"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Earthquake",
-          "Heal Bell",
-          "Return",
-          "Shadow Ball",
-          "Thunder Wave"
-        ]
-      },
       "Fast Attacker": {
         "abilities": [
           "Intimidate"
@@ -3342,6 +3323,21 @@
           "Earthquake",
           "Overheat",
           "Shadow Ball"
+        ]
+      },
+      "Bulky Attacker": {
+        "abilities": [
+          "Intimidate"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Earthquake",
+          "Heal Bell",
+          "Return",
+          "Shadow Ball",
+          "Thunder Wave"
         ]
       }
     }
@@ -3471,29 +3467,6 @@
       "Lum Berry"
     ],
     "roles": {
-      "Wallbreaker": {
-        "abilities": [
-          "Intimidate"
-        ],
-        "items": [
-          "Choice Band",
-          "Lum Berry"
-        ],
-        "moves": [
-          "Double-Edge",
-          "Dragon Dance",
-          "Earthquake",
-          "Hidden Power Flying",
-          "Hydro Pump"
-        ],
-        "ivs": {
-          "hp": 30,
-          "atk": 30,
-          "def": 30,
-          "spa": 30,
-          "spd": 30
-        }
-      },
       "Setup Sweeper": {
         "abilities": [
           "Intimidate"
@@ -3508,6 +3481,29 @@
           "Earthquake",
           "Hidden Power Flying",
           "Substitute"
+        ],
+        "ivs": {
+          "hp": 30,
+          "atk": 30,
+          "def": 30,
+          "spa": 30,
+          "spd": 30
+        }
+      },
+      "Wallbreaker": {
+        "abilities": [
+          "Intimidate"
+        ],
+        "items": [
+          "Choice Band",
+          "Lum Berry"
+        ],
+        "moves": [
+          "Double-Edge",
+          "Dragon Dance",
+          "Earthquake",
+          "Hidden Power Flying",
+          "Hydro Pump"
         ],
         "ivs": {
           "hp": 30,
@@ -3583,6 +3579,20 @@
       "Salac Berry"
     ],
     "roles": {
+      "Setup Sweeper": {
+        "abilities": [
+          "Guts"
+        ],
+        "items": [
+          "Salac Berry"
+        ],
+        "moves": [
+          "Brick Break",
+          "Megahorn",
+          "Rock Slide",
+          "Swords Dance"
+        ]
+      },
       "Berry Sweeper": {
         "abilities": [
           "Swarm"
@@ -3611,20 +3621,6 @@
           "Hidden Power Ghost",
           "Megahorn",
           "Rock Slide"
-        ]
-      },
-      "Setup Sweeper": {
-        "abilities": [
-          "Guts"
-        ],
-        "items": [
-          "Salac Berry"
-        ],
-        "moves": [
-          "Brick Break",
-          "Megahorn",
-          "Rock Slide",
-          "Swords Dance"
         ]
       }
     }
@@ -3751,7 +3747,7 @@
     }
   },
   "Hitmontop": {
-    "level": 86,
+    "level": 87,
     "abilities": [
       "Intimidate"
     ],
@@ -3929,6 +3925,27 @@
       "Leftovers"
     ],
     "roles": {
+      "Setup Sweeper": {
+        "abilities": [
+          "Insomnia"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Calm Mind",
+          "Fire Punch",
+          "Psychic",
+          "Substitute",
+          "Thunder Wave"
+        ],
+        "evs": {
+          "atk": 0
+        },
+        "ivs": {
+          "atk": 0
+        }
+      },
       "Staller": {
         "abilities": [
           "Insomnia"
@@ -3962,27 +3979,6 @@
           "Psychic",
           "Toxic",
           "Wish"
-        ],
-        "evs": {
-          "atk": 0
-        },
-        "ivs": {
-          "atk": 0
-        }
-      },
-      "Setup Sweeper": {
-        "abilities": [
-          "Insomnia"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Calm Mind",
-          "Fire Punch",
-          "Psychic",
-          "Substitute",
-          "Thunder Wave"
         ],
         "evs": {
           "atk": 0
@@ -4075,7 +4071,7 @@
     }
   },
   "Jirachi": {
-    "level": 73,
+    "level": 72,
     "abilities": [
       "Serene Grace"
     ],
@@ -4131,27 +4127,6 @@
       "Leftovers"
     ],
     "roles": {
-      "Fast Attacker": {
-        "abilities": [
-          "Volt Absorb"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Baton Pass",
-          "Hidden Power Ice",
-          "Substitute",
-          "Thunderbolt"
-        ],
-        "evs": {
-          "atk": 0
-        },
-        "ivs": {
-          "atk": 2,
-          "def": 30
-        }
-      },
       "Staller": {
         "abilities": [
           "Volt Absorb"
@@ -4164,6 +4139,27 @@
           "Protect",
           "Thunderbolt",
           "Toxic"
+        ],
+        "evs": {
+          "atk": 0
+        },
+        "ivs": {
+          "atk": 2,
+          "def": 30
+        }
+      },
+      "Fast Attacker": {
+        "abilities": [
+          "Volt Absorb"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Baton Pass",
+          "Hidden Power Ice",
+          "Substitute",
+          "Thunderbolt"
         ],
         "evs": {
           "atk": 0
@@ -4191,27 +4187,6 @@
       "Leftovers"
     ],
     "roles": {
-      "Staller": {
-        "abilities": [
-          "Chlorophyll"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Hidden Power Flying",
-          "Leech Seed",
-          "Protect",
-          "Substitute"
-        ],
-        "ivs": {
-          "hp": 30,
-          "atk": 30,
-          "def": 30,
-          "spa": 30,
-          "spd": 30
-        }
-      },
       "Generalist": {
         "abilities": [
           "Chlorophyll"
@@ -4225,6 +4200,27 @@
           "Sleep Powder",
           "Synthesis",
           "Toxic"
+        ],
+        "ivs": {
+          "hp": 30,
+          "atk": 30,
+          "def": 30,
+          "spa": 30,
+          "spd": 30
+        }
+      },
+      "Staller": {
+        "abilities": [
+          "Chlorophyll"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Hidden Power Flying",
+          "Leech Seed",
+          "Protect",
+          "Substitute"
         ],
         "ivs": {
           "hp": 30,
@@ -4312,7 +4308,7 @@
     }
   },
   "Kangaskhan": {
-    "level": 79,
+    "level": 80,
     "abilities": [
       "Early Bird"
     ],
@@ -4320,6 +4316,20 @@
       "Leftovers"
     ],
     "roles": {
+      "Fast Attacker": {
+        "abilities": [
+          "Early Bird"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Earthquake",
+          "Rest",
+          "Return",
+          "Toxic"
+        ]
+      },
       "Bulky Attacker": {
         "abilities": [
           "Early Bird"
@@ -4333,22 +4343,6 @@
           "Protect",
           "Return",
           "Wish"
-        ]
-      },
-      "Fast Attacker": {
-        "abilities": [
-          "Early Bird"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Double-Edge",
-          "Earthquake",
-          "Rest",
-          "Return",
-          "Shadow Ball",
-          "Toxic"
         ]
       }
     }
@@ -5186,6 +5180,25 @@
       "Leftovers"
     ],
     "roles": {
+      "Bulky Support": {
+        "abilities": [
+          "Flame Body"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Fire Blast",
+          "Flamethrower",
+          "Hidden Power Grass",
+          "Rest",
+          "Sleep Talk",
+          "Toxic"
+        ],
+        "evs": {
+          "atk": 0
+        }
+      },
       "Staller": {
         "abilities": [
           "Flame Body"
@@ -5206,25 +5219,6 @@
         "ivs": {
           "atk": 2,
           "spa": 30
-        }
-      },
-      "Bulky Support": {
-        "abilities": [
-          "Flame Body"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Fire Blast",
-          "Flamethrower",
-          "Hidden Power Grass",
-          "Rest",
-          "Sleep Talk",
-          "Toxic"
-        ],
-        "evs": {
-          "atk": 0
         }
       }
     },
@@ -5281,6 +5275,7 @@
           "Focus Punch",
           "Hidden Power Grass",
           "Hidden Power Ice",
+          "Hidden Power Water",
           "Substitute",
           "Thunder Punch",
           "Toxic"
@@ -5298,6 +5293,7 @@
           "Flamethrower",
           "Hidden Power Grass",
           "Hidden Power Ice",
+          "Hidden Power Water",
           "Substitute",
           "Thunder Punch"
         ],
@@ -5320,27 +5316,6 @@
       "Leftovers"
     ],
     "roles": {
-      "Staller": {
-        "abilities": [
-          "Magnet Pull"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Hidden Power Ice",
-          "Protect",
-          "Thunderbolt",
-          "Toxic"
-        ],
-        "evs": {
-          "atk": 0
-        },
-        "ivs": {
-          "atk": 2,
-          "def": 30
-        }
-      },
       "Bulky Attacker": {
         "abilities": [
           "Magnet Pull"
@@ -5353,6 +5328,27 @@
           "Rest",
           "Sleep Talk",
           "Thunderbolt"
+        ],
+        "evs": {
+          "atk": 0
+        },
+        "ivs": {
+          "atk": 2,
+          "def": 30
+        }
+      },
+      "Staller": {
+        "abilities": [
+          "Magnet Pull"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Hidden Power Ice",
+          "Protect",
+          "Thunderbolt",
+          "Toxic"
         ],
         "evs": {
           "atk": 0
@@ -5381,27 +5377,6 @@
       "Petaya Berry"
     ],
     "roles": {
-      "Staller": {
-        "abilities": [
-          "Static"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Hidden Power Ice",
-          "Protect",
-          "Thunderbolt",
-          "Toxic"
-        ],
-        "evs": {
-          "atk": 0
-        },
-        "ivs": {
-          "atk": 2,
-          "def": 30
-        }
-      },
       "Bulky Attacker": {
         "abilities": [
           "Static"
@@ -5413,6 +5388,27 @@
           "Hidden Power Ice",
           "Substitute",
           "Thunder Wave",
+          "Thunderbolt",
+          "Toxic"
+        ],
+        "evs": {
+          "atk": 0
+        },
+        "ivs": {
+          "atk": 2,
+          "def": 30
+        }
+      },
+      "Staller": {
+        "abilities": [
+          "Static"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Hidden Power Ice",
+          "Protect",
           "Thunderbolt",
           "Toxic"
         ],
@@ -5456,7 +5452,7 @@
     }
   },
   "Mantine": {
-    "level": 86,
+    "level": 87,
     "abilities": [
       "Swift Swim",
       "Water Absorb"
@@ -5485,6 +5481,27 @@
           "atk": 0
         }
       },
+      "Staller": {
+        "abilities": [
+          "Water Absorb"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Haze",
+          "Ice Beam",
+          "Protect",
+          "Surf",
+          "Toxic"
+        ],
+        "evs": {
+          "atk": 0
+        },
+        "ivs": {
+          "atk": 0
+        }
+      },
       "Setup Sweeper": {
         "abilities": [
           "Swift Swim"
@@ -5505,27 +5522,6 @@
         "ivs": {
           "atk": 2,
           "spa": 30
-        }
-      },
-      "Staller": {
-        "abilities": [
-          "Water Absorb"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Haze",
-          "Ice Beam",
-          "Protect",
-          "Surf",
-          "Toxic"
-        ],
-        "evs": {
-          "atk": 0
-        },
-        "ivs": {
-          "atk": 0
         }
       }
     },
@@ -5691,24 +5687,6 @@
       "Leftovers"
     ],
     "roles": {
-      "Setup Sweeper": {
-        "abilities": [
-          "Intimidate"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Brick Break",
-          "Hidden Power Steel",
-          "Rock Slide",
-          "Substitute",
-          "Swords Dance"
-        ],
-        "ivs": {
-          "spd": 30
-        }
-      },
       "Bulky Support": {
         "abilities": [
           "Intimidate"
@@ -5722,6 +5700,24 @@
           "Rock Slide",
           "Substitute",
           "Toxic"
+        ],
+        "ivs": {
+          "spd": 30
+        }
+      },
+      "Setup Sweeper": {
+        "abilities": [
+          "Intimidate"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Brick Break",
+          "Hidden Power Steel",
+          "Rock Slide",
+          "Substitute",
+          "Swords Dance"
         ],
         "ivs": {
           "spd": 30
@@ -5743,6 +5739,22 @@
       "Salac Berry"
     ],
     "roles": {
+      "Setup Sweeper": {
+        "abilities": [
+          "Pure Power"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Brick Break",
+          "Bulk Up",
+          "Recover",
+          "Rock Slide",
+          "Shadow Ball",
+          "Substitute"
+        ]
+      },
       "Wallbreaker": {
         "abilities": [
           "Pure Power"
@@ -5755,23 +5767,6 @@
           "Double-Edge",
           "Rock Slide",
           "Shadow Ball"
-        ]
-      },
-      "Setup Sweeper": {
-        "abilities": [
-          "Pure Power"
-        ],
-        "items": [
-          "Leftovers",
-          "Salac Berry"
-        ],
-        "moves": [
-          "Brick Break",
-          "Bulk Up",
-          "Recover",
-          "Rock Slide",
-          "Shadow Ball",
-          "Substitute"
         ]
       },
       "Berry Sweeper": {
@@ -5845,6 +5840,20 @@
       "Leftovers"
     ],
     "roles": {
+      "Wallbreaker": {
+        "abilities": [
+          "Clear Body"
+        ],
+        "items": [
+          "Choice Band"
+        ],
+        "moves": [
+          "Earthquake",
+          "Explosion",
+          "Meteor Mash",
+          "Rock Slide"
+        ]
+      },
       "Setup Sweeper": {
         "abilities": [
           "Clear Body"
@@ -5858,20 +5867,6 @@
           "Explosion",
           "Meteor Mash",
           "Psychic",
-          "Rock Slide"
-        ]
-      },
-      "Wallbreaker": {
-        "abilities": [
-          "Clear Body"
-        ],
-        "items": [
-          "Choice Band"
-        ],
-        "moves": [
-          "Earthquake",
-          "Explosion",
-          "Meteor Mash",
           "Rock Slide"
         ]
       }
@@ -5903,22 +5898,6 @@
           "Transform"
         ]
       },
-      "Setup Sweeper": {
-        "abilities": [
-          "Synchronize"
-        ],
-        "items": [
-          "Leftovers",
-          "Salac Berry"
-        ],
-        "moves": [
-          "Earthquake",
-          "Explosion",
-          "Rock Slide",
-          "Soft-Boiled",
-          "Swords Dance"
-        ]
-      },
       "Bulky Setup": {
         "abilities": [
           "Synchronize"
@@ -5939,6 +5918,22 @@
         "ivs": {
           "atk": 0
         }
+      },
+      "Setup Sweeper": {
+        "abilities": [
+          "Synchronize"
+        ],
+        "items": [
+          "Leftovers",
+          "Salac Berry"
+        ],
+        "moves": [
+          "Earthquake",
+          "Explosion",
+          "Rock Slide",
+          "Soft-Boiled",
+          "Swords Dance"
+        ]
       }
     }
   },
@@ -6172,27 +6167,6 @@
       "Leftovers"
     ],
     "roles": {
-      "Staller": {
-        "abilities": [
-          "Minus"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Hidden Power Ice",
-          "Protect",
-          "Thunderbolt",
-          "Toxic"
-        ],
-        "evs": {
-          "atk": 0
-        },
-        "ivs": {
-          "atk": 2,
-          "def": 30
-        }
-      },
       "Fast Attacker": {
         "abilities": [
           "Minus"
@@ -6233,6 +6207,27 @@
         "evs": {
           "atk": 0
         }
+      },
+      "Staller": {
+        "abilities": [
+          "Minus"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Hidden Power Ice",
+          "Protect",
+          "Thunderbolt",
+          "Toxic"
+        ],
+        "evs": {
+          "atk": 0
+        },
+        "ivs": {
+          "atk": 2,
+          "def": 30
+        }
       }
     },
     "evs": {
@@ -6269,20 +6264,6 @@
           "def": 30
         }
       },
-      "Staller": {
-        "abilities": [
-          "Levitate"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Mean Look",
-          "Perish Song",
-          "Protect",
-          "Shadow Ball"
-        ]
-      },
       "Bulky Support": {
         "abilities": [
           "Levitate"
@@ -6297,6 +6278,20 @@
           "Thunder Wave",
           "Thunderbolt",
           "Toxic"
+        ]
+      },
+      "Staller": {
+        "abilities": [
+          "Levitate"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Mean Look",
+          "Perish Song",
+          "Protect",
+          "Shadow Ball"
         ]
       }
     }
@@ -6493,7 +6488,7 @@
     }
   },
   "Nidoking": {
-    "level": 82,
+    "level": 81,
     "abilities": [
       "Poison Point"
     ],
@@ -6502,24 +6497,6 @@
       "Leftovers"
     ],
     "roles": {
-      "Wallbreaker": {
-        "abilities": [
-          "Poison Point"
-        ],
-        "items": [
-          "Choice Band",
-          "Leftovers"
-        ],
-        "moves": [
-          "Earthquake",
-          "Fire Blast",
-          "Ice Beam",
-          "Megahorn",
-          "Rock Slide",
-          "Shadow Ball",
-          "Sludge Bomb"
-        ]
-      },
       "Fast Attacker": {
         "abilities": [
           "Poison Point"
@@ -6537,6 +6514,24 @@
           "Sludge Bomb",
           "Substitute",
           "Thunderbolt"
+        ]
+      },
+      "Wallbreaker": {
+        "abilities": [
+          "Poison Point"
+        ],
+        "items": [
+          "Choice Band",
+          "Leftovers"
+        ],
+        "moves": [
+          "Earthquake",
+          "Fire Blast",
+          "Ice Beam",
+          "Megahorn",
+          "Rock Slide",
+          "Shadow Ball",
+          "Sludge Bomb"
         ]
       }
     }
@@ -6630,7 +6625,7 @@
     }
   },
   "Ninjask": {
-    "level": 83,
+    "level": 84,
     "abilities": [
       "Speed Boost"
     ],
@@ -6668,7 +6663,7 @@
     }
   },
   "Noctowl": {
-    "level": 93,
+    "level": 94,
     "abilities": [
       "Insomnia"
     ],
@@ -6957,26 +6952,6 @@
       "Leftovers"
     ],
     "roles": {
-      "Staller": {
-        "abilities": [
-          "Keen Eye"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Ice Beam",
-          "Protect",
-          "Surf",
-          "Toxic"
-        ],
-        "evs": {
-          "atk": 0
-        },
-        "ivs": {
-          "atk": 0
-        }
-      },
       "Bulky Support": {
         "abilities": [
           "Keen Eye"
@@ -6988,6 +6963,26 @@
           "Ice Beam",
           "Rest",
           "Sleep Talk",
+          "Surf",
+          "Toxic"
+        ],
+        "evs": {
+          "atk": 0
+        },
+        "ivs": {
+          "atk": 0
+        }
+      },
+      "Staller": {
+        "abilities": [
+          "Keen Eye"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Ice Beam",
+          "Protect",
           "Surf",
           "Toxic"
         ],
@@ -7017,22 +7012,6 @@
       "Liechi Berry"
     ],
     "roles": {
-      "Fast Attacker": {
-        "abilities": [
-          "Limber"
-        ],
-        "items": [
-          "Choice Band",
-          "Leftovers"
-        ],
-        "moves": [
-          "Hidden Power Ground",
-          "Hypnosis",
-          "Iron Tail",
-          "Return",
-          "Shadow Ball"
-        ]
-      },
       "Berry Sweeper": {
         "abilities": [
           "Limber"
@@ -7053,6 +7032,22 @@
           "spa": 30,
           "spd": 30
         }
+      },
+      "Fast Attacker": {
+        "abilities": [
+          "Limber"
+        ],
+        "items": [
+          "Choice Band",
+          "Leftovers"
+        ],
+        "moves": [
+          "Hidden Power Ground",
+          "Hypnosis",
+          "Iron Tail",
+          "Return",
+          "Shadow Ball"
+        ]
       }
     }
   },
@@ -7067,27 +7062,6 @@
       "Liechi Berry"
     ],
     "roles": {
-      "Berry Sweeper": {
-        "abilities": [
-          "Keen Eye"
-        ],
-        "items": [
-          "Liechi Berry"
-        ],
-        "moves": [
-          "Aerial Ace",
-          "Hidden Power Ground",
-          "Return",
-          "Substitute"
-        ],
-        "evs": {
-          "hp": 77
-        },
-        "ivs": {
-          "spa": 30,
-          "spd": 30
-        }
-      },
       "Fast Attacker": {
         "abilities": [
           "Keen Eye"
@@ -7104,6 +7078,27 @@
           "Return",
           "Toxic"
         ],
+        "ivs": {
+          "spa": 30,
+          "spd": 30
+        }
+      },
+      "Berry Sweeper": {
+        "abilities": [
+          "Keen Eye"
+        ],
+        "items": [
+          "Liechi Berry"
+        ],
+        "moves": [
+          "Aerial Ace",
+          "Hidden Power Ground",
+          "Return",
+          "Substitute"
+        ],
+        "evs": {
+          "hp": 77
+        },
         "ivs": {
           "spa": 30,
           "spd": 30
@@ -7306,6 +7301,24 @@
           "def": 30
         }
       },
+      "Bulky Support": {
+        "abilities": [
+          "Plus"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Hidden Power Ice",
+          "Protect",
+          "Thunderbolt",
+          "Toxic",
+          "Wish"
+        ],
+        "evs": {
+          "atk": 0
+        }
+      },
       "Staller": {
         "abilities": [
           "Plus"
@@ -7326,24 +7339,6 @@
           "atk": 2,
           "def": 30
         }
-      },
-      "Bulky Support": {
-        "abilities": [
-          "Plus"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Hidden Power Ice",
-          "Protect",
-          "Thunderbolt",
-          "Toxic",
-          "Wish"
-        ],
-        "evs": {
-          "atk": 0
-        }
       }
     },
     "evs": {
@@ -7351,7 +7346,7 @@
     }
   },
   "Politoed": {
-    "level": 83,
+    "level": 84,
     "abilities": [
       "Water Absorb"
     ],
@@ -7359,6 +7354,25 @@
       "Leftovers"
     ],
     "roles": {
+      "Bulky Attacker": {
+        "abilities": [
+          "Water Absorb"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Hidden Power Grass",
+          "Hypnosis",
+          "Ice Beam",
+          "Rest",
+          "Surf",
+          "Toxic"
+        ],
+        "evs": {
+          "atk": 0
+        }
+      },
       "Bulky Support": {
         "abilities": [
           "Water Absorb"
@@ -7399,25 +7413,6 @@
         "ivs": {
           "atk": 0
         }
-      },
-      "Bulky Attacker": {
-        "abilities": [
-          "Water Absorb"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Hidden Power Grass",
-          "Hypnosis",
-          "Ice Beam",
-          "Rest",
-          "Surf",
-          "Toxic"
-        ],
-        "evs": {
-          "atk": 0
-        }
       }
     },
     "evs": {
@@ -7430,25 +7425,9 @@
       "Water Absorb"
     ],
     "items": [
-      "Leftovers",
-      "Salac Berry"
+      "Leftovers"
     ],
     "roles": {
-      "Generalist": {
-        "abilities": [
-          "Water Absorb"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Focus Punch",
-          "Hydro Pump",
-          "Ice Beam",
-          "Substitute",
-          "Toxic"
-        ]
-      },
       "Bulky Attacker": {
         "abilities": [
           "Water Absorb"
@@ -7467,13 +7446,27 @@
           "Toxic"
         ]
       },
+      "Generalist": {
+        "abilities": [
+          "Water Absorb"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Focus Punch",
+          "Hydro Pump",
+          "Ice Beam",
+          "Substitute",
+          "Toxic"
+        ]
+      },
       "Setup Sweeper": {
         "abilities": [
           "Water Absorb"
         ],
         "items": [
-          "Leftovers",
-          "Salac Berry"
+          "Leftovers"
         ],
         "moves": [
           "Brick Break",
@@ -7522,26 +7515,9 @@
     "items": [
       "Choice Band",
       "Leftovers",
-      "Liechi Berry",
-      "Salac Berry"
+      "Liechi Berry"
     ],
     "roles": {
-      "Setup Sweeper": {
-        "abilities": [
-          "Vital Spirit"
-        ],
-        "items": [
-          "Leftovers",
-          "Salac Berry"
-        ],
-        "moves": [
-          "Bulk Up",
-          "Cross Chop",
-          "Hidden Power Ghost",
-          "Rock Slide",
-          "Substitute"
-        ]
-      },
       "Fast Attacker": {
         "abilities": [
           "Vital Spirit"
@@ -7575,6 +7551,21 @@
           "def": 30,
           "spd": 30
         }
+      },
+      "Setup Sweeper": {
+        "abilities": [
+          "Vital Spirit"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Bulk Up",
+          "Cross Chop",
+          "Hidden Power Ghost",
+          "Rock Slide",
+          "Substitute"
+        ]
       }
     }
   },
@@ -7587,20 +7578,6 @@
       "Leftovers"
     ],
     "roles": {
-      "Staller": {
-        "abilities": [
-          "Water Absorb"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Earthquake",
-          "Ice Beam",
-          "Protect",
-          "Toxic"
-        ]
-      },
       "Bulky Attacker": {
         "abilities": [
           "Water Absorb"
@@ -7614,6 +7591,20 @@
           "Rest",
           "Sleep Talk",
           "Surf",
+          "Toxic"
+        ]
+      },
+      "Staller": {
+        "abilities": [
+          "Water Absorb"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Earthquake",
+          "Ice Beam",
+          "Protect",
           "Toxic"
         ]
       }
@@ -7737,7 +7728,7 @@
     }
   },
   "Raikou": {
-    "level": 74,
+    "level": 73,
     "abilities": [
       "Pressure"
     ],
@@ -7833,25 +7824,6 @@
       "Liechi Berry"
     ],
     "roles": {
-      "Fast Attacker": {
-        "abilities": [
-          "Guts"
-        ],
-        "items": [
-          "Choice Band"
-        ],
-        "moves": [
-          "Double-Edge",
-          "Facade",
-          "Hidden Power Ground",
-          "Return",
-          "Shadow Ball"
-        ],
-        "ivs": {
-          "spa": 30,
-          "spd": 30
-        }
-      },
       "Wallbreaker": {
         "abilities": [
           "Guts"
@@ -7863,6 +7835,25 @@
           "Double-Edge",
           "Hidden Power Ground",
           "Quick Attack",
+          "Return",
+          "Shadow Ball"
+        ],
+        "ivs": {
+          "spa": 30,
+          "spd": 30
+        }
+      },
+      "Fast Attacker": {
+        "abilities": [
+          "Guts"
+        ],
+        "items": [
+          "Choice Band"
+        ],
+        "moves": [
+          "Double-Edge",
+          "Facade",
+          "Hidden Power Ground",
           "Return",
           "Shadow Ball"
         ],
@@ -7900,16 +7891,16 @@
       "Lum Berry"
     ],
     "roles": {
-      "Setup Sweeper": {
+      "Wallbreaker": {
         "abilities": [
           "Air Lock"
         ],
         "items": [
-          "Lum Berry"
+          "Choice Band"
         ],
         "moves": [
-          "Dragon Dance",
           "Earthquake",
+          "Extreme Speed",
           "Hidden Power Flying",
           "Overheat",
           "Rock Slide"
@@ -7922,16 +7913,16 @@
           "spd": 30
         }
       },
-      "Wallbreaker": {
+      "Setup Sweeper": {
         "abilities": [
           "Air Lock"
         ],
         "items": [
-          "Choice Band"
+          "Lum Berry"
         ],
         "moves": [
+          "Dragon Dance",
           "Earthquake",
-          "Extreme Speed",
           "Hidden Power Flying",
           "Overheat",
           "Rock Slide"
@@ -8010,23 +8001,6 @@
       "Leftovers"
     ],
     "roles": {
-      "Bulky Attacker": {
-        "abilities": [
-          "Clear Body"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Earthquake",
-          "Explosion",
-          "Rest",
-          "Rock Slide",
-          "Sleep Talk",
-          "Thunder Wave",
-          "Toxic"
-        ]
-      },
       "Fast Attacker": {
         "abilities": [
           "Clear Body"
@@ -8042,6 +8016,23 @@
           "Rest",
           "Rock Slide",
           "Superpower"
+        ]
+      },
+      "Bulky Attacker": {
+        "abilities": [
+          "Clear Body"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Earthquake",
+          "Explosion",
+          "Rest",
+          "Rock Slide",
+          "Sleep Talk",
+          "Thunder Wave",
+          "Toxic"
         ]
       }
     }
@@ -8125,20 +8116,6 @@
       "Leftovers"
     ],
     "roles": {
-      "Wallbreaker": {
-        "abilities": [
-          "Rock Head"
-        ],
-        "items": [
-          "Choice Band"
-        ],
-        "moves": [
-          "Double-Edge",
-          "Earthquake",
-          "Megahorn",
-          "Rock Slide"
-        ]
-      },
       "Fast Attacker": {
         "abilities": [
           "Rock Head"
@@ -8152,6 +8129,20 @@
           "Rock Slide",
           "Substitute",
           "Swords Dance"
+        ]
+      },
+      "Wallbreaker": {
+        "abilities": [
+          "Rock Head"
+        ],
+        "items": [
+          "Choice Band"
+        ],
+        "moves": [
+          "Double-Edge",
+          "Earthquake",
+          "Megahorn",
+          "Rock Slide"
         ]
       }
     }
@@ -8227,20 +8218,6 @@
       "Leftovers"
     ],
     "roles": {
-      "Bulky Attacker": {
-        "abilities": [
-          "Keen Eye"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Recover",
-          "Seismic Toss",
-          "Shadow Ball",
-          "Toxic"
-        ]
-      },
       "Bulky Support": {
         "abilities": [
           "Keen Eye"
@@ -8260,6 +8237,20 @@
         "ivs": {
           "atk": 0
         }
+      },
+      "Bulky Attacker": {
+        "abilities": [
+          "Keen Eye"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Recover",
+          "Seismic Toss",
+          "Shadow Ball",
+          "Toxic"
+        ]
       }
     }
   },
@@ -8281,9 +8272,9 @@
           "Lum Berry"
         ],
         "moves": [
+          "Brick Break",
           "Dragon Dance",
           "Earthquake",
-          "Fire Blast",
           "Hidden Power Flying",
           "Rock Slide"
         ],
@@ -8368,6 +8359,24 @@
       "Petaya Berry"
     ],
     "roles": {
+      "Fast Attacker": {
+        "abilities": [
+          "Overgrow"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Earthquake",
+          "Hidden Power Fire",
+          "Hidden Power Ice",
+          "Leaf Blade",
+          "Toxic"
+        ],
+        "ivs": {
+          "atk": 30
+        }
+      },
       "Staller": {
         "abilities": [
           "Overgrow"
@@ -8409,24 +8418,6 @@
         },
         "ivs": {
           "atk": 2
-        }
-      },
-      "Fast Attacker": {
-        "abilities": [
-          "Overgrow"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Earthquake",
-          "Hidden Power Fire",
-          "Hidden Power Ice",
-          "Leaf Blade",
-          "Toxic"
-        ],
-        "ivs": {
-          "atk": 30
         }
       }
     }
@@ -8523,6 +8514,20 @@
           "Megahorn",
           "Rain Dance"
         ]
+      },
+      "Staller": {
+        "abilities": [
+          "Swift Swim"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Megahorn",
+          "Protect",
+          "Surf",
+          "Toxic"
+        ]
       }
     }
   },
@@ -8562,6 +8567,26 @@
       "Petaya Berry"
     ],
     "roles": {
+      "Berry Sweeper": {
+        "abilities": [
+          "Rough Skin"
+        ],
+        "items": [
+          "Petaya Berry"
+        ],
+        "moves": [
+          "Crunch",
+          "Hidden Power Electric",
+          "Hidden Power Grass",
+          "Hydro Pump",
+          "Ice Beam",
+          "Substitute"
+        ],
+        "evs": {
+          "hp": 77,
+          "atk": 0
+        }
+      },
       "Wallbreaker": {
         "abilities": [
           "Rough Skin"
@@ -8581,26 +8606,6 @@
           "def": 30,
           "spa": 30,
           "spd": 30
-        }
-      },
-      "Berry Sweeper": {
-        "abilities": [
-          "Rough Skin"
-        ],
-        "items": [
-          "Petaya Berry"
-        ],
-        "moves": [
-          "Crunch",
-          "Hidden Power Electric",
-          "Hidden Power Grass",
-          "Hydro Pump",
-          "Ice Beam",
-          "Substitute"
-        ],
-        "evs": {
-          "hp": 77,
-          "atk": 0
         }
       }
     }
@@ -8776,7 +8781,7 @@
     }
   },
   "Skarmory": {
-    "level": 72,
+    "level": 71,
     "abilities": [
       "Keen Eye"
     ],
@@ -8784,20 +8789,6 @@
       "Leftovers"
     ],
     "roles": {
-      "Generalist": {
-        "abilities": [
-          "Keen Eye"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Drill Peck",
-          "Spikes",
-          "Toxic",
-          "Whirlwind"
-        ]
-      },
       "Bulky Support": {
         "abilities": [
           "Keen Eye"
@@ -8810,6 +8801,20 @@
           "Protect",
           "Spikes",
           "Toxic"
+        ]
+      },
+      "Generalist": {
+        "abilities": [
+          "Keen Eye"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Drill Peck",
+          "Spikes",
+          "Toxic",
+          "Whirlwind"
         ]
       },
       "Staller": {
@@ -8950,6 +8955,30 @@
       "Leftovers"
     ],
     "roles": {
+      "Bulky Support": {
+        "abilities": [
+          "Own Tempo"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Fire Blast",
+          "Ice Beam",
+          "Psychic",
+          "Rest",
+          "Sleep Talk",
+          "Surf",
+          "Thunder Wave",
+          "Toxic"
+        ],
+        "evs": {
+          "atk": 0
+        },
+        "ivs": {
+          "atk": 0
+        }
+      },
       "Bulky Setup": {
         "abilities": [
           "Own Tempo"
@@ -8982,30 +9011,6 @@
           "Psychic",
           "Surf",
           "Thunder Wave"
-        ],
-        "evs": {
-          "atk": 0
-        },
-        "ivs": {
-          "atk": 0
-        }
-      },
-      "Bulky Support": {
-        "abilities": [
-          "Own Tempo"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Fire Blast",
-          "Ice Beam",
-          "Psychic",
-          "Rest",
-          "Sleep Talk",
-          "Surf",
-          "Thunder Wave",
-          "Toxic"
         ],
         "evs": {
           "atk": 0
@@ -9103,6 +9108,21 @@
       "Leftovers"
     ],
     "roles": {
+      "Setup Sweeper": {
+        "abilities": [
+          "Immunity"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Body Slam",
+          "Curse",
+          "Earthquake",
+          "Self-Destruct",
+          "Shadow Ball"
+        ]
+      },
       "Bulky Setup": {
         "abilities": [
           "Immunity",
@@ -9130,21 +9150,6 @@
           "Curse",
           "Rest",
           "Sleep Talk"
-        ]
-      },
-      "Setup Sweeper": {
-        "abilities": [
-          "Immunity"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Body Slam",
-          "Curse",
-          "Earthquake",
-          "Self-Destruct",
-          "Shadow Ball"
         ]
       }
     }
@@ -9339,21 +9344,6 @@
       "Leftovers"
     ],
     "roles": {
-      "Staller": {
-        "abilities": [
-          "Rock Head"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Double-Edge",
-          "Earthquake",
-          "Hidden Power Rock",
-          "Protect",
-          "Toxic"
-        ]
-      },
       "Bulky Attacker": {
         "abilities": [
           "Rock Head"
@@ -9372,6 +9362,21 @@
           "Roar",
           "Toxic"
         ]
+      },
+      "Staller": {
+        "abilities": [
+          "Rock Head"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Double-Edge",
+          "Earthquake",
+          "Hidden Power Rock",
+          "Protect",
+          "Toxic"
+        ]
       }
     }
   },
@@ -9385,21 +9390,6 @@
       "Leftovers"
     ],
     "roles": {
-      "Generalist": {
-        "abilities": [
-          "Rock Head"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Explosion",
-          "Focus Punch",
-          "Rock Slide",
-          "Substitute",
-          "Toxic"
-        ]
-      },
       "Bulky Attacker": {
         "abilities": [
           "Rock Head"
@@ -9413,6 +9403,21 @@
           "Earthquake",
           "Explosion",
           "Rock Slide",
+          "Toxic"
+        ]
+      },
+      "Generalist": {
+        "abilities": [
+          "Rock Head"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Explosion",
+          "Focus Punch",
+          "Rock Slide",
+          "Substitute",
           "Toxic"
         ]
       }
@@ -9596,21 +9601,6 @@
           "Surf"
         ]
       },
-      "Bulky Attacker": {
-        "abilities": [
-          "Torrent"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Earthquake",
-          "Hydro Pump",
-          "Protect",
-          "Surf",
-          "Toxic"
-        ]
-      },
       "Staller": {
         "abilities": [
           "Torrent"
@@ -9626,6 +9616,21 @@
           "Surf",
           "Toxic"
         ]
+      },
+      "Bulky Attacker": {
+        "abilities": [
+          "Torrent"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Earthquake",
+          "Hydro Pump",
+          "Protect",
+          "Surf",
+          "Toxic"
+        ]
       }
     }
   },
@@ -9638,25 +9643,6 @@
       "Choice Band"
     ],
     "roles": {
-      "Fast Attacker": {
-        "abilities": [
-          "Guts"
-        ],
-        "items": [
-          "Choice Band"
-        ],
-        "moves": [
-          "Aerial Ace",
-          "Double-Edge",
-          "Facade",
-          "Hidden Power Ground",
-          "Return"
-        ],
-        "ivs": {
-          "spa": 30,
-          "spd": 30
-        }
-      },
       "Wallbreaker": {
         "abilities": [
           "Guts"
@@ -9669,6 +9655,25 @@
           "Double-Edge",
           "Hidden Power Ground",
           "Quick Attack",
+          "Return"
+        ],
+        "ivs": {
+          "spa": 30,
+          "spd": 30
+        }
+      },
+      "Fast Attacker": {
+        "abilities": [
+          "Guts"
+        ],
+        "items": [
+          "Choice Band"
+        ],
+        "moves": [
+          "Aerial Ace",
+          "Double-Edge",
+          "Facade",
+          "Hidden Power Ground",
           "Return"
         ],
         "ivs": {
@@ -9911,27 +9916,6 @@
       "Leftovers"
     ],
     "roles": {
-      "Setup Sweeper": {
-        "abilities": [
-          "Chlorophyll"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Earthquake",
-          "Hidden Power Flying",
-          "Swords Dance",
-          "Synthesis"
-        ],
-        "ivs": {
-          "hp": 30,
-          "atk": 30,
-          "def": 30,
-          "spa": 30,
-          "spd": 30
-        }
-      },
       "Staller": {
         "abilities": [
           "Chlorophyll"
@@ -9945,6 +9929,27 @@
           "Leech Seed",
           "Synthesis",
           "Toxic"
+        ],
+        "ivs": {
+          "hp": 30,
+          "atk": 30,
+          "def": 30,
+          "spa": 30,
+          "spd": 30
+        }
+      },
+      "Setup Sweeper": {
+        "abilities": [
+          "Chlorophyll"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Earthquake",
+          "Hidden Power Flying",
+          "Swords Dance",
+          "Synthesis"
         ],
         "ivs": {
           "hp": 30,
@@ -10003,6 +10008,7 @@
           "Flamethrower",
           "Hidden Power Grass",
           "Hidden Power Ice",
+          "Hidden Power Water",
           "Substitute",
           "Thunder Punch"
         ],
@@ -10027,6 +10033,21 @@
       "Lum Berry"
     ],
     "roles": {
+      "Setup Sweeper": {
+        "abilities": [
+          "Sand Stream"
+        ],
+        "items": [
+          "Lum Berry"
+        ],
+        "moves": [
+          "Dragon Dance",
+          "Earthquake",
+          "Fire Blast",
+          "Hidden Power Flying",
+          "Rock Slide"
+        ]
+      },
       "Wallbreaker": {
         "abilities": [
           "Sand Stream"
@@ -10042,21 +10063,6 @@
           "Rest",
           "Rock Slide",
           "Sleep Talk"
-        ]
-      },
-      "Setup Sweeper": {
-        "abilities": [
-          "Sand Stream"
-        ],
-        "items": [
-          "Lum Berry"
-        ],
-        "moves": [
-          "Dragon Dance",
-          "Earthquake",
-          "Fire Blast",
-          "Hidden Power Flying",
-          "Rock Slide"
         ]
       },
       "Bulky Attacker": {
@@ -10088,6 +10094,24 @@
       "Leftovers"
     ],
     "roles": {
+      "Staller": {
+        "abilities": [
+          "Synchronize"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Hidden Power Fire",
+          "Hidden Power Ground",
+          "Protect",
+          "Toxic",
+          "Wish"
+        ],
+        "ivs": {
+          "spa": 30
+        }
+      },
       "Bulky Support": {
         "abilities": [
           "Synchronize"
@@ -10106,24 +10130,6 @@
         },
         "ivs": {
           "atk": 0
-        }
-      },
-      "Staller": {
-        "abilities": [
-          "Synchronize"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Hidden Power Fire",
-          "Hidden Power Ground",
-          "Protect",
-          "Toxic",
-          "Wish"
-        ],
-        "ivs": {
-          "spa": 30
         }
       }
     }
@@ -10185,24 +10191,6 @@
           "spd": 30
         }
       },
-      "Setup Sweeper": {
-        "abilities": [
-          "Guts"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Earthquake",
-          "Hidden Power Ghost",
-          "Return",
-          "Swords Dance"
-        ],
-        "ivs": {
-          "def": 30,
-          "spd": 30
-        }
-      },
       "Wallbreaker": {
         "abilities": [
           "Guts"
@@ -10215,6 +10203,24 @@
           "Focus Punch",
           "Hidden Power Ghost",
           "Return"
+        ],
+        "ivs": {
+          "def": 30,
+          "spd": 30
+        }
+      },
+      "Setup Sweeper": {
+        "abilities": [
+          "Guts"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Earthquake",
+          "Hidden Power Ghost",
+          "Return",
+          "Swords Dance"
         ],
         "ivs": {
           "def": 30,
@@ -10274,21 +10280,6 @@
       "Leftovers"
     ],
     "roles": {
-      "Bulky Support": {
-        "abilities": [
-          "Shield Dust"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Hidden Power Fire",
-          "Psychic",
-          "Signal Beam",
-          "Sleep Powder",
-          "Sludge Bomb"
-        ]
-      },
       "Generalist": {
         "abilities": [
           "Shield Dust"
@@ -10304,6 +10295,21 @@
           "Sleep Powder",
           "Sludge Bomb",
           "Substitute"
+        ]
+      },
+      "Bulky Support": {
+        "abilities": [
+          "Shield Dust"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Hidden Power Fire",
+          "Psychic",
+          "Signal Beam",
+          "Sleep Powder",
+          "Sludge Bomb"
         ]
       }
     }
@@ -10342,7 +10348,7 @@
     }
   },
   "Venusaur": {
-    "level": 81,
+    "level": 80,
     "abilities": [
       "Overgrow"
     ],
@@ -10351,21 +10357,6 @@
       "Salac Berry"
     ],
     "roles": {
-      "Staller": {
-        "abilities": [
-          "Overgrow"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Hidden Power Grass",
-          "Leech Seed",
-          "Sleep Powder",
-          "Sludge Bomb",
-          "Substitute"
-        ]
-      },
       "Setup Sweeper": {
         "abilities": [
           "Overgrow"
@@ -10381,6 +10372,21 @@
           "Sludge Bomb",
           "Swords Dance",
           "Synthesis"
+        ]
+      },
+      "Staller": {
+        "abilities": [
+          "Overgrow"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Hidden Power Grass",
+          "Leech Seed",
+          "Sleep Powder",
+          "Sludge Bomb",
+          "Substitute"
         ]
       }
     }
@@ -10582,6 +10588,21 @@
       "Leftovers"
     ],
     "roles": {
+      "Bulky Attacker": {
+        "abilities": [
+          "Water Veil"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Hidden Power Grass",
+          "Ice Beam",
+          "Self-Destruct",
+          "Surf",
+          "Toxic"
+        ]
+      },
       "Bulky Support": {
         "abilities": [
           "Water Veil"
@@ -10602,21 +10623,6 @@
         "ivs": {
           "atk": 0
         }
-      },
-      "Bulky Attacker": {
-        "abilities": [
-          "Water Veil"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Hidden Power Grass",
-          "Ice Beam",
-          "Self-Destruct",
-          "Surf",
-          "Toxic"
-        ]
       }
     }
   },
@@ -10629,6 +10635,26 @@
       "Leftovers"
     ],
     "roles": {
+      "Staller": {
+        "abilities": [
+          "Thick Fat"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Ice Beam",
+          "Protect",
+          "Surf",
+          "Toxic"
+        ],
+        "evs": {
+          "atk": 0
+        },
+        "ivs": {
+          "atk": 0
+        }
+      },
       "Bulky Attacker": {
         "abilities": [
           "Thick Fat"
@@ -10641,26 +10667,6 @@
           "Ice Beam",
           "Rest",
           "Sleep Talk",
-          "Surf",
-          "Toxic"
-        ],
-        "evs": {
-          "atk": 0
-        },
-        "ivs": {
-          "atk": 0
-        }
-      },
-      "Staller": {
-        "abilities": [
-          "Thick Fat"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Ice Beam",
-          "Protect",
           "Surf",
           "Toxic"
         ],
@@ -10793,6 +10799,26 @@
       "Leftovers"
     ],
     "roles": {
+      "Staller": {
+        "abilities": [
+          "Cute Charm"
+        ],
+        "items": [
+          "Leftovers"
+        ],
+        "moves": [
+          "Protect",
+          "Seismic Toss",
+          "Toxic",
+          "Wish"
+        ],
+        "evs": {
+          "atk": 0
+        },
+        "ivs": {
+          "atk": 0
+        }
+      },
       "Bulky Support": {
         "abilities": [
           "Cute Charm"
@@ -10821,26 +10847,6 @@
           "Protect",
           "Wish"
         ]
-      },
-      "Staller": {
-        "abilities": [
-          "Cute Charm"
-        ],
-        "items": [
-          "Leftovers"
-        ],
-        "moves": [
-          "Protect",
-          "Seismic Toss",
-          "Toxic",
-          "Wish"
-        ],
-        "evs": {
-          "atk": 0
-        },
-        "ivs": {
-          "atk": 0
-        }
       }
     }
   },
@@ -10882,7 +10888,7 @@
     }
   },
   "Xatu": {
-    "level": 84,
+    "level": 85,
     "abilities": [
       "Early Bird",
       "Synchronize"
@@ -10962,7 +10968,7 @@
     }
   },
   "Yanma": {
-    "level": 92,
+    "level": 93,
     "abilities": [
       "Compound Eyes",
       "Speed Boost"
@@ -11010,9 +11016,6 @@
           "Shadow Ball",
           "Substitute"
         ],
-        "evs": {
-          "hp": 81
-        },
         "ivs": {
           "hp": 30,
           "atk": 30,
