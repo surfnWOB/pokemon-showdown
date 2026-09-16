@@ -459,8 +459,8 @@ export const Scripts: ModdedBattleScriptsData = {
 				move.totalDamage = damage;
 			}
 
-			if (move.recoil && move.totalDamage) {
-				this.battle.damage(this.calcRecoilDamage(move.totalDamage, move, pokemon), pokemon, target, 'recoil');
+			if (move.totalDamage) {
+				this.applyRecoilDamage(move.totalDamage, move, pokemon);
 			}
 
 			if (target && pokemon !== target) target.gotAttacked(move, damage, pokemon);
@@ -479,8 +479,5 @@ export const Scripts: ModdedBattleScriptsData = {
 			return damage;
 		},
 
-		calcRecoilDamage(damageDealt, move) {
-			return this.battle.clampIntRange(Math.floor(damageDealt * move.recoil![0] / move.recoil![1]), 1);
-		},
 	},
 };

@@ -22,11 +22,11 @@ export class RandomGen3MegasCAPTeams extends RandomGen3Teams {
 		}
 	}
 
-	protected override getRequiredRandomSpecies(): Species {
+	protected getRequiredRandomSpecies(): Species {
 		return this.dex.species.get(this.sample(this.megaFormes));
 	}
 
-	protected override getRandomSpeciesList(): string[] {
+	protected getRandomSpeciesList(): string[] {
 		return Object.keys(GEN3_RANDOM_SETS);
 	}
 
