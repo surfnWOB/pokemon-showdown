@@ -22,7 +22,7 @@ const CASES = [
 	{ species: 'Pidgeot', tier: 'NU', boost: 20 },
 	{ species: 'Machoke', tier: 'PUBL', boost: 20 },
 	{ species: 'Charmeleon', tier: 'PU', boost: 30 },
-	{ species: 'Yanma', tier: 'ZUBL', boost: 30 },
+	{ species: 'Yanma', tier: 'ZU', boost: 35 },
 	{ species: 'Ivysaur', tier: 'ZU', boost: 35 },
 	{ species: 'Clefairy', tier: 'NFE', boost: 40 },
 	{ species: 'Bulbasaur', tier: 'LC', boost: 40 },
