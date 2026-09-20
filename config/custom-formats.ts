@@ -212,6 +212,14 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		banlist: ['Meditite', 'Wynaut', 'Deep Sea Tooth', 'Swagger'],
 	},
 	{
+		name: "[Gen 3] ADV 200 Box",
+		desc: `ADV 200 with the additional resources distributed through Pok&eacute;mon Box: Ruby &amp; Sapphire.`,
+		mod: 'gen3adv200box',
+		searchShow: false,
+		ruleset: ['Standard', 'One Boost Passer Clause'],
+		banlist: ['Uber', 'Swagger'],
+	},
+	{
 		name: "[Gen 3] Tier Shift",
 		desc: "Gen 3 OU with Tier Shift: OU is legal but unboosted; lower-tier Pokémon get stat boosts excluding HP (UUBL and OU-by-technicality +5, UU/RUBL +10, RU/NUBL +15, NU/PUBL +20, PU/ZUBL +30, ZU +35, SU/LC/NFE +40).",
 		mod: 'gen3',
@@ -609,6 +617,28 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Soul Dew', 'Drizzle ++ Swift Swim',
 			'Arceus', 'Blaziken', 'Darkrai', 'Deoxys', 'Deoxys-Attack', 'Dialga', 'Giratina', 'Giratina-Origin',
 			'Groudon', 'Ho-Oh', 'Kyogre', 'Lugia', 'Mewtwo', 'Palkia', 'Rayquaza', 'Reshiram', 'Shaymin-Sky', 'Zekrom',
+		],
+	},
+	// [Gen 8] Legends: Arceus &mdash; register the gen8legends mod as a playable format.
+	// Mod data + team-validator No Ability waiver already present; format registration
+	// was lost in the master rebuild conflict (formats.ts → ours). Restored here to
+	// match the post-split custom-formats pattern.
+	{
+		name: "[Gen 8] Legends: Arceus",
+		mod: 'gen8legends',
+		ruleset: [
+			'Obtainable',
+			'Species Clause',
+			'HP Percentage Mod',
+			'Cancel Mod',
+			'Endless Battle Clause',
+		],
+		banlist: [
+			'Arceus',
+			'Dialga', 'Dialga-Origin',
+			'Palkia', 'Palkia-Origin',
+			'Giratina', 'Giratina-Origin',
+			'Darkrai', 'Shaymin-Sky', 'Cresselia',
 		],
 	},
 	{
