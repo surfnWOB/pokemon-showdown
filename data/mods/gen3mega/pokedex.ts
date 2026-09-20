@@ -266,7 +266,11 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		gen: 3,
 		// Magic Bounce re-legalized (abilities.ts)
 	},
-	// Absol-Mega-Z excluded: forme has no finalized ability yet
+	absolmegaz: {
+		inherit: true,
+		gen: 3,
+		// Sharpness re-legalized (abilities.ts); AG-only while tours are ongoing.
+	},
 	glaliemega: {
 		inherit: true,
 		gen: 3,

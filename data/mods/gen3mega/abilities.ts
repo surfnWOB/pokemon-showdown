@@ -9,6 +9,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 
 	// Canonical later-gen abilities
 	toughclaws: { inherit: true, gen: 3, isNonstandard: null },
+	sharpness: { inherit: true, gen: 3, isNonstandard: null },
 	megalauncher: { inherit: true, gen: 3, isNonstandard: null },
 	adaptability: { inherit: true, gen: 3, isNonstandard: null },
 	noguard: { inherit: true, gen: 3, isNonstandard: null },

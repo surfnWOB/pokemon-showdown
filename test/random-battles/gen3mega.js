@@ -10,6 +10,8 @@ const { Pokedex: gen3MegaPokedex } = require('../../dist/data/mods/gen3mega/poke
 
 const DEFINED_MEGA_FORMES = Object.entries(gen3MegaPokedex)
 	.filter(([id, data]) => data.gen === 3 && (id.includes('mega') || id.endsWith('primal')))
+	// Mega Absol Z is an AG-only addition during tours; keep the random pool unchanged.
+	.filter(([id]) => id !== 'absolmegaz')
 	.map(([id]) => id)
 	.sort();
 

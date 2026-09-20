@@ -23,6 +23,42 @@ const CUSTOM_SECTIONS = ['Gen 3 Megas', 'surfnWOB Customs', 'Yak Attack', 'Archi
 const customFormats = Dex.formats.all().filter(f => CUSTOM_SECTIONS.includes(f.section));
 
 describe('Fork customs', () => {
+	it('Mega Absol Z is legal only in the AG tiers of Gen 3 Megas', () => {
+		const { TeamValidator } = require('./../../../dist/sim/team-validator');
+		const absol = { species: 'Absol', ability: 'Pressure', item: 'Absolite Z', moves: ['slash'], evs: { hp: 4 } };
+		const partner = { species: 'Snorlax', ability: 'Thick Fat', moves: ['rest'], evs: { hp: 4 } };
+		for (const format of ['gen3megasag', 'gen3megasagdoubles']) {
+			assert.legalTeam([absol, partner], format);
+		}
+		for (const format of ['gen3megas', 'gen3megasuu', 'gen3megasubers', 'gen3megasdoubles', 'gen3megasubersdoubles']) {
+			const errors = TeamValidator.get(format).validateTeam([structuredClone(absol), structuredClone(partner)]);
+			assert(errors && errors.some(error => /banned/.test(error)), `${format}: ${JSON.stringify(errors)}`);
+		}
+		assert.equal(Dex.mod('gen3mega').species.get('Absol-Mega-Z').tier, 'AG');
+	});
+
+	it('Mega Absol Z evolves with Sharpness and boosts slicing moves in Gen 3', () => {
+		const battle = common.createBattle({ formatid: 'gen3megasag' }, [
+			[{ species: 'Absol', ability: 'Pressure', item: 'Absolite Z', moves: ['swordsdance', 'slash'] }],
+			[{ species: 'Mew', ability: 'Synchronize', moves: ['splash'] }],
+		]);
+		try {
+			battle.makeChoices('move swordsdance mega', 'move splash');
+			const absol = battle.p1.active[0];
+			const target = battle.p2.active[0];
+			assert.equal(absol.species.name, 'Absol-Mega-Z');
+			assert.equal(absol.ability, 'sharpness');
+			assert.deepEqual(absol.getTypes(), ['Dark', 'Ghost']);
+			assert.equal(absol.species.baseStats.spe, 151);
+			const slash = battle.dex.getActiveMove('slash');
+			const shadowBall = battle.dex.getActiveMove('shadowball');
+			assert.equal(battle.runEvent('BasePower', absol, target, slash, slash.basePower, true), 105);
+			assert.equal(battle.runEvent('BasePower', absol, target, shadowBall, shadowBall.basePower, true), 80);
+		} finally {
+			battle.destroy();
+		}
+	});
+
 	it('the fork exposes custom formats', () => {
 		assert(customFormats.length > 0, `expected formats in: ${CUSTOM_SECTIONS.join(', ')}`);
 	});

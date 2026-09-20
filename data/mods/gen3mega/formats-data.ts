@@ -74,6 +74,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	banettemega: { tier: "UU" },
 	chimechomega: { tier: "UUBL" }, // UU ban: too strong for UU -> UUBL (stays OU-legal)
 	absolmega: { tier: "UU" },
+	absolmegaz: { tier: "AG" }, // Hold new Mega in AG while tours are ongoing.
 	glaliemega: { tier: "UU" },
 	// Banned to AG (above Ubers): the 'Uber' tag covers AG so it's out of [Gen 3]
 	// Megas, and [Gen 3] Megas Ubers bans the 'AG' tag so it's out of there too.
