@@ -452,6 +452,22 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		banlist: ['Sand Veil', 'Soundproof', 'King\'s Rock', 'Assist', 'Baton Pass + Block', 'Baton Pass + Mean Look', 'Baton Pass + Spider Web', 'Swagger'],
 	},
 	{
+		name: "[Gen 3] Colo-Only Doubles",
+		desc: "Gen 3 Doubles featuring only the Pok&eacute;mon and resources available in Pok&eacute;mon Colosseum.",
+		mod: 'gen3colodoubles',
+		gameType: 'doubles',
+		ruleset: ['Standard', 'Team Preview', 'Max Team Size = 6', 'Picked Team Size = 4'],
+		banlist: [
+			'Uber', 'Smeargle + Transform', 'Smeargle + Aeroblast', 'Smeargle + Superpower',
+			'Smeargle + Psycho Boost', 'Smeargle + Mist Ball', 'Smeargle + Luster Purge', 'Assist',
+			'Quick Claw', 'Confuse Ray', 'Teeter Dance', 'Dynamic Punch', 'Sand-Attack', 'Focus Band',
+			'Flash', 'Mud-Slap', 'Smokescreen', 'Kinesis', 'Bayleef ++ Meganium',
+			'Quilava ++ Typhlosion', 'Croconaw ++ Feraligatr', 'Mareep ++ Flaaffy ++ Ampharos',
+			'Skiploom ++ Jumpluff', 'Slugma ++ Magcargo', 'Remoraid ++ Octillery',
+			'Makuhita ++ Hariyama', 'Meditite ++ Medicham', 'Vibrava ++ Flygon', 'Swablu ++ Altaria',
+		],
+	},
+	{
 		name: "[Gen 3] ADV ES",
 		desc: "Gen 3 OU but every Pok&eacute;mon can learn and has to run Extreme Speed.",
 		mod: 'gen3es',
