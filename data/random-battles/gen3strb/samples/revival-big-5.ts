@@ -1,0 +1,60 @@
+// Revival main sample: Big 5
+// https://pokepast.es/7b0f942b0670246f
+// Preferred over forum counterpart: https://pokepast.es/f6229d2c867e21d6
+
+export default `Tyranitar (F) @ Leftovers
+Ability: Sand Stream
+EVs: 248 HP / 252 Atk / 8 Spe
+Adamant Nature
+- Earthquake
+- Rock Slide
+- Hidden Power [Bug]
+- Focus Punch
+
+Skarmory (F) @ Leftovers
+Ability: Keen Eye
+EVs: 252 HP / 236 SpD / 20 Spe
+Careful Nature
+IVs: 0 Atk
+- Spikes
+- Protect
+- Roar
+- Toxic
+
+Blissey @ Leftovers
+Ability: Natural Cure
+EVs: 252 Def / 112 SpA / 144 Spe
+Modest Nature
+IVs: 0 Atk
+- Soft-Boiled
+- Ice Beam
+- Toxic
+- Fire Blast
+
+Swampert (F) @ Leftovers
+Ability: Torrent
+EVs: 248 HP / 160 Def / 84 SpA / 4 SpD / 12 Spe
+Relaxed Nature
+- Earthquake
+- Ice Beam
+- Hydro Pump
+- Protect
+
+Gengar (F) @ Leftovers
+Ability: Levitate
+EVs: 248 HP / 8 Atk / 44 Def / 12 SpA / 100 SpD / 96 Spe
+Timid Nature
+- Fire Punch
+- Giga Drain
+- Explosion
+- Will-O-Wisp
+
+Starmie @ Leftovers
+Ability: Natural Cure
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+IVs: 0 Atk
+- Hydro Pump
+- Ice Beam
+- Thunderbolt
+- Rapid Spin`;

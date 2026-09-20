@@ -1,0 +1,59 @@
+// Revival alternative: Zapdos Dugtrio
+// https://pokepast.es/94fba13c6b97b8c6
+
+export default `Zapdos @ Leftovers
+Ability: Pressure
+EVs: 248 HP / 28 Def / 140 SpA / 52 SpD / 40 Spe
+Modest Nature
+- Baton Pass
+- Hidden Power [Grass]
+- Substitute
+- Thunderbolt
+
+Dugtrio (M) @ Choice Band
+Ability: Arena Trap
+EVs: 40 HP / 140 Atk / 100 SpD / 228 Spe
+Jolly Nature
+IVs: 30 SpD / 30 Spe
+- Aerial Ace
+- Beat Up
+- Earthquake
+- Hidden Power [Bug]
+
+Suicune @ Leftovers
+Ability: Pressure
+EVs: 100 HP / 180 SpA / 228 Spe
+Modest Nature
+- Calm Mind
+- Hidden Power [Electric]
+- Ice Beam
+- Surf
+
+Celebi @ Leftovers
+Ability: Natural Cure
+EVs: 252 HP / 148 Def / 72 SpA / 36 Spe
+Modest Nature
+IVs: 2 Atk / 30 SpA / 30 Spe
+- Baton Pass
+- Calm Mind
+- Giga Drain
+- Hidden Power [Fire]
+
+Jirachi @ Leftovers
+Ability: Serene Grace
+EVs: 80 HP / 252 SpA / 176 Spe
+Timid Nature
+IVs: 2 Atk / 30 SpA
+- Calm Mind
+- Fire Punch
+- Hidden Power [Grass]
+- Psychic
+
+Gengar (M) @ Leftovers
+Ability: Levitate
+EVs: 252 HP / 44 Def / 24 SpA / 188 Spe
+Timid Nature
+- Explosion
+- Ice Punch
+- Thunderbolt
+- Will-O-Wisp`;
