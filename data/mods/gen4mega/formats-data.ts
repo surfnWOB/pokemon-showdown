@@ -4,6 +4,11 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	// their closest local evidence is Uber or their base ability is OU-banned.
 	// This is a launch boundary for playtesting, not a solved balance claim.
 
+	// Garchomp's Z forme stays in Ubers alongside its base; the other Z Megas are OU.
+	absolmegaz: { tier: "OU" },
+	lucariomegaz: { tier: "OU" },
+	garchompmegaz: { tier: "Uber" },
+
 	// Gen 1
 	venusaurmega: { tier: "OU" },
 	charizardmegax: { tier: "OU" },

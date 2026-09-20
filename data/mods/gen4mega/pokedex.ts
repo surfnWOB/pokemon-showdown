@@ -1,6 +1,7 @@
 export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable = {
 	// Legacy Mega/Primal formes plus the Champions-supported Mega roster are
-	// backported when their base species exists by Gen 4. Legends: Z-A-only
+	// backported when their base species exists by Gen 4, including the three Z Megas.
+	// Other Legends: Z-A-only
 	// formes remain nonstandard, matching the existing gen3mega roster policy.
 	//
 	// Gen 4 has no Fairy type. Formes that gain Fairy retain their pre-Fairy
@@ -83,6 +84,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 	banettemega: { inherit: true, gen: 4 },
 	chimechomega: { inherit: true, gen: 4 },
 	absolmega: { inherit: true, gen: 4 },
+	absolmegaz: { inherit: true, gen: 4 },
 	glaliemega: { inherit: true, gen: 4 },
 	salamencemega: { inherit: true, gen: 4 },
 	metagrossmega: { inherit: true, gen: 4 },
@@ -95,7 +97,9 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 	staraptormega: { inherit: true, gen: 4 },
 	lopunnymega: { inherit: true, gen: 4 },
 	garchompmega: { inherit: true, gen: 4 },
+	garchompmegaz: { inherit: true, gen: 4 },
 	lucariomega: { inherit: true, gen: 4 },
+	lucariomegaz: { inherit: true, gen: 4 },
 	abomasnowmega: { inherit: true, gen: 4 },
 	gallademega: { inherit: true, gen: 4 },
 	froslassmega: { inherit: true, gen: 4 },

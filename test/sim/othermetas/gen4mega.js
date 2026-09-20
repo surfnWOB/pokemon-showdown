@@ -21,6 +21,7 @@ const MEGA_FORMES = [
 	'glaliemega', 'salamencemega', 'metagrossmega', 'latiasmega', 'latiosmega',
 	'kyogreprimal', 'groudonprimal', 'staraptormega', 'lopunnymega', 'garchompmega',
 	'lucariomega', 'abomasnowmega', 'gallademega', 'froslassmega',
+	'absolmegaz', 'lucariomegaz', 'garchompmegaz',
 ];
 
 const MEGA_ITEMS = [
@@ -36,10 +37,65 @@ const MEGA_ITEMS = [
 	'glalitite', 'salamencite', 'metagrossite', 'latiasite', 'latiosite',
 	'blueorb', 'redorb', 'staraptite', 'lopunnite', 'garchompite', 'lucarionite',
 	'abomasite', 'galladite', 'froslassite',
+	'absolitez', 'lucarionitez', 'garchompitez',
 ];
 
 describe('[Gen 4] Megas', () => {
 	const dex = Dex.mod('gen4mega');
+
+	it('allows Absol Z and Lucario Z in OU while keeping Garchomp Z in Ubers', () => {
+		const sets = [
+			{ species: 'Absol', item: 'Absolite Z', ability: 'Pressure', moves: ['night slash'] },
+			{ species: 'Lucario', item: 'Lucarionite Z', ability: 'Inner Focus', moves: ['aura sphere'] },
+		];
+		for (const set of sets) {
+			const name = `${set.species}-Mega-Z`;
+			assert.equal(dex.species.get(name).tier, 'OU');
+			assert.legalTeam([{ ...set, evs: { hp: 4 } }], 'gen4megas');
+		}
+		const garchomp = {
+			species: 'Garchomp', item: 'Garchompite Z', ability: 'Sand Veil', moves: ['dragon pulse'], evs: { hp: 4 },
+		};
+		assert.equal(dex.species.get('Garchomp-Mega-Z').tier, 'Uber');
+		const errors = TeamValidator.get('gen4megas').validateTeam([structuredClone(garchomp)]);
+		assert(errors && errors.some(error => /Uber/.test(error)));
+		assert.legalTeam([garchomp], 'gen4megas@@@+Garchomp-Mega-Z,+Sand Veil');
+	});
+
+	// Exact Gen 4 damage rolls shared with Showdex's gen4MegaDamage regression tests.
+	for (const [attackAbility, defendAbility, move, expected] of [
+		['Sharpness', 'Synchronize', 'nightslash', [152, 154, 156, 158, 160, 162, 162, 164, 166, 168, 170, 172, 174, 176, 178, 180]],
+		['Sharpness', 'Synchronize', 'aerialace', [65, 66, 66, 67, 68, 69, 70, 70, 71, 72, 73, 73, 74, 75, 76, 77]],
+		['Sharpness', 'Synchronize', 'shadowball', [116, 118, 120, 120, 122, 124, 124, 126, 128, 128, 130, 132, 132, 134, 136, 138]],
+		['Synchronize', 'Aura Guard', 'tackle', [13, 13, 13, 13, 13, 13, 14, 14, 14, 14, 14, 14, 15, 15, 15, 15]],
+		['Synchronize', 'Aura Guard', 'earthquake', [73, 73, 74, 75, 76, 77, 78, 79, 79, 80, 81, 82, 83, 84, 85, 86]],
+		['Synchronize', 'Aura Guard', 'grassknot', [7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9]],
+		['Mold Breaker', 'Aura Guard', 'tackle', [26, 26, 26, 27, 27, 27, 28, 28, 28, 29, 29, 29, 30, 30, 30, 31]],
+	]) {
+		it(`Z Mega damage: ${attackAbility} vs ${defendAbility}, ${move}`, () => {
+			const battle = common.createBattle({ formatid: 'gen4megas' }, [
+				[{ species: 'Mew', ability: attackAbility, moves: [move] }],
+				[{ species: 'Mew', ability: defendAbility, moves: ['splash'] }],
+			]);
+			try {
+				const attacker = battle.p1.active[0];
+				const defender = battle.p2.active[0];
+				const damage = [];
+				for (let roll = 85; roll <= 100; roll++) {
+					battle.randomizer = amount => Math.floor(amount * roll / 100);
+					const activeMove = battle.dex.getActiveMove(move);
+					activeMove.willCrit = false;
+					battle.activePokemon = attacker;
+					battle.activeMove = activeMove;
+					battle.runEvent('ModifyMove', attacker, defender, activeMove, activeMove);
+					damage.push(battle.actions.getDamage(attacker, defender, activeMove));
+				}
+				assert.deepEqual(damage, expected);
+			} finally {
+				battle.destroy();
+			}
+		});
+	}
 
 	it('registers only the OU format', () => {
 		const modFormats = Dex.formats.all()
@@ -57,8 +113,46 @@ describe('[Gen 4] Megas', () => {
 		assert(ruleTable.has('modernmegaspeedmod'));
 	});
 
-	it('backports the selected 59-form roster and its items', () => {
-		assert.equal(new Set(MEGA_FORMES).size, 59);
+	it('evolves each Z Mega with its correct typing, ability, and immediate Speed', () => {
+		for (const [species, item, ability, megaAbility, types] of [
+			['Absol', 'Absolite Z', 'Pressure', 'sharpness', ['Dark', 'Ghost']],
+			['Lucario', 'Lucarionite Z', 'Inner Focus', 'auraguard', ['Fighting', 'Steel']],
+			['Garchomp', 'Garchompite Z', 'Sand Veil', 'levitate', ['Dragon']],
+		]) {
+			const battle = common.createBattle({ formatid: 'gen4megas' }, [
+				[{ species, item, ability, moves: ['swordsdance'] }],
+				[{ species: 'Starmie', ability: 'Natural Cure', moves: ['recover'] }],
+			]);
+			try {
+				battle.makeChoices('move swordsdance mega', 'move recover');
+				const mega = battle.p1.active[0];
+				assert.species(mega, `${species}-Mega-Z`);
+				assert.equal(mega.ability, megaAbility);
+				assert.deepEqual(mega.getTypes(), types);
+				assert.equal(mega.species.baseStats.spe, 151);
+				assert(battle.log.find(line => line.startsWith('|move|')).includes(`p1a: ${species}`));
+			} finally {
+				battle.destroy();
+			}
+		}
+	});
+
+	it('Garchomp Z gains Levitate on the Mega turn', () => {
+		const battle = common.createBattle({ formatid: 'gen4megas' }, [
+			[{ species: 'Garchomp', item: 'Garchompite Z', ability: 'Sand Veil', moves: ['swordsdance'] }],
+			[{ species: 'Mew', ability: 'Synchronize', moves: ['earthquake'] }],
+		]);
+		try {
+			battle.makeChoices('move swordsdance mega', 'move earthquake');
+			assert.fullHP(battle.p1.active[0]);
+			assert(battle.log.some(line => line.includes('|-immune|p1a: Garchomp')));
+		} finally {
+			battle.destroy();
+		}
+	});
+
+	it('backports the selected 62-form roster and its items', () => {
+		assert.equal(new Set(MEGA_FORMES).size, 62);
 		const expectedFormes = new Set(MEGA_FORMES);
 		const expectedItems = new Set(MEGA_ITEMS);
 		for (const id of MEGA_FORMES) {
@@ -109,12 +203,12 @@ describe('[Gen 4] Megas', () => {
 	});
 
 	it('does not broadly legalize Future or Legends: Z-A-only formes', () => {
-		for (const id of ['rayquazamega', 'absolmegaz', 'garchompmegaz', 'heatranmega']) {
+		for (const id of ['rayquazamega', 'heatranmega', 'darkraimega']) {
 			const species = dex.species.get(id);
 			assert(species.gen > 4, `${species.name} should retain its source generation`);
 			assert.equal(species.tier, 'Illegal', `${species.name} should stay illegal`);
 		}
-		for (const id of ['absolitez', 'garchompitez', 'heatranite']) {
+		for (const id of ['heatranite', 'darkranite']) {
 			assert(dex.items.get(id).gen > 4, `${id} should not be backported`);
 		}
 	});

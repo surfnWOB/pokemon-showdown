@@ -1,6 +1,8 @@
 export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTable = {
 	// Re-legalize later-generation abilities used by eligible Mega and Primal
 	// formes. Their battle behavior still resolves through the Gen 4 mod chain.
+	sharpness: { inherit: true, gen: 4, isNonstandard: null },
+	auraguard: { inherit: true, gen: 4, isNonstandard: null },
 	toughclaws: { inherit: true, gen: 4, isNonstandard: null },
 	megalauncher: { inherit: true, gen: 4, isNonstandard: null },
 	adaptability: { inherit: true, gen: 4, isNonstandard: null },
