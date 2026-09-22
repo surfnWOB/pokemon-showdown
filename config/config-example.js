@@ -286,6 +286,13 @@ exports.reportjoinsperiod = 0;
 exports.reportbattles = true;
 
 /**
+ * Optional public room title for battles involving accounts in `ladderbots`.
+ * Created at startup without autojoin. Bot battle reports go only to this room;
+ * other battles continue to use `reportbattles`. Empty disables this routing.
+ */
+exports.botgamesroom = '';
+
+/**
  * report joins and leaves in battle - shows messages like "<USERNAME> joined" in battle
  *   Set this to false on large tournament servers where battles get a lot of joins and leaves.
  *   Note that the feature of turning this off is deprecated.

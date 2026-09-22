@@ -27,6 +27,15 @@ stays legible.
   ruleTable/mod-data smoke check across every custom format, plus targeted behavior
   tests that pin the engine seams our patches touch.
 
+## Bot battle announcements
+
+`Config.botgamesroom` optionally names a public room created at startup without
+autojoin. Battles involving an account in `Config.ladderbots` are announced only
+there, using the same account matching as the ladder. Human battles keep their
+normal `Config.reportbattles` destinations. The side-server config uses **Bots Games**
+(`botsgames`); existing saved room settings are preserved on restart.
+`test/server/bot-games.js` covers the reporting split.
+
 ## Custom mods / concepts
 
 - **gen3subzu** — the mod backing the `[Gen 3] SU` and `[Gen 3] IU` formats. It

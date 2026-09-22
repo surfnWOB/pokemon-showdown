@@ -1236,6 +1236,16 @@ export class GlobalRoomState {
 			}];
 		}
 
+		if (Config.botgamesroom && !this.settingsList.some(settings => toID(settings?.title) === toID(Config.botgamesroom))) {
+			this.settingsList.push({
+				title: Config.botgamesroom,
+				auth: {},
+				creationTime: Date.now(),
+				autojoin: false,
+				section: 'official',
+			});
+		}
+
 		this.chatRooms = [];
 
 		this.autojoinList = [];
@@ -1654,13 +1664,15 @@ export class GlobalRoomState {
 				player.setStatusType('online');
 			}
 		}
-		if (Config.reportbattles) {
-			if (typeof Config.reportbattles === 'string') {
-				Config.reportbattles = [Config.reportbattles];
-			} else if (Config.reportbattles === true) {
-				Config.reportbattles = ['lobby'];
+		let reportRooms = Config.botgamesroom && players.some(player => Ladders.Ladder.isLadderBot(player.id)) ?
+			[toID(Config.botgamesroom)] : Config.reportbattles;
+		if (reportRooms) {
+			if (typeof reportRooms === 'string') {
+				reportRooms = [reportRooms];
+			} else if (reportRooms === true) {
+				reportRooms = ['lobby'];
 			}
-			for (const roomid of Config.reportbattles) {
+			for (const roomid of reportRooms) {
 				const reportRoom = Rooms.get(roomid);
 				if (reportRoom) {
 					const reportPlayers = players.map(p => p.getIdentity()).join('|');
