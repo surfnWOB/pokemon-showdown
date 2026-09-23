@@ -362,6 +362,8 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	// Ludicolo, Shiftry, Delcatty, or Raichu. Items and moves keep full gen3 legality.
 	// Quickbans: Slaking (nothing in the pool resists Normal but Shedinja) and Alakazam (base 120
 	// Speed with no Dark or Steel check faster than base 80). Kadabra and Vigoroth stay legal.
+	// Soundproof is unbanned (OU bans it): it is the Whismur line's only gen3 ability, so the
+	// inherited ban would silently remove Exploud from the pool.
 	{
 		name: "[Gen 3] EU",
 		desc: "Early Used &mdash; only Pok&eacute;mon catchable on land before the first badge in Emerald or FireRed/LeafGreen, at any evolution reachable in-game (no stones; trade evolutions allowed). Slaking and Alakazam are quickbanned.",
@@ -369,6 +371,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		ruleset: ['[Gen 3] OU'],
 		banlist: ['All Pokemon'],
 		unbanlist: [
+			'Soundproof',
 			// Hoenn: Routes 101-104, Petalburg Woods, Route 116
 			'Poochyena', 'Mightyena', 'Zigzagoon', 'Linoone', 'Wurmple', 'Silcoon', 'Beautifly', 'Cascoon', 'Dustox',
 			'Lotad', 'Lombre', 'Seedot', 'Nuzleaf', 'Ralts', 'Kirlia', 'Gardevoir', 'Taillow', 'Swellow',

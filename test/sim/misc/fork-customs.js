@@ -889,6 +889,8 @@ describe('Fork customs', () => {
 			set('Kadabra', 'Synchronize', ['psychic', 'firepunch', 'calmmind', 'recover']),
 			set('Primeape', 'Vital Spirit', ['crosschop', 'rockslide', 'earthquake', 'bulkup']),
 			set('Vigoroth', 'Vital Spirit', ['return', 'shadowball', 'earthquake', 'bulkup']),
+			// Soundproof is OU-banned but unbanned here: it is Exploud's only ability.
+			set('Exploud', 'Soundproof', ['return', 'overheat', 'shadowball', 'earthquake']),
 		]) {
 			assert.equal(v.validateTeam([s]), null, `expected ${s.species} legal in EU`);
 		}
