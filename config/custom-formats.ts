@@ -352,6 +352,33 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen3puretradebacks',
 		ruleset: ['[Gen 3] OU'],
 	},
+	// [Gen 3] EU ("Early Used") &mdash; only Pok&eacute;mon whose line can be caught on land before the
+	// first badge in Emerald (Routes 101-104, Petalburg Woods, Route 116) or FireRed/LeafGreen
+	// (Routes 1, 2, 22, Viridian Forest), verified against the pret decomp encounter tables.
+	// No rods (Hoenn's Old Rod is in Dewford, Kanto's in Vermilion), no surf, no starters. Any
+	// in-game-reachable evolution counts: level-ups, and the Abra line via the Cable Club (gated
+	// only on the Pok&eacute;dex in both games). Stone evolutions are out: no evolution stone is
+	// obtainable pre-badge (none in either Pickup table, none on the early maps) &mdash; so no
+	// Ludicolo, Shiftry, Delcatty, or Raichu. Items and moves keep full gen3 legality.
+	// Quickbans: Slaking (nothing in the pool resists Normal but Shedinja) and Alakazam (base 120
+	// Speed with no Dark or Steel check faster than base 80). Kadabra and Vigoroth stay legal.
+	{
+		name: "[Gen 3] EU",
+		desc: "Early Used &mdash; only Pok&eacute;mon catchable on land before the first badge in Emerald or FireRed/LeafGreen, at any evolution reachable in-game (no stones; trade evolutions allowed). Slaking and Alakazam are quickbanned.",
+		mod: 'gen3',
+		ruleset: ['[Gen 3] OU'],
+		banlist: ['All Pokemon'],
+		unbanlist: [
+			// Hoenn: Routes 101-104, Petalburg Woods, Route 116
+			'Poochyena', 'Mightyena', 'Zigzagoon', 'Linoone', 'Wurmple', 'Silcoon', 'Beautifly', 'Cascoon', 'Dustox',
+			'Lotad', 'Lombre', 'Seedot', 'Nuzleaf', 'Ralts', 'Kirlia', 'Gardevoir', 'Taillow', 'Swellow',
+			'Wingull', 'Pelipper', 'Shroomish', 'Breloom', 'Slakoth', 'Vigoroth', 'Marill', 'Azumarill',
+			'Abra', 'Kadabra', 'Nincada', 'Ninjask', 'Shedinja', 'Whismur', 'Loudred', 'Exploud', 'Skitty',
+			// Kanto: Routes 1, 2, 22, Viridian Forest
+			'Pidgey', 'Pidgeotto', 'Pidgeot', 'Rattata', 'Raticate', 'Spearow', 'Fearow',
+			'Caterpie', 'Metapod', 'Butterfree', 'Weedle', 'Kakuna', 'Beedrill', 'Mankey', 'Primeape', 'Pikachu',
+		],
+	},
 
 	// Yak Attack
 	///////////////////////////////////////////////////////////////////

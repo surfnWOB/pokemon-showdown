@@ -874,4 +874,34 @@ describe('Fork customs', () => {
 			{ species: 'Metagross', ability: 'Clear Body', moves: ['meteormash', 'earthquake', 'explosion', 'protect'], evs: { hp: 4 }, level: 100 },
 		], 'gen3ubersdoubles');
 	});
+
+	it('gen3eu: only the pre-badge-1 pool is legal; Slaking and Alakazam are quickbanned', () => {
+		// The roster is wiped (-All Pokemon) and rebuilt from the Emerald + FRLG pre-badge
+		// land encounters at any in-game-reachable evolution (see config/custom-formats.ts).
+		const format = Dex.formats.get('gen3eu', true);
+		assert.equal(format.mod, 'gen3');
+		const { TeamValidator } = require('./../../../dist/sim/team-validator');
+		const v = TeamValidator.get('gen3eu');
+		const set = (species, ability, moves) => ({ species, ability, moves, evs: { hp: 4 }, level: 100 });
+		// Legal: a full-line evolution, a trade evolution's pre-evo, and a Kanto mon.
+		for (const s of [
+			set('Breloom', 'Effect Spore', ['spore', 'focuspunch', 'machpunch', 'skyuppercut']),
+			set('Kadabra', 'Synchronize', ['psychic', 'firepunch', 'calmmind', 'recover']),
+			set('Primeape', 'Vital Spirit', ['crosschop', 'rockslide', 'earthquake', 'bulkup']),
+			set('Vigoroth', 'Vital Spirit', ['return', 'shadowball', 'earthquake', 'bulkup']),
+		]) {
+			assert.equal(v.validateTeam([s]), null, `expected ${s.species} legal in EU`);
+		}
+		// Quickbans, stone-locked evolutions, and a non-early mon are all rejected.
+		for (const s of [
+			set('Slaking', 'Truant', ['return']),
+			set('Alakazam', 'Synchronize', ['psychic']),
+			set('Ludicolo', 'Swift Swim', ['surf']),
+			set('Raichu', 'Static', ['thunderbolt']),
+			set('Tyranitar', 'Sand Stream', ['rockslide']),
+		]) {
+			const errors = v.validateTeam([s]);
+			assert(errors && errors.length > 0, `expected ${s.species} banned from EU`);
+		}
+	});
 });
