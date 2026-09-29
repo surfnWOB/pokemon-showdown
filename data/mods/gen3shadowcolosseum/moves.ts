@@ -189,7 +189,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			this.add('-anim', source, "Bleakwind Storm", target);
 		},
 		onModifyMove(move, pokemon, target) {
-			if (target && ['shadowsky'].includes(target.effectiveWeather())) {
+			if (target && target.effectiveWeather() == 'shadowsky') {
 				move.accuracy = true;
 			}
 		},
@@ -612,7 +612,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		pp: 5,
 		priority: 4,
 		flags: { noassist: 1, failcopycat: 1, cantusetwice: 1, failmimic: 1 },
-		volatileStatus: 'shadowarmor',
+		slotCondition: 'shadowarmor',
 		onPrepareHit(pokemon) {
 			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
 		},
@@ -630,13 +630,15 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 				} else {
 					this.add('-singleturn', target, 'move: Shadow Armor');
 				}
+				this.effectState.slot = target.getSlot();
 			},
 			onFoeRedirectTargetPriority: 1,
 			onFoeRedirectTarget(target, source, source2, move) {
-				if (!this.effectState.target.isSkyDropped() && this.validTarget(this.effectState.target, source, move.target)) {
+				const userSlot = this.getAtSlot(this.effectState.slot);
+				if (this.validTarget(userSlot, source, move.target)) {
 					if (move.smartTarget) move.smartTarget = false;
 					this.debug("Shadow Armor redirected target of move");
-					return this.effectState.target;
+					return userSlot;
 				}
 			},
 			onDamagePriority: -10,
