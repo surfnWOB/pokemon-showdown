@@ -193,9 +193,6 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 				move.accuracy = true;
 			}
 		},
-		damageCallback(pokemon, target) {
-			if (target.volatiles['shadow']) return;
-		},
 		secondary: {
 			chance: 20,
 			boosts: {
