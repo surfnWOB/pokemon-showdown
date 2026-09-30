@@ -41,12 +41,12 @@ export const Rulesets: import('../../../sim/dex-formats').ModdedFormatDataTable 
 						for (const source of learnset[move.id] || []) {
 							if (source === '3M') {
 								hasTMSource = true;
-							} else {
+							} else if (!source.startsWith('3L') || Number(source.slice(2)) <= set.level) {
 								hasNonTMSource = true;
 							}
 						}
 					}
-					// Native/event/inherited users do not consume the TM.
+					// Available level-up/event/inherited sources do not consume the TM.
 					if (!hasTMSource || hasNonTMSource) continue;
 
 					const users = uses.get(move.id) || [];
