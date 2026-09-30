@@ -1,7 +1,8 @@
+// Renewable TMs, including TM30 (Shadow Ball) from Mt. Battle, are excluded.
 const FINITE_TMS = new Set([
 	'focuspunch', 'dragonclaw', 'roar', 'toxic', 'hail',
 	'sunnyday', 'taunt', 'raindance', 'gigadrain', 'solarbeam',
-	'irontail', 'earthquake', 'return', 'shadowball', 'brickbreak',
+	'irontail', 'earthquake', 'return', 'brickbreak',
 	'sludgebomb', 'sandstorm', 'torment', 'rest', 'attract',
 	'thief', 'steelwing', 'skillswap', 'snatch',
 ]);

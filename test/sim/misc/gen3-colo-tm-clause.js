@@ -44,7 +44,6 @@ describe('[Gen 3] Colo-Only Doubles TM Clause', () => {
 		['Iron Tail', 'Pikachu', 'Bayleef'],
 		['Earthquake', 'Meganium', 'Typhlosion'],
 		['Return', 'Pikachu', 'Bayleef'],
-		['Shadow Ball', 'Togetic', 'Granbull'],
 		['Brick Break', 'Pikachu', 'Quilava'],
 		['Sludge Bomb', 'Granbull', 'Qwilfish'],
 		['Sandstorm', 'Hitmontop', 'Magcargo'],
@@ -101,6 +100,13 @@ describe('[Gen 3] Colo-Only Doubles TM Clause', () => {
 			]), null);
 		});
 	}
+
+	it('allows multiple TM-dependent Shadow Ball users because TM30 is renewable at Mt. Battle', () => {
+		assert.equal(validateSets([
+			{ species: 'Togetic', moves: ['Shadow Ball'] },
+			{ species: 'Granbull', moves: ['Shadow Ball'] },
+		]), null);
+	});
 
 	it('allows repeated use of renewable TMs', () => {
 		assert.equal(validateSets([
