@@ -453,6 +453,85 @@ describe('Fork customs', () => {
 			`Enigma Berry should remain illegal in stock ADV 200: ${JSON.stringify(baseItemErrors)}`);
 	});
 
+	it('gen3colodoubles: exposes the Colosseum-only doubles format and roster', () => {
+		const format = Dex.formats.get('gen3coloonlydoubles', true);
+		assert(format.exists, 'expected [Gen 3] Colo-Only Doubles to exist');
+		assert.equal(format.mod, 'gen3colodoubles');
+		assert.equal(format.gameType, 'doubles');
+		const ruleTable = Dex.formats.getRuleTable(format);
+		assert.equal(ruleTable.minTeamSize, 4);
+		assert.equal(ruleTable.maxTeamSize, 6);
+		assert.equal(ruleTable.pickedTeamSize, 4);
+
+		const dex = Dex.mod('gen3colodoubles');
+		const available = dex.species.all().filter(species => ['Uber', 'OU', 'NFE', 'LC'].includes(species.tier));
+		assert.equal(available.length, 68, `expected 68 obtainable species, got ${available.length}`);
+		assert.equal(dex.species.get('pikachu').tier, 'OU');
+		assert.equal(dex.species.get('roselia').isNonstandard, 'Unobtainable');
+	});
+
+	it('gen3colodoubles: enforces finite TMs without charging native learners', () => {
+		const { TeamValidator } = require('./../../../dist/sim/team-validator');
+		const duplicateShadowBall = [
+			{ species: 'Espeon', ability: 'Synchronize', moves: ['shadowball'], evs: { hp: 4 } },
+			{ species: 'Umbreon', ability: 'Synchronize', moves: ['shadowball'], evs: { hp: 4 } },
+			{ species: 'Furret', ability: 'Run Away', moves: ['quickattack'], evs: { hp: 4 } },
+			{ species: 'Noctowl', ability: 'Insomnia', moves: ['fly'], evs: { hp: 4 } },
+		];
+		const errors = TeamValidator.get('gen3coloonlydoubles').validateTeam(duplicateShadowBall);
+		assert(errors?.some(error => /Shadow Ball has only one obtainable TM/.test(error)),
+			`expected duplicate Shadow Ball to consume the one TM: ${JSON.stringify(errors)}`);
+
+		assert.legalTeam([
+			{ species: 'Quagsire', ability: 'Damp', moves: ['earthquake'], evs: { hp: 4 } },
+			{ species: 'Granbull', ability: 'Intimidate', moves: ['earthquake'], evs: { hp: 4 } },
+			{ species: 'Furret', ability: 'Run Away', moves: ['quickattack'], evs: { hp: 4 } },
+			{ species: 'Noctowl', ability: 'Insomnia', moves: ['fly'], evs: { hp: 4 } },
+		], 'gen3coloonlydoubles');
+	});
+
+	it('gen3colodoubles: enforces specimen limits and Colosseum Sketch bans', () => {
+		const { TeamValidator } = require('./../../../dist/sim/team-validator');
+		const fillers = [
+			{ species: 'Furret', ability: 'Run Away', moves: ['quickattack'], evs: { hp: 4 } },
+			{ species: 'Noctowl', ability: 'Insomnia', moves: ['fly'], evs: { hp: 4 } },
+		];
+		const familyErrors = TeamValidator.get('gen3coloonlydoubles').validateTeam([
+			{ species: 'Bayleef', ability: 'Overgrow', moves: ['razorleaf'], evs: { hp: 4 } },
+			{ species: 'Meganium', ability: 'Overgrow', moves: ['solarbeam'], evs: { hp: 4 } },
+			...fillers,
+		]);
+		assert(familyErrors?.some(error => /Bayleef \+\+ Meganium/.test(error)),
+			`expected the one-specimen family limit: ${JSON.stringify(familyErrors)}`);
+
+		assert.legalTeam([
+			{ species: 'Mareep', ability: 'Static', gender: 'F', nature: 'Mild', ivs: { hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0 }, evs: { hp: 4 }, moves: ['thunder'] },
+			{ species: 'Flaaffy', ability: 'Static', gender: 'F', nature: 'Mild', ivs: { hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0 }, evs: { hp: 4 }, moves: ['thunderbolt'] },
+			...fillers,
+		], 'gen3coloonlydoubles');
+		const mareepErrors = TeamValidator.get('gen3coloonlydoubles').validateTeam([
+			{ species: 'Mareep', ability: 'Static', gender: 'F', nature: 'Mild', ivs: { hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0 }, evs: { hp: 4 }, moves: ['thunder'] },
+			{ species: 'Flaaffy', ability: 'Static', gender: 'F', nature: 'Mild', ivs: { hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0 }, evs: { hp: 4 }, moves: ['thunderbolt'] },
+			{ species: 'Ampharos', ability: 'Static', moves: ['thunder'], evs: { hp: 4 } },
+			fillers[0],
+		]);
+		assert(mareepErrors?.some(error => /Mareep \+\+ Flaaffy \+\+ Ampharos/.test(error)),
+			`expected the two-specimen Mareep-family limit: ${JSON.stringify(mareepErrors)}`);
+
+		assert.legalTeam([
+			{ species: 'Smeargle', ability: 'Own Tempo', moves: ['sacredfire'], evs: { hp: 4 } },
+			...fillers,
+			{ species: 'Pikachu', ability: 'Static', moves: ['thunderbolt'], evs: { hp: 4 } },
+		], 'gen3coloonlydoubles');
+		const sketchErrors = TeamValidator.get('gen3coloonlydoubles').validateTeam([
+			{ species: 'Smeargle', ability: 'Own Tempo', moves: ['aeroblast'], evs: { hp: 4 } },
+			...fillers,
+			{ species: 'Pikachu', ability: 'Static', moves: ['thunderbolt'], evs: { hp: 4 } },
+		]);
+		assert(sketchErrors?.some(error => /Aeroblast/.test(error)),
+			`expected unavailable Aeroblast to be banned on Smeargle: ${JSON.stringify(sketchErrors)}`);
+	});
+
 	it('gen3adv200: ADV 200 UU allows the UU pool but bans OU (guards the OU banlist)', () => {
 		// An all-UU team is legal...
 		assert.legalTeam([
