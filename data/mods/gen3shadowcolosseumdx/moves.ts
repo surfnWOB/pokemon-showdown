@@ -189,7 +189,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			this.add('-anim', source, "Bleakwind Storm", target);
 		},
 		onModifyMove(move, pokemon, target) {
-			if (target && target.effectiveWeather() == 'shadowsky') {
+			if (target && target.effectiveWeather() === 'shadowsky') {
 				move.accuracy = true;
 			}
 		},
