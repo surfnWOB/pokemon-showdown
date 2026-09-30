@@ -2,10 +2,10 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	// Shadow Moves
 	shadowrush: {
 		accuracy: true,
-		basePower: 50,
+		basePower: 65,
 		category: "Physical",
 		shortDesc: "This move does not check accuracy.",
-		isNonstandard: "Past",
+		gen: 3,
 		name: "Shadow Rush",
 		pp: 15,
 		priority: 0,
@@ -36,10 +36,10 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	shadowblitz: {
 		accuracy: 100,
-		basePower: 40,
+		basePower: 50,
 		category: "Physical",
 		shortDesc: "Usually moves first. Has 50% recoil.",
-		isNonstandard: "Past",
+		gen: 3,
 		name: "Shadow Blitz",
 		pp: 5,
 		priority: 1,
@@ -57,10 +57,10 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	shadowwave: {
 		accuracy: 100,
-		basePower: 40,
+		basePower: 60,
 		category: "Special",
 		shortDesc: "Lowers the foe(s)'s Evasion by 1 stage.",
-		isNonstandard: "Past",
+		gen: 3,
 		name: "Shadow Wave",
 		pp: 10,
 		priority: 0,
@@ -82,10 +82,10 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	shadowbreak: {
 		accuracy: 90,
-		basePower: 70,
+		basePower: 75,
 		category: "Physical",
 		shortDesc: "-6 priority.",
-		isNonstandard: "Past",
+		gen: 3,
 		name: "Shadow Break",
 		pp: 10,
 		priority: -6,
@@ -105,7 +105,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 70,
 		category: "Special",
 		shortDesc: "10% chance to lower the foe(s)'s SpD by 1 stage.",
-		isNonstandard: "Past",
+		gen: 3,
 		name: "Shadow Rave",
 		pp: 10,
 		priority: 0,
@@ -130,7 +130,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 0,
 		category: "Status",
 		shortDesc: "Summons Shadow Sky for 5 turns.",
-		isNonstandard: "Past",
+		gen: 3,
 		name: "Shadow Sky",
 		pp: 5,
 		priority: 0,
@@ -152,7 +152,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 105,
 		category: "Physical",
 		shortDesc: "Lowers the user's Attack and Defense by 1 stage.",
-		isNonstandard: "Past",
+		gen: 3,
 		name: "Shadow End",
 		pp: 5,
 		priority: 0,
@@ -178,7 +178,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 90,
 		category: "Special",
 		shortDesc: "20% chance to lower the foe(s)'s Evasion by 1 stage. Can't miss in Shadow Sky.",
-		isNonstandard: "Past",
+		gen: 3,
 		name: "Shadow Storm",
 		pp: 10,
 		priority: 0,
@@ -207,8 +207,8 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
-		shortDesc: "Heal 33% max HP and protects the user, then gets disabled.",
-		isNonstandard: "Past",
+		shortDesc: "Heal 50% max HP and protects the user, then gets disabled.",
+		gen: 3,
 		name: "Shadow Panic",
 		pp: 5,
 		priority: 4,
@@ -222,7 +222,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			pokemon.addVolatile('stall');
 		},
 		onAfterMoveSecondarySelf(pokemon, target, move) {
-			pokemon.heal(pokemon.baseMaxhp / 3);
+			pokemon.heal(pokemon.baseMaxhp / 2);
 			pokemon.addVolatile('disable');
 		},
 		condition: {
@@ -263,7 +263,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 60,
 		category: "Special",
 		shortDesc: "Resets the foe's positive stat changes. Always crits and hits adjacent foes in Shadow Sky.",
-		isNonstandard: "Past",
+		gen: 3,
 		name: "Shadow Mist",
 		pp: 15,
 		priority: 0,
@@ -293,7 +293,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 0,
 		category: "Status",
 		shortDesc: "Lower's the foe(s) Defense by 1 stage. Usually moves first.",
-		isNonstandard: "Past",
+		gen: 3,
 		name: "Shadow Down",
 		pp: 30,
 		priority: 1,
@@ -304,7 +304,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			this.add('-anim', source, "Mean Look", target);
 		},
 		boosts: {
-			def: -1,
+			def: -2,
 		},
 		secondary: undefined,
 		target: "allAdjacentFoes",
@@ -317,7 +317,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 40,
 		category: "Physical",
 		shortDesc: "Traps the foe and disables their item.",
-		isNonstandard: "Past",
+		gen: 3,
 		name: "Shadow Hold",
 		pp: 10,
 		priority: 0,
@@ -343,7 +343,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 0,
 		category: "Status",
 		shortDesc: "Boosts the user's Atk, SpA, and Spe by 1 stage. User stops being a Shadow Pokemon.",
-		isNonstandard: "Past",
+		gen: 3,
 		name: "Shadow Shed",
 		pp: 15,
 		priority: 0,
@@ -372,11 +372,11 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 0,
 		damageCallback(pokemon, target) {
 			if (target.volatiles['shadow']) return;
-			return this.clampIntRange(Math.floor(target.getUndynamaxedHP() / 2), 1);
+			return this.clampIntRange(Math.floor(target.getUndynamaxedHP() / 3), 1);
 		},
 		category: "Special",
 		shortDesc: "All Pokemon on the field lose 50% of their current HP.",
-		isNonstandard: "Past",
+		gen: 3,
 		name: "Shadow Half",
 		pp: 5,
 		priority: 0,
@@ -436,7 +436,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 0,
 		category: "Status",
 		shortDesc: "User or ally's attacks ignore abilities and immunities.",
-		isNonstandard: "Past",
+		gen: 3,
 		name: "Shadow Sights",
 		pp: 5,
 		priority: 0,
@@ -459,6 +459,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 					move.ignoreImmunity = true;
 				}
 				move.ignoreAbility = true;
+				move.breaksProtect = true;
 			},
 		},
 		secondary: undefined,
@@ -472,7 +473,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 75,
 		category: "Special",
 		shortDesc: "20% chance to paralyze the foe. Applies the Embargo effect for 5 turns.",
-		isNonstandard: "Past",
+		gen: 3,
 		name: "Shadow Bolt",
 		pp: 10,
 		priority: 0,
@@ -496,7 +497,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 65,
 		category: "Special",
 		shortDesc: "Deals 1.5x damage to Water-types.",
-		isNonstandard: "Past",
+		gen: 3,
 		name: "Shadow Chill",
 		pp: 5,
 		priority: 0,
@@ -525,7 +526,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		},
 		category: "Special",
 		shortDesc: "50% brn. 1.5x pwr to brn foes. 30% bypass protect in Sun.",
-		isNonstandard: "Past",
+		gen: 3,
 		name: "Shadow Fire",
 		pp: 15,
 		priority: 0,
@@ -553,7 +554,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 0,
 		category: "Status",
 		shortDesc: "Protects allies from Shadow moves this turn.",
-		isNonstandard: "Past",
+		gen: 3,
 		name: "Shadow Guard",
 		pp: 10,
 		priority: 3,
@@ -607,7 +608,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 0,
 		category: "Status",
 		shortDesc: "Follow Me + Endure. +1 Spe if hit by Shadow move. Can't use consecutively.",
-		isNonstandard: "Past",
+		gen: 3,
 		name: "Shadow Armor",
 		pp: 5,
 		priority: 4,
@@ -665,7 +666,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 0,
 		category: "Status",
 		shortDesc: "Heals by 33% of its max HP +25% for every active Shadow Pokemon. Deals 25% damage to Shadow Pokemon. User: +1 Def.",
-		isNonstandard: "Past",
+		gen: 3,
 		name: "Shadow Siphon",
 		pp: 10,
 		priority: 0,
@@ -677,18 +678,17 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		},
 		self: {
 			onHit(pokemon, source, move) {
-				this.heal(source.baseMaxhp / 3, source, pokemon);
+				this.heal(source.baseMaxhp / 4, source, pokemon);
 				this.boost({ def: 1 }, source);
 			},
 		},
 		onHitField(target, source) {
 			if (target.volatiles['shadow']) {
-				this.heal(source.baseMaxhp / 4, source, target);
+				this.heal(source.baseMaxhp / 10, source, target);
 				this.damage(target.baseMaxhp / 4, target, source);
 			}
 			if (source.volatiles['shadow']) {
-				this.heal(source.baseMaxhp / 4, source, target);
-				this.damage(source.baseMaxhp / 4, source, target);
+				this.heal(source.baseMaxhp / 10, source, target);
 			}
 		},
 		secondary: undefined,
@@ -700,7 +700,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 150,
 		category: "Special",
 		shortDesc: "User must recharge, unless it KOes its target.",
-		isNonstandard: "Past",
+		gen: 3,
 		name: "Shadow Blast",
 		pp: 5,
 		priority: 0,
