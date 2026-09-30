@@ -481,6 +481,7 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
 		eventData: [
 			{ generation: 3, level: 20, moves: ["metronome", "charm", "sweetkiss", "yawn"] },
 		],
+		eventOnly: true,
 	},
 	mareep: {
 		learnset: {
@@ -532,6 +533,7 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
 		eventData: [
 			{ generation: 3, level: 30, moves: ["thunderbolt", "thunderwave", "cottonspore", "thundershock"] },
 		],
+		eventOnly: true,
 	},
 	ampharos: {
 		learnset: {
