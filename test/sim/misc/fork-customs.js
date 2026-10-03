@@ -23,6 +23,47 @@ const CUSTOM_SECTIONS = ['Gen 3 Megas', 'surfnWOB Customs', 'Yak Attack', 'Archi
 const customFormats = Dex.formats.all().filter(f => CUSTOM_SECTIONS.includes(f.section));
 
 describe('Fork customs', () => {
+	describe('UUBL UU VR cutoff', () => {
+		it('bans all 44 S through B- entries, including the inherited Regice exception', () => {
+			const format = Dex.formats.get('gen3uubluu');
+			assert.equal(format.banlist.length, 44);
+			const rules = Dex.formats.getRuleTable(format);
+			for (const name of format.banlist) {
+				assert(rules.isBannedSpecies(Dex.mod('gen3').species.get(name)), name);
+			}
+			const parent = Dex.formats.getRuleTable(Dex.formats.get('gen3uubl'));
+			assert(!parent.isBannedSpecies(Dex.mod('gen3').species.get('Regice')));
+		});
+
+		it('keeps every C+ through D entry and unranked pre-evolutions eligible', () => {
+			const rules = Dex.formats.getRuleTable(Dex.formats.get('gen3uubluu'));
+			const legal = [
+				'Ludicolo', 'Lunatone', 'Linoone', 'Typhlosion', 'Hitmonlee', 'Solrock', 'Slaking',
+				'Lapras', 'Jynx', 'Golduck', 'Misdreavus', 'Zangoose', 'Meganium', 'Ampharos',
+				'Jumpluff', 'Crobat', 'Cacturne', 'Hitmontop', 'Camerupt', 'Raichu', 'Poliwrath',
+				'Girafarig', 'Shedinja', 'Electrode', 'Banette', 'Porygon2', 'Kabutops', 'Quagsire',
+				'Sableye', 'Sandslash', 'Roselia', 'Nidoking', 'Scyther', 'Kadabra', 'Eevee', 'Dratini',
+			];
+			for (const name of legal) assert(!rules.isBannedSpecies(Dex.mod('gen3').species.get(name)), name);
+		});
+
+		it('inherits UUBL bans and validates a legal team without changing the parent', () => {
+			const { TeamValidator } = require('./../../../dist/sim/team-validator');
+			const legal = { species: 'Porygon2', ability: 'Trace', moves: ['recover'], evs: { hp: 4 } };
+			assert.legalTeam([legal], 'gen3uubluu');
+			for (const name of ['Dragonite', 'Regice', 'Raikou', 'Registeel', 'Mewtwo']) {
+				const species = Dex.mod('gen3').species.get(name);
+				const errors = TeamValidator.get('gen3uubluu').validateTeam([
+					{ species: name, ability: species.abilities[0], moves: ['rest'], evs: { hp: 4 } },
+				]);
+				assert(errors && errors.some(error => /banned/.test(error)), name);
+			}
+			const rules = Dex.formats.getRuleTable(Dex.formats.get('gen3uubluu'));
+			for (const move of ['flail', 'reversal', 'swagger', 'assist']) assert(rules.isBanned('move:' + move), move);
+			assert(!rules.isBanned('ability:sandveil'));
+		});
+	});
+
 	it('Mega Absol Z is legal only in the AG tiers of Gen 3 Megas', () => {
 		const { TeamValidator } = require('./../../../dist/sim/team-validator');
 		const absol = { species: 'Absol', ability: 'Pressure', item: 'Absolite Z', moves: ['slash'], evs: { hp: 4 } };
