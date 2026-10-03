@@ -162,6 +162,27 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		ruleset: ['Standard', '!Switch Priority Clause Mod'],
 		banlist: ['Quick Claw', 'Soul Dew', 'Swagger'],
 	},
+	{
+		name: "[Gen 3] UUBL UU",
+		desc: "ADV UUBL with the S through B- ranks banned from the October 3, 2026 community VR snapshot. C+ and below, including unranked Pokemon, remain eligible under UUBL rules.",
+		mod: 'gen3',
+		ruleset: ['[Gen 3] UUBL'],
+		// Frozen cutoff, not a live VR dependency:
+		// https://www.smogon.com/forums/threads/adv-uubl.3652530/#-community-viability-rankings-w-analyses
+		banlist: [
+			// S
+			'Dragonite', 'Vaporeon', 'Alakazam',
+			// A+, A, A-
+			'Regirock', 'Scizor', 'Slowbro', 'Regice',
+			'Omastar', 'Sceptile', 'Weezing', 'Houndoom', 'Marowak', 'Machamp',
+			'Lanturn', 'Miltank', 'Dodrio', 'Dusclops', 'Articuno', 'Espeon',
+			// B+, B, B-
+			'Ursaring', 'Tauros', 'Donphan', 'Qwilfish', 'Chansey', 'Swellow', 'Blastoise',
+			'Armaldo', 'Umbreon', 'Smeargle', 'Tentacruel', 'Arcanine', 'Venusaur', 'Rhydon',
+			'Hariyama', 'Kangaskhan', 'Exeggutor', 'Haunter', 'Glalie', 'Steelix', 'Gardevoir',
+			'Kingdra', 'Entei', 'Blaziken', 'Flareon',
+		],
+	},
 	// [Gen 3] UUBL Classic 26 — preserves the UUBL metagame as it stood in 2026, before
 	// Raikou and Registeel were raised to OU by tiering decision on 2026-07-08. Both are
 	// kept legal here via unbanlist. ("26" leaves room to preserve other UUBL eras later.)
