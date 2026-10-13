@@ -23,6 +23,13 @@ const CUSTOM_SECTIONS = ['Gen 3 Megas', 'surfnWOB Customs', 'Yak Attack', 'Archi
 const customFormats = Dex.formats.all().filter(f => CUSTOM_SECTIONS.includes(f.section));
 
 describe('Fork customs', () => {
+	it('exposes DPP sample-team randbats with the Gen 4 OU rules', () => {
+		const format = Dex.formats.get('gen4ousampleteamrandbats');
+		assert(format.exists && customFormats.includes(format));
+		assert.equal(format.mod, 'gen4strb');
+		assert.equal(format.team, 'random');
+		assert(Dex.formats.getRuleTable(format).has('sleepmovesclause'));
+	});
 	describe('UUBL UU VR cutoff', () => {
 		it('bans all 44 S through B- entries, including the inherited Regice exception', () => {
 			const format = Dex.formats.get('gen3uubluu');
@@ -467,7 +474,8 @@ describe('Fork customs', () => {
 		assert.equal(box.mod, 'gen3adv200box');
 		assert.deepEqual(box.ruleset, base.ruleset);
 		assert.deepEqual(box.banlist, base.banlist);
-		assert.equal(box.searchShow, base.searchShow);
+		// The base ADV 200 ladder is enabled on this fork; Box stays challenge-only.
+		assert.equal(box.searchShow, false);
 	});
 
 	it('gen3adv200box: legalizes only the Pokemon Box gifts and Enigma Berry', () => {

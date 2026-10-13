@@ -248,6 +248,16 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		banlist: ['Uber', 'Smeargle + Ingrain', 'Sand Veil', 'Soundproof', 'Assist', 'Baton Pass + Block', 'Baton Pass + Mean Look', 'Baton Pass + Spider Web', 'Swagger'],
 	},
 	{
+		name: "[Gen 4] OU Sample Team Randbats",
+		desc: "Randomly assigns one of the 13 current DPP OU sample teams, preserving its lead and sets.",
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/dpp-ou-sample-teams-v2.3767939/">DPP OU Sample Teams v2</a>`,
+		],
+		team: 'random',
+		mod: 'gen4strb',
+		ruleset: ['[Gen 4] OU'],
+	},
+	{
 		name: "[Gen 4] No PSS",
 		desc: "Gen 4 OU but move categories are determined by type, like in Gen 3.",
 		mod: 'gen4nopss',
