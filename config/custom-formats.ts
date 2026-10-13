@@ -6,7 +6,7 @@
 // near-pristine: upstream touches that file ~330 times a year, so carrying our
 // formats inline made every sync conflict across ~600 lines instead of ~15.
 //
-// The five section headers below are ALSO declared, bodyless, in
+// The six section headers below are ALSO declared, bodyless, in
 // config/formats.ts. That duplication is deliberate and load-bearing:
 // mergeFormatLists keys sections by name and appends into the existing bucket,
 // so the copy over there is what pins each section's position and column. With
@@ -248,16 +248,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		banlist: ['Uber', 'Smeargle + Ingrain', 'Sand Veil', 'Soundproof', 'Assist', 'Baton Pass + Block', 'Baton Pass + Mean Look', 'Baton Pass + Spider Web', 'Swagger'],
 	},
 	{
-		name: "[Gen 4] OU Sample Team Randbats",
-		desc: "Randomly assigns one of the 13 current DPP OU sample teams, preserving its lead and sets.",
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/dpp-ou-sample-teams-v2.3767939/">DPP OU Sample Teams v2</a>`,
-		],
-		team: 'random',
-		mod: 'gen4strb',
-		ruleset: ['[Gen 4] OU'],
-	},
-	{
 		name: "[Gen 4] No PSS",
 		desc: "Gen 4 OU but move categories are determined by type, like in Gen 3.",
 		mod: 'gen4nopss',
@@ -414,6 +404,30 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		],
 	},
 
+	// Sample Team Randbats
+	///////////////////////////////////////////////////////////////////
+
+	{
+		section: "Sample Team Randbats",
+		column: 1,
+	},
+	{
+		name: "[Gen 3] OU Sample Team Randbats",
+		team: 'random',
+		mod: 'gen3strb',
+		ruleset: ['Standard', 'Freeze Clause Mod'],
+	},
+	{
+		name: "[Gen 4] OU Sample Team Randbats",
+		desc: "Randomly assigns one of the 13 current DPP OU sample teams, preserving its lead and sets.",
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/dpp-ou-sample-teams-v2.3767939/">DPP OU Sample Teams v2</a>`,
+		],
+		team: 'random',
+		mod: 'gen4strb',
+		ruleset: ['[Gen 4] OU'],
+	},
+
 	// Yak Attack
 	///////////////////////////////////////////////////////////////////
 
@@ -457,12 +471,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen3hoennification',
 		ruleset: ['Standard', 'Deoxys Camouflage Clause Mod', 'One Boost Passer Clause', 'Freeze Clause Mod'],
 		banlist: ['Wobbuffet + Leftovers', 'Wynaut + Leftovers'],
-	},
-	{
-		name: "[Gen 3] OU Sample Team Randbats",
-		team: 'random',
-		mod: 'gen3strb',
-		ruleset: ['Standard', 'Freeze Clause Mod'],
 	},
 	{
 		name: "[Gen 3] Tradebacks",

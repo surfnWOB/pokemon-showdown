@@ -20,7 +20,7 @@ The column value will be ignored for repeat sections.
 export const Formats: import('../sim/dex-formats').FormatList = [
 
 	// ── Fork sections ───────────────────────────────────────────────────────
-	// The formats for these five sections live in config/custom-formats.ts and
+	// The formats for these six sections live in config/custom-formats.ts and
 	// are merged in at load by mergeFormatLists (sim/dex-formats.ts:561). The
 	// bodyless headers stay HERE because that function keys sections by name and
 	// appends into the existing bucket: this copy is what pins each section's
@@ -41,6 +41,10 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		section: "surfnWOB Customs",
+		column: 1,
+	},
+	{
+		section: "Sample Team Randbats",
 		column: 1,
 	},
 	{
@@ -6035,3 +6039,14 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		ruleset: ['HP Percentage Mod', 'Cancel Mod', 'Desync Clause Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
 	},
 ];
+
+// Fork visibility policy: retain upstream definitions for inherited rules, but
+// omit these sections from the client format list and disable their ladders.
+const hiddenSections = new Set(['S/V Singles', 'S/V Doubles', 'Champions']);
+let section = '';
+for (const [index, format] of Formats.entries()) {
+	if (format.section) section = format.section;
+	if (hiddenSections.has(section) && 'name' in format) {
+		Formats[index] = { ...format, searchShow: false, challengeShow: false, tournamentShow: false };
+	}
+}

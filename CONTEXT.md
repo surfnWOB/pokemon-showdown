@@ -8,15 +8,18 @@ stays legible.
 ## Where our changes live
 
 - **`config/custom-formats.ts`** — the **format seam**. Every fork format body lives
-  here, across five sections (`Gen 3 Megas`, `surfnWOB Customs`, `Yak Attack`,
-  `Archie Madness`, `Other`); each declares a `mod` pointing at a directory under
+  here, across six sections (`Gen 3 Megas`, `surfnWOB Customs`, `Sample Team Randbats`,
+  `Yak Attack`, `Archie Madness`, `Other`); each declares a `mod` pointing at a directory under
   `data/mods/`. `sim/dex-formats.ts` merges this file into `config/formats.ts` at
   load, so upstream's list stays near-pristine and rebases cleanly.
 - **`config/formats.ts`** — upstream's list, plus only what the seam can't absorb:
-  five *bodyless* section headers (they pin each section's slot and column — the
+  six *bodyless* section headers (they pin each section's slot and column — the
   merge keys sections by name and appends into the existing bucket) and the `column:`
   renumbering our leading sections force downstream. Missing `custom-formats.ts`
   fails **silently**; `test/sim/misc/fork-customs.js` asserts each section survived.
+  A visibility policy after the upstream list hides `S/V Singles`, `S/V Doubles`,
+  and `Champions` from all selectors and disables their ladders. Their definitions
+  remain available so other formats can inherit their rules.
 - **`data/mods/<modid>/`** — a **mod**: `scripts.ts` (`inherit: '<parent>'`, `gen: N`)
   plus optional `formats-data.ts` (per-species `tier`) and other data tables. A mod
   inherits its parent's data and overrides selectively. A `formats-data.ts` entry

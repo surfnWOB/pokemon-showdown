@@ -19,10 +19,36 @@ const { Formats } = require('./../../../dist/config/formats');
 // body — including the per-format it()s generated below — before any hook runs,
 // so the format list has to exist now.
 Dex.includeFormats();
-const CUSTOM_SECTIONS = ['Gen 3 Megas', 'surfnWOB Customs', 'Yak Attack', 'Archie Madness', 'Other'];
+const CUSTOM_SECTIONS = ['Gen 3 Megas', 'surfnWOB Customs', 'Sample Team Randbats', 'Yak Attack', 'Archie Madness', 'Other'];
 const customFormats = Dex.formats.all().filter(f => CUSTOM_SECTIONS.includes(f.section));
 
 describe('Fork customs', () => {
+	it('omits the modern mainline sections from all selectors while retaining inherited rules', () => {
+		const hiddenSections = ['S/V Singles', 'S/V Doubles', 'Champions'];
+		for (const section of hiddenSections) {
+			const hidden = Dex.formats.all().filter(format => format.section === section);
+			assert(hidden.length > 0, `missing definitions for ${section}`);
+			for (const format of hidden) {
+				assert.equal(format.searchShow, false, `${format.name}: ladder`);
+				assert.equal(format.challengeShow, false, `${format.name}: challenges`);
+				assert.equal(format.tournamentShow, false, `${format.name}: tournaments`);
+			}
+		}
+		const nationalDex = Dex.formats.get('gen9nationaldex');
+		assert(nationalDex.challengeShow && nationalDex.searchShow);
+		assert(Dex.formats.getRuleTable(nationalDex).size > 0);
+	});
+
+	it('groups sample-team randbats in their own selector section', () => {
+		const samples = Dex.formats.all().filter(format => format.section === 'Sample Team Randbats');
+		assert.deepEqual(samples.map(format => format.id), ['gen3ousampleteamrandbats', 'gen4ousampleteamrandbats']);
+		for (const format of samples) {
+			assert.equal(format.column, 1);
+			assert.equal(format.team, 'random');
+			assert(format.challengeShow && format.searchShow);
+		}
+	});
+
 	it('exposes DPP sample-team randbats with the Gen 4 OU rules', () => {
 		const format = Dex.formats.get('gen4ousampleteamrandbats');
 		assert(format.exists && customFormats.includes(format));
@@ -146,6 +172,7 @@ describe('Fork customs', () => {
 		const expectedColumns = {
 			'Gen 3 Megas': 1,
 			'surfnWOB Customs': 1,
+			'Sample Team Randbats': 1,
 			'Yak Attack': 1,
 			'Archie Madness': 1,
 			'Other': 1,
