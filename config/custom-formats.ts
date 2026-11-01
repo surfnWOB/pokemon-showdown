@@ -559,7 +559,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 3] ADV ES",
-		desc: "Gen 3 OU but every Pok&eacute;mon can learn and has to run Extreme Speed.",
+		desc: "Gen 3 OU with mandatory Extreme Speed and reduced randomness: conditional critical hits, no full paralysis or confusion self-hits, and more reliable moves.",
 		mod: 'gen3es',
 		searchShow: false,
 		ruleset: ['Standard', 'One Boost Passer Clause', 'Accuracy Trap Clause', 'Freeze Clause Mod'],
