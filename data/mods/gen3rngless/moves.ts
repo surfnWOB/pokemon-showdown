@@ -58,6 +58,10 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		shortDesc: "Survive attacks at 1 HP; repeated uses alternate.",
 	},
 
+	willowisp: {
+		inherit: true,
+		accuracy: 100,
+	},
 	toxic: {
 		inherit: true,
 		accuracy: 100,

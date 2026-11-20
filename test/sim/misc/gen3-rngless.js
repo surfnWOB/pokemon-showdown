@@ -135,7 +135,7 @@ describe('[Gen 3] RNGless', () => {
 	it('updates move accuracy and removes the two secondary effects only in RNGless', () => {
 		const es = Dex.mod('gen3rngless');
 		const gen3 = Dex.mod('gen3');
-		for (const id of ['meteormash', 'rockslide', 'toxic']) {
+		for (const id of ['meteormash', 'rockslide', 'toxic', 'willowisp']) {
 			assert.equal(es.moves.get(id).accuracy, 100);
 			assert.notEqual(gen3.moves.get(id).accuracy, 100);
 		}
